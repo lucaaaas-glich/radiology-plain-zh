@@ -27,6 +27,21 @@
 
 ## 使用
 
+### 本机 Apple Silicon Mac
+
+本机准备独立的 `.venv-mac` 环境。模型导出与4位量化完成后，双击项目里的 **`开始解释报告.command`**，粘贴英文或中文报告，再输入一个空行，即可得到中文解释。输入 `q` 退出。
+
+也可以从项目根目录运行：
+
+```bash
+.venv-mac/bin/python -m radplain.predict_mlx --input examples/中文报告.txt
+.venv-mac/bin/python -m radplain.predict_mlx --input examples/英文报告.txt --json
+```
+
+本地使用 `artifacts/mlx-4bit`。模型准备完成后，日常推理不需要学校GPU，输入文本不会由这些推理脚本发送到外部服务。首次运行会加载模型。模型尚未导出时程序会明确提示缺少模型，不会把其他模型冒充成训练结果。
+
+### CUDA / 通用 PyTorch
+
 在本项目目录建立独立环境，避免改动已有作业环境：
 
 ```bash
@@ -43,7 +58,7 @@ python -m radplain.predict --text 'No pleural effusion or pneumothorax.'
 
 ```bash
 python -m radplain.predict --input report.txt --device cuda --json
-python -m radplain.predict --text '左侧少量胸腔积液，右侧未见积液。' --device mps
+python -m radplain.predict --text '左侧少量胸腔积液，右侧未见积液。' --device cuda
 ```
 
 ## Rangpur A100 复现
@@ -70,6 +85,8 @@ mkdir -p logs
 - 教师和学生来自同一模型家族，模仿教师的分数可能高估真正的事实改善。
 - 文本去重不等于患者独立；缺少患者 ID 时不能证明患者级无泄漏。
 - 20 个挑战样例由 AI 编写，用于观察行为，不能替代独立临床评估。
+
+详细实验边界见 [实验设计与局限](docs/实验设计与局限.md)，概念讲解见 [学习路线](docs/学习路线.md)。
 
 ## 文件说明
 
