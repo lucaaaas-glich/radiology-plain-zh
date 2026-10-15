@@ -1,2 +1,3 @@
-# Optional: plots only; separate from inference/training environments.
+# Optional reporting tools; separate from inference/training environments.
 matplotlib==3.10.8
+reportlab==4.4.9
