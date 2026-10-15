@@ -25,7 +25,7 @@ def main():
     p.add_argument('--model', required=True)
     p.add_argument('--out', required=True, type=Path)
     p.add_argument('--split', choices=['dev','holdout','real-dev','real-holdout'], default='dev')
-    p.add_argument('--mode', choices=['direct','evidence','evidence-no-repair'], default='evidence')
+    p.add_argument('--mode', choices=['direct','evidence','evidence-no-repair','evidence-critic'], default='evidence')
     p.add_argument('--max-tokens', type=int, default=384)
     p.add_argument('--candidate-lock', type=Path)
     p.add_argument('--arm')
@@ -69,7 +69,7 @@ def main():
             if a.mode == 'direct':
                 result=backend(messages(row['report']),a.max_tokens)
             else:
-                result=explain(row['report'],backend,max_tokens=a.max_tokens,repair=a.mode!='evidence-no-repair')
+                result=explain(row['report'],backend,max_tokens=a.max_tokens,repair=a.mode!='evidence-no-repair',use_critic=a.mode=='evidence-critic')
                 result['display_text']=render_text(result)
             r={'id':row['id'],'report':row['report'],'result':result}
             results.append(r)

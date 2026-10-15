@@ -3,11 +3,25 @@ import json
 import time
 from .guard_v2 import administrative_instruction, review, spans
 from .glossary_v2 import glossary
+from .semantic_v2 import critique
 
-PROMPT_VERSION = 'evidence-zh-v2-dev3'
+PROMPT_VERSION = 'evidence-zh-v2-dev4'
+HARD_CODES = frozenset({
+    'empty','language','incomplete','quantity','ambiguous_date','date_changed',
+    'left','right','bilateral','carina','above','below','lung_base',
+    'upper_lobe','lower_lobe','middle_lobe','newness','acute_scope',
+    'indeterminate','cannot_exclude','possible','negative_qualifier',
+})
+
+
+def critique_accepts(check,audit):
+    """Model approval cannot override selected explicit factual/format flags."""
+    return audit['verdict']['valid'] and audit['verdict']['supported'] and not any(
+        x['code'] in HARD_CODES for x in check['issues'])
 SYSTEM = (
     '你把放射科报告的一句话忠实改写成简体中文，帮助患者理解。只输出这句话的解释，不写前言或标题。'
     '保留全部事实、位置、左右侧、否定、限定范围、可能或不能排除、变化和建议。'
+    '不确定性必须修饰原来的对象：“有阴影，可能是感染”不能变成“可能有阴影，是感染”。'
     '用短句；专业词可保留，术语会在独立词典中解释。不要添加原因、推测、治疗、安慰或建议。'
     '数值必须按原句出现的先后顺序逐个保留，不能计算差值、换算单位或改变日期格式。'
     '“现在”和“以前”的数值必须对应，范围和多个尺寸不能变成变化量。'
@@ -27,7 +41,7 @@ def messages_for(source, context, feedback=None):
     return [{'role': 'system', 'content': SYSTEM}, {'role': 'user', 'content': content}]
 
 
-def explain(report, generate, max_tokens=256, repair=True):
+def explain(report, generate, max_tokens=256, repair=True, use_critic=False):
     if not report.strip():
         raise ValueError('输入不能为空')
     if len(report) > 12000:
@@ -51,18 +65,27 @@ def explain(report, generate, max_tokens=256, repair=True):
         for _ in range(2 if repair else 1):
             response = generate(messages_for(p['source'], '\n'.join(previous), feedback), max_tokens=max_tokens)
             check = review(p['source'], response['text'], response.get('finish_reason'))
-            row['attempts'].append(dict(response, check=check))
-            if check['no_flags']:
+            attempt=dict(response,check=check)
+            accepted=check['no_flags']
+            feedback=list(check['issues'])
+            if use_critic and response.get('finish_reason')=='stop' and response['text'].strip():
+                audit=critique(p['source'],response['text'],generate)
+                attempt['critique']=audit
+                accepted=critique_accepts(check,audit)
+                if not audit['verdict']['supported']:
+                    feedback.append({'code':'semantic_review','detail':audit['verdict']['reason_zh']})
+                attempt['soft_flags_waived']=[] if not accepted else [x['code'] for x in check['issues']]
+            row['attempts'].append(attempt)
+            if accepted:
                 row.update(status='generated', explanation_zh=response['text'])
                 break
-            feedback = check['issues']
         else:
             row.update(status='source_only', reason='改写仍有需核对的信息，保留原句，未完成此句的中文解释。')
         output.append(row)
         previous.append(p['source'])
     eligible = [x for x in output if x['status'] != 'excluded_instruction']
     generated = [x for x in eligible if x['status'] == 'generated']
-    return {'version': PROMPT_VERSION, 'source_report': report, 'segments': output,
+    return {'version': PROMPT_VERSION, 'use_critic':use_critic,'source_report': report, 'segments': output,
             'glossary': glossary(context),
             'coverage': {'generated_segments': len(generated), 'eligible_segments': len(eligible),
                          'source_only_segments': len(eligible)-len(generated),

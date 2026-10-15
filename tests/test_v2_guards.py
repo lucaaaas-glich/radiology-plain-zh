@@ -2,6 +2,7 @@ import pytest
 from radplain.guard_v2 import numeric_sequence, review, spans
 from radplain.explain_v2 import explain, render_text
 from radplain.glossary_v2 import glossary
+from radplain.render_v2 import render_html
 
 
 def codes(source, prediction):
@@ -127,6 +128,14 @@ def test_glossary_does_not_assert_positive_finding():
     assert len(entries)==2
     assert all('不表示报告肯定存在' in e['note'] for e in entries)
     assert all(e['url'].startswith('https://www.cancer.gov/') for e in entries)
+
+
+def test_html_escapes_source_and_never_includes_failed_candidates():
+    r=explain('<script>alert(1)</script>',lambda *a,**k:{'text':'不该显示的失败答案99毫米。','finish_reason':'length'})
+    page=render_html(r)
+    assert '<script>' not in page
+    assert '&lt;script&gt;' in page
+    assert '99毫米' not in page
 
 
 @pytest.mark.parametrize('text', ['', 'x'*12001, '有阴影。'*41])

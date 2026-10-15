@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 from .explain_v2 import explain, render_text
 from .mlx_backend import MLXBackend
+from .render_v2 import render_html
 
 
 def public_result(result):
@@ -19,9 +20,14 @@ def main():
     p.add_argument('--model',help='覆盖已选定的本地模型；不自动下载')
     p.add_argument('--max-tokens',type=int,default=384)
     p.add_argument('--json',action='store_true')
+    p.add_argument('--html',type=Path,help='将一次解释保存为独立网页；需同时指定 --text 或 --input')
     a=p.parse_args()
     if a.max_tokens <= 0:
         p.error('--max-tokens 必须大于0')
+    if a.html and a.text is None and a.input is None:
+        p.error('--html 需同时指定 --text 或 --input')
+    if a.html and a.html.exists():
+        p.error('--html 目标已存在，拒绝覆盖')
     config=Path('configs/v2_local.json')
     if a.model:
         model=a.model
@@ -69,10 +75,16 @@ def main():
             continue
         result['model']=model
         result['model_load_seconds']=backend.load_seconds
+        if a.html:
+            a.html.parent.mkdir(parents=True,exist_ok=True)
+            with a.html.open('x',encoding='utf-8') as f:
+                f.write(render_html(result))
         if a.json:
             print(json.dumps(public_result(result),ensure_ascii=False,indent=2))
         else:
             print(render_text(result))
+            if a.html:
+                print('已保存：'+str(a.html.resolve()))
         if once:
             return
 
