@@ -2,7 +2,9 @@
 
 把专业的放射科报告改写成患者更容易理解的简体中文。一个独立的学习与研究项目，源于 COMP3710 的放射科报告通俗化选题，但不作为第二份课程作业提交。
 
-**当前状态：实现与验证进行中，实测结果尚未生成。不要把计划当作已完成的实验。**
+**当前状态：A100训练、基线对比、Mac量化与真实本地运行验证均已完成。** 文字指标提高，但仍观察到数值和确定性错误。完整证据见 [实测结果与讲解](docs/实测结果与讲解.md)。
+
+在249条具有可用合成中文参考的测试报告上，ROUGE-L从0.409提高到0.553，chrF从26.89提高到37.33。实际使用4,066条训练样本，A100训练9.4分钟。分数表示与教师文本的接近程度，**不表示医疗准确率**。例如微调模型曾把5毫米增大到8毫米说成“增大1毫米”，也曾改错随访间隔。
 
 ## 它做什么
 
@@ -27,6 +29,23 @@
 
 ## 使用
 
+### 本机 Apple Silicon Mac
+
+本机独立的 `.venv-mac` 环境和4位模型已经准备好。双击项目里的 **`开始解释报告.command`**，粘贴英文或中文报告，再输入一个空行，即可得到中文解释。输入 `q` 退出。
+
+实测模型权重868.6MB，20条短报告全部生成结束，单条生成时间中位数0.62秒；MLX记录的峰值分配内存1.12GiB。这不含每次启动的模型加载，也不代表长报告速度或整个进程内存。[本地测量记录](results/mac_4bit_v1/summary.json)
+
+也可以从项目根目录运行：
+
+```bash
+.venv-mac/bin/python -m radplain.predict_mlx --input examples/中文报告.txt
+.venv-mac/bin/python -m radplain.predict_mlx --input examples/英文报告.txt --json
+```
+
+本地使用 `artifacts/mlx-4bit`。模型准备完成后，日常推理不需要学校GPU，输入文本不会由这些推理脚本发送到外部服务。首次运行会加载模型。模型尚未导出时程序会明确提示缺少模型，不会把其他模型冒充成训练结果。
+
+### CUDA / 通用 PyTorch
+
 在本项目目录建立独立环境，避免改动已有作业环境：
 
 ```bash
@@ -39,11 +58,11 @@ python -m radplain.predict --text 'No pleural effusion or pneumothorax.'
 
 默认读取本地 `artifacts/base-model` 和 `artifacts/pilot_v1/best`。
 也可传入 `--model Qwen/Qwen2.5-1.5B-Instruct` 下载基础模型，使用 `--baseline` 不加载 adapter。
-模型权重、真实数据与完整预测不提交到 Git。训练完成后补充模型获取与本地运行说明。
+模型权重、真实数据与完整预测不提交到 Git。学校项目目录保留基础模型及适配器；Mac使用单独导出的MLX版本。新的独立克隆需要按下方实验步骤生成权重，Git仓库本身不含可直接推理的模型文件。
 
 ```bash
 python -m radplain.predict --input report.txt --device cuda --json
-python -m radplain.predict --text '左侧少量胸腔积液，右侧未见积液。' --device mps
+python -m radplain.predict --text '左侧少量胸腔积液，右侧未见积液。' --device cuda
 ```
 
 ## Rangpur A100 复现
@@ -61,6 +80,16 @@ mkdir -p logs
 训练前会运行数据/损失掩码/中文指标单元测试，并在真实 A100 上检查有限非零梯度。
 不要重复提交同一实验；训练与评估目录已存在时程序会拒绝覆盖。
 
+复现已保存的实验时，在**新的独立克隆目录**中指定模型锁文件和数据 revision，避免上游 `main` 的更新改变数据或权重：
+
+```bash
+export RADZH_MODEL_LOCK="$PWD/results/pilot_v1/models.lock.json"
+export RADZH_DATA_REVISION=6783ab38f9de28c4372799346f51d3927ae7eb9a
+/opt/slurm/bin/sbatch scripts/run_a100.sh
+```
+
+锁文件只使用模型名称和 revision，其中旧机器的缓存路径不参与下载。固定版本、划分和随机种子帮助复现实验，但不同硬件和软件下不承诺逐位相同的训练结果。
+
 ## 怎样理解分数
 
 - jieba 分词后的 ROUGE-1/2/L 和 chrF 衡量与合成参考的文字接近程度。
@@ -70,6 +99,10 @@ mkdir -p logs
 - 教师和学生来自同一模型家族，模仿教师的分数可能高估真正的事实改善。
 - 文本去重不等于患者独立；缺少患者 ID 时不能证明患者级无泄漏。
 - 20 个挑战样例由 AI 编写，用于观察行为，不能替代独立临床评估。
+
+详细实验边界见 [实验设计与局限](docs/实验设计与局限.md)，概念讲解见 [学习路线](docs/学习路线.md)。
+
+本地命令行另有数字与单位核对提示。这是在发现试验错误后加入的独立规则，不修改生成文本，也不影响上述原始指标；没有提示不等于事实正确。完整的20例合成挑战对比见 [逐例分析](results/pilot_v1/challenge_review.json)。
 
 ## 文件说明
 

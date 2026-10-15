@@ -1,0 +1,9 @@
+{
+  "platform": "macOS-26.3.1-arm64-arm-64bit",
+  "processor": "arm64",
+  "quantization": "MLX affine4bit group64",
+  "elapsed_seconds": 13.190192166948691,
+  "peak_memory_bytes": 1204072310,
+  "count": 20,
+  "note": "Local quantized challenge inference, including first-run compilation; not the A100 benchmark."
+}

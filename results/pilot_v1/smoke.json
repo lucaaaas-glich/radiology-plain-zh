@@ -1,0 +1,7 @@
+{
+  "loss": 1.05828058719635,
+  "finite_nonzero_gradients": true,
+  "mask_verified": true,
+  "gpu": "NVIDIA A100-PCIE-40GB",
+  "note": "Synthetic smoke example only; weights discarded."
+}

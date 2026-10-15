@@ -1,0 +1,12 @@
+{
+  "teacher": {
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "path": "/scratch/664456/radzh-models/teacher"
+  },
+  "student": {
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "path": "/scratch/664456/radzh-models/student"
+  }
+}

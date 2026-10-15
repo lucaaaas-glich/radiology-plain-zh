@@ -1,0 +1,31 @@
+{
+  "selection": "first unused source-text keyword match per predeclared category; not selected by model score",
+  "reviewer": "AI-assisted; not clinician review",
+  "cases": [
+    {
+      "id": "d70d34c7f2434a2790c65d8aa7ce9e0597ea193c8684de4ec89f7d86fd95ea71",
+      "focus": "negation",
+      "analysis_zh": "原始英文同一句将未见肺动脉充盈缺损与compatible with pulmonary embolism并列，存在歧义，不宜把这例当作无争议的金标准。两模型均未标出冲突。LoRA还把胸膜下改成肺底、把腋窝非特异性淋巴结影改成影像模糊和可能肿大。教师将mediastinum误写成心包，说明参考也会出错。"
+    },
+    {
+      "id": "594e46843f772115278bee4007bf291e249440582651583949cbf57414e96c63",
+      "focus": "uncertainty",
+      "analysis_zh": "两模型保留炎症或感染的可能性；LoRA更简洁，但间质-肺泡模式仍难懂。日期05 08 2014存在日月顺序歧义：教师与两个学生解释不同，不能只凭教师文本判定学生错误。"
+    },
+    {
+      "id": "12fcecba39c0e355fba73d80fddfd9044d5314bee3c70d9525594f913b9786ff",
+      "focus": "number_or_followup",
+      "analysis_zh": "LoRA将6个月复查改成3个月，并遗漏5毫米及多项细节。基线保留随访间隔，却把乙状结肠憩室写成直肠下段痔疮，并把既有肝病变无变化写成未见任何肝病变。两者均有事实错误，文字相似度不能兜底。"
+    },
+    {
+      "id": "40b87bb957074981b72706c9f118e8aa0000b85bf50ab108dcfb5bc05fb689d6",
+      "focus": "change",
+      "analysis_zh": "LoRA把不能排除心脏后方病变改成仍然存在病理变化，又把观察受限的原因写成病变原因。基线保留不能排除。两者对骨折细节都有损失，不能把更流畅当作更准确。"
+    },
+    {
+      "id": "eea86f6527e74a62195acd5e562203c18e2345a05a752ced3e71f40f367d31a2",
+      "focus": "device",
+      "analysis_zh": "LoRA比基线更明确保留导管尖端位置与肺门这一解剖部位，也保留可能性；两者均没有充分解释导管、上腔静脉等术语，且省略皮下储液装置特征。"
+    }
+  ]
+}

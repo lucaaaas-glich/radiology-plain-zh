@@ -1,0 +1,38 @@
+{
+  "recorded_at": "2026-10-15T18:46:23.234787+00:00",
+  "original_gpu_run": {
+    "source_commit": "d081044",
+    "tests_passed": 9,
+    "slurm_job": "664456",
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "elapsed": "00:47:52"
+  },
+  "export": {
+    "slurm_job": "664471",
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "elapsed": "00:02:12"
+  },
+  "posthoc_application_checks": {
+    "command": ".venv/bin/python -m pytest -q tests",
+    "tests_passed": 14,
+    "warning": "jieba pkg_resources deprecation",
+    "elapsed_seconds": 39.43,
+    "note": "Includes5 number/unit overlap tests added after model evaluation; these do not establish clinical safety."
+  },
+  "local_delivery": {
+    "verified_at": "2026-10-15T18:55:03.196641+00:00",
+    "environment": "Apple Silicon macOS26.3.1,8GB RAM;mlx-lm0.32.0",
+    "merged_source_hashes_verified": true,
+    "quantized_challenges_completed": 20,
+    "real_cli_checks": [
+      "UTF-8 Chinese report file to JSON: success,normal stop",
+      "Chinese numerical follow-up report to JSON: success,missing6mm flag displayed",
+      "Executable interactive .command launcher: Chinese response and q exit0",
+      "Nonpositive generation limit rejected with exit2"
+    ],
+    "model_weight_bytes": 868629082,
+    "evidence": "results/mac_4bit_v1/summary.json and model_integrity.json"
+  }
+}

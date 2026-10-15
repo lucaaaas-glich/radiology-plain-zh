@@ -1,0 +1,12 @@
+{
+  "metric": "jieba_ROUGE_L_fmeasure",
+  "n": 249,
+  "mean_lora_minus_baseline": 0.14368887318936202,
+  "paired_bootstrap_95_percentile_interval": [
+    0.12631350717230114,
+    0.16103951294642246
+  ],
+  "bootstrap_replicates": 2000,
+  "seed": 371026,
+  "limitations": "Conditional on sampled reports and synthetic references. Not clinical safety, not independent patient validation; one training seed."
+}
