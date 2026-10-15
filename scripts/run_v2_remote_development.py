@@ -13,12 +13,15 @@ def main():
     p=argparse.ArgumentParser()
     p.add_argument('--model',required=True)
     p.add_argument('--out',type=Path,required=True)
+    p.add_argument('--skip-direct',action='store_true')
+    p.add_argument('--load-in-4bit',action='store_true')
     a=p.parse_args()
     a.out.mkdir(parents=True,exist_ok=False)
-    backend=HFBackend(a.model)
-    tasks=[('synthetic_direct','examples/challenge.jsonl','direct'),
-           ('synthetic_critic','examples/challenge.jsonl','evidence-critic'),
+    backend=HFBackend(a.model,load_in_4bit=a.load_in_4bit)
+    tasks=[('synthetic_critic','examples/challenge.jsonl','evidence-critic'),
            ('real_critic','data/v2/real/dev.jsonl','evidence-critic')]
+    if not a.skip_direct:
+        tasks.insert(0,('synthetic_direct','examples/challenge.jsonl','direct'))
     for label,source,mode in tasks:
         rows=[];folder=a.out/label;folder.mkdir()
         with (folder/'outputs.jsonl').open('x',encoding='utf-8') as f:
@@ -30,11 +33,11 @@ def main():
         write_json(folder/'runtime.json',{'count':len(rows),'mode':mode,'stage':'development_only',
                 'generation_seconds':sum(r['result']['seconds'] for r in rows),
                 'input_sha256':hashlib.sha256(Path(source).read_bytes()).hexdigest()})
-    write_json(a.out/'runtime.json',{'model':a.model,'dtype':'bfloat16','device':torch.cuda.get_device_name(),
+    write_json(a.out/'runtime.json',{'model':a.model,'compute_dtype':'bfloat16','weight_quantization':'bitsandbytes_nf4_double_quant' if a.load_in_4bit else None,'device':torch.cuda.get_device_name(),
             'slurm_job_id':os.environ.get('SLURM_JOB_ID'),'load_seconds':backend.load_seconds,
             'peak_cuda_allocated_bytes':torch.cuda.max_memory_allocated(),
             'peak_cuda_reserved_bytes':torch.cuda.max_memory_reserved(),'platform':platform.platform(),
-            'packages':{p:version(p) for p in ['torch','transformers','huggingface_hub','safetensors']},
+            'packages':{p:version(p) for p in ['torch','transformers','huggingface_hub','safetensors']+(['bitsandbytes','accelerate'] if a.load_in_4bit else [])},
             'source_files_sha256':{str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(Path('radplain').glob('*.py'))}})
 
 

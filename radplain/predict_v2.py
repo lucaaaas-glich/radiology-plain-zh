@@ -19,7 +19,7 @@ def main():
     s.add_argument('--text')
     s.add_argument('--input',type=Path)
     p.add_argument('--model',help='覆盖已选定的本地模型；不自动下载')
-    p.add_argument('--backend',choices=['mlx','cuda'],default='mlx')
+    p.add_argument('--backend',choices=['mlx','cuda','cuda-nf4'],default='mlx')
     p.add_argument('--mode',choices=['evidence','evidence-critic'],help='覆盖配置里的解释方法')
     p.add_argument('--max-tokens',type=int,default=384)
     p.add_argument('--json',action='store_true')
@@ -54,7 +54,7 @@ def main():
             backend=MLXBackend(model)
         else:
             from .hf_backend_v2 import HFBackend
-            backend=HFBackend(model)
+            backend=HFBackend(model,load_in_4bit=a.backend=='cuda-nf4')
     except (ValueError,RuntimeError) as e:
         p.error(str(e))
     once=a.text is not None or a.input is not None

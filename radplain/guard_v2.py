@@ -5,12 +5,13 @@ paraphrases/conversions are flagged; unsupported paraphrases can escape checks.
 The caller must report coverage, keep the source, and never call a pass 'correct'.
 """
 import re
+from collections import Counter
 from decimal import Decimal
 from .common import chinese_ratio
 from .fidelity import numeric_review, _number
-from .quantity_v2 import review_quantities
+from .quantity_v2 import normalized_quantities_text, review_quantities
 
-VERSION = 'lexical-guard-v2-dev6'
+VERSION = 'lexical-guard-v2-dev7'
 CN = '零〇一二两三四五六七八九十百点半'
 UNIT = r'mm|cm|millimet(?:er|re)s?|centimet(?:er|re)s?|毫米|厘米|months?|个月|月|years?|年|weeks?|星期|周|days?|天'
 ORDINALS = dict(zip(('first second third fourth fifth sixth seventh eighth ninth tenth eleventh twelfth').split(), range(1, 13)))
@@ -96,6 +97,12 @@ FEATURES = [
     ('acute_scope', r'\bacute\b|急性', r'急性'),
     ('enteric_tube', r'\benteric\s+tube\b', r'肠内.{0,3}管|胃管|胃肠管|消化道.{0,5}管|胃肠.{0,5}管|肠道.{0,3}管|肠导管'),
     ('cardiomegaly', r'\bcardiomegaly\b', r'心脏|心影'),
+    ('degree_mild', r'\bmild(?:ly)?\b|轻度', r'轻|稍|略|少量'),
+    ('degree_moderate', r'\bmoderate(?:ly)?\b|中度', r'中度|中等'),
+    ('degree_marked', r'\bmarked(?:ly)?\b|\bsevere(?:ly)?\b|重度|严重', r'明显|显著|重度|严重|较重'),
+    ('degree_subtle', r'\bsubtle\b|细微', r'细微|微弱|隐约|轻微|不明显'),
+    ('multiple', r'\bmultiple\b|多发|多个', r'多发|多个|多处|多枚|数个|数枚|若干|多种'),
+    ('lung_apex', r'\blung\s+ap(?:ex|ices)\b|\bapical\s+pneumothorax\b|肺尖', r'肺尖|尖部'),
 ]
 
 UNCERTAIN = re.compile(r'cannot\s+(?:be\s+)?(?:excluded|exclude|rule\s+out)|不能.{0,3}排除|无法排除|不排除', re.I)
@@ -156,6 +163,14 @@ def review(source, prediction, finish_reason='stop'):
         add('numeric_sequence', f'数值数量或顺序不一致：原文{original}，改写{output}；请保留原文数值顺序，不做计算')
     q, quantity_issues = review_quantities(source, prediction)
     issues.extend(quantity_issues)
+    # Date formatting and spelled durations are normalized before comparing
+    # multiplicity. This catches a missing image/series ID even if the model
+    # critic approves it. Order-only differences remain a separate soft flag.
+    source_values = Counter(numeric_sequence(normalized_quantities_text(source)))
+    output_values = Counter(numeric_sequence(normalized_quantities_text(prediction)))
+    missing_values = source_values-output_values
+    if missing_values:
+        add('numeric_value_missing', '原文数字被遗漏或改变：'+', '.join(missing_values.elements()))
     original_prior, output_prior = prior_roles(source), prior_roles(prediction)
     if original_prior and original_prior != output_prior:
         add('prior_measurement', f'以前的测量值未按原文对应：{original_prior}；请明确“以前为…”')
@@ -196,5 +211,9 @@ def review(source, prediction, finish_reason='stop'):
         add('added_advice', '出现原句没有的建议')
     if administrative_instruction(prediction):
         add('instruction_echo', '输出含疑似行政指令')
+    if re.search(r'左(?:侧)?(?:肺)?中叶',prediction):
+        add('left_middle_lobe', '左肺的肺叶命名有疑点；舌段属于左上叶，不能写成独立的左中叶')
+    if re.fullmatch(r'\s*(?:follow[ -]?up|随访)\s*[.。:]?\s*',source,re.I) and re.search(r'建议|推荐|需要|应当|应该',prediction):
+        add('followup_context_became_advice', '单独的随访标题描述本次检查背景，不能改成新建议')
     return {'version': VERSION, 'scope': 'limited_lexical_checks_not_clinical_validation',
             'issues': issues, 'no_flags': not issues, 'numeric_overlap': q}

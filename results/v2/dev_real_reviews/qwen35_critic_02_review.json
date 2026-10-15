@@ -1,0 +1,169 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "scope": "Displayed Chinese only; source-only fallback is incomplete, not a correct answer.",
+  "cases": [
+    {
+      "id": "real_0e9c60d4ad638a81",
+      "output_sha256": "81f2d94be662cffe84f8a697712942562ec85d846fa3ae7183d852e1792624aa",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "technical",
+      "notes_zh": "未发现明确事实改变，仍使用较多专业词。"
+    },
+    {
+      "id": "real_53499b1249f0e7a6",
+      "output_sha256": "736e73fee95f2b67c7df467f454b2d3f42471a049d849387fa723eb161de148a",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "生成内容未见明确诊断改变；报告建议的引导语不够贴切，但只复述影像早期可阴性的提醒。部分句子回退。"
+    },
+    {
+      "id": "real_4187fbf7eadcb951",
+      "output_sha256": "9036d6502153e5d95fd111f4f9fd04ef957bed89707745420c6cd0aeae549541",
+      "errors": [
+        "anatomy_side",
+        "omission",
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "复杂分布句把右上叶后段改成尖段，周边分布限定遗漏；胸椎额外变成胸椎后侧。"
+    },
+    {
+      "id": "real_6e2b1d9d0d10b307",
+      "output_sha256": "33d4ab95e529b3c627b775e42e6d69e6fee50cdf57ff37c946160f41b853a8d3",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "已生成内容未见明确事实改变，日期及变化长句回退。"
+    },
+    {
+      "id": "real_4889613d7b935c76",
+      "output_sha256": "0b020f7b37c3996b5c7c2a7109c9f47e353e671b7093436824a15920f9ead76b",
+      "errors": [
+        "omission",
+        "recommendation",
+        "anatomy_side"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "术后背景遗漏肺癌；随访标题变成新复查建议；背阔肌下方关系写成背阔肌处。"
+    },
+    {
+      "id": "real_99884d41e32a39f8",
+      "output_sha256": "a7dda25acd534e7632130e22f89053b2c89ac2ff9481bbb445180843c753be46",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "乙状结肠译名修复。第二病灶重复加入系列5可能来自同句隐含上下文，但未明确列出，标记精度疑点而不计明确错误；不评完整忠实。"
+    },
+    {
+      "id": "real_c6927c378a6e2c87",
+      "output_sha256": "08ffcc914dbc262b10cd4e3a9ddd2aed187619caaeb899d72cadbf2f520b155c",
+      "errors": [
+        "anatomy_side"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "把舌部残留纤维化放到左中叶舌段，肺叶定位错误。"
+    },
+    {
+      "id": "real_788c7076b21bef32",
+      "output_sha256": "8431331ea47bad3c842995a4fb5384c42c29b4cbbb49cb87045df021e03536ef",
+      "errors": [
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "肺气肿的小叶中心型与持续存在限定丢失。结肠/乙状结肠范围仍有精度疑点，未另计明确错误。"
+    },
+    {
+      "id": "real_8e3f069b88d7550c",
+      "output_sha256": "93d1899142435c769d51d736f6a3139f0cbd156610267017af38fe7e025f0d75",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "肋骨检查宽泛写成胸部检查，具体检查对象表达不精确；未单列明确错误，也未评完整忠实。"
+    },
+    {
+      "id": "real_20d69a9e8c41860d",
+      "output_sha256": "02a729967d410ba880018b5e4c6bd7c7652c0a7424481cdfeb01989fd0731e09",
+      "errors": [
+        "negation",
+        "change",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "几年前CT已知的发现误成此次没有发现既往异常，否定和时间关系改变；黏膜下层也被简化为壁内。"
+    },
+    {
+      "id": "real_2f86141ba8fa19ea",
+      "output_sha256": "191494e156590bcac7af4a9e2ed77b547cd476602628d53aefe4baca3c46782e",
+      "errors": [
+        "anatomy_side",
+        "change",
+        "negation",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "进展期/严重肺气肿被写成已经进展；没有新冠相关肺感染扩大为没有急慢性肺感染；气道周围增厚套用了相邻发现的肺叶范围。"
+    },
+    {
+      "id": "real_4d02bd9100fee8f7",
+      "output_sha256": "4c9db9438498309509bcb86fd741edb360374a097290f5a2d3a1be4c22a1b25b",
+      "errors": [
+        "recommendation",
+        "terminology",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "随访标题变成新的复查建议；脐下腹壁膨出改成腹直肌分离；结论遗漏细微程度。"
+    },
+    {
+      "id": "real_de592071091f2d97",
+      "output_sha256": "78c4a29beed66991ab1563c003a63aa0a73b69582b3e0a20952196d2da4a16ea",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "保留中文未见明确诊断改变，但减压性积液的译法不够清楚，另有原文回退。"
+    },
+    {
+      "id": "real_abd463216fac09a8",
+      "output_sha256": "99c45dcd91dc65777ecc28f247094a256ebd1a6c02d255328bffe253e875698f",
+      "errors": [
+        "anatomy_side",
+        "unsupported_addition",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "距离变成上方距离；大的横突漏掉大小。caliber没有翻译，报告建议前缀出现在诊断描述前。"
+    },
+    {
+      "id": "real_b27e89e8eb71724d",
+      "output_sha256": "6cbd9767a5d0fb995f1c3ff0b2a0945eb6e1c689c642fa8e57143b6820fcf84a",
+      "errors": [
+        "terminology",
+        "anatomy_side"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "乳房成形术被写成乳腺切除术；气腔实变写成气道实变，术式及解剖位置改变。"
+    },
+    {
+      "id": "real_4b40d531f81fd555",
+      "output_sha256": "82c02a5ff4873442999b4b34fe3864ab990d3c248a54d54b1ca7eed24fa3b3c9",
+      "errors": [
+        "anatomy_side",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "右侧肋骨的外侧位置限定遗漏。"
+    }
+  ]
+}

@@ -11,7 +11,29 @@ WORDS={'one':1,'two':2,'three':3,'four':4,'five':5,'six':6,'seven':7,'eight':8,'
        'seventy':70,'eighty':80,'ninety':90}
 EN='(?:'+'|'.join(WORDS)+')'
 UNITS=r'(?:millimet(?:er|re)s?|centimet(?:er|re)s?|mm|cm|months?|years?|weeks?|days?)'
-DATES=re.compile(r'\b\d{4}[-/]\d{1,2}[-/]\d{1,2}\b|\b\d{1,2}([/ -])\d{1,2}\1\d{4}\b|\d{4}年\d{1,2}月\d{1,2}日')
+DATES=re.compile(r'(?<!\d)\d{4}[-/]\d{1,2}[-/]\d{1,2}(?!\d)|(?<!\d)\d{1,2}([/ -])\d{1,2}\1\d{4}(?!\d)|\d{4}年\d{1,2}月\d{1,2}日')
+YEAR = r'(?:18|19|20|21)\d{2}'
+EN_CALENDAR = re.compile(rf'\b(?:in|since|during|from|year)\s+({YEAR})\b(?!\s*(?:{UNITS})\b)', re.I)
+CN_CALENDAR = re.compile(rf'(?<!\d)({YEAR})年(?![后前年余多来内间])')
+DURATION_PREFIX = re.compile(r'(?:持续|历时|经过|长达|为期|共|累计|约|超过)\s*$')
+
+
+def calendar_years(text):
+    """Recognize explicit calendar context, never every four-digit number.
+
+    This deliberately covers a narrow range of modern report years. Bare IDs,
+    measurements and English '2015 years' must remain numeric quantities. Chinese
+    duration cues keep an otherwise ambiguous YYYY年 out of calendar matching.
+    Full dates are handled separately by dates().
+    """
+    masked = DATES.sub(lambda m: ' ' * len(m.group()), text)
+    spans = []
+    for m in EN_CALENDAR.finditer(masked):
+        spans.append((m.start(1), m.end(1), m[1]))
+    for m in CN_CALENDAR.finditer(masked):
+        if not DURATION_PREFIX.search(masked[max(0, m.start()-8):m.start()]):
+            spans.append((m.start(), m.end(), m[1]))
+    return sorted(spans)
 
 
 def dates(text):
@@ -38,8 +60,12 @@ def dates(text):
 
 
 def normalized_quantities_text(text):
+    for start, end, year in reversed(calendar_years(text)):
+        text=text[:start]+' [YEAR] '+text[end:]
     text=DATES.sub(' [DATE] ',text)
     text=re.sub(r'COVID[ -]?19','COVID',text,flags=re.I)
+    text=re.sub(rf'(\d+(?:\.\d+)?|[{CN}]+)(?:周)?岁',r'\1年',text)
+    text=re.sub(rf'\b({EN})-(?={UNITS}\b)',r'\1 ',text,flags=re.I)
     def convert_en(m):
         n=sum(WORDS[w.lower()] for w in re.findall(EN,m[1],re.I))
         if m[2]:
@@ -63,8 +89,14 @@ def review_quantities(source,prediction):
     # faithful Chinese formatting instead of misclassifying the year as duration.
     clear=[d['canonical'] for d in original if not d['ambiguous']]
     clear_out=[d['canonical'] for d in output if not d['ambiguous']]
-    if clear and clear!=clear_out:
+    if clear!=clear_out:
         issues.append({'code':'date_changed','detail':'日期与原文不一致或有遗漏，请核对并保留原日期'})
+    if any(d['ambiguous'] and d['raw'] not in source for d in output):
+        issues.append({'code':'ambiguous_date','detail':'输出新增了原文没有的日期'})
+    source_years=[year for _,_,year in calendar_years(source)]
+    output_years=[year for _,_,year in calendar_years(prediction)]
+    if source_years!=output_years:
+        issues.append({'code':'date_changed','detail':'日历年份与原文不一致或有遗漏，请保留原年份及其含义'})
     q=numeric_review(normalized_quantities_text(source),normalized_quantities_text(prediction))
     if q['warnings']:
         issues.append({'code':'quantity','detail':'；'.join(q['warnings'])})

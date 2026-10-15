@@ -3,7 +3,7 @@ import time
 
 
 class HFBackend:
-    def __init__(self,model_path,max_input_tokens=4096):
+    def __init__(self,model_path,max_input_tokens=4096,load_in_4bit=False):
         import torch
         from transformers import AutoConfig,AutoModelForCausalLM,AutoModelForImageTextToText,AutoTokenizer
         if not torch.cuda.is_available():
@@ -12,8 +12,16 @@ class HFBackend:
         config=AutoConfig.from_pretrained(model_path,trust_remote_code=False)
         cls=AutoModelForImageTextToText if config.model_type.startswith('qwen3_5') else AutoModelForCausalLM
         self.tokenizer=AutoTokenizer.from_pretrained(model_path,trust_remote_code=False)
-        self.model=cls.from_pretrained(model_path,dtype=torch.bfloat16,attn_implementation='sdpa',
-                                      trust_remote_code=False).eval().to('cuda')
+        kwargs={'dtype':torch.bfloat16,'attn_implementation':'sdpa','trust_remote_code':False}
+        if load_in_4bit:
+            from transformers import BitsAndBytesConfig
+            kwargs['quantization_config']=BitsAndBytesConfig(load_in_4bit=True,bnb_4bit_quant_type='nf4',
+                    bnb_4bit_use_double_quant=True,bnb_4bit_compute_dtype=torch.bfloat16)
+            kwargs['device_map']={'':0}
+        self.model=cls.from_pretrained(model_path,**kwargs).eval()
+        if not load_in_4bit:
+            self.model=self.model.to('cuda')
+        self.load_in_4bit=load_in_4bit
         self.max_input_tokens=max_input_tokens
         self.load_seconds=time.perf_counter()-start
         self.model_path=str(model_path)

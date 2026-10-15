@@ -4,6 +4,19 @@ import re
 NCI = 'https://www.cancer.gov/publications/dictionaries/cancer-terms/def/'
 FLEISCHNER = 'https://doi.org/10.1148/radiol.232558'
 ENTRIES = [
+    ('左肺舌部／舌段', r'\blingula\w*\b|舌段|舌叶', '左肺上叶的一部分；它不属于独立的左肺中叶。', 'https://training.seer.cancer.gov/lung/anatomy/'),
+    ('淋巴结', r'lymph\s+nodes?|淋巴结', '属于免疫系统的小结构，参与过滤淋巴液并帮助身体应对感染等问题。', NCI + 'lymph-node'),
+    ('淋巴结肿大／病变', r'lymphadenopathy|淋巴结肿大', '淋巴结出现肿大或病变；这个词本身不能确定原因。', NCI + 'lymphadenopathy'),
+    ('腺癌', r'adenocarcinoma|腺癌', '从具有分泌功能的腺性组织发生的一类癌。', NCI + 'adenocarcinoma'),
+    ('肝切除术', r'hepatectomy|肝切除', '通过手术切除部分或全部肝脏；具体范围以报告为准。', NCI + 'hepatectomy'),
+    ('叶切除术', r'lobectomy|叶切除', '通过手术切除器官中完整的一叶；所指器官和部位要看原文。', NCI + 'lobectomy'),
+    ('肉芽肿', r'granuloma\w*|肉芽肿', '一些免疫细胞紧密聚在一起，形成的小团块。', 'https://my.clevelandclinic.org/health/diseases/24597-granuloma'),
+    ('骨赘', r'osteophytes?|骨赘|骨刺', '在脊柱骨头或关节周围长出的额外骨性突起，俗称骨刺。', 'https://www.nhs.uk/conditions/osteophyte/'),
+    ('转移', r'metasta\w*|转移', '癌细胞从最初发生的部位扩散到身体其他部位。', NCI + 'metastasis'),
+    ('水肿', r'\b[oe]?edema\b|水肿', '组织内液体增多而引起的肿胀。', NCI + 'edema'),
+    ('血栓形成', r'thrombosis|血栓', '血管内部形成或存在凝结的血块。', NCI + 'thrombosis'),
+    ('腹水', r'ascites|腹水', '腹部内异常积聚的液体。', NCI + 'ascites'),
+    ('对比剂／造影剂', r'\bcontrast\b|对比剂|造影剂', '在影像检查中帮助显示身体内部结构或异常区域的物质。', NCI + 'contrast-material'),
     ('胸腔积液', r'pleural\s+effusion|胸腔积液', '肺和胸壁之间的间隙里积聚了液体。', NCI + 'pleural-effusion'),
     ('气胸', r'pneumothorax|气胸', '肺和胸壁之间的间隙里进入了空气。', NCI + 'pneumothorax'),
     ('肺不张', r'atelectasis|肺不张', '部分肺组织没有充分展开。', NCI + 'atelectasis'),
