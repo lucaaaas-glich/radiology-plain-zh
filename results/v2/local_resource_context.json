@@ -1,0 +1,12 @@
+{
+  "observed_at_utc": "2026-10-15T23:17:44Z",
+  "stage": "contextless_development_4b_running",
+  "system_ram_gib": 8,
+  "system_physical_memory_used_mb": 7504,
+  "system_wired_mb": 5386,
+  "system_compressor_mb": 1052,
+  "system_swap_used_mb": 9580.75,
+  "inference_process_memory_mb_top": 3232,
+  "interpretation": "Shared interactive Mac with other applications open; not an isolated throughput benchmark. top MEM is not MLX allocation or process RSS. Other user applications were not stopped. Larger-model downloads and inference are serialized.",
+  "source": "single vm_stat/sysctl/top observation, not a time-series peak"
+}
