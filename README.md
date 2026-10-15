@@ -76,6 +76,16 @@ mkdir -p logs
 训练前会运行数据/损失掩码/中文指标单元测试，并在真实 A100 上检查有限非零梯度。
 不要重复提交同一实验；训练与评估目录已存在时程序会拒绝覆盖。
 
+复现已保存的实验时，在**新的独立克隆目录**中指定模型锁文件和数据 revision，避免上游 `main` 的更新改变数据或权重：
+
+```bash
+export RADZH_MODEL_LOCK="$PWD/results/pilot_v1/models.lock.json"
+export RADZH_DATA_REVISION=6783ab38f9de28c4372799346f51d3927ae7eb9a
+/opt/slurm/bin/sbatch scripts/run_a100.sh
+```
+
+锁文件只使用模型名称和 revision，其中旧机器的缓存路径不参与下载。固定版本、划分和随机种子帮助复现实验，但不同硬件和软件下不承诺逐位相同的训练结果。
+
 ## 怎样理解分数
 
 - jieba 分词后的 ROUGE-1/2/L 和 chrF 衡量与合成参考的文字接近程度。

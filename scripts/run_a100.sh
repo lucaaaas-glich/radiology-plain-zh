@@ -24,11 +24,15 @@ trap 'code=$?; printf "pipeline_exit=%s job=%s\n" "$code" "$SLURM_JOB_ID" > "log
 hostname
 nvidia-smi --query-gpu=name,memory.total,driver_version --format=csv
 "$PY" -m pytest -q tests
-"$PY" scripts/download_models.py --out "$TASK_SCRATCH/radzh-models"
+MODEL_ARGS=()
+DATA_ARGS=()
+if test -n "${RADZH_MODEL_LOCK:-}"; then MODEL_ARGS+=(--lock "$RADZH_MODEL_LOCK"); fi
+if test -n "${RADZH_DATA_REVISION:-}"; then DATA_ARGS+=(--revision "$RADZH_DATA_REVISION"); fi
+"$PY" scripts/download_models.py --out "$TASK_SCRATCH/radzh-models" "${MODEL_ARGS[@]}"
 cp "$TASK_SCRATCH/radzh-models/models.lock.json" results/pilot_v1/models.lock.json
 "$PY" scripts/smoke_gpu.py --model "$TASK_SCRATCH/radzh-models/student"
 if ! test -f data/pilot_v1/manifest.json; then
-  "$PY" -m radplain.data
+  "$PY" -m radplain.data "${DATA_ARGS[@]}"
 fi
 "$PY" -m radplain.teacher --model "$TASK_SCRATCH/radzh-models/teacher"
 # The student is retained in home storage so inference remains possible after scratch cleanup.
@@ -38,6 +42,9 @@ if ! test -e artifacts/base-model; then
   cp "$TASK_SCRATCH/radzh-models/student/"*.safetensors artifacts/base-model/
   cp "$TASK_SCRATCH/radzh-models/student/"*.txt artifacts/base-model/ 2>/dev/null || true
   cp "$TASK_SCRATCH/radzh-models/student/"*.jinja artifacts/base-model/ 2>/dev/null || true
+  cp "$TASK_SCRATCH/radzh-models/student/"LICENSE* artifacts/base-model/ 2>/dev/null || true
+  cp "$TASK_SCRATCH/radzh-models/student/"NOTICE* artifacts/base-model/ 2>/dev/null || true
+  cp "$TASK_SCRATCH/radzh-models/student/README.md" artifacts/base-model/UPSTREAM_README.md
 fi
 "$PY" -m radplain.train --model artifacts/base-model
 # The fixed test is first generated only after dev-loss checkpoint selection is complete.

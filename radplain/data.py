@@ -25,14 +25,14 @@ def clean_rows(rows):
     return result, dict(counts)
 
 
-def prepare(config_path, out):
+def prepare(config_path, out, revision=None):
     from datasets import load_dataset
     from huggingface_hub import HfApi
     cfg = load_config(config_path)
     out = Path(out)
     if (out / "manifest.json").exists():
         raise FileExistsError(f"Already prepared: {out}; use a new experiment directory")
-    revision = HfApi().dataset_info(cfg["dataset"]).sha
+    revision = revision or HfApi().dataset_info(cfg["dataset"]).sha
     ds = load_dataset(cfg["dataset"], revision=revision)
     train, train_counts = clean_rows(ds["train"])
     held, held_counts = clean_rows(ds["validation"])
@@ -68,5 +68,6 @@ if __name__ == "__main__":
     p = argparse.ArgumentParser()
     p.add_argument("--config", default="configs/pilot.json")
     p.add_argument("--out", default="data/pilot_v1")
+    p.add_argument("--revision", help="Pinned dataset commit for exact data-version replay")
     a = p.parse_args()
-    prepare(a.config, a.out)
+    prepare(a.config, a.out, a.revision)
