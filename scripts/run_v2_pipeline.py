@@ -14,6 +14,7 @@ from radplain.common import read_jsonl, write_json
 from radplain.explain_v2 import explain, render_text
 from radplain.mlx_backend import MLXBackend
 from radplain.prompts import messages
+from scripts.v2_local_preflight import validate as validate_final
 
 
 def digest(path):
@@ -56,20 +57,11 @@ def main():
         unchanged=subprocess.run(['git','diff','--quiet','HEAD','--',str(a.candidate_lock)])
         if committed.returncode or unchanged.returncode:
             p.error('Candidate lock must be tracked and committed before any holdout generation')
-        lock=json.loads(a.candidate_lock.read_text())
-        if not a.arm or a.arm not in lock['arms']:
-            p.error('Holdout requires --arm declared in the candidate lock')
-        expected_arm=lock['arms'][a.arm]
-        if (a.model,a.mode,a.max_tokens)!=(expected_arm['model'],expected_arm['mode'],expected_arm['max_tokens']):
-            p.error('Arguments do not match the frozen arm')
-        for file, sha in lock['code_sha256'].items():
-            if digest(file) != sha:
-                raise ValueError('Frozen candidate changed: '+file)
-        for file, sha in lock['model_files_sha256'][a.model].items():
-            if digest(file)!=sha:
-                raise ValueError('Frozen model changed: '+file)
+        validate_final(a.candidate_lock, a.arm, a.model, a.mode,
+                       a.max_tokens, inputs, a.split)
     a.out.mkdir(parents=True, exist_ok=False)
-    source_hashes={str(p):digest(p) for p in sorted(Path('radplain').glob('*.py'))}
+    source_hashes={str(p):digest(p) for p in [*sorted(Path('radplain').glob('*.py')),
+                  Path(__file__), Path('scripts/v2_local_preflight.py')]}
     rows = read_jsonl(inputs)
     backend = MLXBackend(a.model)
     results=[]
