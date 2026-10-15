@@ -1,0 +1,41 @@
+{
+  "synthetic": {
+    "count": 48,
+    "mode": "evidence-critic",
+    "arm": "gpu27b_evidence",
+    "generation_seconds": 451.84201999986544,
+    "input_sha256": "a528158b924dbd7ff6da9c675e5bd8d8df756a1dc801600ef3cb4ef6f3aafdf7",
+    "candidate_lock_sha256": "990417161871099300b9e99730a73eef1ab4bae2eb70d78446a10a0d70b47ce0",
+    "model_repo": "Qwen/Qwen3.5-27B",
+    "model_revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "slurm_job_id": "664840"
+  },
+  "real": {
+    "count": 24,
+    "mode": "evidence-critic",
+    "arm": "gpu27b_evidence",
+    "generation_seconds": 1691.9349082228728,
+    "input_sha256": "5b5754822d85947f9581bffcbc8444fb5bffbacd7e16275b5a220b6ca75b4768",
+    "candidate_lock_sha256": "990417161871099300b9e99730a73eef1ab4bae2eb70d78446a10a0d70b47ce0",
+    "model_repo": "Qwen/Qwen3.5-27B",
+    "model_revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "slurm_job_id": "664840"
+  },
+  "hardware": {
+    "load_seconds": 33.49347932031378,
+    "peak_cuda_allocated_bytes": 18444867072,
+    "peak_cuda_reserved_bytes": 18830327808,
+    "device": "NVIDIA A100-PCIE-40GB",
+    "quantization": "NF4 double quantization; BF16 compute",
+    "candidate_lock_sha256": "990417161871099300b9e99730a73eef1ab4bae2eb70d78446a10a0d70b47ce0"
+  },
+  "metadata_only": true,
+  "inspection_barrier": "held",
+  "predictions_not_retrieved": true,
+  "observed_at_utc": "2026-10-15T23:01:59.142953+00:00",
+  "slurm_job_id": "664840",
+  "slurm_state": "COMPLETED",
+  "slurm_exit_code": "0:0",
+  "slurm_elapsed": "01:33:31",
+  "slurm_batch_max_rss_kib": 51211184
+}

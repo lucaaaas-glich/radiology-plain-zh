@@ -1,0 +1,78 @@
+{
+  "stage": "development_diagnostic",
+  "not_clinical_accuracy": true,
+  "invalid_is_not_correct_detection": true,
+  "plan": {
+    "purpose": "development diagnostic; not unseen evaluation or clinical accuracy",
+    "count": 38,
+    "bad": 24,
+    "valid": 14,
+    "pairs_sha256": "bf1939f784d3366b9af9aacb89e0a5a3093f7f0b0a6808bd37067709c97e7ae5",
+    "max_reasoning_tokens": 1024,
+    "max_verdict_tokens": 512,
+    "temperature": 0,
+    "model": "artifacts/v2/qwen35-4b",
+    "selection": "compare reasoning on/off with identical source prompts and glossary; no final holdouts used"
+  },
+  "arms": {
+    "direct": {
+      "pairs": 38,
+      "bad_pairs": 24,
+      "valid_pairs": 14,
+      "bad_pairs_validly_rejected": 13,
+      "bad_pairs_accepted": 11,
+      "valid_pairs_accepted": 14,
+      "valid_pairs_validly_rejected": 0,
+      "invalid_bad_pairs": 0,
+      "invalid_valid_pairs": 0,
+      "seconds": 122.71110892004799,
+      "generated_tokens": 1144,
+      "finish_reasons": {
+        "stop": 38
+      }
+    },
+    "thinking": {
+      "pairs": 38,
+      "bad_pairs": 24,
+      "valid_pairs": 14,
+      "bad_pairs_validly_rejected": 1,
+      "bad_pairs_accepted": 0,
+      "valid_pairs_accepted": 0,
+      "valid_pairs_validly_rejected": 0,
+      "invalid_bad_pairs": 23,
+      "invalid_valid_pairs": 14,
+      "seconds": 1836.6336287091253,
+      "generated_tokens": 38848,
+      "finish_reasons": {
+        "reasoning_budget": 37,
+        "stop": 1
+      }
+    }
+  },
+  "source_files_sha256": {
+    "radplain/predict_mlx.py": "5899d658628156a8284046d14a2e5ed14de631a5e5b17c86151481cfcab455e0",
+    "radplain/predict_v2.py": "e006d34349318da215f3477657e96209515511231d0e0968b84f9acf7508ff4d",
+    "radplain/render_v2.py": "8f8d9db8b22d95d26ee5ee81897987620f15df5a3138a2b6165a87cf25f28cd1",
+    "radplain/teacher.py": "aa4f31e7e3d8cfa9478e21b5c269a55c3bd2237351d308d44878c10604288e83",
+    "radplain/predict.py": "eab4c4699ccee5e98b48b707e6262075e004bbe1ac58f40becb803b043f37e7b",
+    "radplain/mlx_backend.py": "6e0d8c5e24d6847ae0bcfda2f72965574cd656cf848c2120099825d789a3db9d",
+    "radplain/__init__.py": "b0bd0be201a9be1a0f029b5cc676818aa15231097205d7af3e420a8903e00348",
+    "radplain/glossary_v2.py": "2e6b35c0a913ce7220fb8ae5e023e587f42477be59e0df2a2d9982aa5ca62afb",
+    "radplain/semantic_v2.py": "5838a85078c08cc97ded897a221ee19aad101e3b8d48f1b1f08941c3291a057c",
+    "radplain/prompts.py": "ed812040abd7bea1235f3adac3c6d2512c6f1e1958ca86e166e1562a02154cb8",
+    "radplain/model.py": "511de7b3c95fedb156a7c29fd56def17c0ed3db9e315f87edacb59035b9deb23",
+    "radplain/explain_v2.py": "67db265d3ae5c4fb66b916854f250a580f7973800f9112343d8ddef617d0adfc",
+    "radplain/quantity_v2.py": "65441899468993f509af2a5fa34ae2259730b2b12965f2ceedb64644da54574e",
+    "radplain/common.py": "3698bb29475ceb06fd4630cca14023c465f2e8e3a1a149fc890e7e56323927bd",
+    "radplain/train.py": "0b666450806aedfeb3e95ba6164fb170dee5a46f151646efa221af7250fc2c1a",
+    "radplain/fidelity.py": "d92179b82a40fdebe6a0881156d988cdfcc113e404074c9a7039a4f7e981dec0",
+    "radplain/evaluate.py": "8ec50abeaa7d512ffe109d56bf458fc859038cd1a7c2deabc887100e76551b1b",
+    "radplain/hf_backend_v2.py": "9dcba7849d49b13c23e04ef80c3e45553e08ece98a83c5ebc854e5f8b4679c18",
+    "radplain/data.py": "e570471d3afdc4f2efebd4cbdbdad52ece8fa02e9b69e9ebf7065fad1d31a450",
+    "radplain/guard_v2.py": "a480d8649776247c42a3bcc824e87f8cb6156661d0492762a7e3054fe22dca2f",
+    "/Users/jiangfu/Documents/Codex/2026-10-16/ni-k/work/experiments/thinking-critic/run.py": "e9a45d1184893bcf5a2fd0bed26befc525fe7a1d2c488ba45701e5308ecfa8a6"
+  },
+  "source_changed_during_run": false,
+  "load_seconds": 2.566008709021844,
+  "peak_mlx_allocated_bytes": 3114960596
+}
