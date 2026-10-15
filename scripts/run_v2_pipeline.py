@@ -82,6 +82,11 @@ def main():
           'git_commit':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),
           'load_seconds':backend.load_seconds,'generation_seconds':sum(r['result']['seconds'] for r in results),
           'peak_mlx_allocated_bytes':mx.get_peak_memory(),'platform':platform.platform(),
+          'effective_backend_limits': {
+              'max_input_tokens': backend.max_input_tokens,
+              'mlx_memory_guideline_bytes': getattr(backend, 'memory_limit_bytes', None),
+              'mlx_cache_limit_bytes': getattr(backend, 'cache_limit_bytes', None),
+              'note': 'MLX allocation guideline is not an OS hard limit; null means not set by this backend.'},
           'peak_process_rss_bytes':resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
           'rss_units_note':'macOS ru_maxrss uses bytes; script is for MLX on macOS',
           'source_files_sha256':source_hashes,
