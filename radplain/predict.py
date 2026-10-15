@@ -19,6 +19,8 @@ def main():
     p.add_argument("--json", action="store_true")
     p.add_argument("--max-new-tokens", type=int, default=384)
     a = p.parse_args()
+    if a.max_new_tokens <= 0:
+        p.error("--max-new-tokens 必须大于0")
     report = a.input.read_text(encoding="utf-8").strip() if a.input else a.text.strip()
     if not report:
         p.error("输入不能为空")

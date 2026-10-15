@@ -18,6 +18,8 @@ def main():
     p.add_argument("--max-tokens", type=int, default=384)
     p.add_argument("--json", action="store_true")
     a = p.parse_args()
+    if a.max_tokens <= 0:
+        p.error("--max-tokens 必须大于0")
     if not Path(a.model).is_dir():
         p.error(f"本地模型尚未准备完成：{a.model}")
     model, tokenizer = load(a.model)
@@ -49,9 +51,10 @@ def main():
             continue
         prompt = tokenizer.apply_chat_template(messages(report), tokenize=False, add_generation_prompt=True)
         if len(tokenizer.encode(prompt)) > 2048:
-            print("报告超过本原型的输入长度限制；请使用较短的完整报告，不会自动截掉后文。")
+            error = "报告超过本原型的输入长度限制；请使用较短的完整报告，不会自动截掉后文。"
             if once:
-                return
+                p.error(error)
+            print(error)
             continue
         start, parts, final = time.perf_counter(), [], None
         for response in stream_generate(model, tokenizer, prompt=prompt, max_tokens=a.max_tokens,
@@ -66,7 +69,8 @@ def main():
                 "generation_tokens": getattr(final, "generation_tokens", None),
                 "finish_reason": getattr(final, "finish_reason", None)}
         if a.json:
-            print(json.dumps({"explanation_zh": text, "generation": meta, "numeric_review": review}, ensure_ascii=False, indent=2))
+            print(json.dumps({"explanation_zh": text, "generation": meta, "numeric_review": review,
+                              "notice": "研究原型；数值检查不能验证全部医学事实，请核对原报告。"}, ensure_ascii=False, indent=2))
         else:
             print()
             print_numeric_warnings(review)
