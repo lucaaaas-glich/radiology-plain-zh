@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+data/
+artifacts/
+cache/
+logs/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.parquet
+.DS_Store
+STATUS.md
+ops/
