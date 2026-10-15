@@ -1,6 +1,6 @@
 """Run development/frozen holdout with original or evidence-linked inference.
 
-Synthetic outputs may be committed; this script never reads real patient data.
+Synthetic outputs may be committed; public real-report outputs stay Git-ignored.
 """
 import argparse
 import hashlib
@@ -17,7 +17,11 @@ from radplain.prompts import messages
 
 
 def digest(path):
-    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+    value=hashlib.sha256()
+    with Path(path).open('rb') as stream:
+        for chunk in iter(lambda:stream.read(8*1024*1024),b''):
+            value.update(chunk)
+    return value.hexdigest()
 
 
 def main():
@@ -47,6 +51,11 @@ def main():
             raise ValueError('Frozen holdout changed')
         if not a.candidate_lock:
             p.error('Holdout requires a committed candidate-lock written after development selection')
+        committed=subprocess.run(['git','ls-files','--error-unmatch','--',str(a.candidate_lock)],
+                                 capture_output=True,text=True)
+        unchanged=subprocess.run(['git','diff','--quiet','HEAD','--',str(a.candidate_lock)])
+        if committed.returncode or unchanged.returncode:
+            p.error('Candidate lock must be tracked and committed before any holdout generation')
         lock=json.loads(a.candidate_lock.read_text())
         if not a.arm or a.arm not in lock['arms']:
             p.error('Holdout requires --arm declared in the candidate lock')
