@@ -1,0 +1,7 @@
+{
+  "file": "artifacts/mlx-4bit/model.safetensors",
+  "sha256": "70899aac71143e1de7bba76f56bc9155df9e00d0b5272798d2470e41feb1d078",
+  "size_bytes": 868629082,
+  "source_merged_export_checksums": "artifacts/merged-model/sha256.json",
+  "source_hashes_verified_before_quantization": true
+}

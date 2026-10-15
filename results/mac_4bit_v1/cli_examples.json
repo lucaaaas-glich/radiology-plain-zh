@@ -1,0 +1,21 @@
+{
+  "source": "Recorded from two actual CLI invocations in this task",
+  "cases": [
+    {
+      "command": ".venv-mac/bin/python -m radplain.predict_mlx --input examples/中文报告.txt --json",
+      "explanation_zh": "左侧胸腔有少量积液，右侧没有。心脏大小正常。",
+      "generation_seconds": 0.72678837494459,
+      "finish_reason": "stop",
+      "numeric_warnings": []
+    },
+    {
+      "input": "右肺中叶结节约7mm，较前6mm略增大，建议6个月后复查。",
+      "explanation_zh": "右肺中叶有一个结节，大小约为7毫米，比之前略大一些。建议6个月后复查。",
+      "generation_seconds": 0.837013709009625,
+      "finish_reason": "stop",
+      "numeric_warnings": [
+        "原文数值未在输出中匹配到：6mm"
+      ]
+    }
+  ]
+}

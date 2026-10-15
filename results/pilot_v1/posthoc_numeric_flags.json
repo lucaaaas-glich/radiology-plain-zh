@@ -34,6 +34,22 @@
           ]
         }
       ]
+    },
+    "mac-4bit": {
+      "total": 20,
+      "flags": [
+        {
+          "id": "followup_zh",
+          "scope": "number_unit_overlap_only_not_semantic_or_medical_validation",
+          "extra_output_quantities": [],
+          "unmatched_source_quantities": [
+            "6mm"
+          ],
+          "warnings": [
+            "原文数值未在输出中匹配到：6mm"
+          ]
+        }
+      ]
     }
   }
 }

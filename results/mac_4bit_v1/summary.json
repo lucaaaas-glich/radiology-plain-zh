@@ -1,0 +1,21 @@
+{
+  "model_weight_bytes": 868629082,
+  "count": 20,
+  "completed_count": 20,
+  "changed_text_vs_a100_lora": 19,
+  "median_generation_seconds": 0.6165142289828509,
+  "total_generation_tokens": 387,
+  "generation_tokens_per_wall_second": 29.339981942774482,
+  "runtime": {
+    "platform": "macOS-26.3.1-arm64-arm-64bit",
+    "processor": "arm64",
+    "quantization": "MLX affine4bit group64",
+    "elapsed_seconds": 13.190192166948691,
+    "peak_memory_bytes": 1204072310,
+    "count": 20,
+    "note": "Local quantized challenge inference, including first-run compilation; not the A100 benchmark."
+  },
+  "caveat": "The full deployment changes include safe merging,4-bit quantization,MLX execution and single-item versus batched generation. Output differences are not isolated evidence about quantization alone.",
+  "review_file": "results/pilot_v1/challenge_review.json",
+  "memory_note": "MLX peak allocator bytes, not total process RSS or total Mac memory usage."
+}
