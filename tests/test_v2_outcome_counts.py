@@ -51,3 +51,21 @@ def test_cannot_mark_fallback_as_faithful_success():
     review['cases'][0]['complete_faithful_chinese'] = True
     with pytest.raises(ValueError, match='incomplete'):
         validate(rows, review)
+
+
+def test_chart_does_not_hide_error_by_counting_fallback_as_success():
+    from scripts.plot_v2_outcomes import buckets
+    rows=fixture_rows();review=reviewed(rows)
+    review['cases'][0].update(errors=['negation'],notes_zh='一段回退，但另一段仍有否定错误。')
+    result=buckets(rows,review)
+    assert result=={'faithful_complete':1,'observed_error':2,
+                   'incomplete_without_observed_error':0,'remaining_precision_concern':0}
+
+
+def test_chart_keeps_unresolved_precision_concern_separate():
+    from scripts.plot_v2_outcomes import buckets
+    rows=fixture_rows();review=reviewed(rows)
+    review['cases'][1].update(errors=[],notes_zh='未判明确错误，但不够精确。')
+    result=buckets(rows,review)
+    assert result=={'faithful_complete':1,'observed_error':0,
+                   'incomplete_without_observed_error':1,'remaining_precision_concern':1}

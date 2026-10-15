@@ -1,0 +1,2 @@
+# Optional: plots only; separate from inference/training environments.
+matplotlib==3.10.8
