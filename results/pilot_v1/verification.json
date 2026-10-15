@@ -1,0 +1,24 @@
+{
+  "recorded_at": "2026-10-15T18:46:23.234787+00:00",
+  "original_gpu_run": {
+    "source_commit": "d081044",
+    "tests_passed": 9,
+    "slurm_job": "664456",
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "elapsed": "00:47:52"
+  },
+  "export": {
+    "slurm_job": "664471",
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "elapsed": "00:02:12"
+  },
+  "posthoc_application_checks": {
+    "command": ".venv/bin/python -m pytest -q tests",
+    "tests_passed": 14,
+    "warning": "jieba pkg_resources deprecation",
+    "elapsed_seconds": 39.43,
+    "note": "Includes5 number/unit overlap tests added after model evaluation; these do not establish clinical safety."
+  }
+}

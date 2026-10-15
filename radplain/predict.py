@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 from .model import generate_batch, load_model
 from .prompts import messages
+from .fidelity import numeric_review, print_numeric_warnings
 
 
 def main():
@@ -24,11 +25,14 @@ def main():
     model, tok = load_model(a.model, None if a.baseline else a.adapter, device=a.device)
     text, meta = generate_batch(model, tok, [messages(report)], max_input_tokens=2048,
                                 max_new_tokens=a.max_new_tokens)
+    review = numeric_review(report, text[0])
     if a.json:
         print(json.dumps({"explanation_zh": text[0], "generation": meta[0],
+                          "numeric_review": review,
                           "notice": "研究原型；请核对原报告。"}, ensure_ascii=False, indent=2))
     else:
         print(text[0])
+        print_numeric_warnings(review)
         if not meta[0]["completed"]:
             print("\n[提示：输出达到长度上限，可能不完整。]")
 

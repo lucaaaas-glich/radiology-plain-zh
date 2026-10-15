@@ -4,6 +4,7 @@ import json
 import time
 from pathlib import Path
 from .prompts import messages
+from .fidelity import numeric_review, print_numeric_warnings
 
 
 def main():
@@ -60,13 +61,15 @@ def main():
             if not a.json:
                 print(response.text, end="", flush=True)
         text = "".join(parts).strip()
+        review = numeric_review(report, text)
         meta = {"seconds": time.perf_counter()-start, "model": a.model,
                 "generation_tokens": getattr(final, "generation_tokens", None),
                 "finish_reason": getattr(final, "finish_reason", None)}
         if a.json:
-            print(json.dumps({"explanation_zh": text, "generation": meta}, ensure_ascii=False, indent=2))
+            print(json.dumps({"explanation_zh": text, "generation": meta, "numeric_review": review}, ensure_ascii=False, indent=2))
         else:
             print()
+            print_numeric_warnings(review)
             if getattr(final, "generation_tokens", 0) >= a.max_tokens:
                 print("[输出达到长度上限，可能不完整。]")
         if once:

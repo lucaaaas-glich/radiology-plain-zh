@@ -1,0 +1,39 @@
+{
+  "scope": "Post-pilot number/unit overlap flags; may miss errors or flag valid paraphrases. No clinical-accuracy interpretation.",
+  "sets": {
+    "challenge-baseline": {
+      "total": 20,
+      "flags": []
+    },
+    "challenge-lora": {
+      "total": 20,
+      "flags": [
+        {
+          "id": "numbers_en",
+          "scope": "number_unit_overlap_only_not_semantic_or_medical_validation",
+          "extra_output_quantities": [
+            "1毫米"
+          ],
+          "unmatched_source_quantities": [],
+          "warnings": [
+            "输出出现原文未直接列出的数值：1毫米"
+          ]
+        },
+        {
+          "id": "followup_zh",
+          "scope": "number_unit_overlap_only_not_semantic_or_medical_validation",
+          "extra_output_quantities": [
+            "0.5毫米"
+          ],
+          "unmatched_source_quantities": [
+            "6mm"
+          ],
+          "warnings": [
+            "输出出现原文未直接列出的数值：0.5毫米",
+            "原文数值未在输出中匹配到：6mm"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "baseline": {
+    "rouge1": 0.45303351518974305,
+    "rouge2": 0.19882906847799392,
+    "rougeL": 0.408987083738242,
+    "chrf": 26.88724811154437,
+    "total_rows": 256,
+    "synthetic_reference_scored_rows": 249,
+    "chinese_output_fraction": 0.9765625,
+    "generation_completed_fraction": 1.0,
+    "mean_output_characters": 59.3515625,
+    "interpretation": "Lexical agreement with a synthetic teacher; not clinical accuracy or evidence of safety.",
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "adapter": null,
+    "prompt_version": "zh-radiology-v1",
+    "generation_seconds": 76.8492406308651,
+    "wall_seconds_excluding_loading": 78.91462943400256,
+    "output_tokens_per_second": 144.5687674828874,
+    "batch_size": 16,
+    "do_sample": false,
+    "max_new_tokens": 384,
+    "device": "cuda:0",
+    "peak_allocated_bytes": 3913959936,
+    "peak_reserved_bytes": 4267704320
+  },
+  "lora": {
+    "rouge1": 0.5995511498310072,
+    "rouge2": 0.3467479069338351,
+    "rougeL": 0.552675956927604,
+    "chrf": 37.334936181328786,
+    "total_rows": 256,
+    "synthetic_reference_scored_rows": 249,
+    "chinese_output_fraction": 1.0,
+    "generation_completed_fraction": 1.0,
+    "mean_output_characters": 59.4609375,
+    "interpretation": "Lexical agreement with a synthetic teacher; not clinical accuracy or evidence of safety.",
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "adapter": "artifacts/pilot_v1/best",
+    "prompt_version": "zh-radiology-v1",
+    "generation_seconds": 110.82141250616405,
+    "wall_seconds_excluding_loading": 112.83342743501998,
+    "output_tokens_per_second": 96.84049099629614,
+    "batch_size": 16,
+    "do_sample": false,
+    "max_new_tokens": 384,
+    "device": "cuda:0",
+    "peak_allocated_bytes": 3931392512,
+    "peak_reserved_bytes": 4299161600
+  },
+  "training": {
+    "config": {
+      "student_model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "teacher_model": "Qwen/Qwen2.5-7B-Instruct",
+      "dataset": "BioLaySumm/BioLaySumm2025-LaymanRRG-opensource-track",
+      "seed": 371026,
+      "train_size": 4096,
+      "validation_size": 256,
+      "test_size": 256,
+      "max_source_tokens": 640,
+      "max_target_tokens": 384,
+      "max_sequence_length": 1152,
+      "teacher_batch_size": 8,
+      "generation_batch_size": 16,
+      "epochs": 2,
+      "learning_rate": 0.0001,
+      "train_batch_size": 4,
+      "gradient_accumulation_steps": 4,
+      "lora_rank": 16,
+      "lora_alpha": 32,
+      "lora_dropout": 0.05
+    },
+    "filters": {
+      "train": {
+        "initial": 4096,
+        "teacher_rejected": 30,
+        "too_long": 0,
+        "used": 4066
+      },
+      "validation": {
+        "initial": 256,
+        "teacher_rejected": 6,
+        "too_long": 0,
+        "used": 250
+      }
+    },
+    "history": [
+      {
+        "epoch": 1,
+        "train_token_loss": 1.006005742498137,
+        "validation_token_loss": 0.9300626260469019,
+        "elapsed_seconds": 283.5328857440036
+      },
+      {
+        "epoch": 2,
+        "train_token_loss": 0.8548010384213643,
+        "validation_token_loss": 0.8970892915297645,
+        "elapsed_seconds": 562.6509073370835
+      }
+    ],
+    "total_parameters": 1548072448,
+    "trainable_parameters": 4358144,
+    "optimizer_steps": 510,
+    "elapsed_seconds": 562.6568494730163,
+    "peak_allocated_bytes": 10841319424,
+    "peak_reserved_bytes": 34529607680,
+    "gpu": "NVIDIA A100-PCIE-40GB",
+    "torch": "2.14.0+cu130",
+    "cuda": "13.0"
+  },
+  "data": {
+    "dataset": "BioLaySumm/BioLaySumm2025-LaymanRRG-opensource-track",
+    "revision": "6783ab38f9de28c4372799346f51d3927ae7eb9a",
+    "seed": 371026,
+    "official_counts": {
+      "train": 150454,
+      "validation": 10000,
+      "test": 10537
+    },
+    "filters": {
+      "train": {
+        "duplicate_report": 52918,
+        "empty_or_outside_character_range": 4397
+      },
+      "validation": {
+        "empty_or_outside_character_range": 265,
+        "duplicate_report": 2189
+      }
+    },
+    "train_removed_for_validation_overlap": 2120,
+    "available_unique": {
+      "train": 91019,
+      "held_out": 7546
+    },
+    "counts": {
+      "train": 4096,
+      "validation": 256,
+      "test": 256
+    },
+    "source_counts": {
+      "train": {
+        "PadChest": 2867,
+        "BIMCV-COVID19": 1148,
+        "OpenI": 81
+      },
+      "validation": {
+        "PadChest": 189,
+        "BIMCV-COVID19": 63,
+        "OpenI": 4
+      },
+      "test": {
+        "PadChest": 184,
+        "BIMCV-COVID19": 66,
+        "OpenI": 6
+      }
+    },
+    "split_definition": "Train from official train; seeded dev and final test subsets from official validation. Official test is not used.",
+    "limitations": [
+      "Report-text independence is checked; patient independence cannot be established without patient IDs.",
+      "20-2400 character filtering excludes shortest and longest reports.",
+      "Chinese references will be synthetic and are not clinician-validated."
+    ]
+  },
+  "teacher": {
+    "splits": {
+      "train": {
+        "total": 4096,
+        "accepted": 4066
+      },
+      "validation": {
+        "total": 256,
+        "accepted": 250
+      },
+      "test": {
+        "total": 256,
+        "accepted": 249
+      }
+    },
+    "elapsed_seconds": 1192.5589465069352,
+    "teacher": "Qwen/Qwen2.5-7B-Instruct",
+    "warning": "Synthetically generated translations; acceptance checks only language, length and completion, not clinical fidelity."
+  },
+  "selection": {
+    "epoch": 2,
+    "validation_token_loss": 0.8970892915297645,
+    "criterion": "lowest validation answer-token cross-entropy; no final-test selection"
+  }
+}
