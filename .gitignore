@@ -17,3 +17,4 @@ STATUS.md
 ops/
 results/**/predictions.jsonl
 results/**/case-review.json
+results/v2/real-data/
