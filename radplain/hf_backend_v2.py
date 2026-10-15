@@ -12,7 +12,7 @@ class HFBackend:
         config=AutoConfig.from_pretrained(model_path,trust_remote_code=False)
         cls=AutoModelForImageTextToText if config.model_type.startswith('qwen3_5') else AutoModelForCausalLM
         self.tokenizer=AutoTokenizer.from_pretrained(model_path,trust_remote_code=False)
-        self.model=cls.from_pretrained(model_path,torch_dtype=torch.bfloat16,attn_implementation='sdpa',
+        self.model=cls.from_pretrained(model_path,dtype=torch.bfloat16,attn_implementation='sdpa',
                                       trust_remote_code=False).eval().to('cuda')
         self.max_input_tokens=max_input_tokens
         self.load_seconds=time.perf_counter()-start

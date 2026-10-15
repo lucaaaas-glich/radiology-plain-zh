@@ -108,7 +108,7 @@ def test_administrative_instruction_is_not_sent_to_generator():
 
 def test_future_recommendation_does_not_leak_into_first_sentence_prompt():
     calls=[]
-    candidates=iter(['左下肺仍有阴影。','报告建议复查影像。'])
+    candidates=iter(['左肺下叶仍有阴影。','报告建议复查影像。'])
     def generate(messages,**kwargs):
         calls.append(str(messages))
         return {'text':next(candidates),'finish_reason':'stop'}

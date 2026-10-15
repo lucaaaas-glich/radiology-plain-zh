@@ -1,9 +1,10 @@
 """Local v2 CLI. Buffer and check candidates before showing an explanation."""
 import argparse
 import json
+import uuid
+import webbrowser
 from pathlib import Path
 from .explain_v2 import explain, render_text
-from .mlx_backend import MLXBackend
 from .render_v2 import render_html
 
 
@@ -18,9 +19,13 @@ def main():
     s.add_argument('--text')
     s.add_argument('--input',type=Path)
     p.add_argument('--model',help='覆盖已选定的本地模型；不自动下载')
+    p.add_argument('--backend',choices=['mlx','cuda'],default='mlx')
+    p.add_argument('--mode',choices=['evidence','evidence-critic'],help='覆盖配置里的解释方法')
     p.add_argument('--max-tokens',type=int,default=384)
     p.add_argument('--json',action='store_true')
     p.add_argument('--html',type=Path,help='将一次解释保存为独立网页；需同时指定 --text 或 --input')
+    p.add_argument('--html-dir',type=Path,help='每次解释保存到此目录，生成独立网页')
+    p.add_argument('--open-html',action='store_true',help='解释后用默认浏览器打开生成的本地网页')
     a=p.parse_args()
     if a.max_tokens <= 0:
         p.error('--max-tokens 必须大于0')
@@ -28,16 +33,29 @@ def main():
         p.error('--html 需同时指定 --text 或 --input')
     if a.html and a.html.exists():
         p.error('--html 目标已存在，拒绝覆盖')
-    config=Path('configs/v2_local.json')
+    if a.html and a.html_dir:
+        p.error('--html 和 --html-dir 不能同时使用')
+    if a.open_html and not (a.html or a.html_dir):
+        p.error('--open-html 需要 --html 或 --html-dir')
+    config=Path('configs/v2_local.json' if a.backend=='mlx' else 'configs/v2_gpu.json')
+    settings=json.loads(config.read_text()) if config.exists() else {}
     if a.model:
         model=a.model
-    elif config.exists():
-        model=json.loads(config.read_text())['model']
+    elif 'model' in settings:
+        model=settings['model']
     else:
         p.error('v2模型选择尚未完成，请显式指定 --model')
+    mode=a.mode or settings.get('mode','evidence')
+    if mode not in {'evidence','evidence-critic'}:
+        p.error('配置里的 mode 无效')
     try:
-        backend=MLXBackend(model)
-    except ValueError as e:
+        if a.backend=='mlx':
+            from .mlx_backend import MLXBackend
+            backend=MLXBackend(model)
+        else:
+            from .hf_backend_v2 import HFBackend
+            backend=HFBackend(model)
+    except (ValueError,RuntimeError) as e:
         p.error(str(e))
     once=a.text is not None or a.input is not None
     if not once:
@@ -67,24 +85,33 @@ def main():
             if not report.strip():
                 continue
         try:
-            result=explain(report,backend,max_tokens=a.max_tokens)
+            if not a.json:
+                print('正在逐句解释和核对，请稍候……')
+            result=explain(report,backend,max_tokens=a.max_tokens,use_critic=mode=='evidence-critic')
         except ValueError as e:
             if once:
                 p.error(str(e))
             print(str(e))
             continue
         result['model']=model
+        result['backend']=a.backend
+        result['mode']=mode
         result['model_load_seconds']=backend.load_seconds
-        if a.html:
-            a.html.parent.mkdir(parents=True,exist_ok=True)
-            with a.html.open('x',encoding='utf-8') as f:
+        html_path=a.html
+        if a.html_dir:
+            html_path=a.html_dir/('解释-'+uuid.uuid4().hex[:12]+'.html')
+        if html_path:
+            html_path.parent.mkdir(parents=True,exist_ok=True)
+            with html_path.open('x',encoding='utf-8') as f:
                 f.write(render_html(result))
         if a.json:
             print(json.dumps(public_result(result),ensure_ascii=False,indent=2))
         else:
             print(render_text(result))
-            if a.html:
-                print('已保存：'+str(a.html.resolve()))
+            if html_path:
+                print('已保存：'+str(html_path.resolve()))
+        if a.open_html:
+            webbrowser.open(html_path.resolve().as_uri())
         if once:
             return
 

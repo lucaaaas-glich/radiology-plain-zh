@@ -10,7 +10,7 @@ from .common import chinese_ratio
 from .fidelity import numeric_review, _number
 from .quantity_v2 import review_quantities
 
-VERSION = 'lexical-guard-v2-dev5'
+VERSION = 'lexical-guard-v2-dev6'
 CN = '零〇一二两三四五六七八九十百点半'
 UNIT = r'mm|cm|millimet(?:er|re)s?|centimet(?:er|re)s?|毫米|厘米|months?|个月|月|years?|年|weeks?|星期|周|days?|天'
 ORDINALS = dict(zip(('first second third fourth fifth sixth seventh eighth ninth tenth eleventh twelfth').split(), range(1, 13)))
@@ -86,9 +86,10 @@ FEATURES = [
     ('above', r'\babove\b|上方', r'上方|以上|之上'),
     ('below', r'\bbelow\b|下方|膈下', r'下方|以下|膈下|之下'),
     ('lung_base', r'\bbibas\w*\b|\blung\s+bases?\b|肺底', r'肺底|底部|下部|下肺|肺下|基底'),
-    ('upper_lobe', r'\bupper\s+lobe\b|肺上叶', r'上叶|上部|上肺|肺上'),
-    ('lower_lobe', r'\blower\s+lobe\b|肺下叶', r'下叶|下部|下肺|肺下'),
-    ('middle_lobe', r'\bmiddle\s+lobe\b|肺中叶', r'中叶|中部|中间'),
+    ('upper_lobe', r'\bupper\s+lobes?\b|[肺左右]上叶', r'上叶'),
+    ('lower_lobe', r'\blower\s+lobes?\b|[肺左右]下叶', r'下叶'),
+    ('middle_lobe', r'\bmiddle\s+lobe\b|[肺左右]中叶', r'中叶'),
+    ('endotracheal_tube', r'\bendotracheal\s+tube\b|气管插管|气管导管', r'气管.{0,3}(?:插管|导管)|气管插管'),
     ('limited_assessment', r'\blimit\w*\b|poorly\s+assessed|cannot\s+be\s+confirmed|not\s+included|限制|欠清|未能评价|未完全纳入', r'限制|受限|影响|不清|看不清|无法|不能|未能|没有.{0,4}拍|未.{0,4}拍|不在|不包括|未包括|未完全'),
     ('newness', r'\bnew\b|新发|新出现|新增', r'新'),
     ('negative_qualifier', r'no\s+(?:definite|obvious)|未见(?:明显|明确)', r'(?:未见|没有|未发现|看不到).{0,3}(?:明显|明确|清楚)'),
@@ -168,7 +169,11 @@ def review(source, prediction, finish_reason='stop'):
         if present and not expressed:
             detail={'recommendation':'原文只是建议，请明确写“报告建议”，不要改成必须或需要',
                     'indeterminate':'请明确保留“性质尚不能确定”，不补充诊断或新检查建议',
-                    'enteric_tube':'enteric tube指通向消化道的管子，不是患者肠道本身'}
+                    'enteric_tube':'enteric tube指通向消化道的管子，不是患者肠道本身',
+                    'endotracheal_tube':'必须说明位置对应的是气管插管，不能只写距离或位置',
+                    'upper_lobe':'请明确保留上叶，不要改成上肺野或上部',
+                    'middle_lobe':'请明确保留中叶，不要改成中肺野或中部',
+                    'lower_lobe':'请明确保留下叶，不要改成下肺野或下部'}
             add(name, detail.get(name,'请保留原文的' + name + '信息'))
         # Some features may be legitimate rewordings; enforce additions only for sides.
         if name in ('left', 'right', 'bilateral') and expressed and not present:
@@ -176,6 +181,8 @@ def review(source, prediction, finish_reason='stop'):
             bilateral_source = bool(re.search(FEATURES[2][1], source, re.I))
             if not (name in ('left', 'right') and bilateral_source):
                 add('added_' + name, '出现原句没有的左右侧描述')
+    if re.search(r'lung\s+bases?|bibas\w*|mid.zone|肺底|肺中部',source,re.I) and not re.search(r'\blobes?\b|[上下中]叶',source,re.I) and re.search(r'[上下中]叶',prediction):
+        add('zone_became_lobe','肺野位置或肺底不等于肺叶，请保留原文的区域表述')
     for name, src, target in CONCEPTS:
         if re.search(src, source, re.I) and not re.search(target, prediction, re.I):
             add('missing_' + name, '原句中的' + name + '可能被遗漏')

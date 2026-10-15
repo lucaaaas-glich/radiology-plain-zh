@@ -44,3 +44,11 @@ def test_semantic_repair_still_has_only_two_candidates_and_hides_failed_text():
     assert len(calls)==4
     assert r['coverage']['fully_generated']
     assert '右侧积液减少，左侧积液增多' not in render_text(r)
+
+
+def test_line_protocol_keeps_embedded_quotes_and_fails_on_conflicting_verdicts():
+    assert parse_verdict('SUPPORTED\n原文"Heart size"与心脏大小对应。','stop')['supported']
+    assert not parse_verdict('UNSUPPORTED\n左右写反了。','stop')['supported']
+    assert not parse_verdict('SUPPORTED','stop')['valid']
+    assert not parse_verdict('SUPPORTED\nUNSUPPORTED','stop')['valid']
+    assert not parse_verdict('SUPPORTED\n一致。','length')['valid']

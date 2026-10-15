@@ -15,7 +15,11 @@ from radplain.explain_v2 import explain
 
 
 def digest(path):
-    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+    value = hashlib.sha256()
+    with Path(path).open('rb') as stream:
+        for chunk in iter(lambda: stream.read(8 * 1024 * 1024), b''):
+            value.update(chunk)
+    return value.hexdigest()
 
 
 def main():
