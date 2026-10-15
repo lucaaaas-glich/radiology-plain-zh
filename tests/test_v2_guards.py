@@ -48,6 +48,8 @@ def test_negation_cannot_be_kept_only_for_the_other_finding():
 def test_development_false_positives_have_valid_synonyms():
     assert not review('右肺上叶4mm结节，性质待定。','右肺上叶4毫米结节，性质尚未确定。')['issues']
     assert not review('Tube below the diaphragm.','管子位于膈肌之下。')['issues']
+    assert not review('Mild bibasal atelectasis.','双肺底部有少量肺组织没有充分展开。')['issues']
+    assert not review('Indeterminate nodule.','结节性质无法明确判断。')['issues']
 
 
 def test_wrong_side_and_device_anatomy_are_flagged():
@@ -101,6 +103,18 @@ def test_administrative_instruction_is_not_sent_to_generator():
     assert 'prescribe antibiotics' not in calls[0]
     assert r['coverage']['excluded_instruction_segments']==1
     assert r['segments'][1]['source'].endswith('antibiotics.')
+
+
+def test_future_recommendation_does_not_leak_into_first_sentence_prompt():
+    calls=[]
+    candidates=iter(['左下肺仍有阴影。','报告建议复查影像。'])
+    def generate(messages,**kwargs):
+        calls.append(str(messages))
+        return {'text':next(candidates),'finish_reason':'stop'}
+    r=explain('Persistent left lower lobe opacity. Follow-up imaging is recommended.',generate)
+    assert r['coverage']['fully_generated']
+    assert 'Follow-up imaging' not in calls[0]
+    assert 'Persistent left lower lobe' in calls[1]
 
 
 def test_incomplete_generation_is_not_shown_as_complete():
