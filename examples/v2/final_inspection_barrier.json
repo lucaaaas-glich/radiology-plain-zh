@@ -1,0 +1,9 @@
+{
+  "state": "held",
+  "created_at_utc": "2026-10-15T22:15:06.857626+00:00",
+  "gpu_candidate_lock": "examples/v2/candidate_gpu.lock.json",
+  "gpu_candidate_lock_sha256": "990417161871099300b9e99730a73eef1ab4bae2eb70d78446a10a0d70b47ce0",
+  "rule": "No final output text may be downloaded, read, scored, or used until all local candidates and settings are committed. Progress counts/failure status only.",
+  "local_candidate_lock": null,
+  "released_at_utc": null
+}
