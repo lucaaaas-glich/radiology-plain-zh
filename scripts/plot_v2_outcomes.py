@@ -78,6 +78,8 @@ def main():
         file=a.out.with_suffix('.'+ext)
         if file.exists():raise ValueError('Refusing to overwrite '+str(file))
         fig.savefig(file,dpi=180,facecolor='#fbfcfd')
+        if ext=='svg':
+            file.write_text('\n'.join(line.rstrip() for line in file.read_text().splitlines())+'\n')
     plt.close(fig)
     print(json.dumps({'stage':plan['stage'],'reports_per_arm':total,'outcomes':values},ensure_ascii=False))
 
