@@ -3,7 +3,7 @@ from pathlib import Path
 from huggingface_hub import snapshot_download,hf_hub_download,HfApi
 
 root=Path(__file__).resolve().parents[1]
-items=[('mlx-community/Qwen3-4B-Instruct-2507-4bit','50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b','qwen3-4b','Qwen/Qwen3-4B-Instruct-2507'),('mlx-community/Qwen3.5-4B-4bit','0e7ffd5c629ef7719d4cbc04069232580bfa9d9c','qwen35-4b','Qwen/Qwen3.5-4B'),('mlx-community/Qwen3.5-9B-4bit','8b2b98c00a6b4d291155e4890773ca8f769aee53','qwen35-9b','Qwen/Qwen3.5-9B')]
+items=[('mlx-community/Qwen3-4B-Instruct-2507-4bit','50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b','qwen3-4b','Qwen/Qwen3-4B-Instruct-2507'),('mlx-community/Qwen3.5-4B-4bit','0e7ffd5c629ef7719d4cbc04069232580bfa9d9c','qwen35-4b','Qwen/Qwen3.5-4B'),('mlx-community/Qwen3.5-9B-4bit','8b2b98c00a6b4d291155e4890773ca8f769aee53','qwen35-9b','Qwen/Qwen3.5-9B'),('mlx-community/Qwen2.5-7B-Instruct-4bit','c26a38f6a37d0a51b4e9a1eb3026530fa35d9fed','qwen25-7b','Qwen/Qwen2.5-7B-Instruct')]
 p=argparse.ArgumentParser()
 p.add_argument('--only',nargs='+',choices=[x[2] for x in items],default=['qwen3-4b','qwen35-4b'])
 a=p.parse_args()
