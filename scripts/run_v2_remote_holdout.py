@@ -8,10 +8,7 @@ import hashlib
 import json
 import os
 from pathlib import Path
-import torch
 from radplain.common import read_jsonl, write_json
-from radplain.hf_backend_v2 import HFBackend
-from radplain.explain_v2 import explain
 
 
 def digest(path):
@@ -22,13 +19,35 @@ def digest(path):
     return value.hexdigest()
 
 
+def verify_model_manifest(request, lock, arm, model):
+    """The request cannot substitute a smaller/different hash manifest."""
+    expected=lock['model_files_sha256'][arm['model_repo']]
+    if not expected or request['model_files_sha256']!=expected:
+        raise ValueError('Request model manifest differs from frozen lock')
+    index=Path(model)/'model.safetensors.index.json'
+    if index.name not in expected:
+        raise ValueError('Frozen model index is missing')
+    for file,sha in expected.items():
+        path=Path(model)/file
+        if Path(file).name!=file or digest(path)!=sha:
+            raise ValueError('Frozen model changed: '+file)
+    shards=set(json.loads(index.read_text())['weight_map'].values())
+    if not shards or not shards.issubset(expected):
+        raise ValueError('Model shard hashes are missing from the frozen lock')
+
+
 def main():
+    import torch
+    from radplain.hf_backend_v2 import HFBackend
+    from radplain.explain_v2 import explain
     p=argparse.ArgumentParser()
     p.add_argument('--model', required=True, type=Path)
     p.add_argument('--request', required=True, type=Path)
     p.add_argument('--out', required=True, type=Path)
     a=p.parse_args()
     request=json.loads(a.request.read_text())
+    if digest(request['candidate_lock'])!=request['candidate_lock_sha256']:
+        raise ValueError('Uploaded candidate lock changed')
     lock=json.loads(Path(request['candidate_lock']).read_text())
     arm=lock['arms'][request['arm']]
     if arm['backend']!='cuda-nf4' or arm['mode']!='evidence-critic':
@@ -39,9 +58,7 @@ def main():
     for file,sha in lock['code_sha256'].items():
         if digest(file)!=sha:
             raise ValueError('Frozen code changed: '+file)
-    for file,sha in request['model_files_sha256'].items():
-        if digest(a.model/file)!=sha:
-            raise ValueError('Frozen model changed: '+file)
+    verify_model_manifest(request,lock,arm,a.model)
     inputs=[]
     for split in ['synthetic','real']:
         source=Path(request['inputs'][split]['path'])

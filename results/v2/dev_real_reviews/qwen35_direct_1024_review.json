@@ -1,0 +1,183 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "scope": "Displayed Chinese only; source-only fallback is incomplete, not a correct answer.",
+  "cases": [
+    {
+      "id": "real_0e9c60d4ad638a81",
+      "output_sha256": "be7282a0a5bce1177ad414d05dd65c74965f0b64e01c73dcf5e95e27356306bb",
+      "errors": [
+        "unsupported_addition",
+        "terminology",
+        "anatomy_side"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "把电极在位和术后金属夹扩写为位置正确、正常痕迹；把肺泡浸润改为磨玻璃影，并改变导线异常类型。"
+    },
+    {
+      "id": "real_53499b1249f0e7a6",
+      "output_sha256": "057859d82e3da2c3bc4bdc5e143d8930f7bc533f55e49cc40488ed7c9dbf4fd2",
+      "errors": [
+        "terminology",
+        "negation",
+        "anatomy_side"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "将肺泡实变的阴性发现扩展到炎症/肺炎排除，心纵隔与肺门的范围改成大血管；总括正常的范围过大。"
+    },
+    {
+      "id": "real_4187fbf7eadcb951",
+      "output_sha256": "739201fdabcfa52cfa765811d10487c80c105a6b9e537dc5618502c3f9a6fd36",
+      "errors": [
+        "anatomy_side",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "复杂支气管扩张分布及相对程度未完整保留，脊柱和骨赘位置不够准确；并未把原文含混部位自行定为唯一金标准。"
+    },
+    {
+      "id": "real_6e2b1d9d0d10b307",
+      "output_sha256": "70af7bae026a9102cac327bb7426eadfdcd13d96ee5e93d6ae0b7457aeced9d8",
+      "errors": [
+        "change",
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "肋膈角形态被写成由原来凹陷变平的时间变化；肺不张增加受压病因。日期保留。"
+    },
+    {
+      "id": "real_4889613d7b935c76",
+      "output_sha256": "746c2c83edff81814124e6019591fc1be9dc0e6fbeb2bbc63d8254de42525b8d",
+      "errors": [
+        "number_time",
+        "unsupported_addition",
+        "anatomy_side"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "三个月半变成三个月；新增术后恢复良好、囊肿无需担心等结论；脂肪瘤的肌肉下方关系变模糊。"
+    },
+    {
+      "id": "real_99884d41e32a39f8",
+      "output_sha256": "a40c5e8b694e2a45b558b82f7d310c59ca331d5967b8bb298ce15875b586cee6",
+      "errors": [
+        "anatomy_side",
+        "unsupported_addition",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "把肝包膜下位置改到下缘，新增已完成治疗、肺不张暂时性及无需担心等解释。图像索引遗漏单独记作可追溯性问题，不单凭索引缺失判严重临床错误。"
+    },
+    {
+      "id": "real_c6927c378a6e2c87",
+      "output_sha256": "7429b8641ef2c5902ab5362b91782046f43964ea717ce9bd86400fb9d954dd6a",
+      "errors": [
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "增加既往炎症治愈为瘢痕原因及无需担心的安慰；舌段位置正确，但已消退弱化为基本消退。"
+    },
+    {
+      "id": "real_788c7076b21bef32",
+      "output_sha256": "8effa38b9ca4bffb9fa96c7943bc975284e6eb8ca902ab758b86cc75c911f6f1",
+      "errors": [
+        "omission",
+        "anatomy_side",
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "加入良性等安慰；肺气肿与胸膜下改变的持续性、类型和位置细节未全保留，并将无结节缩为无新结节。"
+    },
+    {
+      "id": "real_8e3f069b88d7550c",
+      "output_sha256": "141905b4f8137ae51696871c5613a3d674a9c5b6b145d5f1f93f7bef75bb7cd7",
+      "errors": [
+        "negation"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "原文仅无相关病理发现，解释变为没有任何病变，扩大阴性结论范围。"
+    },
+    {
+      "id": "real_20d69a9e8c41860d",
+      "output_sha256": "93cfd0a9828de994892792c1ac7dbbcf68a1ac5d3244c30e624729734b7cad76",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "去除反复行政占位和重复段落是合理的；主要阳性阴性及既往时间保留。输尿管肾盂连接处的定位被泛化为输尿管连接处，作为精度顾虑，不计明确错误。"
+    },
+    {
+      "id": "real_2f86141ba8fa19ea",
+      "output_sha256": "4377e9e33bebe6b652f9d4719f67a73fedc1d7e90761094380078a4efae4d162",
+      "errors": [
+        "unsupported_addition",
+        "anatomy_side",
+        "omission",
+        "negation"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "新增吸烟可能病因和良性疤痕判断；改变纵隔旁大泡及远端支气管扩张的定位，省略肺气肿亚型；新冠肺部感染阴性扩为所有新冠感染阴性。"
+    },
+    {
+      "id": "real_4d02bd9100fee8f7",
+      "output_sha256": "2f952a7be0ec9f169d6a5d2feb3fbee6f637c221e6a31de69b9ab3d16ade014b",
+      "errors": [
+        "omission",
+        "unsupported_addition",
+        "change"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "遗漏2015手术、部分结节位置、肠系膜改变及脐下膨出；新增术后结构正常和脾肉芽肿稳定，把无其他变化说成无其他问题。"
+    },
+    {
+      "id": "real_de592071091f2d97",
+      "output_sha256": "8b049332e4a4314b91e617f92c9a49ad4e490cdad03a551ce5e9e28ea8b7c81b",
+      "errors": [
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "主要肺叶塌陷、少量积液及支气管通畅保留，但漏掉无空气支气管征；与完整保留标准不符。"
+    },
+    {
+      "id": "real_abd463216fac09a8",
+      "output_sha256": "a2b70af1d2f1d34703748b1124362867bdab0045ee7604bc1682a190143fca83",
+      "errors": [
+        "anatomy_side",
+        "number_time",
+        "unsupported_addition",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "中线腹疝误称腹股沟疝；漏140毫米距离、左侧骨连接等，增加轻度脂肪肝、无胆结石及进一步处理意见。"
+    },
+    {
+      "id": "real_b27e89e8eb71724d",
+      "output_sha256": "3b07078c3bdf9179fc433b49b657d26d1df3d1f93151ce839e0bf14888ecd49d",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "实变阴性和双侧乳房成形术保留。括号只说没有炎症相关实变，没有直接宣称排除肺炎；仍需避免让读者误读为病因诊断。"
+    },
+    {
+      "id": "real_4b40d531f81fd555",
+      "output_sha256": "8e3730fda6e64577a838a433a768087d316b7284bfc17e3815241ea9bb352427",
+      "errors": [
+        "anatomy_side",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "右侧肋骨外侧的定位遗漏，间质浸润另称细网状影的解释偏窄；新出现、稳定和可能转移保留。"
+    }
+  ]
+}
