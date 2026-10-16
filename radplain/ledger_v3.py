@@ -3,7 +3,7 @@ import json
 import re
 from .structure_v3 import structural_prefix_length
 
-VERSION = 'fact-ledger-v3-dev5'
+VERSION = 'fact-ledger-v3-dev6'
 ROLES = {'history', 'technique', 'finding', 'impression', 'recommendation', 'metadata', 'unknown'}
 FIELDS = {'evidence', 'entity', 'location', 'quantity', 'negation', 'certainty',
           'time_change', 'condition_action', 'qualifier'}

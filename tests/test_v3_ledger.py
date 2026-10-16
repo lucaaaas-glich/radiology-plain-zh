@@ -216,3 +216,10 @@ def test_weak_bilateral_lexical_flag_is_not_passed_to_semantic_auditor():
         assert 'added_bilateral' not in messages[1]['content']
         return reply({'checked_ids':[1],'issues':[]})
     assert explain('Mediastinum is unremarkable.',generate)['coverage']['fully_generated']
+
+
+def test_dorsal_glossary_only_applies_to_vertebral_context():
+    from radplain.glossary_v3 import glossary
+    assert any(g['term']=='胸椎' for g in glossary('Sclerosis of the lower dorsal vertebral bodies.'))
+    assert not any(g['term']=='胸椎' for g in glossary('Dorsal soft tissues are normal.'))
+    assert any(g['term']=='锁骨下静脉' for g in glossary('right subclavian vein'))

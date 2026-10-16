@@ -14,7 +14,7 @@ from radplain.mlx_backend import MLXBackend
 def main():
     import mlx.core as mx
     p=argparse.ArgumentParser()
-    p.add_argument('--label',choices=['dev1','dev2checked'],default='dev1')
+    p.add_argument('--label',choices=['dev1','dev2checked','dev5'],default='dev1')
     a=p.parse_args()
     folder=Path('results/v3/real-data')/('local-'+a.label)
     folder.mkdir(parents=True,exist_ok=False)

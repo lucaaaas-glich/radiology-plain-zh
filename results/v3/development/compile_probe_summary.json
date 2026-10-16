@@ -1,0 +1,41 @@
+{
+  "stage": "two OLD synthetic reports; runtime development only",
+  "outputs_sha256": "4fc8be175008a859a70cb333d17262aac30fc995e61577e3835c3bd34f3bca64",
+  "compilation_used": false,
+  "observed_warning": "compile_config criteria not met; compilation skipped",
+  "decision": "Reject this runtime change: static cache did not improve speed; original generation settings restored",
+  "cases": [
+    {
+      "id": "v2_05_en_multi_numbers",
+      "same_output": true,
+      "dynamic": {
+        "seconds": 2.607152795419097,
+        "generation_tokens": 23
+      },
+      "static_cold": {
+        "seconds": 3.359674680046737,
+        "generation_tokens": 23
+      },
+      "static_warm": {
+        "seconds": 2.647714577615261,
+        "generation_tokens": 23
+      }
+    },
+    {
+      "id": "v2_11_en_certainty",
+      "same_output": true,
+      "dynamic": {
+        "seconds": 2.6881156777963042,
+        "generation_tokens": 24
+      },
+      "static_cold": {
+        "seconds": 2.7719385623931885,
+        "generation_tokens": 24
+      },
+      "static_warm": {
+        "seconds": 2.763734834268689,
+        "generation_tokens": 24
+      }
+    }
+  ]
+}

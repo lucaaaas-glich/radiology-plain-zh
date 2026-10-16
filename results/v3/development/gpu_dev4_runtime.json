@@ -1,0 +1,19 @@
+{
+  "arms": {
+    "v3": {
+      "count": 14,
+      "seconds": 1768.412754801102,
+      "model_calls": 106,
+      "input_tokens": 113640,
+      "generation_tokens": 15397
+    }
+  },
+  "request_sha256": "a8eae0c90de456d872f51abf52b694aeafcf5efe94c7798745bb04672f48033a",
+  "input_sha256": "709e40510e5357c27ffd3c2d9e7bec9030abff48c3041860dcd7457797195718",
+  "job_id": "666860",
+  "completed_at": "2026-10-16T15:14:24.330080+00:00",
+  "model_load_seconds": 43.69565925933421,
+  "peak_cuda_allocated_bytes": 19083185152,
+  "device": "NVIDIA A100-PCIE-40GB",
+  "worker_sha256": "6671fcb1dcdf5c9781b2c42a2882d78557678ed8f48736a38d72802e68b9ef79"
+}

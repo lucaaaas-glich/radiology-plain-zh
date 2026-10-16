@@ -1,0 +1,152 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "stage": "development",
+  "cases": [
+    {
+      "id": "real_944bae9cd174b3f3",
+      "output_sha256": "2cd9bb02e2fb67819ec5ab2f59fc6adcaf3b74215e9142f18f77538d4ff374cd",
+      "errors": [],
+      "clinical_coverage_complete": false,
+      "precision_concern": false,
+      "readability": "mixed",
+      "ledger_review": "no_observed_issue",
+      "notes_zh": "投照PA方向已修正；胸部划区、心脏增大及替代诊断仍回退。逐条检查了清单及核对过程，含对不存在清单的投诉。 已展示清单未见明确事实错误；错误投诉属于核对员自身问题。"
+    },
+    {
+      "id": "real_b5195f156c0cbe9d",
+      "output_sha256": "ce43b9d9c2b3879478f8bfd710b95bc0e86d927eb367a9c11d6ed2b273373aec",
+      "errors": [
+        "unsupported_addition"
+      ],
+      "clinical_coverage_complete": false,
+      "precision_concern": false,
+      "readability": "mixed",
+      "ledger_review": "not_reviewed",
+      "notes_zh": "未知F仍猜成女性；半年度排除转移、憩室和腹部游离液体回退。其他腹部临床句比dev1恢复更多。"
+    },
+    {
+      "id": "real_d462b8b6ee6a35a9",
+      "output_sha256": "a3f9d71312ad951086479d6120d242eea30aff7b60e0e8123b54b346d05dc30f",
+      "errors": [
+        "omission"
+      ],
+      "clinical_coverage_complete": false,
+      "precision_concern": false,
+      "readability": "mixed",
+      "ledger_review": "not_reviewed",
+      "notes_zh": "仍遗漏双下叶后部的后部限定；舌段瘢痕性肺不张回退。数值和检查技术保留。"
+    },
+    {
+      "id": "real_3000010eb2853496",
+      "output_sha256": "a7563f2798e044d07aef9d742dc862e0679fc7ea5a6a260b9c3bfda4fc114ad4",
+      "errors": [],
+      "clinical_coverage_complete": false,
+      "precision_concern": false,
+      "readability": "mixed",
+      "ledger_review": "not_reviewed",
+      "notes_zh": "呼吸衰竭和肺栓塞主要所见保留；双侧肺实变、病理大小淋巴结否定、急性肺栓塞结论及严重程度回退。"
+    },
+    {
+      "id": "real_25751d3ec470393d",
+      "output_sha256": "36916c8eb83c1ea3f6863b122daf898f6e44e6a380b6809aa7276df07bf321ae",
+      "errors": [],
+      "clinical_coverage_complete": false,
+      "precision_concern": true,
+      "readability": "mixed",
+      "ledger_review": "not_reviewed",
+      "notes_zh": "病史、日期与严重肺部受累保留；含混冠脉原句被译为中度异常迹象，记录精度顾虑；淋巴结整句回退。"
+    },
+    {
+      "id": "real_7087fb455870b62c",
+      "output_sha256": "4cfc2d2a27785c82509d1efcfceabd53cb28993faac0a988a88236721070ee9f",
+      "errors": [],
+      "clinical_coverage_complete": true,
+      "precision_concern": false,
+      "readability": "mixed",
+      "ledger_review": "not_reviewed",
+      "notes_zh": "颈静脉未加内静脉限定；胃管、胸骨固定、主动脉延长和COPD征象均保留。"
+    },
+    {
+      "id": "real_9aec311bef0d8392",
+      "output_sha256": "70258f9796c0ce0255a218a7a1d70a5700cc61c641d684151273c4a55989a113",
+      "errors": [],
+      "clinical_coverage_complete": false,
+      "precision_concern": true,
+      "readability": "mixed",
+      "ledger_review": "not_reviewed",
+      "notes_zh": "骨折后遗改变回退，浸润被括注为炎症渗出过窄；同dev1标准记精度顾虑。"
+    },
+    {
+      "id": "real_2646eef8c69cbba1",
+      "output_sha256": "5130551146488950945da09d5ebf7b97f262f203851ab58f0e6e7f043a2e3a04",
+      "errors": [
+        "anatomy_side"
+      ],
+      "clinical_coverage_complete": false,
+      "precision_concern": false,
+      "readability": "mixed",
+      "ledger_review": "not_reviewed",
+      "notes_zh": "下段胸椎仍写成下背部椎体。胃管末端回退；日期为可明确解释的18 05 2011，转换未改变日期。"
+    },
+    {
+      "id": "v2_05_en_multi_numbers",
+      "output_sha256": "1957ea21768e936ddec4f19137042f5b4b3ca0e4b133d09606f5cda58c28e82f",
+      "errors": [],
+      "clinical_coverage_complete": true,
+      "precision_concern": false,
+      "readability": "plain",
+      "ledger_review": "not_reviewed",
+      "notes_zh": "两个结节的左右肺叶、3和9毫米及不变关系均保留。"
+    },
+    {
+      "id": "v2_06_en_dates",
+      "output_sha256": "873bccf34456354d9ee5987521db81d5c5393e94f1955072426b296630c39895",
+      "errors": [],
+      "clinical_coverage_complete": false,
+      "precision_concern": false,
+      "readability": "none",
+      "ledger_review": "not_reviewed",
+      "notes_zh": "整句因含混日期回退，没有提供中文解释；不计为忠实成功。"
+    },
+    {
+      "id": "v2_11_en_certainty",
+      "output_sha256": "72963b35d43c5b4853c8eeab60be18b616fc7c70c7a01030cca25dba4a48ae83",
+      "errors": [],
+      "clinical_coverage_complete": true,
+      "precision_concern": false,
+      "readability": "mixed",
+      "ledger_review": "not_reviewed",
+      "notes_zh": "左肺门饱满、疑似淋巴结肿大和本次片不能确认均保留。"
+    },
+    {
+      "id": "v2_16_en_device",
+      "output_sha256": "e05f6dbef0120e92e356695fed0c69c24c698c606c773be85831216851f8a1e5",
+      "errors": [],
+      "clinical_coverage_complete": true,
+      "precision_concern": false,
+      "readability": "mixed",
+      "ledger_review": "not_reviewed",
+      "notes_zh": "导管尖端上腔静脉下段及位置不变保留。"
+    },
+    {
+      "id": "v2_34_zh_negation",
+      "output_sha256": "cbbb9032d6c6d9c308fb27b8788fcad3b76752da77fbd8d15a024135df2d3d85",
+      "errors": [],
+      "clinical_coverage_complete": true,
+      "precision_concern": false,
+      "readability": "plain",
+      "ledger_review": "not_reviewed",
+      "notes_zh": "没有新实变与旧右上肺实变仍存在均保留，没有偷换肺叶。"
+    },
+    {
+      "id": "v2_41_zh_recommendation",
+      "output_sha256": "11cb792517235ddeb323a4ed4b8caa562dee7ff68b55d2b1e18ce117efc6fedf",
+      "errors": [],
+      "clinical_coverage_complete": true,
+      "precision_concern": true,
+      "readability": "plain",
+      "ledger_review": "not_reviewed",
+      "notes_zh": "位置、数值和条件性一年复查保留；把泛指稳定收窄为大小稳定，记录精度顾虑而不判明确事实错误。"
+    }
+  ]
+}
