@@ -90,10 +90,15 @@ def main():
     for name,value in [('10-final20.json',main_request),('11-ablation10.json',control_request)]:
         write(a.bundle/'requests'/(name+'.pending'),value)
         write(Path('examples/v3')/name,value)
+    for name in ('resume_v3_final.py','run_v3_continuation_a100.sh'):
+        target=a.bundle/'scripts'/name
+        target.parent.mkdir(exist_ok=True)
+        shutil.copy2(Path('scripts')/name,target)
     dependencies=[a.development_request,a.development_input,a.development_outputs,a.development_review,a.selection,activation,
                   Path('docs/v3/预注册评估方案.md'),Path('examples/v3/fla_package_sources.json'),
                   Path('examples/v3/real_manifest.json'),Path('examples/v3/main20_manifest.json'),
-                  Path('docs/v3/测试规模修订.md'),Path('examples/v2/candidate_gpu.lock.json')]
+                  Path('docs/v3/测试规模修订.md'),Path('examples/v2/candidate_gpu.lock.json'),
+                  Path('scripts/resume_v3_final.py'),Path('scripts/run_v3_continuation_a100.sh')]
     lock={'frozen_at_utc':datetime.now(timezone.utc).isoformat(),
           'stage':'Candidate frozen before new cohort predictions; selection used OLD development only',
           'model':baseline_lock['arms']['gpu27b_evidence'],
