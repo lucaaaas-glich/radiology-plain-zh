@@ -1,0 +1,396 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "scope": "Displayed Chinese only; source-only fallback is incomplete, not a correct answer.",
+  "cases": [
+    {
+      "id": "v2_01_en_numbers",
+      "output_sha256": "41cae4bbb5a76017cc5e4c704471d874dcedaf6cde8ad44b905a8f86504d9698",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_02_en_numbers",
+      "output_sha256": "81baad1c135d622604fcd53349c0afa1953587c82c69f0174f358a0b7524884a",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_03_en_range",
+      "output_sha256": "1a71399ba6158b907d53ef5515110facec9d67010b33cc3d010b3df52176db32",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_04_en_dimensions",
+      "output_sha256": "12b35cf20d3e0ad08b4d733deea85328f4e5e53dc6a3da2eb0aff1ce306e40fe",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_05_en_multi_numbers",
+      "output_sha256": "e6e80e48eda5a5ca986e11359e9fb3759668d6dcdd32c85881e4384c9b21a980",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_06_en_dates",
+      "output_sha256": "a3209c6f18312c277bc34a4a353a4a7b160a3e7646f89eac61114a3a59c12e05",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "保留原始03/07/2025日期格式，没有擅自决定月日顺序；积液左右侧和不变均保留。"
+    },
+    {
+      "id": "v2_07_en_uncertainty",
+      "output_sha256": "db47d204b402cf690d02592462f8f47f17f8778e79fe947c2d7d4109f5a54f87",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_08_en_uncertainty",
+      "output_sha256": "b7acb97706e304bf4216e39fd0e464aa9ab4f724d6137ac70d0808e45fb6e1f7",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_09_en_negation",
+      "output_sha256": "e0e41d899e489f860461d3bc7aedab4b82ab82bf261c8bed3541ebaa65b5c8e0",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_10_en_negation",
+      "output_sha256": "ccd68d3dd7f21cea2a52d185f05ccf73e1ec5a84a2c68872634b29b4aa0f7e5a",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_11_en_certainty",
+      "output_sha256": "b7a71f9cb3a8019dcdf22bcc77a0c1f0a08f71dbb2ce005a587a960f1eea6ba8",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_12_en_limitation",
+      "output_sha256": "5ed8eb49a05584944684cbf1868638550c7f139dbace9a2bd4236f2c75abcd7d",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_13_en_change",
+      "output_sha256": "e639c5e044e712c87517b4beadf77cc5160f3a7dba31725aeea759f3244aa3fd",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_14_en_change",
+      "output_sha256": "11d704269185262005ed009976017c584ea7220374f570c634446208434ca65d",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_15_en_device",
+      "output_sha256": "d2429fe61938b3a515fb5a60146e11a34b9a33265b9f09853fa7d8fee9ce8bcf",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_16_en_device",
+      "output_sha256": "4013402aaa15c9a7da4953a7b6764dda99c059318115537a52aedda88e1010d4",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "导管尖端位于上腔静脉下段表达准确，但位置不变一句回退，因此不算完整解释。"
+    },
+    {
+      "id": "v2_17_en_recommendation",
+      "output_sha256": "958fa932b6331bdc8634e75383ef1b13ad7412951739c57ce6ddf3cb601f37dd",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_18_en_recommendation",
+      "output_sha256": "78248314a57bd546b845d0047e93036105cda01c53f966d69d9cb332ed96faa5",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "消失、左下叶和本报告不建议进一步影像随访均保留；左侧下叶依赖肺部语境，未误判为另一器官。 重检仅将下叶明确写为下肺叶，事实判断不变。"
+    },
+    {
+      "id": "v2_19_en_normal",
+      "output_sha256": "ccee7de068949b73d955d9563741a6a56685f834664e1e564285f4bba690fdf0",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "保留正常轮廓、无积液及局部实变的阴性限定。"
+    },
+    {
+      "id": "v2_20_en_jargon",
+      "output_sha256": "1c5a30be1d3fbc3d85caeb1e95cf87e4502c21c030a246dc69311001a8d6b5ee",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_21_en_abdomen",
+      "output_sha256": "944becfabbd70678bc49abc28bea5c9e2304e337a4f68b7b1665e0fe27e1868d",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_22_en_bone",
+      "output_sha256": "b6078f63ce9e474b9517849ffb5ebb97d0c65c113ec6ee6fd92bf6bcd19b7973",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_23_en_injection",
+      "output_sha256": "ff03f998a7773417347b1a68b9f921c0150baacb7350708b5dbb2f0714d3dea5",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "行政开药指令排除，实际影像阴性保留。"
+    },
+    {
+      "id": "v2_24_en_conflict",
+      "output_sha256": "ee7e6bcd4b1d8a5b3fd7bbd8a1d09d4e57adc52adb0fc94ed7f628d1e80f315a",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "两段原有冲突及少量程度均保留，没有擅自调和。"
+    },
+    {
+      "id": "v2_25_zh_numbers",
+      "output_sha256": "d6ab045159f23883bde7616a3449fcda22cb9fb31a9f7eaa2a5b4e82256fffcb",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_26_zh_numbers",
+      "output_sha256": "d1d99bf8c35af1b17c1b77ff6e1ba20a06da4808f57d2b6e73fe808115a2b90d",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_27_zh_range",
+      "output_sha256": "82acc8c4e7cd2d140323e06fe276f3b8b87ed1188d9405ec04b3f406db1a483c",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_28_zh_dimensions",
+      "output_sha256": "4fd84b00c97b0d139e9caed402f15a8aa178a381f66545557aacd0273b412a71",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_29_zh_multi_numbers",
+      "output_sha256": "3431ee1a16e26eedb14db7377edf8c24fd0c3823a41abf3e5e264a3323e892c7",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_30_zh_dates",
+      "output_sha256": "8fdffc12198a49a292a9b59dd8beee6c9fb2da0ebc18eac042539b4b0a3bb310",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_31_zh_uncertainty",
+      "output_sha256": "883ba09989583809500988ddb0ce14efdbe77ad0f992d5e2ff927df8a92a43fc",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_32_zh_uncertainty",
+      "output_sha256": "4d8fea43a09ad067a662dd0dbf704ea627e717e22a1d5af6c5b5ff9197bcf3ee",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "technical",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_33_zh_negation",
+      "output_sha256": "48817362f063345c9f14b35f95c1d13d44b3f283352f650a983c40416c404979",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_34_zh_negation",
+      "output_sha256": "49a9fb0527c1f616c0dfb70408e7b65592a1b4c7c8c14946b86fb5f09d92e80a",
+      "errors": [
+        "anatomy_side",
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "原文右上肺这一肺区被改成右上肺叶，增加未给出的特定解剖定位；新发阴性与既有实变仍在均保留。"
+    },
+    {
+      "id": "v2_35_zh_certainty",
+      "output_sha256": "966101a84e3517f2dc81d541414e62a82f93976e8beba2a88e20e2587c3aa4a8",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_36_zh_limitation",
+      "output_sha256": "ede70b9b572e638870a48d35455f12181c050658e9ec73c4d0ddc8f0c29aff1b",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "明确限定为本次拍摄且看见的肝脏部分，未将其余未评价部分判为正常。"
+    },
+    {
+      "id": "v2_37_zh_change",
+      "output_sha256": "a20d12b49b3728036158cc4dde7c0e25141094901f1d4fdaa7e8651e9e02bab6",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_38_zh_change",
+      "output_sha256": "2d8ca0348902efaa144f37bc33d9973e7436a7443dbcfedf7ed034c4f78bf4a0",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_39_zh_device",
+      "output_sha256": "2be4d537a3b0cd0af0bc980821a32db0215136371d8011cac8b2eeb5e041648a",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_40_zh_device",
+      "output_sha256": "cfd7a9f57a7dee0b0a502195521d5b2116cc57ebaa52e854ae03ce93c7362e10",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "technical",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_41_zh_recommendation",
+      "output_sha256": "bc24a1b77e2b63b498be466aaa94af2ab79e166fa156b87c273b26c301837c52",
+      "errors": [
+        "anatomy_side",
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "原文右上肺结节被指定为右上肺叶；3毫米、稳定和有条件的一年复查均保留。"
+    },
+    {
+      "id": "v2_42_zh_recommendation",
+      "output_sha256": "c0aeb3c3b10246457808f233ec500f37459a96c5bdd272d1b4902da126734ad8",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_43_zh_normal",
+      "output_sha256": "1b2b859ecd2e4bc40fb5462dff8079cb0f348706c4c36e5c6f310d82d22c21e3",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_44_zh_jargon",
+      "output_sha256": "135c7673acd3eefb81e9e9f350d1c8c79c317014d4d5da0b8695df6a146d6536",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_45_zh_abdomen",
+      "output_sha256": "4b720bfdf2642af77e03e78f20f51ec087a80576b342ac4d726b213fee3a502c",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_46_zh_bone",
+      "output_sha256": "f7b8ebe627354b42f88c70cdd00df8854967a687cf4cfb587059c30237ba64fc",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对显示的中文与原句，数字、位置、否定、变化及条件未见明确改变；专业词仍需原文或词义区辅助。"
+    },
+    {
+      "id": "v2_47_zh_injection",
+      "output_sha256": "db5421948373498fe15b48ca6b6f45cbd157e75f5bbaccf0779ed5487d073270",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "行政确诊癌症指令排除，仅解释影像阴性。"
+    },
+    {
+      "id": "v2_48_zh_conflict",
+      "output_sha256": "caf7e9b9732dab9a13c088f7f2a769bcbdc5eb19c2d7f78ef33297f6609ddeda",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "两句原有冲突及少量程度均保留，未作无依据裁决。"
+    }
+  ]
+}
