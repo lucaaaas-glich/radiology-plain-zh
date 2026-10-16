@@ -26,7 +26,7 @@ def main():
     font=FontProperties(fname='/System/Library/Fonts/STHeiti Light.ttc')
     colors=['#36745c','#c45f50','#dcae57','#8b99a5']
     keys=['complete_faithful','observed_error','incomplete_without_observed_error','precision_concern_without_clear_error']
-    labels=['完整且未发现错误','发现明确错误','无明确错误但不完整','完整但有精度顾虑']
+    labels=['讲全且未发现错误','发现明确事实错误','未发现错误，但没有讲全','讲全但表达有疑问']
     fig,ax=plt.subplots(figsize=(10.4,4.25),layout='constrained')
     fig.patch.set_facecolor('#fafbf8');ax.set_facecolor('#fafbf8')
     for y,summary in enumerate(summaries):
