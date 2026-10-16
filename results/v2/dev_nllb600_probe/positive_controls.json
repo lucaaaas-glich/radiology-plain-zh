@@ -1,0 +1,26 @@
+{
+  "purpose": "Post-run implementation sanity checks, not a selection test or medical evaluation.",
+  "cases": [
+    {
+      "source": "Hello. How are you?",
+      "source_first_token": "eng_Latn",
+      "target_first_token": "zho_Hans",
+      "unknown_target_tokens": 0,
+      "translation": "您好,您好吗?"
+    },
+    {
+      "source": "The meeting starts at nine tomorrow morning.",
+      "source_first_token": "eng_Latn",
+      "target_first_token": "zho_Hans",
+      "unknown_target_tokens": 0,
+      "translation": "会议明天早上九点开始."
+    },
+    {
+      "source": "There is no fluid around the left lung.",
+      "source_first_token": "eng_Latn",
+      "target_first_token": "zho_Hans",
+      "unknown_target_tokens": 0,
+      "translation": "在左肺周围没有液体."
+    }
+  ]
+}

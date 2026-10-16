@@ -1,0 +1,166 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "scope": "Displayed Chinese only; source-only fallback is incomplete, not a correct answer.",
+  "cases": [
+    {
+      "id": "real_0e9c60d4ad638a81",
+      "output_sha256": "723ef3caaf312c9619b274de6f6f54675e8b1edbc331badd993888c6b32e4442",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "主要设备、轻度浸润和少量积液等保留；肺膜一词不够标准但未将胸膜腔改变为别的器官。"
+    },
+    {
+      "id": "real_53499b1249f0e7a6",
+      "output_sha256": "2b7e94c5a96c6c94d6c9d93d94a9dce57af8bce14098800ae3ad84620f2c2614",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "年龄接触史及一条阴性句回退。其余关键内容保留，早期检查可阴性被套入报告建议前缀，文字框架不合适。"
+    },
+    {
+      "id": "real_4187fbf7eadcb951",
+      "output_sha256": "d305376505bf7b401c8109d079924259df29c00064911f95e210cd71a948966f",
+      "errors": [
+        "anatomy_side",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "支气管分布中的右上叶后段被换成尖段，并遗漏若干外周限定；胸椎前缘骨赘增加胸椎后侧定位。"
+    },
+    {
+      "id": "real_6e2b1d9d0d10b307",
+      "output_sha256": "a423a48c066d2609d52382b7a11ecbbf340c3f8d13b6fea20b5b5d372ec456b7",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "日期及积液比较句回退，其余引流管、肺中野和稳定性保留。"
+    },
+    {
+      "id": "real_4889613d7b935c76",
+      "output_sha256": "6ddd643001268eeb50d683e1f03c9b394b3472ffaa0f80af2da92836fc8a0adb",
+      "errors": [
+        "negation",
+        "change",
+        "anatomy_side",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "无病理性淋巴结被写成病理大小或外观的淋巴结未见改变，可能变成已有异常且稳定；脂肪瘤在背阔肌下方误为肌处，静脉给药途径遗漏。"
+    },
+    {
+      "id": "real_99884d41e32a39f8",
+      "output_sha256": "13c020201bea5c031a807ca12653c75df435b526c3b8bdac6170a11d30ce8d60",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "按NCI词典，lymphadenopathy可包括淋巴结肿大或病变，该处中文属于可接受同义表达，不记否定错误。亚被膜一词仍不规范，记精度顾虑，未评全部忠实；主要病期、病灶尺寸与转移结论保留。"
+    },
+    {
+      "id": "real_c6927c378a6e2c87",
+      "output_sha256": "2e7018e78133b3f780f27da1762fe45f6ec8d9b9c944f09d4c146d6fe10fe67e",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "舌段定位及浸润消退改正确，残余纤维化句回退，全文未完成。"
+    },
+    {
+      "id": "real_788c7076b21bef32",
+      "output_sha256": "5a91c420cd3ac8e23f9be0a8184222a52a452c033401155c1de115adb395facb",
+      "errors": [
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "持续性和小叶中心型限定丢失；结肠乙状范围简为仅乙状结肠。其他细分部位和双侧单纯性囊肿比前版完整。"
+    },
+    {
+      "id": "real_8e3f069b88d7550c",
+      "output_sha256": "e9d884f22125e9316eea0a65c1ebefc793399037dcacd4e1f319320c9b0c04e3",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "病史和相关阴性保留；前后位改成泛称正位，未计明确错误但不判全部细节保留。"
+    },
+    {
+      "id": "real_20d69a9e8c41860d",
+      "output_sha256": "7bf488071839d5210883d765c7749820281e6d9aa2167b2588767de4256b2abb",
+      "errors": [
+        "negation",
+        "anatomy_side",
+        "terminology",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "几年前已知异常翻为本次未发现，黏膜下水肿一次误为皮下水肿；其他重复句将黏膜层次泛化，混入英文caliber和报告建议前缀。"
+    },
+    {
+      "id": "real_2f86141ba8fa19ea",
+      "output_sha256": "c683d92f061d6f4507e97e17af9da7c9716a9a5dd3759a4e6a6e230eb708e7fc",
+      "errors": [
+        "negation",
+        "certainty"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "新冠肺部感染阴性扩大为没有任何急慢性肺部感染；慢性支气管炎导致的增厚弱化为提示慢性支气管炎。肺气肿亚型、结节数值与监测建议保留。"
+    },
+    {
+      "id": "real_4d02bd9100fee8f7",
+      "output_sha256": "093f1aeb6274081e24125266cb6a78baf267873fbf40dab4dc9a0135f0741df7",
+      "errors": [
+        "terminology",
+        "anatomy_side"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "脐下腹壁膨出误为腹直肌分离；两条含年份信息回退。磨玻璃影细微程度已保留。"
+    },
+    {
+      "id": "real_de592071091f2d97",
+      "output_sha256": "dce1336a2981aa1ba9f357aa52fd18f937b5e1586453c3bbb75cc7309011faaf",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "一条含气肺部条带句回退；完全/部分塌陷和支气管通畅保留。减压性改变一词对于ex vacuo不够清楚，记精度顾虑。"
+    },
+    {
+      "id": "real_abd463216fac09a8",
+      "output_sha256": "ce44b8841e73fa72573aa87a7647f1603926b90fbd7a66f9b1aed3912491feac",
+      "errors": [
+        "anatomy_side",
+        "unsupported_addition",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "无方向的140毫米距离被加成上方；较大横突限定遗漏，混入英文caliber及报告建议前缀。按NCI词典，淋巴结肿大或病变是lymphadenopathy可接受同义表达，该处不记否定错误。"
+    },
+    {
+      "id": "real_b27e89e8eb71724d",
+      "output_sha256": "b136e28877e7881e31f841c456e45e3ed792f8b2f0a155dc34d25513cf6fbac6",
+      "errors": [
+        "terminology",
+        "anatomy_side"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "乳房成形术仍误为乳腺切除术，肺含气空间误为气道。"
+    },
+    {
+      "id": "real_4b40d531f81fd555",
+      "output_sha256": "f8b374e696a4bff6710c7b412406774bd97375b2829e1323ad41ea4f3eff2857",
+      "errors": [
+        "anatomy_side",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "右侧肋骨的外侧定位遗漏；新发、稳定和可能性保留。"
+    }
+  ],
+  "annotation_revision_note": "完成初稿后核对NCI lymphadenopathy定义，撤销两处将可接受同义词误判为否定扩大；未修改模型输出。初稿未作为最终评价。来源 https://www.cancer.gov/publications/dictionaries/cancer-terms/def/lymphadenopathy"
+}

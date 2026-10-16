@@ -1,0 +1,197 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "scope": "Displayed Chinese only; source-only fallback is incomplete, not a correct answer.",
+  "cases": [
+    {
+      "id": "real_0e9c60d4ad638a81",
+      "output_sha256": "8bd2884d7334392196ca89953dfafc0ecf0c951fc94d31bf28b28450604a6b48",
+      "errors": [
+        "anatomy_side",
+        "omission",
+        "terminology",
+        "certainty"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "心室电极与导线被泛化为起搏器本身，肺门误为肺部位置；肺泡浸润与胸膜腔积液混淆且未分别保留，确定术后关系被弱化。"
+    },
+    {
+      "id": "real_53499b1249f0e7a6",
+      "output_sha256": "040ebe5e36e6f7d4863002307c1f22fbbb1e5b8c9eff12464504a78368b1dc7a",
+      "errors": [
+        "anatomy_side",
+        "omission",
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "心纵隔/肺门变为心脏和大血管，缺少肺门范围；无可用既往片说成以前未作对比，增加最近接触的时间。"
+    },
+    {
+      "id": "real_4187fbf7eadcb951",
+      "output_sha256": "066e73741981a7d093753274f78d3acaedaf0744b59c217e6a5094a8c240a71f",
+      "errors": [
+        "anatomy_side",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "多个肺叶及尖段位置简化或遗漏，胸椎前缘骨赘误到脊柱后部，住院背景和相对程度未全保留。"
+    },
+    {
+      "id": "real_6e2b1d9d0d10b307",
+      "output_sha256": "d4b5f31e8e36c308635446caa5f3629f76762a3aa9a50874daaa352de063432b",
+      "errors": [
+        "anatomy_side",
+        "change",
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "同侧肋膈角变为两侧分隔角，并额外写成变平的变化。"
+    },
+    {
+      "id": "real_4889613d7b935c76",
+      "output_sha256": "20308a95636f32e070acc764742f8ec6e5c3164e484d361d6f6e8be6236fd218",
+      "errors": [
+        "number_time",
+        "terminology",
+        "anatomy_side",
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "把既往对比日期当手术日期，三个月半变三个月；肾血管平滑肌脂肪瘤误成脂肪肉瘤；胸壁同一病灶被拆为两个部位。"
+    },
+    {
+      "id": "real_99884d41e32a39f8",
+      "output_sha256": "fc4b23e1765e4bec2c36636acbf6497a410b8056bcd3a313ae5eed7b9afd4031",
+      "errors": [
+        "negation",
+        "anatomy_side",
+        "omission",
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "none",
+      "notes_zh": "输出反复循环直至1024token上限；乙状结肠误到直肠，肺不张置于直肠，阴性转移句翻转，肝转移等大量内容缺失。保存失败，不展示为完整解释。"
+    },
+    {
+      "id": "real_c6927c378a6e2c87",
+      "output_sha256": "1ad5563da90c06d79d0c30e010d079b5702ba03e8b921c978b237d70dd231f82",
+      "errors": [
+        "change",
+        "anatomy_side",
+        "certainty"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "局灶浸润已消退被弱化为炎症改善，舌段位置丢失，并将浸润确定成炎症。"
+    },
+    {
+      "id": "real_788c7076b21bef32",
+      "output_sha256": "1c0f9f4f56f8737af3f608a1be18b3aa03fff64b2f0b2dc9b98317a6768ba770",
+      "errors": [
+        "anatomy_side",
+        "omission",
+        "unsupported_addition",
+        "negation"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "肺叶、胸膜下和肠系膜定位失真，省略憩室病；新增轻微气肿，阴性转移扩大为无恶性肿瘤，膀胱受压变为笼统异常。"
+    },
+    {
+      "id": "real_8e3f069b88d7550c",
+      "output_sha256": "e4baa028e30c33937554695dd7108260697624f0c114084f823c265896d3cd93",
+      "errors": [
+        "anatomy_side",
+        "change",
+        "negation"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "斜位变侧位，用力后起病变用力加重，无相关病理发现扩大为无异常。"
+    },
+    {
+      "id": "real_20d69a9e8c41860d",
+      "output_sha256": "fa05e894457fee4a1161298a7b781c09517e79f784944729c1f0a50dad5ab861",
+      "errors": [
+        "omission",
+        "anatomy_side"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "肾积水和下腔静脉慢性血栓整段遗漏，盆腔范围遗漏，纵隔气体位置错误，反复重复其余内容。"
+    },
+    {
+      "id": "real_2f86141ba8fa19ea",
+      "output_sha256": "8d5cc464c1a6cec7a702faf691e7b5ed6378b8bbfdcc323ab58cc0f0e0ec08f7",
+      "errors": [
+        "anatomy_side",
+        "omission",
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "纵隔旁肺大泡遗漏，肺气肿亚型不准确，支气管周围增厚的程度遗漏；肺底变为基底段。主要结节数字保留。"
+    },
+    {
+      "id": "real_4d02bd9100fee8f7",
+      "output_sha256": "0da88922bcb8772d2e3cffb5de5f27b882a89a3f27b957cf35b6c06e726d9109",
+      "errors": [
+        "anatomy_side",
+        "terminology",
+        "certainty",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "左大裂位置变左上肺，肺门变主支气管，膀胱切除误成囊肿切除，肠系膜变腹膜后；可能炎症变为提示炎症且丢非特异性。"
+    },
+    {
+      "id": "real_de592071091f2d97",
+      "output_sha256": "bebe7d50f1e53d5dd66075e83cd30ef208438fe77453db154ed9205544f077f3",
+      "errors": [
+        "terminology",
+        "anatomy_side",
+        "omission",
+        "negation"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "肺不张反复称受阻，完全和部分塌陷改成轻重；空气支气管征解释错误，特定新冠肺部感染阴性扩为新冠感染阴性。"
+    },
+    {
+      "id": "real_abd463216fac09a8",
+      "output_sha256": "a6ce1464e778dcd356642ddfd2a50ff093ded3d35d4640ef6c4fa090bfe36e69",
+      "errors": [
+        "anatomy_side",
+        "omission",
+        "unsupported_addition",
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "小肠各段变大小肠，耻骨联合变盆底，回肠90毫米长度及轻度水肿遗漏；新增轻微脂肪沉积，尿路变尿道，骨关节关系变融合。"
+    },
+    {
+      "id": "real_b27e89e8eb71724d",
+      "output_sha256": "379fbbde82e8525abedbfafc7ca998b328dbb1bcbbd3b54eb39da5e1b61d53b5",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "实变阴性及双侧乳房成形术正确保留；专业词未进一步解释。"
+    },
+    {
+      "id": "real_4b40d531f81fd555",
+      "output_sha256": "141c96b283f0091c98d8e487d3f04c15ad35d2aba2edf3227054436dccdc3467",
+      "errors": [
+        "anatomy_side"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "右侧外侧肋骨改成右上肋骨后方；其他新发、稳定和可能性保留。"
+    }
+  ]
+}

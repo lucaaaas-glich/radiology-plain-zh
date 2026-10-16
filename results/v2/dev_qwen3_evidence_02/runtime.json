@@ -1,0 +1,32 @@
+{
+  "split": "dev",
+  "mode": "evidence",
+  "model": "artifacts/v2/qwen3-4b",
+  "count": 20,
+  "input_sha256": "d53fa9e1d57cd1da6d89c8505824a3079c1cb6000432dfcaa50cf5856992e848",
+  "candidate_lock_sha256": null,
+  "git_commit": "48f7a830cd909ff7e688ab0f0d811b38317813c8",
+  "load_seconds": 2.0244672499829903,
+  "generation_seconds": 80.28726566582918,
+  "peak_mlx_allocated_bytes": 2787329220,
+  "platform": "macOS-26.3.1-arm64-arm-64bit",
+  "source_files_sha256": {
+    "radplain/__init__.py": "b0bd0be201a9be1a0f029b5cc676818aa15231097205d7af3e420a8903e00348",
+    "radplain/common.py": "3698bb29475ceb06fd4630cca14023c465f2e8e3a1a149fc890e7e56323927bd",
+    "radplain/data.py": "e570471d3afdc4f2efebd4cbdbdad52ece8fa02e9b69e9ebf7065fad1d31a450",
+    "radplain/evaluate.py": "8ec50abeaa7d512ffe109d56bf458fc859038cd1a7c2deabc887100e76551b1b",
+    "radplain/explain_v2.py": "4509f5a4fcd2c7af8a80695fb05123b869bdd331a415eaf25a4b83418289bd95",
+    "radplain/fidelity.py": "d92179b82a40fdebe6a0881156d988cdfcc113e404074c9a7039a4f7e981dec0",
+    "radplain/glossary_v2.py": "4982173081cf0775e97691b85954fd89055474a7ebe5b10c3f64fc2f1c1c98a7",
+    "radplain/guard_v2.py": "b2c82eea882214ec574a575dccc2494b1930a0632a2a7a11915b050ad0e57bad",
+    "radplain/mlx_backend.py": "6e0d8c5e24d6847ae0bcfda2f72965574cd656cf848c2120099825d789a3db9d",
+    "radplain/model.py": "511de7b3c95fedb156a7c29fd56def17c0ed3db9e315f87edacb59035b9deb23",
+    "radplain/predict.py": "eab4c4699ccee5e98b48b707e6262075e004bbe1ac58f40becb803b043f37e7b",
+    "radplain/predict_mlx.py": "5899d658628156a8284046d14a2e5ed14de631a5e5b17c86151481cfcab455e0",
+    "radplain/predict_v2.py": "8941b42b32855e6c6f6a1577c1a91132c4163755001d5da460477fd3783a8f87",
+    "radplain/prompts.py": "ed812040abd7bea1235f3adac3c6d2512c6f1e1958ca86e166e1562a02154cb8",
+    "radplain/teacher.py": "aa4f31e7e3d8cfa9478e21b5c269a55c3bd2237351d308d44878c10604288e83",
+    "radplain/train.py": "0b666450806aedfeb3e95ba6164fb170dee5a46f151646efa221af7250fc2c1a"
+  },
+  "source_changed_during_run": false
+}

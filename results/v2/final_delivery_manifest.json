@@ -1,0 +1,35 @@
+{
+  "completed_at_utc": "2026-10-16T07:03:26.049923+00:00",
+  "scope": "All five predeclared final arms, Chinese teaching explanation, examples and reproducibility; not clinical deployment",
+  "full_stage_complete": true,
+  "school_access_blocker_resolved": true,
+  "automation_status": "PAUSED",
+  "evaluation_rows_validated": 360,
+  "original_model_outputs": 288,
+  "stored_candidate_recheck_rows": 72,
+  "recheck_new_model_calls": 0,
+  "unchanged_review_reuse": 64,
+  "changed_cases_separately_reviewed": 8,
+  "pdf_pages": 4,
+  "visual_qa": "All four final PDF pages and both chart designs visually inspected; no clipping, overlapping text or missing glyphs observed.",
+  "frozen_local_and_recheck_code_verified": true,
+  "original_gpu_reference_21_files_verified": true,
+  "prior_artifacts_preserved": true,
+  "files": {
+    "docs/v2/最终五方案实测与讲解.md": "7b668665c57dbedae6f873cfd3b20b4536c925bdc5bb7aa47730f5081dda3d07",
+    "docs/v2/最终五方案实测与讲解.pdf": "3582cdb530f41d049b21b3b2597f00fa6e829be05c62757f261ff05c69347f49",
+    "docs/v2/最终评估复现.md": "ef0932f9edf7f56658847ee8b5b90dd55773b1bea33ab37f7074f91f0c15f093",
+    "results/v2/final_five_arm_comparison.json": "9c3d0fc4b2817c6dde3e6bdc485120d552d1c194e4f96d4d45946deab3e027cd",
+    "results/v2/final_real_five_arm_outcomes.png": "b361dec56a1b841b40d71d04f7d9d4ad167dc58c96b71492918ea2ffa507625b",
+    "results/v2/final_synthetic_five_arm_outcomes.png": "a6408a0ed3c256fdf43fa6c93b6daa7afc3c57e18bbf064e07409d71abc55858",
+    "docs/v2/examples/V2_27B示例_保留阴性限定.html": "be1ebb0a97b7f7d8cd24926e11df0887c79ad41a4b0393065a13d8b864c3aa14",
+    "docs/v2/examples/V2_27B示例_仍会擅自细化部位.html": "95dcb7b0144b333528c8a31d9d71fd85cbcf05ca3ce2dc0878268cb2550bb68a"
+  },
+  "remaining_required_work": [],
+  "research_limitations": [
+    "Project AI review, not independent/blinded/clinician validation",
+    "No real Chinese clinical report or patient comprehension validation",
+    "Residual factual errors, incomplete outputs and precision concerns",
+    "No clinical deployment claim"
+  ]
+}

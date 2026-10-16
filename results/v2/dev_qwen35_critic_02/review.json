@@ -1,0 +1,168 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "scope": "Displayed Chinese only; source-only fallback is incomplete, not a correct answer.",
+  "cases": [
+    {
+      "id": "negation_en",
+      "output_sha256": "21f5d3acc2f0a2bcf2ef506e3c463d73c5ca1243c9cda4c97e57ccf4b72e6d27",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明确事实改变；术语可结合独立词语说明阅读。"
+    },
+    {
+      "id": "uncertainty_en",
+      "output_sha256": "80f8f3c70c3aaa22b788988e0dd56efcc4cb97ca4923d3ffab1df62ff8bbd54e",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实改变；术语可结合独立词语说明阅读。"
+    },
+    {
+      "id": "laterality_en",
+      "output_sha256": "4b1b1b1b4e7a3b140140bd5eed0af410e4690e351b0257bc31ede8ddfa7f5dee",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明确事实改变；术语可结合独立词语说明阅读。"
+    },
+    {
+      "id": "change_en",
+      "output_sha256": "2c44004d664a0d02dbef8d213462752e107b703bcb00a843da10367b2a864925",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "有原文回退，未完成全部中文解释。"
+    },
+    {
+      "id": "urgent_finding_en",
+      "output_sha256": "81097690dde9d27350e23ba2a1e28336862f05d68382c2b7c0117a57fa8542de",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实改变；术语可结合独立词语说明阅读。"
+    },
+    {
+      "id": "uncertain_cancer_en",
+      "output_sha256": "0cc2f64791c193cdc02cd560e38ae0077c6c2f525ce74bd6ae5cb8b1b10be5fb",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "有原文回退，未完成全部中文解释。"
+    },
+    {
+      "id": "numbers_en",
+      "output_sha256": "cda3a94a061efa2f5e4ef0151c6aad825fcdf7e07354b0c8698025fc1854b639",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实改变；术语可结合独立词语说明阅读。"
+    },
+    {
+      "id": "no_new_en",
+      "output_sha256": "97c09d4eabe642697d78ea07aca815917a46c5351f6a06e17f7ec421f73a48a7",
+      "errors": [
+        "anatomy_side"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "肺尖被扩大为肺上叶；后一段重复前文，原文对应不够清楚。"
+    },
+    {
+      "id": "limited_en",
+      "output_sha256": "9ddd371d769382162108beda4e9a97c34b47e9b5922f3bcefa0ade87479040ae",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实改变；术语可结合独立词语说明阅读。"
+    },
+    {
+      "id": "devices_en",
+      "output_sha256": "b909b20a13b473c9152f066aa3cb0ce809b06e4664a7e969be802235b05dc0d3",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明确事实改变；术语可结合独立词语说明阅读。"
+    },
+    {
+      "id": "negation_zh",
+      "output_sha256": "1de58f5e189acac0b2eeb0a9ee21b3443d4ecddd0caa7062a2f7eb9bee30fe5d",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明确事实改变；术语可结合独立词语说明阅读。"
+    },
+    {
+      "id": "uncertainty_zh",
+      "output_sha256": "a862708a2cc3ad3e84f90a9b33ee272f69552d344648e7f3b7b1e1bdd808fab5",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实改变；术语可结合独立词语说明阅读。"
+    },
+    {
+      "id": "laterality_zh",
+      "output_sha256": "8f2b752965eee0f6798982ba44fa2a63340652bbc61a2fbad0b8703e83685007",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明确事实改变；术语可结合独立词语说明阅读。"
+    },
+    {
+      "id": "comparison_zh",
+      "output_sha256": "d7f4dbd88c5075cd0b6a9ac37f5ac2f4a51ac77b0bfccabc790f248aea968d8b",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实改变；术语可结合独立词语说明阅读。"
+    },
+    {
+      "id": "certainty_zh",
+      "output_sha256": "bd2d9dd435d2db44bef120c5958b8db260dba7ec785d03ed5d1e31294fe47ff8",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实改变；术语可结合独立词语说明阅读。"
+    },
+    {
+      "id": "followup_zh",
+      "output_sha256": "332837e55a618314498441c28854026cf2af22897ee9fdb8dc8c310bf35b0499",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实改变；术语可结合独立词语说明阅读。"
+    },
+    {
+      "id": "multiple_en",
+      "output_sha256": "0d9245d2a2f9898a9963f26f4ce3c7fadce51113b931d5240ff56a6ac6700046",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "双肺有胸腔积液的定位措辞不严谨，未单列明确事实错误，但不评为完全忠实；流体仍明确为胸腔积液。"
+    },
+    {
+      "id": "stable_en",
+      "output_sha256": "ddc7a66b2fb655c4c6b7db64eedf5220f2908b76b73b79d4e5b2a42a3be8e2d6",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实改变；术语可结合独立词语说明阅读。"
+    },
+    {
+      "id": "recommendation_en",
+      "output_sha256": "486d78e92a035001c56e9479eaa66ec98257308ce8d5c6d67cec7bd0f4e6f3cc",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实改变；术语可结合独立词语说明阅读。"
+    },
+    {
+      "id": "injection_en",
+      "output_sha256": "56770819bd22f3e710f54234ecfd3f44dbb4ae9a658e9b21348ac78be5c36db7",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明确事实改变；术语可结合独立词语说明阅读。"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "stage": "development_only",
+  "split": "synthetic",
+  "count": 14,
+  "generation_seconds": 13.175576459150761,
+  "load_seconds": 0.9848852920113131,
+  "model_repo": "JustFrederik/nllb-200-distilled-600M-ct2-int8",
+  "model_revision": "302d78f00e6fdb50a1064059df7c392b735e9d05",
+  "model_files": {
+    "repo": "JustFrederik/nllb-200-distilled-600M-ct2-int8",
+    "revision": "302d78f00e6fdb50a1064059df7c392b735e9d05",
+    "files": [
+      {
+        "name": "README.md",
+        "size": 3435,
+        "sha256": "7c9ab4af8da4a3e82a1dcf6014318a540e3509f31051c470610767521f0b1993"
+      },
+      {
+        "name": "config.json",
+        "size": 159,
+        "sha256": "0c2f6fa2057c7264d052fb4a62ba3476eeae70487acddfa8e779a53a00cbf44c"
+      },
+      {
+        "name": "model.bin",
+        "size": 622595991,
+        "sha256": "ed1beaf75134de7505315a5223162f56acff397eff6b50638a500d3936fe707b"
+      },
+      {
+        "name": "sentencepiece.bpe.model",
+        "size": 4852054,
+        "sha256": "14bb8dfb35c0ffdea7bc01e56cea38b9e3d5efcdcb9c251d6b40538e1aab555a"
+      },
+      {
+        "name": "shared_vocabulary.txt",
+        "size": 2568098,
+        "sha256": "a132a83330f45514c2476eb81d1d69b3c41762264d16ce0a7ea982e5d6c728e5"
+      },
+      {
+        "name": "special_tokens_map.json",
+        "size": 3548,
+        "sha256": "992bd4ed610d644d6823081937bcc91bb8878dd556cea4ae5327f2480361330e"
+      },
+      {
+        "name": "tokenizer.json",
+        "size": 17331176,
+        "sha256": "e316b82de11d0f951f370943b3c438311629547285129b0b81dadabd01bca665"
+      },
+      {
+        "name": "tokenizer_config.json",
+        "size": 564,
+        "sha256": "d1aa8c3697d3e35674f97b5b7e9c99d22b010f528e80140257d97316be90d044"
+      }
+    ],
+    "download_seconds": 66.17927716707345
+  },
+  "input_sha256": "d53fa9e1d57cd1da6d89c8505824a3079c1cb6000432dfcaa50cf5856992e848",
+  "plan_sha256": "86284579891ed2475f8506a5b3a1dd2613954368a057ef8460d36e62b89e302d",
+  "device": "cpu",
+  "compute_type": "int8_float32",
+  "source_sha256": {
+    "experiments/v2_mt/run_probe.py": "3aa473e0f0fe34b3e10584c86e8e818924eb72a4b9905e93de6880ba15603173",
+    "radplain/guard_v2.py": "784d7c24d8293dee1a08e5ce11b0f844355b50d08ec8dfdb8bc00e73815d6334",
+    "radplain/glossary_v2.py": "f5521346fe40c08b0bf80e1fba018633acb77d38117c0de874809f098382f010",
+    "radplain/explain_v2.py": "971bd1bacb78e66764f481abe1235826c81ddc135f3813b91582d5802a4edd2f",
+    "radplain/quantity_v2.py": "d38f6178494ac5839e5f1eea64275abbd0765a97822fd6971ba7474a47b23c0d"
+  },
+  "source_changed_during_run": false,
+  "peak_process_rss_bytes": 1168670720,
+  "dependencies": {
+    "ctranslate2": "4.8.3",
+    "transformers": "4.57.1",
+    "tokenizers": "0.22.2",
+    "sentencepiece": "0.2.2",
+    "numpy": "2.5.4",
+    "huggingface-hub": "0.36.2"
+  }
+}

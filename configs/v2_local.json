@@ -1,0 +1,5 @@
+{
+  "model": "artifacts/v2/qwen35-4b",
+  "mode": "evidence-critic",
+  "description_zh": "本机4位模型，逐句中文解释、原文对应与有限核对；不完整片段保留原文。"
+}

@@ -1,0 +1,156 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "scope": "Displayed Chinese only; source-only fallback is incomplete, not a correct answer.",
+  "cases": [
+    {
+      "id": "negation_en",
+      "output_sha256": "aa42f283011891cdc4c0b2064f6f0bccd1ac602e7a315fb0838580f16293312c",
+      "errors": [
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "胸腔积液与气胸均被译成不成立的医学词语。"
+    },
+    {
+      "id": "uncertainty_en",
+      "output_sha256": "fca3335cbf8f812fcba5d7231f31e7472a61bb5d72f74762c29c293e6ed16c37",
+      "errors": [
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "肺叶写成叶片，结节写成节点，不能作为清晰的医学解释。"
+    },
+    {
+      "id": "laterality_en",
+      "output_sha256": "b9f336ff55d1104e8b8b7a9f6190fbd1f32c36b94f77ec62e60eefc2dcb789d5",
+      "errors": [
+        "anatomy_side",
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "右侧被译成正确，胸腔积液变成骨髓流出等错误部位与术语。"
+    },
+    {
+      "id": "change_en",
+      "output_sha256": "ce82140b1bd57be624b8081b991385bd0f7d917ed3d375773e2533f412e33079",
+      "errors": [
+        "omission",
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "肺部阴影的具体含义丢失，只剩不完整的度下降。"
+    },
+    {
+      "id": "urgent_finding_en",
+      "output_sha256": "24925b35585d9545bab6cf0551e34bd42b83b3e1aa99f5e1de20374bbe144b7f",
+      "errors": [
+        "anatomy_side",
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "肺尖气胸变成右心肺，纵隔移位变成中期转班。"
+    },
+    {
+      "id": "uncertain_cancer_en",
+      "output_sha256": "15c494d91158a54ff616a56594ffd3a8e7afd7d4cc0a900d349815e7760c06e1",
+      "errors": [
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "局灶阴影被译成焦点光；感染可能性与不能排除恶性虽保留，发现本身错误。"
+    },
+    {
+      "id": "numbers_en",
+      "output_sha256": "57672583cb261b5272484e18cc9af3a6f3d112589d48a93a247c32d7ca977b72",
+      "errors": [
+        "number_time",
+        "recommendation",
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "三个月后改为三个月内，结节和肺叶也使用错误词语。"
+    },
+    {
+      "id": "no_new_en",
+      "output_sha256": "2641b4fc848d95b0b1533a6f86c90c9a5610ce013ae3e40ea9b37e8bd6b90ee1",
+      "errors": [
+        "anatomy_side",
+        "terminology",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "双肺尖位置丢失，实变误为焦点整合。"
+    },
+    {
+      "id": "limited_en",
+      "output_sha256": "41a2c24804760e10106f1f1dd106545ea9ba332feb8d6dfdbb399a369ce4fd91",
+      "errors": [
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "肺不张被音译成不能解释病情的词组。"
+    },
+    {
+      "id": "devices_en",
+      "output_sha256": "0c9b18482b047a321a13fb6c384c22328b0ec8fb611c3aac42718743a961d4dc",
+      "errors": [
+        "anatomy_side",
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "气管导管误为肠道管，隆突误为腹部，膈肌只写膜。"
+    },
+    {
+      "id": "multiple_en",
+      "output_sha256": "39dae242c605f22c3d0996f1decaf524a04a58907b2892cd42ca76d88a9236aa",
+      "errors": [
+        "terminology",
+        "negation"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "心脏增大误为心脏病，气胸阴性竟变成没有肺。"
+    },
+    {
+      "id": "stable_en",
+      "output_sha256": "7241678994c850d818f3666c4281c3e5f7f2aa84a8d8d4f8b8952b3362b9ab3d",
+      "errors": [
+        "terminology",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "钙化的钙信息丢失，结节与肺叶仍是错误词语。"
+    },
+    {
+      "id": "recommendation_en",
+      "output_sha256": "fdc698f4e40fe20b377dbfb02901073e464c381fe1719bf2d6a6f3e8084a8cbb",
+      "errors": [
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "阴影和消退误为不透明度和分辨率，复查目的失真。"
+    },
+    {
+      "id": "injection_en",
+      "output_sha256": "210a9f9937d37dcf03dabd8b92a27f0458278140bfd807fef178979070fa8a84",
+      "errors": [
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "行政指令被既有规则排除，但积液本身仍误译。"
+    }
+  ]
+}

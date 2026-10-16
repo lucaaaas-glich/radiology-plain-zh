@@ -1,0 +1,155 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "scope": "Displayed Chinese only; source-only fallback is incomplete, not a correct answer.",
+  "cases": [
+    {
+      "id": "real_0e9c60d4ad638a81",
+      "output_sha256": "dcf48a0f4a98b94f93fd648ab5661244ebcb13f03b191236ab69316d1854b60a",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "起搏器与导线、轻度浸润、少量积液、可能关系保留；沿用此前标准，肺膜用词不标准但未计为器官改变。"
+    },
+    {
+      "id": "real_53499b1249f0e7a6",
+      "output_sha256": "74a2187ec1eaa927237fa7ae58f185eb5b660755f5613171c064fb97cf56de74",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "年龄、接触史和全部阴性句均完成；重复肺炎词语影响行文，不单独计事实错误。"
+    },
+    {
+      "id": "real_4187fbf7eadcb951",
+      "output_sha256": "9aceb11bf0f276745868c2a919250121e2f68af16f89ce975ee6a90adbc73375",
+      "errors": [
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "右上叶后段与胸椎前缘定位已正确，但复杂分布句漏掉两处外周限定；仍列遗漏。术语密集。"
+    },
+    {
+      "id": "real_6e2b1d9d0d10b307",
+      "output_sha256": "862ca7f2eb0478e152d0c5f04e1515ea7766310c66fbb52494a98afd668c7725",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "日期、左侧积液改善、同侧肋膈角、引流管及稳定结节保留，日期回退已消失。"
+    },
+    {
+      "id": "real_4889613d7b935c76",
+      "output_sha256": "5bf49f835afd8c2cd31d955f0b8cbe374f0f5d4187992f0f7693434fb48acaba",
+      "errors": [
+        "negation",
+        "anatomy_side"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "时间比较句回退；无病理性淋巴结仍被写成病理大小或外观的淋巴结未见改变，改变阴性关系；脂肪瘤在背阔肌下方被写成肌处。静脉途径已恢复。"
+    },
+    {
+      "id": "real_99884d41e32a39f8",
+      "output_sha256": "e468714206d0f639bdba401c9c9b455efe99da690d75c83f86a4c68606214f1b",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "尺寸、分期、两处病灶和术后关系保留；亚被膜措辞生硬且意义不够清楚，列精度顾虑而不计明确错误。"
+    },
+    {
+      "id": "real_c6927c378a6e2c87",
+      "output_sha256": "d17912e09554dbcf23052d9893e30147ee21c30d37a3dd646d5445161b97fd50",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "舌段浸润已吸收保留；小纤维化残余句回退，所以不计完整忠实。"
+    },
+    {
+      "id": "real_788c7076b21bef32",
+      "output_sha256": "98871937d0139fb68a487048b202a25a9b9744404c40a7e31dc835c146b6269e",
+      "errors": [
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "肺气肿句遗漏持续存在及小叶中心型限定；结肠复合部位被泛化。单纯囊肿虽保留为简单囊肿，但措辞不标准。"
+    },
+    {
+      "id": "real_8e3f069b88d7550c",
+      "output_sha256": "a57a310b42086510a8083b4595203b8bbf0e4dcfc735a761f910ec0a5d8cf9d9",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "用力后一月的后肋痛、前后与斜位、未见相关病理发现均保留，语言仍专业。"
+    },
+    {
+      "id": "real_20d69a9e8c41860d",
+      "output_sha256": "201e351e6a3bbd6f0fcb34dc3bce0e725bf82157dd11ecda40be79243b74cd2b",
+      "errors": [
+        "anatomy_side",
+        "omission",
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "部分重复句仍将黏膜下水肿改成皮下水肿；既往发现句保留已知但新增本次无新发现，并遗漏数年前限定。首条去标识占位句回退。"
+    },
+    {
+      "id": "real_2f86141ba8fa19ea",
+      "output_sha256": "a60f77b585d3a7ba60665d5497b0d2bc2fd5c2098cbdb0d5dbaf139051fa712b",
+      "errors": [
+        "change",
+        "omission",
+        "negation"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "严重肺气肿误为已经进展，虚构时间变化；末句漏COVID-19范围，将该病感染阴性扩大成所有肺部感染阴性；也遗漏慢性支气管炎原因。亚厘米及可能感染监测句已完成。"
+    },
+    {
+      "id": "real_4d02bd9100fee8f7",
+      "output_sha256": "93fe6ae01f6a7fa423129ced891f35c7a46e0837e498f3714a05ee7cbd15c79d",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "2015年手术与明显淋巴结限定恢复，历史感染句仍回退。腹膜疝表述不标准、具体所指有精度顾虑，未凭该歧义单独判明确错误。"
+    },
+    {
+      "id": "real_de592071091f2d97",
+      "output_sha256": "2915380aa3b116aef7f3481faa66be90c391ac33300aa27c8777d61ba81c839a",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "双侧条带句回退，其余容积、左右与程度、气道通畅且变细均保留；ex vacuo译为减压性难读且有精度顾虑，沿用此前同标准不单列明确错误。"
+    },
+    {
+      "id": "real_abd463216fac09a8",
+      "output_sha256": "586c752bc68cff43e33ca60aba1376ad42c0e1706de9618d4d0919d91ef25cd5",
+      "errors": [
+        "anatomy_side",
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "140毫米距离仍增加上方这一原文没有的方向；疝内肠段变化句回退。大横突限定已恢复，仍混入caliber英文，降低可读性。"
+    },
+    {
+      "id": "real_b27e89e8eb71724d",
+      "output_sha256": "41f136bc1c30d9f4cb90bab1e749d74b437e0565cfee6b90763817a992f7bac5",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "含气空间实变阴性和双侧乳房成形术均正确，已有切除术误译消失。"
+    },
+    {
+      "id": "real_4b40d531f81fd555",
+      "output_sha256": "f3b5a2d0e71e38902ece43c2f4edea8f5f5b86bed5f66f7cd057520fb299f3c4",
+      "errors": [
+        "anatomy_side",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "右侧肋骨外侧定位仍遗漏，按此前相同标准列错误；肺底、新出现、稳定和可能性均保留。"
+    }
+  ]
+}

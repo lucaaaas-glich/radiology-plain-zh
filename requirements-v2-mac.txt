@@ -1,0 +1,9 @@
+# Versions measured for V2 inference on this Apple Silicon Mac.
+# Keep the V1 requirements file and training environments unchanged.
+mlx==0.32.4
+mlx-lm==0.32.0
+transformers==5.19.0
+huggingface-hub==2.2.0
+tokenizers==0.23.3
+numpy==2.5.4
+safetensors==0.8.0

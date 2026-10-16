@@ -1,0 +1,22 @@
+{
+  "scope": "Local three-arm final evaluation and Chinese explanation; GPU final review still pending external access.",
+  "pdf_pages": 5,
+  "visual_qa": "All five pages of the latest PDF rendered with Poppler and visually inspected; no clipping, overlapping text, missing glyphs, or broken tables observed.",
+  "source_document": "docs/v2/本机实测与讲解.md",
+  "final_reports_reviewed_per_arm": 72,
+  "local_final_arms": 3,
+  "files": {
+    "docs/v2/本机实测与讲解.md": "35f9ca203205f1d6ea8af58fefd7a3fba88e0e65d6d3d30848a787c15f36b2a0",
+    "docs/v2/本机实测与讲解.pdf": "1ba1ec73dd5d1cd4e6fd355bf48e7699c6809fdb59708f489546d2bd95fc604e",
+    "results/v2/final_synthetic_local_outcomes.png": "accea5dcf3250ed73861995041a3b4fd365c0508c87fdeffcd55c2a5bfea8c3f",
+    "results/v2/final_real_local_outcomes.png": "90216dfe5bb8e67b74ac8b3de6f851764df05a5244e4470fe783b26c541ad662",
+    "docs/v2/examples/V2_示例_导管位置.html": "73f249f02b7726815f0c21d5cb785ecabd3e203a2199141c1a5fe7df19db66bb",
+    "docs/v2/examples/V2_示例_日期不确定.html": "623414a78a0c2f947c44dc98caa58ca62205f1fd2add756d9fde8b0e05babd53",
+    "docs/v2/examples/V2_示例_仍会遗漏限定词.html": "c4ac1576e32e87e6350f929ead00f534ae67aad8ad14a11e8fd27278684cb445"
+  },
+  "pending": [
+    "Retrieve original frozen GPU72 outputs after school connection/Duo restored",
+    "Review GPU final outputs and run frozen stored-candidate recheck",
+    "Complete five-arm final comparison and full stage delivery"
+  ]
+}

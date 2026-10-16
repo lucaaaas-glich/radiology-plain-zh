@@ -1,0 +1,205 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "scope": "Displayed Chinese only; source-only fallback is incomplete, not a correct answer.",
+  "cases": [
+    {
+      "id": "real_0e9c60d4ad638a81",
+      "output_sha256": "083aba3727e697ddd8ff5bb6a0357ab3cee8df23599f49274d25d8886c01c76c",
+      "errors": [
+        "unsupported_addition",
+        "anatomy_side",
+        "omission",
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "增加起搏器和金属夹正常的判断；心胸比例写成心肺比例，肺门周围变成肺边缘，肺泡浸润和胸膜积液混成肺内液体，遗漏电极位置。"
+    },
+    {
+      "id": "real_53499b1249f0e7a6",
+      "output_sha256": "4dd5d1f7b69bb7abc2aa9cbac9507dc57c2ff9272d52dafcd8bad148e0dd9f8b",
+      "errors": [
+        "anatomy_side",
+        "negation",
+        "terminology",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "肺门译成淋巴结，实变及间质阴性扩大成未见明显炎症或异常；未清楚单列无新冠肺炎发现。"
+    },
+    {
+      "id": "real_4187fbf7eadcb951",
+      "output_sha256": "67ad12e57f87bd63c5957275d42f9dd0a9817409aaa6438dfa240ec7ab7d7aec",
+      "errors": [
+        "anatomy_side",
+        "omission",
+        "certainty",
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "支气管扩张解释成气管扩张；多处肺叶定位泛化，未使用对比剂、住院背景和骨赘前缘遗漏，结论语气和因果限定改变。"
+    },
+    {
+      "id": "real_6e2b1d9d0d10b307",
+      "output_sha256": "102bfd034d0768ea2673237c9c9e4a7330fa5fd9689133812bbfef18db061f01",
+      "errors": [
+        "unsupported_addition",
+        "change",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "肺不张新增没有明显变化，把前后结节比较误带入；片层形态未保留。"
+    },
+    {
+      "id": "real_4889613d7b935c76",
+      "output_sha256": "ef9547f0e0b41385ccab8477a33a3c6246e47dae1c9db8bfd13f37c558f58a1e",
+      "errors": [
+        "number_time",
+        "anatomy_side",
+        "omission",
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "凭空编2020年10月手术，并把与三个月半前检查比较改成术后三个月半；具体对照日期、给药途径、肺叶部位及脂肪瘤所在层次丢失。"
+    },
+    {
+      "id": "real_99884d41e32a39f8",
+      "output_sha256": "7a7dfe7738b0d6478db9cb20ad4650fd5ba5b4273ad45287065291fc7109e677",
+      "errors": [
+        "omission",
+        "anatomy_side",
+        "certainty"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "大量遗漏腺癌亚型、乙状部位、静脉给药、右肝切除、病灶分段与图像号、肾囊肿、手术缝线等；肺叶定位泛化，已确认的肝转移正文又写可能。"
+    },
+    {
+      "id": "real_c6927c378a6e2c87",
+      "output_sha256": "67702ef463267bba46e8b678bc60577c7dd8de9b07abe6661164f74dc3c50b14",
+      "errors": [
+        "unsupported_addition",
+        "anatomy_side",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "将影像浸润直接称为炎症及感染，舌段定位遗漏；纤维化解释为变硬组织缺乏准确术语。"
+    },
+    {
+      "id": "real_788c7076b21bef32",
+      "output_sha256": "596ffe1c95579eefc973cd93ff4a2361ec4165d3f34442615db2aef3f8561553",
+      "errors": [
+        "anatomy_side",
+        "terminology",
+        "omission",
+        "negation"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "叶定位及小叶中心型和胸膜下位置泛化，肠系膜脂膜炎译成腹膜炎，乙状范围混入直肠；没有结节改成没有新结节，扩大保留异常的可能。"
+    },
+    {
+      "id": "real_8e3f069b88d7550c",
+      "output_sha256": "3e0f6f37d3f42cdbe2977e98300718980ed6473bf03e65fbb16e3e8506326c42",
+      "errors": [
+        "anatomy_side",
+        "negation"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "斜位改成侧面片，无相关病理发现改成无明显疾病或异常，改变检查方式及阴性范围。"
+    },
+    {
+      "id": "real_20d69a9e8c41860d",
+      "output_sha256": "47c732a7bb61149c8fe791f9db421c7c8c89b14a584cb4d72144d953e93c0f49",
+      "errors": [
+        "anatomy_side",
+        "negation",
+        "omission",
+        "certainty"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "原文输尿管管径正常被写成双侧输尿管扩张，严重改变对象与结论；可能的连接部狭窄转为肯定，黏膜下层次、静脉途径、数年前限定遗漏。重复段合并本身不计错误。"
+    },
+    {
+      "id": "real_2f86141ba8fa19ea",
+      "output_sha256": "2131061bd3732d61da33f2098470a43d9fb63ac370bd98a637892941e66d9f89",
+      "errors": [
+        "anatomy_side",
+        "terminology",
+        "omission",
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "肺叶定位泛化；肉芽肿解释成炎症后瘢痕，支气管混称气管；小叶中心及旁间隔亚型、肺大泡、亚厘米界限等丢失，肺不张新增轻微程度。"
+    },
+    {
+      "id": "real_4d02bd9100fee8f7",
+      "output_sha256": "f8ea5ad441ba5a3e15bd0939b442b6dd3400d178e51c9854b93c908b0c6b401c",
+      "errors": [
+        "anatomy_side",
+        "omission",
+        "negation",
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "左侧主裂结节被移到左上叶，肠系膜位置变成腹膜后；整个既往新冠及不支持残留肺炎段落遗漏，脾肉芽肿简成结节，无显著淋巴结异常扩大成无肿大。"
+    },
+    {
+      "id": "real_de592071091f2d97",
+      "output_sha256": "ef1be2f188cb6b19e4c3a2e8bbf5fbad91dbf8f6b9b7dc35613ac7151252fcc6",
+      "errors": [
+        "anatomy_side",
+        "omission",
+        "unsupported_addition",
+        "negation"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "左下叶完全及上叶部分塌陷被模糊，胸膜腔积液移到塌陷肺内；支气管说成气管，含气肺区说成健康，遗漏无空气支气管征与可能ex-vacuo，肺部感染阴性扩大。"
+    },
+    {
+      "id": "real_abd463216fac09a8",
+      "output_sha256": "e6e2eabfe2f789513f31993ac6649b57204488d79ce1b0884fb832501a016583",
+      "errors": [
+        "number_time",
+        "omission",
+        "anatomy_side",
+        "negation"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "囊体59×90×90毫米整组尺寸遗漏，中度程度、静脉给药和退行性改变遗漏；出入点管径变化写成两处均扩张，横突大转为连接处大，淋巴结阴性丢失显著限定。"
+    },
+    {
+      "id": "real_b27e89e8eb71724d",
+      "output_sha256": "d4361e9346c27746879a5150dc3d8c3d4f0fd0ba801d6221157364df50bbdae6",
+      "errors": [
+        "unsupported_addition",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "双侧乳房成形术历史变成双侧乳腺检查正常，捏造正常结论并丢失手术事实。"
+    },
+    {
+      "id": "real_4b40d531f81fd555",
+      "output_sha256": "9382933b8c5cb4ea6098efda27883a271990c80fe1c96099b6facce74f325580",
+      "errors": [
+        "terminology",
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "实变被说成积液或炎症，间质浸润被说成炎症或纤维化，加入了原文没有的性质；新出现和左右侧仍保留。"
+    }
+  ]
+}

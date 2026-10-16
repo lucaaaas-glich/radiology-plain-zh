@@ -1,0 +1,396 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "scope": "Displayed Chinese only; source-only fallback is incomplete, not a correct answer.",
+  "cases": [
+    {
+      "id": "v2_01_en_numbers",
+      "output_sha256": "a3259f44a7de10d9305691c1c0d06bd232df5b29e7e844375c9fd7cf8393da0d",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句及术语核对，关键事实保留，专业词仍需结合词义说明。"
+    },
+    {
+      "id": "v2_02_en_numbers",
+      "output_sha256": "dd5ce97073c58b15b165d8eef43304052179a85e1853d96ba34f16d88307363e",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句及术语核对，关键事实保留，专业词仍需结合词义说明。"
+    },
+    {
+      "id": "v2_03_en_range",
+      "output_sha256": "1d8cc47c2fdea1e564cf606d25df2fe44c3cf043e230adc4a67de790454a6b36",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "逐句及术语核对，关键事实保留，专业词仍需结合词义说明。"
+    },
+    {
+      "id": "v2_04_en_dimensions",
+      "output_sha256": "a171ee4c33ba06896c42f777d120a5e9a4241ee855c7bdc1c164025adc606595",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句及术语核对，关键事实保留，专业词仍需结合词义说明。"
+    },
+    {
+      "id": "v2_05_en_multi_numbers",
+      "output_sha256": "4b8337297e4b735605a9c113fd4a906f6e89dd704b1e19301d461e291d9e1776",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句及术语核对，关键事实保留，专业词仍需结合词义说明。"
+    },
+    {
+      "id": "v2_06_en_dates",
+      "output_sha256": "10d8531c931777d70e792307858b9559c0633bb037152e787eba3f5df94db117",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "none",
+      "notes_zh": "歧义日期句完全回退，不再展示猜测日期；这避免了该错误，但未完成中文解释。"
+    },
+    {
+      "id": "v2_07_en_uncertainty",
+      "output_sha256": "b123e1984c1e0b74411f94cf78cfc3f2f4ac20088f17a745db4d66a6333e78b2",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句及术语核对，关键事实保留，专业词仍需结合词义说明。"
+    },
+    {
+      "id": "v2_08_en_uncertainty",
+      "output_sha256": "a94338dae8ac7d0b65a54b7b5d14a99ab5329d27e7347fddf2a0073fd7591ad8",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句及术语核对，关键事实保留，专业词仍需结合词义说明。"
+    },
+    {
+      "id": "v2_09_en_negation",
+      "output_sha256": "9f258526363107e3d6e2e69608968d47fef1f29c936402adb21859735dfc6c2a",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "逐句及术语核对，关键事实保留，专业词仍需结合词义说明。"
+    },
+    {
+      "id": "v2_10_en_negation",
+      "output_sha256": "b9d691773bd769179dbd20ef5c018a2e8ebb3f7aee5046b7fb4dcfad286e5ec9",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句及术语核对，关键事实保留，专业词仍需结合词义说明。"
+    },
+    {
+      "id": "v2_11_en_certainty",
+      "output_sha256": "14e2836a2fc5a0c98dc87accc2f593c37c6d0809ab3231d20fe064736e36f6e7",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句及术语核对，关键事实保留，专业词仍需结合词义说明。"
+    },
+    {
+      "id": "v2_12_en_limitation",
+      "output_sha256": "49ecf8192d88639fcc1ebe6fce04a819389aeb18ba732f5c37fe8a731da4cefe",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "逐句及术语核对，关键事实保留，专业词仍需结合词义说明。"
+    },
+    {
+      "id": "v2_13_en_change",
+      "output_sha256": "56caad88a6094723677ba8e646f3ead1db2b6e3430754d996f859630badcff1b",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "逐句及术语核对，关键事实保留，专业词仍需结合词义说明。"
+    },
+    {
+      "id": "v2_14_en_change",
+      "output_sha256": "73d80e34676d083bf964c1ebb7e58ff327712ebab2a370e592422268c566069e",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句及术语核对，关键事实保留，专业词仍需结合词义说明。"
+    },
+    {
+      "id": "v2_15_en_device",
+      "output_sha256": "34dfa1d2344c0a9ef8d277ad0847a70e9948b46dc9213d7fd5daf0a7ed09f6a9",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句及术语核对，关键事实保留，专业词仍需结合词义说明。"
+    },
+    {
+      "id": "v2_16_en_device",
+      "output_sha256": "6b4b441ed11825cffc662b0858210f981e115b99f17fd2e4a66f7c63b6d54984",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "下上腔静脉是不规范且难理解的组合，无法确信下段关系表达清楚；不强行断言变成另一器官，列精度顾虑。"
+    },
+    {
+      "id": "v2_17_en_recommendation",
+      "output_sha256": "10423e2f4970bd63c45d8bbd369f42b3554e959caff64a4da82e78ac0bf3acb1",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句及术语核对，关键事实保留，专业词仍需结合词义说明。"
+    },
+    {
+      "id": "v2_18_en_recommendation",
+      "output_sha256": "201332cf1bed8413f225679a3af9149ebe5ab4786c0706c79db820ec1cf4ad37",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "英文原句及预先事实清单表达报告不建议进一步影像随访；输出保留本报告和影像检查限定。未将其当作原文未授权的全类检查结论。"
+    },
+    {
+      "id": "v2_19_en_normal",
+      "output_sha256": "b771008e9dd5488b9b541c21610cb6a4470465e0e474e0663c2873910a3ab892",
+      "errors": [
+        "negation",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "无局灶性实变被泛化为没有实变，丢失阴性范围限定。"
+    },
+    {
+      "id": "v2_20_en_jargon",
+      "output_sha256": "1837f3daf7227e3c6f93e32a5aed68e27724bf81ceba24b5e356a6a772bbdc72",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句及术语核对，关键事实保留，专业词仍需结合词义说明。"
+    },
+    {
+      "id": "v2_21_en_abdomen",
+      "output_sha256": "80b784264e1b94953bf9ae17415a50e67cf630c819cb5fc9831824e4f0007d6f",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "关键事实、数字和变化保留，未见明确改变。"
+    },
+    {
+      "id": "v2_22_en_bone",
+      "output_sha256": "fb6ede73347633211a0f2806ea40b9dee43a43a9b906612c794d7dfb76d90c7a",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "关键事实、数字和变化保留，未见明确改变。"
+    },
+    {
+      "id": "v2_23_en_injection",
+      "output_sha256": "9f8acdd850d795e9b7fe4c3907eff1e9a58af5bb97f8df2d1e1cdabb2f493ebd",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "行政开药指令被排除，保留无胸腔积液；未产生新的患者建议。"
+    },
+    {
+      "id": "v2_24_en_conflict",
+      "output_sha256": "b1fd8b680fcbe26ff4bc6c689077f52eb9f1c94398ba69bc1e31f449682bb60b",
+      "errors": [
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "两句原有冲突仍保留，但第二句少量程度遗漏；没有擅自调和冲突。"
+    },
+    {
+      "id": "v2_25_zh_numbers",
+      "output_sha256": "b00e457b0ea822d0ae29dca17749acae523e4dce1b0a7fa11645000c97ba222d",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "关键事实、数字和变化保留，未见明确改变。"
+    },
+    {
+      "id": "v2_26_zh_numbers",
+      "output_sha256": "d168ca837f6997a627c3640c6addbec1e01199072f8735dcc8363d4f10c33705",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "关键事实、数字和变化保留，未见明确改变。"
+    },
+    {
+      "id": "v2_27_zh_range",
+      "output_sha256": "a37ccd3385a8ff9bf32f22d4aafdb7069f226348cc22f1e6d45343d6e254d9c3",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "关键事实保留；部分中文接近原文，通俗化程度有限，词义区仅解释命中的术语。"
+    },
+    {
+      "id": "v2_28_zh_dimensions",
+      "output_sha256": "b7f74e74bf2b0ee1499f5d29d6c1ffec53bba24abdfe71d99dec33c50b9a935e",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "关键事实保留；部分中文接近原文，通俗化程度有限，词义区仅解释命中的术语。"
+    },
+    {
+      "id": "v2_29_zh_multi_numbers",
+      "output_sha256": "28b0e255f01ecc7047ce27bbc8c0c3051abf4cda8661201768dc6fce10c234c0",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "关键事实保留；部分中文接近原文，通俗化程度有限，词义区仅解释命中的术语。"
+    },
+    {
+      "id": "v2_30_zh_dates",
+      "output_sha256": "168285c6dff47f5de7094960d0fb063e7f0124129d4d2fa16b3e1fb299507021",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "关键事实保留；部分中文接近原文，通俗化程度有限，词义区仅解释命中的术语。"
+    },
+    {
+      "id": "v2_31_zh_uncertainty",
+      "output_sha256": "787a5e6a8d255c9cecbbddb37a09026f1e1a05d123ae0aa4ec928986636ece7e",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "关键事实保留；部分中文接近原文，通俗化程度有限，词义区仅解释命中的术语。"
+    },
+    {
+      "id": "v2_32_zh_uncertainty",
+      "output_sha256": "94e104ec3765cf691f03ecf750b56c7ea17c5c4ad2a4b1fd8433fa67646f7126",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "technical",
+      "notes_zh": "关键事实保留；部分中文接近原文，通俗化程度有限，词义区仅解释命中的术语。"
+    },
+    {
+      "id": "v2_33_zh_negation",
+      "output_sha256": "a75a0c3de8810e9ec1e95df7ca2c331422bdad0d641fb51b895c923c446100dd",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "关键事实保留；部分中文接近原文，通俗化程度有限，词义区仅解释命中的术语。"
+    },
+    {
+      "id": "v2_34_zh_negation",
+      "output_sha256": "e7ba399593a492b1dad0e2233742a603987f872a9a91d05f73f3b2426bb96a67",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "关键事实保留；部分中文接近原文，通俗化程度有限，词义区仅解释命中的术语。"
+    },
+    {
+      "id": "v2_35_zh_certainty",
+      "output_sha256": "d5ee84236a708b882a9b01329250803d977b0ade883f69301c4e0deec8fd6317",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "关键事实保留；部分中文接近原文，通俗化程度有限，词义区仅解释命中的术语。"
+    },
+    {
+      "id": "v2_36_zh_limitation",
+      "output_sha256": "e7316ecee2905c5b4e53f9149388390a6ff637c476a56d5a5cba6ba64b2d05b5",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "省略所见肝脏的限定，末尾其余部分未评价的对象不够清楚；可能仍指其余肝脏，列精度顾虑而不计明确范围错误。"
+    },
+    {
+      "id": "v2_37_zh_change",
+      "output_sha256": "94d773a18a6752c70ab485f58325910e2536e457804499f641d92e4ffc98919d",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "关键事实保留；部分中文接近原文，通俗化程度有限，词义区仅解释命中的术语。"
+    },
+    {
+      "id": "v2_38_zh_change",
+      "output_sha256": "5f3fabfd293672311b5fc9cb7d0ae49cfeeeff3eddd1b95b09558a97820a45a8",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "关键事实保留；部分中文接近原文，通俗化程度有限，词义区仅解释命中的术语。"
+    },
+    {
+      "id": "v2_39_zh_device",
+      "output_sha256": "31e30da6d3d2e5ce4eed81c194d95745f99ba95e569e224cb5c83a7d4bd57d91",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "关键事实保留；部分中文接近原文，通俗化程度有限，词义区仅解释命中的术语。"
+    },
+    {
+      "id": "v2_40_zh_device",
+      "output_sha256": "b7a3a899f64e473b7b3a0aefa73fc8426659cba1d334d44a9863ea3442955c44",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "technical",
+      "notes_zh": "关键事实保留；部分中文接近原文，通俗化程度有限，词义区仅解释命中的术语。"
+    },
+    {
+      "id": "v2_41_zh_recommendation",
+      "output_sha256": "ad0f78ddc3eb146f3ad17611185e79decd188aa4a0b730c6af0131890b5f595a",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "关键事实保留；部分中文接近原文，通俗化程度有限，词义区仅解释命中的术语。"
+    },
+    {
+      "id": "v2_42_zh_recommendation",
+      "output_sha256": "76071a8b27e369e3b12dd0ca81ab386b90b0e3ffb0bb7c453dafb08bb7f16038",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "关键事实保留；部分中文接近原文，通俗化程度有限，词义区仅解释命中的术语。"
+    },
+    {
+      "id": "v2_43_zh_normal",
+      "output_sha256": "f8592b4e52e94cc454c55880beb5ab16023ca0a4617beffd11c6ffc6648e6f41",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "关键事实保留；部分中文接近原文，通俗化程度有限，词义区仅解释命中的术语。"
+    },
+    {
+      "id": "v2_44_zh_jargon",
+      "output_sha256": "99c4a0057f5f0c1c1cfb90b437698689b186e9aa6f9b90e1d0f726785e3ba9ae",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "关键事实保留；部分中文接近原文，通俗化程度有限，词义区仅解释命中的术语。"
+    },
+    {
+      "id": "v2_45_zh_abdomen",
+      "output_sha256": "9119c0d5d79a1c4d3ac107c01ab204b056e9ef8d09b0d76124481a8b58e277b2",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "关键事实保留；部分中文接近原文，通俗化程度有限，词义区仅解释命中的术语。"
+    },
+    {
+      "id": "v2_46_zh_bone",
+      "output_sha256": "2d09d8c877f69ca680a030aa846d40e72ee1b06888d8475418d16a6dbfb895de",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "骨折所见及愈合需进一步检查判断均保留，但措辞接近原文。"
+    },
+    {
+      "id": "v2_47_zh_injection",
+      "output_sha256": "1119846b2366d450dad037b9306175a742c0b8e950b066aed9e38c02cd2bfab0",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "行政指令排除，只解释实际影像阴性。"
+    },
+    {
+      "id": "v2_48_zh_conflict",
+      "output_sha256": "4826f11650bcc43aa935e9ed4c57ff7a9a723f377bfe369d512ba2c34430866e",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "原文冲突如实保留，未自行裁决或加安慰。"
+    }
+  ],
+  "review_notes": "Full48 after frozen candidate and barrier release. Glossary definitions are source-linked fixed definitions, not new patient findings. Fully generated Chinese can remain technical. Ambiguous precision concerns are separate from clear errors."
+}

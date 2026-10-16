@@ -1,0 +1,92 @@
+{
+  "stage": "development_only",
+  "model": {
+    "repo": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+    "revision": "c26a38f6a37d0a51b4e9a1eb3026530fa35d9fed",
+    "upstream": "Qwen/Qwen2.5-7B-Instruct",
+    "upstream_revision_at_retrieval": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "note": "Upstream revision at retrieval is not proof of the converter original source revision. Community quantization, not trained by this project.",
+    "local_path": "artifacts/v2/qwen25-7b",
+    "download_seconds": 2989.43408203125,
+    "files": {
+      "model.safetensors": {
+        "bytes": 4284346255,
+        "sha256": "86110f368236b53cf4c2336f991a85703b17bcc60bb75f292b4002ec0219f071"
+      },
+      "added_tokens.json": {
+        "bytes": 605,
+        "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b"
+      },
+      "tokenizer_config.json": {
+        "bytes": 7280,
+        "sha256": "4921d4cbae33349a9cb3b2ad3a7622efdea10a5d208c9f333c77b154aa714888"
+      },
+      "special_tokens_map.json": {
+        "bytes": 613,
+        "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd"
+      },
+      "config.json": {
+        "bytes": 787,
+        "sha256": "1661a349986919d13820d3981623776138d50783d13e247cdc5b075a22b62698"
+      },
+      "tokenizer.json": {
+        "bytes": 7031673,
+        "sha256": "a8506e7111b80c6d8635951a02eab0f4e1a8e4e5772da83846579e97b16f61bf"
+      },
+      "README.md": {
+        "bytes": 732,
+        "sha256": "bcc928c815d856439e238f1977b50c93580ec5e79118e588b20f03aba1a215f5"
+      },
+      "merges.txt": {
+        "bytes": 1671853,
+        "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+      },
+      "vocab.json": {
+        "bytes": 2776833,
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      },
+      "model.safetensors.index.json": {
+        "bytes": 51711,
+        "sha256": "23cd562592dd96686d2e799eb02e4b578a4038b6045eaefe860d270cc060e24f"
+      }
+    }
+  },
+  "context_policy": "all_previous_source_sentences",
+  "mlx_memory_guideline_bytes": 5905580032,
+  "mlx_cache_limit_bytes": 134217728,
+  "wall_clock_budget_seconds": 2700,
+  "source_files_sha256": {
+    "radplain/predict_mlx.py": "5899d658628156a8284046d14a2e5ed14de631a5e5b17c86151481cfcab455e0",
+    "radplain/predict_v2.py": "e006d34349318da215f3477657e96209515511231d0e0968b84f9acf7508ff4d",
+    "radplain/render_v2.py": "8f8d9db8b22d95d26ee5ee81897987620f15df5a3138a2b6165a87cf25f28cd1",
+    "radplain/teacher.py": "aa4f31e7e3d8cfa9478e21b5c269a55c3bd2237351d308d44878c10604288e83",
+    "radplain/predict.py": "eab4c4699ccee5e98b48b707e6262075e004bbe1ac58f40becb803b043f37e7b",
+    "radplain/mlx_backend.py": "6e0d8c5e24d6847ae0bcfda2f72965574cd656cf848c2120099825d789a3db9d",
+    "radplain/__init__.py": "b0bd0be201a9be1a0f029b5cc676818aa15231097205d7af3e420a8903e00348",
+    "radplain/glossary_v2.py": "2e6b35c0a913ce7220fb8ae5e023e587f42477be59e0df2a2d9982aa5ca62afb",
+    "radplain/semantic_v2.py": "5838a85078c08cc97ded897a221ee19aad101e3b8d48f1b1f08941c3291a057c",
+    "radplain/prompts.py": "ed812040abd7bea1235f3adac3c6d2512c6f1e1958ca86e166e1562a02154cb8",
+    "radplain/model.py": "511de7b3c95fedb156a7c29fd56def17c0ed3db9e315f87edacb59035b9deb23",
+    "radplain/explain_v2.py": "67db265d3ae5c4fb66b916854f250a580f7973800f9112343d8ddef617d0adfc",
+    "radplain/quantity_v2.py": "65441899468993f509af2a5fa34ae2259730b2b12965f2ceedb64644da54574e",
+    "radplain/common.py": "3698bb29475ceb06fd4630cca14023c465f2e8e3a1a149fc890e7e56323927bd",
+    "radplain/train.py": "0b666450806aedfeb3e95ba6164fb170dee5a46f151646efa221af7250fc2c1a",
+    "radplain/fidelity.py": "d92179b82a40fdebe6a0881156d988cdfcc113e404074c9a7039a4f7e981dec0",
+    "radplain/evaluate.py": "8ec50abeaa7d512ffe109d56bf458fc859038cd1a7c2deabc887100e76551b1b",
+    "radplain/hf_backend_v2.py": "9dcba7849d49b13c23e04ef80c3e45553e08ece98a83c5ebc854e5f8b4679c18",
+    "radplain/data.py": "e570471d3afdc4f2efebd4cbdbdad52ece8fa02e9b69e9ebf7065fad1d31a450",
+    "radplain/guard_v2.py": "a480d8649776247c42a3bcc824e87f8cb6156661d0492762a7e3054fe22dca2f",
+    "/Users/jiangfu/Downloads/3710/radiology-plain-zh/scripts/audit_v2_local7b.py": "f5c4075fc38a955dcd0199e3e4a2e0ba0d717888a55eda9fae9826b79e4bfe78"
+  },
+  "note": "Memory guideline is not an OS hard limit.",
+  "count": 16,
+  "mode": "direct",
+  "max_tokens": 1024,
+  "split": "real_direct",
+  "generation_seconds": 203.64911704079714,
+  "load_seconds": 7.004968166933395,
+  "input_sha256": "b3d32295a683a3789607b46486136bde9518e6875dad47898a49c25ca587ed3b",
+  "peak_mlx_allocated_bytes": 4788663136,
+  "peak_process_rss_bytes": 213581824,
+  "source_changed_during_run": false
+}

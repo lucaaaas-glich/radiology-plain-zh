@@ -1,0 +1,9 @@
+{
+  "command": ".venv-mac/bin/python -m radplain.predict_v2 --input examples/英文报告.txt --html-dir data/v2/cli_smoke",
+  "completed": true,
+  "input_sha256": "c0400890cc5b3dcfea5df7fe975f6788eb96874645c6b5ace1d9e7af07c694b1",
+  "html_sha256": "ba435ce41defed116ee30a8604e8b0291e529beac1fd8d022b893ddddeeb65bf",
+  "generated_segments": 3,
+  "review_zh": "实测三个片段均正确保留左侧少量积液、右侧无积液与心脏大小正常，并生成本地HTML；未打开浏览器。",
+  "no_inference_overlap": true
+}

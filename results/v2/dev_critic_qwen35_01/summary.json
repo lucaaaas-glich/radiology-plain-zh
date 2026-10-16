@@ -1,0 +1,10 @@
+{
+  "stage": "handwritten development diagnostics, not clinical validation",
+  "model": "artifacts/v2/qwen35-4b",
+  "problem_pairs": 20,
+  "problem_pairs_rejected": 17,
+  "valid_pairs": 10,
+  "valid_pairs_rejected": 0,
+  "invalid_verdicts": 0,
+  "seconds": 105.79701029043645
+}

@@ -1,0 +1,12 @@
+{
+  "purpose": "development diagnostic; not unseen evaluation or clinical accuracy",
+  "count": 38,
+  "bad": 24,
+  "valid": 14,
+  "pairs_sha256": "bf1939f784d3366b9af9aacb89e0a5a3093f7f0b0a6808bd37067709c97e7ae5",
+  "max_reasoning_tokens": 1024,
+  "max_verdict_tokens": 512,
+  "temperature": 0,
+  "model": "artifacts/v2/qwen35-4b",
+  "selection": "compare reasoning on/off with identical source prompts and glossary; no final holdouts used"
+}

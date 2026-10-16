@@ -1,0 +1,130 @@
+{
+  "paired_reports": 16,
+  "counts": {
+    "observed_error": {
+      "both": 7,
+      "only_a": 2,
+      "only_b": 0,
+      "neither": 7
+    },
+    "complete_faithful": {
+      "both": 1,
+      "only_a": 0,
+      "only_b": 4,
+      "neither": 11
+    },
+    "fully_generated": {
+      "both": 8,
+      "only_a": 1,
+      "only_b": 2,
+      "neither": 5
+    }
+  },
+  "cases": [
+    {
+      "id": "real_0e9c60d4ad638a81",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "real_53499b1249f0e7a6",
+      "observed_error": "neither",
+      "complete_faithful": "only_b",
+      "fully_generated": "only_b"
+    },
+    {
+      "id": "real_4187fbf7eadcb951",
+      "observed_error": "both",
+      "complete_faithful": "neither",
+      "fully_generated": "both"
+    },
+    {
+      "id": "real_6e2b1d9d0d10b307",
+      "observed_error": "neither",
+      "complete_faithful": "only_b",
+      "fully_generated": "only_b"
+    },
+    {
+      "id": "real_4889613d7b935c76",
+      "observed_error": "both",
+      "complete_faithful": "neither",
+      "fully_generated": "neither"
+    },
+    {
+      "id": "real_99884d41e32a39f8",
+      "observed_error": "neither",
+      "complete_faithful": "neither",
+      "fully_generated": "both"
+    },
+    {
+      "id": "real_c6927c378a6e2c87",
+      "observed_error": "neither",
+      "complete_faithful": "neither",
+      "fully_generated": "neither"
+    },
+    {
+      "id": "real_788c7076b21bef32",
+      "observed_error": "both",
+      "complete_faithful": "neither",
+      "fully_generated": "both"
+    },
+    {
+      "id": "real_8e3f069b88d7550c",
+      "observed_error": "neither",
+      "complete_faithful": "only_b",
+      "fully_generated": "both"
+    },
+    {
+      "id": "real_20d69a9e8c41860d",
+      "observed_error": "both",
+      "complete_faithful": "neither",
+      "fully_generated": "only_a"
+    },
+    {
+      "id": "real_2f86141ba8fa19ea",
+      "observed_error": "both",
+      "complete_faithful": "neither",
+      "fully_generated": "both"
+    },
+    {
+      "id": "real_4d02bd9100fee8f7",
+      "observed_error": "only_a",
+      "complete_faithful": "neither",
+      "fully_generated": "neither"
+    },
+    {
+      "id": "real_de592071091f2d97",
+      "observed_error": "neither",
+      "complete_faithful": "neither",
+      "fully_generated": "neither"
+    },
+    {
+      "id": "real_abd463216fac09a8",
+      "observed_error": "both",
+      "complete_faithful": "neither",
+      "fully_generated": "neither"
+    },
+    {
+      "id": "real_b27e89e8eb71724d",
+      "observed_error": "only_a",
+      "complete_faithful": "only_b",
+      "fully_generated": "both"
+    },
+    {
+      "id": "real_4b40d531f81fd555",
+      "observed_error": "both",
+      "complete_faithful": "neither",
+      "fully_generated": "both"
+    }
+  ],
+  "review_scope": "project AI; not blinded, independent, or clinician review",
+  "not_clinical_accuracy": true,
+  "stage": "development",
+  "inputs": {
+    "a_outputs": "results/v2/real-data/dev_qwen35_critic_03/outputs.jsonl",
+    "a_review": "results/v2/dev_real_reviews/qwen35_critic_03_review.json",
+    "b_outputs": "results/v2/real-data/dev_qwen35_critic_04/outputs.jsonl",
+    "b_review": "results/v2/dev_real_reviews/qwen35_critic_04_review.json"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "closed_at_utc": "2026-10-16T04:02:42.236540+00:00",
+  "authorized_deadline_utc": "2026-10-16T04:00:45Z",
+  "automation_id": "automation-4",
+  "automation_status": "PAUSED",
+  "stop_reason": "User time limit reached; school access remains blocked",
+  "full_stage_complete": false,
+  "local_final_complete": true,
+  "last_network_check_utc": "2026-10-16T04:00:22Z",
+  "last_network_result": "Rangpur TCP22 TimeoutError",
+  "pending": [
+    "Retrieve original frozen GPU72 outputs after school connection/Duo restored",
+    "Review GPU final outputs and run frozen stored-candidate recheck",
+    "Complete five-arm final comparison and full stage delivery"
+  ],
+  "prior_artifact_hashes_verified": true,
+  "unchanged_source_commit": "5a267cf",
+  "closure_note_sha256": "aab84df7a730b06ed978aeb7d46b4118b44d4238de37329b4e79ebbd9f199033"
+}

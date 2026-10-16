@@ -1,0 +1,237 @@
+{
+  "guard": "lexical-guard-v2-dev5",
+  "critic_run": "dev_critic_qwen35_01",
+  "note": "Development diagnostic, selection-informed; NOT generalization or clinical accuracy. Current guard applied posthoc to cached model verdicts.",
+  "summary": {
+    "problem_pairs": 20,
+    "problem_pairs_rejected": 20,
+    "valid_pairs": 10,
+    "valid_pairs_rejected": 0
+  },
+  "pairs": [
+    {
+      "id": "past_value_swapped",
+      "expected_problem": true,
+      "accepted": false,
+      "guard_codes": [
+        "prior_measurement"
+      ]
+    },
+    {
+      "id": "wrong_unit",
+      "expected_problem": true,
+      "accepted": false,
+      "guard_codes": [
+        "quantity"
+      ]
+    },
+    {
+      "id": "lost_range",
+      "expected_problem": true,
+      "accepted": false,
+      "guard_codes": [
+        "numeric_sequence"
+      ]
+    },
+    {
+      "id": "lost_value",
+      "expected_problem": true,
+      "accepted": false,
+      "guard_codes": [
+        "numeric_sequence",
+        "quantity",
+        "prior_measurement",
+        "prior_comparison"
+      ]
+    },
+    {
+      "id": "invented_difference",
+      "expected_problem": true,
+      "accepted": false,
+      "guard_codes": [
+        "numeric_sequence",
+        "quantity"
+      ]
+    },
+    {
+      "id": "certainty_removed",
+      "expected_problem": true,
+      "accepted": false,
+      "guard_codes": [
+        "indeterminate"
+      ]
+    },
+    {
+      "id": "possible_to_definite",
+      "expected_problem": true,
+      "accepted": false,
+      "guard_codes": [
+        "possible"
+      ]
+    },
+    {
+      "id": "negation_removed",
+      "expected_problem": true,
+      "accepted": false,
+      "guard_codes": [
+        "negation_presence",
+        "negation_pneumothorax"
+      ]
+    },
+    {
+      "id": "negation_association",
+      "expected_problem": true,
+      "accepted": false,
+      "guard_codes": [
+        "negation_pleural_effusion"
+      ]
+    },
+    {
+      "id": "added_advice",
+      "expected_problem": true,
+      "accepted": false,
+      "guard_codes": [
+        "added_advice"
+      ]
+    },
+    {
+      "id": "side_flip",
+      "expected_problem": true,
+      "accepted": false,
+      "guard_codes": [
+        "left",
+        "added_right"
+      ]
+    },
+    {
+      "id": "above_below",
+      "expected_problem": true,
+      "accepted": false,
+      "guard_codes": [
+        "above"
+      ]
+    },
+    {
+      "id": "wrong_carina",
+      "expected_problem": true,
+      "accepted": false,
+      "guard_codes": [
+        "carina"
+      ]
+    },
+    {
+      "id": "base_omitted",
+      "expected_problem": true,
+      "accepted": false,
+      "guard_codes": [
+        "lung_base"
+      ]
+    },
+    {
+      "id": "direction_reversed",
+      "expected_problem": true,
+      "accepted": false,
+      "guard_codes": [
+        "improved"
+      ]
+    },
+    {
+      "id": "bilateral_directions_swapped",
+      "expected_problem": true,
+      "accepted": false,
+      "guard_codes": []
+    },
+    {
+      "id": "sizes_assigned_wrong_organs",
+      "expected_problem": true,
+      "accepted": false,
+      "guard_codes": []
+    },
+    {
+      "id": "newness_lost",
+      "expected_problem": true,
+      "accepted": false,
+      "guard_codes": [
+        "newness"
+      ]
+    },
+    {
+      "id": "invented_cause",
+      "expected_problem": true,
+      "accepted": false,
+      "guard_codes": []
+    },
+    {
+      "id": "acute_scope_lost",
+      "expected_problem": true,
+      "accepted": false,
+      "guard_codes": [
+        "acute_scope"
+      ]
+    },
+    {
+      "id": "straight_numbers",
+      "expected_problem": false,
+      "accepted": true,
+      "guard_codes": []
+    },
+    {
+      "id": "proper_uncertainty",
+      "expected_problem": false,
+      "accepted": true,
+      "guard_codes": []
+    },
+    {
+      "id": "unit_translation",
+      "expected_problem": false,
+      "accepted": true,
+      "guard_codes": []
+    },
+    {
+      "id": "valid_unit_conversion",
+      "expected_problem": false,
+      "accepted": true,
+      "guard_codes": [
+        "numeric_sequence"
+      ]
+    },
+    {
+      "id": "valid_numeric_reorder",
+      "expected_problem": false,
+      "accepted": true,
+      "guard_codes": [
+        "numeric_sequence"
+      ]
+    },
+    {
+      "id": "plain_atelectasis",
+      "expected_problem": false,
+      "accepted": true,
+      "guard_codes": []
+    },
+    {
+      "id": "negative_pair",
+      "expected_problem": false,
+      "accepted": true,
+      "guard_codes": []
+    },
+    {
+      "id": "correct_sides",
+      "expected_problem": false,
+      "accepted": true,
+      "guard_codes": []
+    },
+    {
+      "id": "below_synonym",
+      "expected_problem": false,
+      "accepted": true,
+      "guard_codes": []
+    },
+    {
+      "id": "proper_cannot_exclude",
+      "expected_problem": false,
+      "accepted": true,
+      "guard_codes": []
+    }
+  ]
+}

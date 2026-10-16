@@ -1,0 +1,6 @@
+{
+  "status": "superseded_development_prototype",
+  "selected": false,
+  "replacement": "results/v2/dev_remote27b_recheck_03",
+  "reason": "Final dev8 also requires enteric device identity, and uses the unified source snapshot. Original outputs retained."
+}

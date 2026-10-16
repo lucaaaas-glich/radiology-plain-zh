@@ -1,0 +1,171 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "scope": "Displayed Chinese only; source-only fallback is incomplete, not a correct answer.",
+  "cases": [
+    {
+      "id": "real_0e9c60d4ad638a81",
+      "output_sha256": "13ebdead7c75e1de9bc3e049582d8b0e4b50168e11cfa5d183caccb31a678b57",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "已生成部分未发现明显事实改变。 有片段保留原文，未完成全部中文解释。"
+    },
+    {
+      "id": "real_53499b1249f0e7a6",
+      "output_sha256": "d8947edb8da0af63facf19f07aaaf19dd6c0009e49a970f900b700ba415e255c",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "已生成部分未发现明显事实改变。 有片段保留原文，未完成全部中文解释。"
+    },
+    {
+      "id": "real_4187fbf7eadcb951",
+      "output_sha256": "dbee3a97365b003c4fd59c4d75ee494964a477cc73f9883f94916724dcb5aa71",
+      "errors": [
+        "anatomy_side",
+        "terminology",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "胸椎被解释成脊柱后方；机化性肺炎术语不准确；遗漏住院背景。"
+    },
+    {
+      "id": "real_6e2b1d9d0d10b307",
+      "output_sha256": "4aea71e8bf1d682a145f88faabd2a4de3bf5aff88d79fde325da30f5a8252dc1",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "已生成部分未发现明显事实改变。 有片段保留原文，未完成全部中文解释。"
+    },
+    {
+      "id": "real_4889613d7b935c76",
+      "output_sha256": "5076e4ab931d3a9156ad817b4a351eb6d70ff6a807892bc737341fbb9b4e72ad",
+      "errors": [
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "手术背景中遗漏肺癌这一重要信息。 有片段保留原文，未完成全部中文解释。"
+    },
+    {
+      "id": "real_99884d41e32a39f8",
+      "output_sha256": "2ed95593c81da74848e686e09f926be6e65663424d7e6d86c2489d456a8bbdeb",
+      "errors": [
+        "anatomy_side",
+        "negation",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "肠道部位表达不精确，漏掉腋窝淋巴结否定；把无可疑肺转移结节及积液改写成疑似转移或积液。"
+    },
+    {
+      "id": "real_c6927c378a6e2c87",
+      "output_sha256": "c699030e6064e8f184c194904fc89aef8ec6d71e924c3819b3a2e544cedea921",
+      "errors": [
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "浸润影吸收的部位被遗漏。"
+    },
+    {
+      "id": "real_788c7076b21bef32",
+      "output_sha256": "4e2e9b360b5144595c0761d2d0fb607587ea926b3446005d2deb9fe9010727e4",
+      "errors": [
+        "anatomy_side",
+        "omission",
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "遗漏积液同侧限定与单纯囊肿限定；结肠部位加入直肠；侵袭性骨病变被缩窄为恶性病变。"
+    },
+    {
+      "id": "real_8e3f069b88d7550c",
+      "output_sha256": "e4f77018338483a419dd69e3bcb1bf0f094bb5d440ce8c2bc7b7009570bce705",
+      "errors": [
+        "number_time",
+        "negation"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "一个月前发生改为过去一个月的持续描述；无相关病理发现扩大为无任何病理异常。"
+    },
+    {
+      "id": "real_20d69a9e8c41860d",
+      "output_sha256": "3e8e00b8bd06645723cf183da53a7e1364b31e177cc3e40be7dd694b42c921d8",
+      "errors": [
+        "anatomy_side",
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "肾积水的位置被写到输尿管/盆腔，肾盂肾盏及连接处表达错误；重复片段也存在不一致翻译。"
+    },
+    {
+      "id": "real_2f86141ba8fa19ea",
+      "output_sha256": "83fa23a2674714685188d7735b175a52345b1367d67ed10f92b860dda173c308",
+      "errors": [
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "首句把肺气肿模式改成肺大泡，混淆相关但不同的发现。 有片段保留原文，未完成全部中文解释。"
+    },
+    {
+      "id": "real_4d02bd9100fee8f7",
+      "output_sha256": "5ab00f08f8725565051ad9e13c6738757901fddd9f29f1ba6302fb6ddf331694",
+      "errors": [
+        "anatomy_side",
+        "terminology",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "腹壁膨出改成肠管脱垂；肉芽肿写成一般结节；遗漏单纯囊肿限定。 有片段保留原文，未完成全部中文解释。"
+    },
+    {
+      "id": "real_de592071091f2d97",
+      "output_sha256": "1ddce2cb20f9b5252977a89f006b9ed87f19a72ba1152b17af2625c33f5b3d8c",
+      "errors": [
+        "anatomy_side"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "肺叶支气管改成肺段支气管，层级改变。"
+    },
+    {
+      "id": "real_abd463216fac09a8",
+      "output_sha256": "0ea9a0d3b11fd9ef90a7c964fc4a50df605a97071fafb6cf8754d4e39eeb1b07",
+      "errors": [
+        "omission",
+        "anatomy_side"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "正常变异限定被遗漏；尿液排出通路被缩窄为输尿管。 有片段保留原文，未完成全部中文解释。"
+    },
+    {
+      "id": "real_b27e89e8eb71724d",
+      "output_sha256": "7a281e431eb17373333cf6f5f01ab210957e3f5dfc5215f340bef844d3c23907",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "已生成部分未发现明显事实改变。 有片段保留原文，未完成全部中文解释。"
+    },
+    {
+      "id": "real_4b40d531f81fd555",
+      "output_sha256": "695b158c346e8533a3e9fa70c8026389d9979fbd6017250289f32b77cbd66aed",
+      "errors": [
+        "anatomy_side",
+        "terminology",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "肺底改成下叶；骨纹理改为密度；遗漏肋骨外侧定位。"
+    }
+  ]
+}
