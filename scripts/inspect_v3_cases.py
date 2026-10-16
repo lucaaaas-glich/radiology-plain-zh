@@ -43,8 +43,7 @@ def main():
                         for unit in value['units']:
                             print(' UNIT',unit['id'],unit.get('role'))
                             for fact in unit['facts']:
-                                fields={k:v for k,v in fact.items() if k!='evidence'}
-                                print('  ',json.dumps(fields or fact,ensure_ascii=False))
+                                print('  ',json.dumps(fact,ensure_ascii=False))
                     except (ValueError,KeyError,TypeError):
                         # Do not silently omit malformed extractions from review.
                         print(call['text'])

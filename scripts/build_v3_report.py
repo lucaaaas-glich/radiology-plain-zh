@@ -12,7 +12,7 @@ from reportlab.lib import colors
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, Image
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, Image, PageBreak
 
 
 INK = colors.HexColor('#193746')
@@ -74,6 +74,9 @@ def build(source, output, stage):
     while i < len(lines):
         line = lines[i].strip(); i += 1
         if not line:
+            continue
+        if line == '<!-- pagebreak -->':
+            story.append(PageBreak())
             continue
         if line.startswith('```'):
             code = []
