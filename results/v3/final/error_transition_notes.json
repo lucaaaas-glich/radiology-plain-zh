@@ -1,0 +1,74 @@
+{
+  "scope": "All main20 pairs reviewed. These are segment-level project-AI causal observations, not inferred from report incompleteness and not independent clinical review.",
+  "cases": [
+    {
+      "id": "long_0b1f5bc1b9a68604",
+      "old_error": "Adjacent bowel relationship silently omitted in V2 unit15.",
+      "new_same_content": "V3 unit15 explicitly restores adjacency.",
+      "new_remaining_error": "V3 unit31 adds volume to 26% growth; V2 did not add volume.",
+      "cause": "one old error corrected, a different error introduced; both reports still incomplete",
+      "v2_output_sha256": "dc7d89b21e8f66fd9deb3381cb443dab5392dbedad3ef9a9710a8109822392b6",
+      "v3_output_sha256": "85940de69a770eca8c768e9dedf99d8a13ee3761b0b4845bd429789af4d40858"
+    },
+    {
+      "id": "long_63dbdd7032e14da4",
+      "old_error": "V2 loses partial obstruction qualifier throughout and assigns mesenteric focus to abdominal wall.",
+      "new_same_content": "V3 unit2 retains partial/subocclusive qualifier and unit17 says left abdominal flank without wall; both generated.",
+      "new_remaining_incomplete": "Date/contrast comparison and simple cortical cysts remain source-only.",
+      "cause": "previous errors corrected in displayed text, but report incomplete elsewhere; not a withholding-only explanation",
+      "v2_output_sha256": "885c50e1a19df526dab55ca7f4e0f1440fa922c212a9d5e262c64d679939001e",
+      "v3_output_sha256": "62d305ac0d9a53a4546181ab93b3359314acbeaa1cafae35a6608a5eb11d9ef1"
+    },
+    {
+      "id": "long_48f1f40212aa6574",
+      "old_error": "V2 turns dependent distribution into a fixed lung-base location and strengthens a Consider recommendation.",
+      "new_same_content": "V3 preserves gravity-dependent distribution; the Consider-to-direct-recommendation error remains.",
+      "cause": "partial factual correction, not a corrected whole report",
+      "v2_output_sha256": "8ceb6de18f3d9cb1174a2663eaa345aca2d9e1c3760fa7fb2ab9a970e2fecb62",
+      "v3_output_sha256": "f4ddb27c70892a318672f8c64b7d804aa6ce6833b00e15336b4f04114401d76c"
+    },
+    {
+      "id": "long_1b1bf3aecd9f8ad2",
+      "old_error": "No clear error observed; apparent wording and rarefaction remain precision concerns.",
+      "new_remaining_error": "V3 parenthesis describes calcified granulomas as immune-cell aggregates formed by calcium deposition, rather than aggregates that contain calcification.",
+      "cause": "new terminology/causal-definition error in generated explanation; original extracted evidence did not contain that causal claim",
+      "v2_output_sha256": "fbee430fcf54e1d3f15a81fe2e5d60b1320af775aff11c3e14e3a81eda08a7ae",
+      "v3_output_sha256": "4ff72d844423b627d78c545597c849e7ac69f81b0b8643873921bf99d447a39d"
+    },
+    {
+      "id": "long_f2007f131c21153c",
+      "old_error": "Consider biopsy becomes a direct recommendation.",
+      "new_remaining_error": "Same strengthening persists despite a checklist that retained consider biopsy.",
+      "new_same_content": "V3 restores the doubtful prior visibility sentence, but five other clinical units newly fall back.",
+      "cause": "old recommendation error persists; mixed coverage changes and no complete-faithful gain",
+      "v2_output_sha256": "640bf54b583ae6c1f82066d9a052cac87f56035095c8a24bec84c584f107b44c",
+      "v3_output_sha256": "faebb823ae9c9aef60ece7d7c13e0a7c513d5f31a132defc66b4607eb1a2ec9c"
+    }
+  ],
+  "complete_faithful_losses_reviewed": [
+    {
+      "id": "long_5fefdb2a79347660",
+      "cause": "celiac location rendered broadly as abdominal; full coverage but precision concern",
+      "v2_output_sha256": "d30d458e7afb3a591cad5c3b6a40d859942ffe094957b4b29dbabe32d190ea4f",
+      "v3_output_sha256": "c463f63a86fec88a2b0688d4a521817d6566f5e175b446315c9cc65f065a192c"
+    },
+    {
+      "id": "long_c8acd9987fc6e1bf",
+      "cause": "new clinical source-only sentences for hepatic probable cysts/stability and abdominal/retroperitoneal nodes",
+      "v2_output_sha256": "71d3c5df99ba8cac38ef8490aad1ca86efe41fd2b5ef84057a53e30a7d98a03d",
+      "v3_output_sha256": "1c0101503432ee273c81893f08ded80e9e615ef1ee3cbb4674568fc331d70ba3"
+    },
+    {
+      "id": "long_8b37c849e2e993be",
+      "cause": "loculated fluid rendered as localized; full coverage but precision concern",
+      "v2_output_sha256": "a90538381971814da3beb7dd57931690a79437ec015b59f6b31b940e874a4360",
+      "v3_output_sha256": "26371ef586c486d59349327d7115ffe69cb490dfb91e3652619ddb17d65076cb"
+    },
+    {
+      "id": "long_3a5ce0a2a2aa2089",
+      "cause": "new clinical source-only nodes and diverticulosis; numeric heading false rejection differs from added no-inflammation objection",
+      "v2_output_sha256": "2c7a334431ef0c02925e6d2849cae48cec9389fd5be10a676dc3435b9aa8a687",
+      "v3_output_sha256": "deccec6f24fbb957c5af81da2d125a64320c3bfe72055ac5ddcfd501fbcde1c2"
+    }
+  ]
+}
