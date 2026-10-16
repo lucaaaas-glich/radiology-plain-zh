@@ -11,6 +11,8 @@ def main():
     p.add_argument('--start',type=int,default=1)
     p.add_argument('--count',type=int,default=4)
     p.add_argument('--ledger',action='store_true')
+    p.add_argument('--ledger-extractions',action='store_true',
+                   help='Also inspect original extracted fields, including rejected checklists')
     a=p.parse_args()
     arms=[(path.parent.name,{r['id']:r for r in load_rows(path)}) for path in a.outputs]
     order=list(arms[0][1])[a.start-1:a.start-1+a.count]
@@ -30,6 +32,21 @@ def main():
                 if a.ledger and s.get('ledger'):
                     print(' LEDGER',s['ledger']['role'],
                           [{k:v for k,v in fact.items() if k!='evidence'} for fact in s['ledger']['facts']])
+            if a.ledger_extractions:
+                print('EXTRACTION VALIDATION',json.dumps(result.get('ledger_batches',[]),ensure_ascii=False))
+                for call in result.get('calls',[]):
+                    if call.get('stage')!='ledger':continue
+                    print('ORIGINAL EXTRACTION',call['ids'],'FINISH',call.get('finish_reason'))
+                    try:
+                        value=json.loads(call['text'])
+                        for unit in value['units']:
+                            print(' UNIT',unit['id'],unit.get('role'))
+                            for fact in unit['facts']:
+                                fields={k:v for k,v in fact.items() if k!='evidence'}
+                                print('  ',json.dumps(fields or fact,ensure_ascii=False))
+                    except (ValueError,KeyError,TypeError):
+                        # Do not silently omit malformed extractions from review.
+                        print(call['text'])
 
 
 if __name__=='__main__':main()
