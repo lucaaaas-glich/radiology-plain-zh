@@ -10,7 +10,7 @@ from radplain.common import fingerprint as source_fingerprint
 
 
 def verify_cohort(rows,manifest,stage):
-    expected=manifest['rows'][::4] if stage=='ablation' else manifest['rows']
+    expected=manifest['rows'][::2] if stage=='ablation' else manifest['rows']
     if {r['id'] for r in rows}!={r['id'] for r in expected} or len(rows)!=len(expected):
         raise ValueError('Final results do not cover the complete predeclared cohort')
     indexed={r['id']:r for r in expected}
@@ -114,7 +114,7 @@ def main():
     if a.out.exists():raise ValueError('Refusing to replace a summary')
     rows=load_rows(a.outputs)
     if a.stage!='development':
-        manifest_path=Path('examples/v3/real_manifest.json')
+        manifest_path=Path('examples/v3/main20_manifest.json')
         verify_cohort(rows,json.loads(manifest_path.read_text()),a.stage)
         if not Path('examples/v3/final_candidate.lock.json').exists():
             raise ValueError('Final candidate has not been frozen')

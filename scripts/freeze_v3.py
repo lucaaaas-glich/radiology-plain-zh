@@ -43,8 +43,8 @@ def main():
     spec=request['arms']['v3']
     for file,digest in spec['code_sha256'].items():
         if sha(file)!=digest:raise ValueError('Candidate changed after development: '+file)
-    manifest=json.loads(Path('examples/v3/real_manifest.json').read_text())
-    source=Path('data/v3/real/holdout.jsonl')
+    manifest=json.loads(Path('examples/v3/main20_manifest.json').read_text())
+    source=Path('data/v3/real/main20.jsonl')
     if sha(source)!=manifest['input_sha256']:raise ValueError('New cohort changed')
     final=load_rows(source)
     verify_cohort(final,manifest,'final')
@@ -70,30 +70,31 @@ def main():
         file='radplain/'+name
         shutil.copy2(file,v2/file);v2_hashes[file]=sha(file)
     (a.bundle/'inputs').mkdir()
-    shutil.copy2(source,a.bundle/'inputs/final40.jsonl')
+    shutil.copy2(source,a.bundle/'inputs/final20.jsonl')
     subset=a.bundle/'inputs/ablation10.jsonl'
-    subset.write_text(''.join(json.dumps(r,ensure_ascii=False)+'\n' for r in final[::4]))
+    subset.write_text(''.join(json.dumps(r,ensure_ascii=False)+'\n' for r in final[::2]))
     v3_spec=dict(spec,directory='candidates/final-v3')
     baseline_spec={'directory':'candidates/final-v2','module':'explain_v2_accelerated',
                    'max_input_tokens':4096,'code_sha256':v2_hashes,
                    'kwargs':{'max_tokens':384,'use_critic':True}}
-    main_request={'phase':'final','input':'inputs/final40.jsonl','input_sha256':sha(source),
-                  'out':'results/final40','arms':{'v2':baseline_spec,'v3':v3_spec}}
+    main_request={'phase':'final','input':'inputs/final20.jsonl','input_sha256':sha(source),
+                  'out':'results/final20','arms':{'v2':baseline_spec,'v3':v3_spec}}
     control_spec=dict(v3_spec,kwargs=dict(v3_spec['kwargs'],use_ledger=False))
     control_request={'phase':'ablation','input':'inputs/ablation10.jsonl','input_sha256':sha(subset),
                      'out':'results/ablation10','arms':{'without_ledger':control_spec}}
-    for name,value in [('10-final40.json',main_request),('11-ablation10.json',control_request)]:
+    for name,value in [('10-final20.json',main_request),('11-ablation10.json',control_request)]:
         write(a.bundle/'requests'/(name+'.pending'),value)
         write(Path('examples/v3')/name,value)
     dependencies=[a.development_request,a.development_outputs,a.development_review,a.selection,activation,
                   Path('docs/v3/预注册评估方案.md'),Path('examples/v3/fla_package_sources.json'),
-                  Path('examples/v3/real_manifest.json'),Path('examples/v2/candidate_gpu.lock.json')]
+                  Path('examples/v3/real_manifest.json'),Path('examples/v3/main20_manifest.json'),
+                  Path('docs/v3/测试规模修订.md'),Path('examples/v2/candidate_gpu.lock.json')]
     lock={'frozen_at_utc':datetime.now(timezone.utc).isoformat(),
           'stage':'Candidate frozen before new cohort predictions; selection used OLD development only',
           'model':baseline_lock['arms']['gpu27b_evidence'],
           'model_files_sha256':baseline_lock['model_files_sha256'],
           'shared_acceleration':runtime,'arms':main_request['arms'],
-          'ablation':control_request,'main_request_sha256':sha(Path('examples/v3/10-final40.json')),
+          'ablation':control_request,'main_request_sha256':sha(Path('examples/v3/10-final20.json')),
           'ablation_request_sha256':sha(Path('examples/v3/11-ablation10.json')),
           'input_sha256':sha(source),'dependencies_sha256':{str(f):sha(f) for f in dependencies},
           'worker_sha256':sha('scripts/run_v3_worker.py'),

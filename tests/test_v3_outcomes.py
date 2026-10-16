@@ -46,10 +46,10 @@ def test_precision_concern_is_not_declared_faithful():
 
 
 def test_final_summary_rejects_missing_cases_and_changed_source():
-    rows=[{'id':str(i),'report':'Source '+str(i)} for i in range(40)]
+    rows=[{'id':str(i),'report':'Source '+str(i)} for i in range(20)]
     manifest={'rows':[{'id':r['id'],'source_sha256':source_fingerprint(r['report'])} for r in rows]}
     verify_cohort(rows,manifest,'final')
-    verify_cohort(rows[::4],manifest,'ablation')
+    verify_cohort(rows[::2],manifest,'ablation')
     with pytest.raises(ValueError,match='complete'):verify_cohort(rows[:-1],manifest,'final')
     rows[0]['report']='Different source'
     with pytest.raises(ValueError,match='source report'):verify_cohort(rows,manifest,'final')
