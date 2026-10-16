@@ -1,0 +1,188 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "scope": "Displayed Chinese only; source-only fallback is incomplete, not a correct answer.",
+  "cases": [
+    {
+      "id": "real_0e9c60d4ad638a81",
+      "output_sha256": "4e9000a9b3748feb87bf47021c0004c24d2ad0b182dcb64dbfce8a041120ca54",
+      "errors": [
+        "terminology",
+        "anatomy_side"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "起搏器写成心脏病发作器，锁骨下、导线和主动脉等多个词义错误。"
+    },
+    {
+      "id": "real_53499b1249f0e7a6",
+      "output_sha256": "b3171821404d4390830b2a3c125a652d6c7fbc0e7a81d75885dd13c822ef709d",
+      "errors": [
+        "negation",
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "早期影像可能阴性翻成可能阳性；结节误为结核，其他影像术语也失真。"
+    },
+    {
+      "id": "real_4187fbf7eadcb951",
+      "output_sha256": "e18a94ebac8be157a82160006ef20455b158c62e08d15cdf73bdeeb3d590344b",
+      "errors": [
+        "omission",
+        "terminology",
+        "anatomy_side",
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "重建方向与支气管扩张等信息丢失，纵隔变中腹部，最终因果关系反转为流行病原因主要是纤维化。"
+    },
+    {
+      "id": "real_6e2b1d9d0d10b307",
+      "output_sha256": "03d9da8e401095b12b862566576288cebcf1ecf18c4ff903f6696e94e843d554",
+      "errors": [
+        "number_time",
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "明确检查日变成该日期之前；结节写为结核，肋膈角和肺不张译文失真。"
+    },
+    {
+      "id": "real_4889613d7b935c76",
+      "output_sha256": "c5baac8e2ee4ca417ebab2ac56bf8c2b6d8746e93f59a4e756354f958859accb",
+      "errors": [
+        "omission",
+        "terminology",
+        "anatomy_side"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "肺实质误为肺瘤，肾脏定位与病灶类型丢失，肩胛和背阔肌位置无法恢复。"
+    },
+    {
+      "id": "real_99884d41e32a39f8",
+      "output_sha256": "48d335fc8c967c062c4ebaba8c8eaa0e377fc073fd62a8e64294afeb36b1af50",
+      "errors": [
+        "terminology",
+        "anatomy_side"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "淋巴结病变写成淋巴瘤，低密度误成低阴茎，多处器官、病灶和否定对象错误。"
+    },
+    {
+      "id": "real_c6927c378a6e2c87",
+      "output_sha256": "5d3a81afce925da2eac1f9055e5a97f46af20415b932d3fef3b084277dd2652e",
+      "errors": [
+        "anatomy_side",
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "舌段误成阴茎，浸润消退译文混用英文与分辨率。"
+    },
+    {
+      "id": "real_788c7076b21bef32",
+      "output_sha256": "b82cb4466f51647756197144a5fbfe79da49defa0c3dc027d82e3f781ee35146",
+      "errors": [
+        "omission",
+        "terminology",
+        "anatomy_side"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "肺部术语多处误为阴道相关词，少量同侧积液整项遗漏，多个腹部发现失真。"
+    },
+    {
+      "id": "real_8e3f069b88d7550c",
+      "output_sha256": "68da7f969d4b3f561710b8bc13f1e68237652bfcc7df647817ac3eb5f2f13cc9",
+      "errors": [
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "用力后这一症状诱因遗漏，月份与后方部位表达含混。"
+    },
+    {
+      "id": "real_20d69a9e8c41860d",
+      "output_sha256": "31fe996e05c46c9c60fd589d4fe535e73cad0272648d9e8a4f7aadc8e93ecfae",
+      "errors": [
+        "terminology",
+        "anatomy_side"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "黏膜下水肿、纵隔/腹膜积气、肾积水及下腔静脉血栓等核心术语广泛失真。"
+    },
+    {
+      "id": "real_2f86141ba8fa19ea",
+      "output_sha256": "8308a652cf36e87a164bf6282665da0a6a98a0b11b40cc7fbe9ddaf174a3c185",
+      "errors": [
+        "terminology",
+        "recommendation",
+        "anatomy_side"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "肺气肿类型、支气管扩张等被误译，随访改为后续治疗，胸内结构指称错误。"
+    },
+    {
+      "id": "real_4d02bd9100fee8f7",
+      "output_sha256": "fde1658052a498df618d8e685ed7703d1aca170414a95303a631949912fbccc1",
+      "errors": [
+        "terminology",
+        "anatomy_side",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "肺叶误成阴道，肺实质、肾囊肿、淋巴结病变和疝等术语失真，部分发现无法从译文恢复。"
+    },
+    {
+      "id": "real_de592071091f2d97",
+      "output_sha256": "34d147451810eb5e7c18ac41f066299cda2595d17fd60e5b0b170712bee9991c",
+      "errors": [
+        "terminology",
+        "omission",
+        "anatomy_side"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "第一句大量重复同一个字，体积缩小和肺不张等事实丢失；支气管误为淋巴管，通畅误为专利。"
+    },
+    {
+      "id": "real_abd463216fac09a8",
+      "output_sha256": "f5257aa4712521098e483491b9e3ba0082a2ed3305a1226777c078f1762dfad4",
+      "errors": [
+        "terminology",
+        "anatomy_side",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "肠段和疝结构词义失真，肝脂肪变整项丢失，腹膜后误为逆脑膜；部分数值虽保留，所属结构错误。"
+    },
+    {
+      "id": "real_b27e89e8eb71724d",
+      "output_sha256": "01e63c9c04c960426f971f313b62d136239ba054bbc12a04735240bf778bc880",
+      "errors": [
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "气腔实变误为在空中整合，乳房成形术误为乳腺移植。"
+    },
+    {
+      "id": "real_4b40d531f81fd555",
+      "output_sha256": "d3d2b376e0571b0a38d2d2c65f9cef371ff30345ddc29ce0fb180c943bb1284d",
+      "errors": [
+        "terminology",
+        "anatomy_side"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "肺实变、间质浸润被错译，双侧肺底定位弱化，不能准确传达原发现。"
+    }
+  ]
+}
