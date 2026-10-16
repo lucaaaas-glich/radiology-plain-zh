@@ -6,6 +6,7 @@ import argparse
 from datetime import datetime, timezone
 import json
 import inspect
+from importlib.metadata import version
 from pathlib import Path
 import subprocess
 from scripts.v2_local_preflight import committed, digest
@@ -34,7 +35,8 @@ def main():
         evidence[str(path)] = digest(path)
     code = [*sorted(Path('radplain').glob('*.py')), Path('scripts/run_v2_pipeline.py'),
             Path('scripts/v2_local_preflight.py'), Path('scripts/freeze_v2_local.py'),
-            Path('configs/v2_local.json')]
+            Path('configs/v2_local.json'), Path('requirements-v2-mac.txt'),
+            Path('scripts/prepare_v2_local_model.py')]
     for path in code:
         committed(path)
     config = json.loads(Path('configs/v2_local.json').read_text())
@@ -62,6 +64,13 @@ def main():
         'local_evidence': dict(local, model=args.model, mode='evidence-critic', max_tokens=384,
                                critic_max_tokens=512, context_policy='all_previous_source_sentences'),
     }
+    packages = {}
+    for line in Path('requirements-v2-mac.txt').read_text().splitlines():
+        if '==' in line and not line.startswith('#'):
+            package, expected = line.strip().split('==')
+            packages[package] = version(package)
+            if packages[package] != expected:
+                raise ValueError('Installed package differs from measured requirements: ' + package)
     result = {'frozen_at_utc': datetime.now(timezone.utc).isoformat(),
               'stage': 'Local selection based on development only; final predictions not inspected',
               'development_commit': subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),
@@ -69,6 +78,7 @@ def main():
               'selected_model_provenance': selected, 'arms': arms,
               'code_sha256': {str(p): digest(p) for p in code},
               'model_files_sha256': models,
+              'installed_packages_at_freeze': packages,
               'holdout_sha256': json.loads(Path('examples/v2/candidate_gpu.lock.json').read_text())['holdout_sha256'],
               'development_evidence': evidence,
               'interpretation': 'Project AI review, not independent or clinical validation; GPU and local evidence pipelines differ.'}
