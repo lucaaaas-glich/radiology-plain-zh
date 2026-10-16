@@ -1,7 +1,7 @@
 """Separate V3 pipeline; never changes or silently substitutes the frozen V2."""
 import time
 from .common import chinese_ratio
-from .glossary_v2 import glossary
+from .glossary_v3 import glossary
 from .guard_v2 import review
 from .ledger_v3 import (VERSION, LEDGER_SYSTEM, WRITE_SYSTEM, AUDIT_SYSTEM, messages,
                         parse_json, validate_ledger, validate_translations, validate_audit)
@@ -37,7 +37,10 @@ def explain(report, generate, progress=None, max_attempts=2, use_ledger=True):
                 else:
                     ledger = {}
                 attempt['ledger'] = list(ledger.values())
-                raw = call('write', messages(WRITE_SYSTEM, report, pending, 事实清单=list(ledger.values()), 上次检查问题=feedback), 1600, pending)
+                meanings=[{'原文词':g['source_term'],'中文词':g['term'],'词义':g['definition_zh']}
+                          for g in glossary(' '.join(r['source'] for r in pending))]
+                raw = call('write', messages(WRITE_SYSTEM, report, pending, 事实清单=list(ledger.values()),
+                           固定词义参考不是患者新发现=meanings, 上次检查问题=feedback), 1600, pending)
                 translated = validate_translations(parse_json(raw), pending)
                 attempt['translations'] = list(translated.values())
                 checks = {r['id']: review(r['source'], translated[r['id']]['text']) for r in pending}

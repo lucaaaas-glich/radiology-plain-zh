@@ -1,0 +1,21 @@
+{
+  "recorded_at_utc": "2026-10-16T13:57:54.053648+00:00",
+  "remote_environment": "existing project .venv-v2-large; no package installation or environment edits in V3",
+  "python": "3.11.16",
+  "packages": {
+    "torch": "2.14.0",
+    "transformers": "5.19.0",
+    "huggingface_hub": "2.2.0",
+    "bitsandbytes": "0.50.2",
+    "accelerate": "1.15.0",
+    "safetensors": "0.8.0"
+  },
+  "gpu": "NVIDIA A100-PCIE-40GB",
+  "driver": "590.48.01",
+  "job_id": 666860,
+  "model_repo": "Qwen/Qwen3.5-27B",
+  "model_revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+  "quantization": "NF4 double quantization; BF16 compute",
+  "temperature": 0,
+  "thinking": false
+}

@@ -80,6 +80,11 @@ def test_truncated_json_is_never_accepted_even_if_parseable():
         parse_json({'text':'{}','finish_reason':'length'})
 
 
+def test_duplicate_json_fields_cannot_silently_erase_anatomy():
+    with pytest.raises(ValueError,match='Duplicate JSON'):
+        parse_json({'text':'{"facts":[{"location":"right subclavian vein","location":"superior vena cava"}]}','finish_reason':'stop'})
+
+
 def test_numeric_omission_is_not_overridden_by_model_approval():
     text='A 5 mm nodule.'
     def generate(messages,max_tokens):
