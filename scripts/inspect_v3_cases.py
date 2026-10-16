@@ -3,6 +3,7 @@ import argparse
 import json
 from pathlib import Path
 from scripts.summarize_v2 import fingerprint, load_rows
+from radplain.ledger_v3 import parse_json
 
 
 def main():
@@ -38,7 +39,7 @@ def main():
                     if call.get('stage')!='ledger':continue
                     print('ORIGINAL EXTRACTION',call['ids'],'FINISH',call.get('finish_reason'))
                     try:
-                        value=json.loads(call['text'])
+                        value=parse_json(call)
                         for unit in value['units']:
                             print(' UNIT',unit['id'],unit.get('role'))
                             for fact in unit['facts']:
