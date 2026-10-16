@@ -1,0 +1,35 @@
+{
+  "scope": "Read actual changed segments; no inference from report outcome alone. Not independent medical review.",
+  "control_reports": 10,
+  "direction": "Compare without-ledger to same fixed V3 outputs",
+  "observed_error_removed_in_without_ledger": {
+    "id": "long_1b1bf3aecd9f8ad2",
+    "cause": "Chinese definitions separately describe calcification and immune-cell aggregation; no causal claim that calcium deposition created the granuloma. Both full reports, so this is not withholding. Precision concerns persist.",
+    "with_ledger_output_sha256": "4ff72d844423b627d78c545597c849e7ac69f81b0b8643873921bf99d447a39d",
+    "without_ledger_output_sha256": "6cc5c3c359f374967167cf6af9068eb3d7e152fc309eff10d794b550836d3e14"
+  },
+  "coverage_cost_of_removing_ledger": {
+    "clinically_complete": {
+      "with": 6,
+      "without": 4
+    },
+    "generated_segments": {
+      "with": 158,
+      "without": 151,
+      "eligible_both": 171
+    },
+    "complete_faithful": {
+      "with": 1,
+      "without": 1
+    },
+    "lost_clinical_completeness_ids": [
+      "long_48f1f40212aa6574",
+      "long_8b37c849e2e993be"
+    ]
+  },
+  "refusal_mechanisms_qualitative_only": [
+    "Without-ledger first case, units10/11: correct positional term explanations rejected as additions; other rejected units in that case may have substantive problems, so not all refusals are false alarms.",
+    "With and without ledger, main case17 unit3: missing chapter numeral1 triggers hard numeric rejection even when model audit accepts meaning.",
+    "Without-ledger main case5: draft of a negative nodule finding adds need for further evaluation; this has a real scope concern. It is not evidence that all rejection should be disabled."
+  ]
+}

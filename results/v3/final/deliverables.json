@@ -1,0 +1,17 @@
+{
+  "created_at_utc": "2026-10-16T19:38:38.194153+00:00",
+  "files_sha256": {
+    "docs/v3/最终实测与讲解.md": "33f7ec9673b05b636fb0882b917f4416b19ce1405f8186b06e665d7e0acb7a6d",
+    "docs/v3/最终实测与讲解.pdf": "23e4b98f6dcc74551e56fcea6731a9e8de31df787e17deff9bbfce3a57ce6370",
+    "docs/v3/V3_结果对比.png": "f0878719533ceb287ce6793d0f9f2bb5cfe91e6c57a75094aa2f3035ce4be44d",
+    "docs/v3/V3_结果对比.svg": "03267ee2328f861f3b564becb645201d1006f498184bb565b9531bf369c4f6c0",
+    "docs/v3/V3_结果对比.json": "984a4bfa3185b4a4e1506a585090c51200b6ae17d788807a7eaa9b6a156a7752"
+  },
+  "pdf_pages": 4,
+  "all_pdf_pages_rendered_and_visually_reviewed": true,
+  "chart_visually_reviewed": true,
+  "all_50_outputs_reviewed_and_hash_verified": true,
+  "full_real_reports_not_in_git": true,
+  "existing_html_examples_manifest": "results/v3/example_artifacts.json",
+  "limitations": "Project AI review, not independent, blinded, clinical, or patient readability validation."
+}

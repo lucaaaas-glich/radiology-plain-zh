@@ -1,0 +1,109 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "stage": "ablation",
+  "cases": [
+    {
+      "id": "long_b3baa3486a61d6cc",
+      "output_sha256": "012297ad94d7e19beb9b8b942f080ad35e8d7e494668f20f7f679d55ed759ac2",
+      "errors": [],
+      "clinical_coverage_complete": false,
+      "precision_concern": true,
+      "readability": "mixed",
+      "ledger_review": "not_applicable",
+      "notes_zh": "7/15句生成。已展示前后2.4/5厘米、横径2.3/3.5厘米、位置与影像改善，以及新左胸水和心包积液结论，未见明确事实错误；organized写已形成与有清单版同样记录精度顾虑。8句临床内容回退，包括病因、肾周病灶及既往脓肿、右后基底积液实性化、左右新积液的测量、其他发现和两段结论。比有清单版10/15更不完整；不能把无清单更少输出视作更安全或更好。 另读完整拒绝轨迹：第10/11句两次都是正确胸膜/心包位置释义被误报为新增事实，因此这两处是可定位的误拦。第8句草稿还把size细化为体积，不能把本例所有回退统一说成正确译文被误拦。"
+    },
+    {
+      "id": "long_5fefdb2a79347660",
+      "output_sha256": "1a1f44f09a146f6a5b725bfb9f9db7ef2a6a73c21075bf55dcfa4731a34ccde7",
+      "errors": [],
+      "clinical_coverage_complete": true,
+      "precision_concern": true,
+      "readability": "mixed",
+      "ledger_review": "not_applicable",
+      "notes_zh": "28/28句全部生成。大小3–28毫米、蛋壳样钙化初期、沿淋巴分布、未钙化为主、可能病因、取样排除肿瘤目的及否定范围保留；未见明确事实错误。与有清单版一致，celiac淋巴结泛写腹腔淋巴结，记录部位精度顾虑，不能算完整忠实。含多处短词义说明，可读性混合。"
+    },
+    {
+      "id": "long_48f1f40212aa6574",
+      "output_sha256": "cb14aea5df8950fdba40dcce2cc98bd29c61f4c863bb82da5d34ea83536613d1",
+      "errors": [
+        "recommendation"
+      ],
+      "clinical_coverage_complete": false,
+      "precision_concern": true,
+      "readability": "mixed",
+      "ledger_review": "not_applicable",
+      "notes_zh": "与有清单版一样保留重力依赖部位和可能性，20毫米/30HU/肝IV段/T5T6等未变；仍将Consider scheduling直接写建议安排，记建议强度错误。discrete写局限性与两主臂同样记精度顾虑，不以变形性脊柱炎历史术语单独判新疾病错误。第4句未见肺结节回退，其他19句生成，所以比有清单版更不完整。 读第4句两次拒绝轨迹：第一次给未见结节添加需进一步评估，第二次加性质未定；这类释义混入额外判断有真实顾虑，不把此处回退简单归为复核误报。"
+    },
+    {
+      "id": "long_5444aec1786f55c3",
+      "output_sha256": "40595a075b7d07d8d59cff033d2a9a67b61f0f7280b3aafac2ed2f4e2c937283",
+      "errors": [],
+      "clinical_coverage_complete": true,
+      "precision_concern": false,
+      "readability": "mixed",
+      "ledger_review": "not_applicable",
+      "notes_zh": "11句全部生成。所有列明肺动脉分支、双侧且右侧为主、上叶为主的肺部改变、进展中COVID肺炎、提示纤维化初期迹象和肝IV段富血管病灶均保留，未发现明确事实或精度问题。与有清单版同样为完整忠实解释；中文仍有不少术语，少量括号解释，未经过患者可读性测试。"
+    },
+    {
+      "id": "long_89f60c1298aaa093",
+      "output_sha256": "e8d031d53d3a1d42c9b8e727a2d35455079f883da390a978cf61005c80b0c192",
+      "errors": [],
+      "clinical_coverage_complete": false,
+      "precision_concern": true,
+      "readability": "mixed",
+      "ledger_review": "not_applicable",
+      "notes_zh": "8/14句生成。已展示约34毫米、心大、轻度圆柱形扩张、双肺中下野与胸膜下/支气管周围范围、淋巴结非显著限定等未见明确事实错误。中下肺野为主的分布重点变为外周为主，心大解释添加具体原因未定，与主测试相同标准记表达精度顾虑。6句临床回退：胸片气管偏移、源含混冠脉名称、气管居中、左第五肋前1/3旧骨折、D5压缩小于25%、感染后纤维化结论。比有清单版多3处回退、恢复1处胸膜腔解释，整体更不完整，不能把未展示的事实算作已解释。"
+    },
+    {
+      "id": "long_c8acd9987fc6e1bf",
+      "output_sha256": "d83e80a6f6c8ef3b9351f72a67f1d9d879df444ddc456191c072307e672b26a5",
+      "errors": [],
+      "clinical_coverage_complete": false,
+      "precision_concern": false,
+      "readability": "mixed",
+      "ledger_review": "not_applicable",
+      "notes_zh": "14/17句生成，门静脉期增强CT、2020年5月21日、各器官否定范围及妇科手术改变均保留，未发现明确事实或精度问题。未见结节后的性质未定作为通用词义，与主测试V3同句性质不确定按一致标准处理，不强判为存在新的患者病灶。肝低密度影可能囊肿且稳定、腹腔内/腹膜后淋巴结阴性及整体影像稳定结论3句回退；比有清单版再少结论一句，仍未完整解释。"
+    },
+    {
+      "id": "long_8b37c849e2e993be",
+      "output_sha256": "341bf1f832ac96e1dda8213538d07da6f339eafe025dee6a081ac434537404af",
+      "errors": [],
+      "clinical_coverage_complete": false,
+      "precision_concern": false,
+      "readability": "mixed",
+      "ledger_review": "not_applicable",
+      "notes_zh": "16/17句生成。明确27×8毫米属于气管管腔，33毫米属于主肺动脉；患者撤回增强同意、左右与甲状腺左侧为主、胸水包裹性、肺叶体积减少、肝II段单纯囊肿、骨改变稳定、复发符合程度保留，未见明确事实或精度问题。loculated改成包裹性，比有清单版局限性更具体；但胸膜固定术后改变、弥漫增厚伴实性结节及相较21 10 20增大的整句回退，丢失重要变化和时间信息，因此仍不完整，不能因精度顾虑消失就称为整篇改善。"
+    },
+    {
+      "id": "long_263f60c72e2468ec",
+      "output_sha256": "56c494bcccd7197572c25a93c99cec81543dad1a9166ef5f59e5fbf5975aee73",
+      "errors": [],
+      "clinical_coverage_complete": true,
+      "precision_concern": true,
+      "readability": "mixed",
+      "ledger_review": "not_applicable",
+      "notes_zh": "14/14句全部生成。92%、此前未知完全性右束支阻滞、已排除PE、检查血管范围、左侧较广泛和左肺下叶外侧段等关键事实保留，未发现明确事实错误。但第10句把实变主要分布在双侧后基底区改成后基底区病灶以实变为主，predominantly修饰关系改变；与旧版同类表述使用一致的精度顾虑标准，因此不是完整忠实。含多处一般词义解释，仍属混合可读性。"
+    },
+    {
+      "id": "long_3a5ce0a2a2aa2089",
+      "output_sha256": "67c6fc3797b42030980987d6c1ceb7b54e88ab8ec6f65728b718d6090d2707b1",
+      "errors": [],
+      "clinical_coverage_complete": false,
+      "precision_concern": true,
+      "readability": "mixed",
+      "ledger_review": "not_applicable",
+      "notes_zh": "19/20句生成，关键数字、稳定性、异常右锁骨下动脉走行及无瘤样扩张、肝大、左卵巢静脉和左主动脉旁6毫米保留，未见明确患者事实错误。恢复有清单版未展示的结肠憩室，括号明确本身不表示发炎，是词义说明而非断言本患者无炎症。第8句精确术名仍保留，但括号只说切除部分右侧结肠，弱化扩大切除范围，记释义精度顾虑，不把这种简化强判为新的患者手术。胸部淋巴结阴性一句仍回退；读两次轨迹，模型audit均无问题，硬数字规则因未复制章节编号1而拦截，属可定位的程序误拦。整体仍不完整。",
+      "terminology_reference": "https://www.uclh.nhs.uk/patients-and-visitors/patient-information-pages/extended-right-hemicolectomy"
+    },
+    {
+      "id": "long_1b1bf3aecd9f8ad2",
+      "output_sha256": "6cc5c3c359f374967167cf6af9068eb3d7e152fc309eff10d794b550836d3e14",
+      "errors": [],
+      "clinical_coverage_complete": true,
+      "precision_concern": true,
+      "readability": "mixed",
+      "ledger_review": "not_applicable",
+      "notes_zh": "15/15句全部生成。第6句将钙化和肉芽肿分别解释为钙盐沉积与免疫细胞聚集，未再声称钙盐沉积造成免疫细胞团块；有清单版的明确术语错误在这里是真正修正而非隐藏。无明确患者事实错误；否定范围、27日与手术关系不清、随访条件保留。与主两臂一致，apparent写明显但仍保留评估受限，记录精度顾虑；皮质囊肿括号写肾表面、中轴骨简化为脊柱以及胆管连接关系说明也不够具体，因此并非完整忠实成功。"
+    }
+  ]
+}
