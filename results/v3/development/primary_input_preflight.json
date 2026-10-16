@@ -1,0 +1,88 @@
+{
+  "stage": "input-only preflight before outputs; no cohort changes",
+  "cohort": "examples/v3/main20_manifest.json",
+  "v2_frozen_max_segments": 40,
+  "counts": [
+    {
+      "id": "long_b3baa3486a61d6cc",
+      "v2_segments": 15
+    },
+    {
+      "id": "long_9ef37ce93b166517",
+      "v2_segments": 19
+    },
+    {
+      "id": "long_5fefdb2a79347660",
+      "v2_segments": 28
+    },
+    {
+      "id": "long_0eaad3584df25a63",
+      "v2_segments": 24
+    },
+    {
+      "id": "long_48f1f40212aa6574",
+      "v2_segments": 20
+    },
+    {
+      "id": "long_7d84f26f81b5b22e",
+      "v2_segments": 17
+    },
+    {
+      "id": "long_5444aec1786f55c3",
+      "v2_segments": 11
+    },
+    {
+      "id": "long_d34640bea83a69d9",
+      "v2_segments": 18
+    },
+    {
+      "id": "long_89f60c1298aaa093",
+      "v2_segments": 14
+    },
+    {
+      "id": "long_0b1f5bc1b9a68604",
+      "v2_segments": 32
+    },
+    {
+      "id": "long_c8acd9987fc6e1bf",
+      "v2_segments": 17
+    },
+    {
+      "id": "long_63dbdd7032e14da4",
+      "v2_segments": 34
+    },
+    {
+      "id": "long_8b37c849e2e993be",
+      "v2_segments": 17
+    },
+    {
+      "id": "long_33af35acd9e3d0ba",
+      "v2_segments": 16
+    },
+    {
+      "id": "long_263f60c72e2468ec",
+      "v2_segments": 14
+    },
+    {
+      "id": "long_56b2592a4e7006f7",
+      "v2_segments": 10
+    },
+    {
+      "id": "long_3a5ce0a2a2aa2089",
+      "v2_segments": 22
+    },
+    {
+      "id": "long_987f2fc465614129",
+      "v2_segments": 33
+    },
+    {
+      "id": "long_1b1bf3aecd9f8ad2",
+      "v2_segments": 15
+    },
+    {
+      "id": "long_f2007f131c21153c",
+      "v2_segments": 26
+    }
+  ],
+  "v2_over_limit": 0
+}

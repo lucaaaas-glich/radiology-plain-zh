@@ -1,0 +1,29 @@
+{
+  "examples": [
+    {
+      "file": "V3_完整解释示例.html",
+      "source_position": 7,
+      "source_id": "long_5444aec1786f55c3",
+      "output_fingerprint_sha256": "e4ba64cb0cf724288798c24ac71a3e1523e1b1425430780437b3b0fadd8e8ec8",
+      "html_sha256": "a3311c12370d7e595ed0314f78d49426829a4a6dcf26c594402cf0c310d7f8d4",
+      "presentation": "Frozen generated text plus a separate, explicitly labeled project-AI review banner; no manual correction of model text"
+    },
+    {
+      "file": "V3_仍有错误示例.html",
+      "source_position": 5,
+      "source_id": "long_48f1f40212aa6574",
+      "output_fingerprint_sha256": "f4ddb27c70892a318672f8c64b7d804aa6ce6833b00e15336b4f04114401d76c",
+      "html_sha256": "132966171b6e8a7f8587b91ca51c6da8e0c7ae46436d4d66efad5ff1e7b47e6b",
+      "presentation": "Frozen generated text plus a separate, explicitly labeled project-AI review banner; no manual correction of model text"
+    },
+    {
+      "file": "V3_没有讲全示例.html",
+      "source_position": 1,
+      "source_id": "long_b3baa3486a61d6cc",
+      "output_fingerprint_sha256": "40028fc377a2824b0d38acab43e8e4f0262c8f6a307d64e792cbf16c114f3987",
+      "html_sha256": "2c3eb62cc0202c919a650958b701abbdc1bb2d20ff85da9323284a00395d61fd",
+      "presentation": "Frozen generated text plus a separate, explicitly labeled project-AI review banner; no manual correction of model text"
+    }
+  ],
+  "qa": "All three HTML pages visually inspected in local in-app browser; source/checklist expansion verified. Full report texts remain local and ignored."
+}

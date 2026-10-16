@@ -1,0 +1,40 @@
+{
+  "reports": 4,
+  "stage_cost": {
+    "ledger": {
+      "calls": 10,
+      "seconds": 385.96405028551817,
+      "input_tokens": 7345,
+      "generated_tokens": 3530
+    },
+    "write": {
+      "calls": 13,
+      "seconds": 229.72120748925954,
+      "input_tokens": 13348,
+      "generated_tokens": 2075
+    },
+    "audit": {
+      "calls": 11,
+      "seconds": 53.47705176472664,
+      "input_tokens": 14331,
+      "generated_tokens": 449
+    }
+  },
+  "ledger_statuses": {
+    "format_failed": 14,
+    "available": 38,
+    "quotes_validated": 2
+  },
+  "ledger_extraction_batches": 10,
+  "batches_with_format_or_quote_failure": 6,
+  "units_affected_by_ledger_format_or_quote_failure": 14,
+  "generated_with_available_ledger": 38,
+  "generated_from_source_without_ledger": 14,
+  "write_or_audit_format_errors_by_unique_attempt": {
+    "IDs must match every target exactly once": 2
+  },
+  "inapplicable_complaints_about_missing_ledger": 2,
+  "last_audit_issue_types_on_source_only_units": {},
+  "note": "These are recorded program/model events, not factual error counts. Available ledger means quoted/accepted, not medically correct. Audit issue types may be wrong or inapplicable; they are not independently validated causes.",
+  "outputs_sha256": "8469befcbc66e80893b67c17af98bb649191c5bd18dfee76ce7486af2d9e8640"
+}

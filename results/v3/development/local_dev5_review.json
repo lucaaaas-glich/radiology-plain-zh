@@ -1,0 +1,28 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "stage": "development",
+  "cases": [
+    {
+      "id": "real_3000010eb2853496",
+      "output_sha256": "ebab2d953edd18c5b2e31a52eb1162ff59a7989ddc911a2cf5daf9e19a369d96",
+      "errors": [],
+      "clinical_coverage_complete": false,
+      "precision_concern": true,
+      "readability": "mixed",
+      "ledger_review": "not_reviewed",
+      "notes_zh": "呼吸衰竭保留；肺栓塞主要结果、COVID实变和最终分级回退。扫描下界膈肌穹窿简化为膈肌，记录精度顾虑。"
+    },
+    {
+      "id": "real_2646eef8c69cbba1",
+      "output_sha256": "2de74fe46d1d589613f0e5a3164ceed1b9c15b8aa1e1109841eb8534be8f81b6",
+      "errors": [
+        "anatomy_side"
+      ],
+      "clinical_coverage_complete": false,
+      "precision_concern": false,
+      "readability": "mixed",
+      "ledger_review": "not_reviewed",
+      "notes_zh": "subclavian被写成锁骨静脉，缺少下方定位；lower dorsal写成下背部，未保留胸椎定位。胃管末端和稳定性日期回退。"
+    }
+  ]
+}

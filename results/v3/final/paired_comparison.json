@@ -1,0 +1,268 @@
+{
+  "main_v2_a_vs_v3_b": {
+    "paired_reports": 20,
+    "counts": {
+      "observed_error": {
+        "neither": 15,
+        "both": 3,
+        "only_a": 1,
+        "only_b": 1
+      },
+      "complete_faithful": {
+        "neither": 15,
+        "only_a": 4,
+        "both": 1
+      },
+      "clinical_coverage_complete": {
+        "only_a": 3,
+        "neither": 11,
+        "both": 6
+      }
+    },
+    "cases": [
+      {
+        "id": "long_b3baa3486a61d6cc",
+        "observed_error": "neither",
+        "complete_faithful": "neither",
+        "clinical_coverage_complete": "only_a"
+      },
+      {
+        "id": "long_9ef37ce93b166517",
+        "observed_error": "neither",
+        "complete_faithful": "neither",
+        "clinical_coverage_complete": "neither"
+      },
+      {
+        "id": "long_5fefdb2a79347660",
+        "observed_error": "neither",
+        "complete_faithful": "only_a",
+        "clinical_coverage_complete": "both"
+      },
+      {
+        "id": "long_0eaad3584df25a63",
+        "observed_error": "neither",
+        "complete_faithful": "neither",
+        "clinical_coverage_complete": "neither"
+      },
+      {
+        "id": "long_48f1f40212aa6574",
+        "observed_error": "both",
+        "complete_faithful": "neither",
+        "clinical_coverage_complete": "both"
+      },
+      {
+        "id": "long_7d84f26f81b5b22e",
+        "observed_error": "neither",
+        "complete_faithful": "neither",
+        "clinical_coverage_complete": "neither"
+      },
+      {
+        "id": "long_5444aec1786f55c3",
+        "observed_error": "neither",
+        "complete_faithful": "both",
+        "clinical_coverage_complete": "both"
+      },
+      {
+        "id": "long_d34640bea83a69d9",
+        "observed_error": "neither",
+        "complete_faithful": "neither",
+        "clinical_coverage_complete": "neither"
+      },
+      {
+        "id": "long_89f60c1298aaa093",
+        "observed_error": "neither",
+        "complete_faithful": "neither",
+        "clinical_coverage_complete": "neither"
+      },
+      {
+        "id": "long_0b1f5bc1b9a68604",
+        "observed_error": "both",
+        "complete_faithful": "neither",
+        "clinical_coverage_complete": "neither"
+      },
+      {
+        "id": "long_c8acd9987fc6e1bf",
+        "observed_error": "neither",
+        "complete_faithful": "only_a",
+        "clinical_coverage_complete": "only_a"
+      },
+      {
+        "id": "long_63dbdd7032e14da4",
+        "observed_error": "only_a",
+        "complete_faithful": "neither",
+        "clinical_coverage_complete": "neither"
+      },
+      {
+        "id": "long_8b37c849e2e993be",
+        "observed_error": "neither",
+        "complete_faithful": "only_a",
+        "clinical_coverage_complete": "both"
+      },
+      {
+        "id": "long_33af35acd9e3d0ba",
+        "observed_error": "neither",
+        "complete_faithful": "neither",
+        "clinical_coverage_complete": "neither"
+      },
+      {
+        "id": "long_263f60c72e2468ec",
+        "observed_error": "neither",
+        "complete_faithful": "neither",
+        "clinical_coverage_complete": "both"
+      },
+      {
+        "id": "long_56b2592a4e7006f7",
+        "observed_error": "neither",
+        "complete_faithful": "neither",
+        "clinical_coverage_complete": "neither"
+      },
+      {
+        "id": "long_3a5ce0a2a2aa2089",
+        "observed_error": "neither",
+        "complete_faithful": "only_a",
+        "clinical_coverage_complete": "only_a"
+      },
+      {
+        "id": "long_987f2fc465614129",
+        "observed_error": "neither",
+        "complete_faithful": "neither",
+        "clinical_coverage_complete": "neither"
+      },
+      {
+        "id": "long_1b1bf3aecd9f8ad2",
+        "observed_error": "only_b",
+        "complete_faithful": "neither",
+        "clinical_coverage_complete": "both"
+      },
+      {
+        "id": "long_f2007f131c21153c",
+        "observed_error": "both",
+        "complete_faithful": "neither",
+        "clinical_coverage_complete": "neither"
+      }
+    ],
+    "not_clinical_accuracy": true,
+    "old_error_to_complete_faithful": [],
+    "old_error_absent_but_report_incomplete": [
+      "long_63dbdd7032e14da4"
+    ],
+    "old_error_to_complete_but_precision_concern": [],
+    "complete_faithful_gained": [],
+    "complete_faithful_lost": [
+      "long_5fefdb2a79347660",
+      "long_c8acd9987fc6e1bf",
+      "long_8b37c849e2e993be",
+      "long_3a5ce0a2a2aa2089"
+    ],
+    "paired_generation_seconds": {
+      "a": 2697.9340230003,
+      "b": 7324.009149972349,
+      "b_over_a": 2.7146731860505304
+    },
+    "interpretation": "Error disappearance in an incomplete report is not complete success. It can reflect correction of the old error, withholding of that content, or both; determine the cause by reading the actual changed segments, never from the report state alone. All clinical judgments are project AI review, not independent medical accuracy. A complete-faithful label means no error was observed."
+  },
+  "control_without_ledger_a_vs_with_ledger_b": {
+    "paired_reports": 10,
+    "counts": {
+      "observed_error": {
+        "neither": 8,
+        "both": 1,
+        "only_b": 1
+      },
+      "complete_faithful": {
+        "neither": 9,
+        "both": 1
+      },
+      "clinical_coverage_complete": {
+        "neither": 4,
+        "both": 4,
+        "only_b": 2
+      }
+    },
+    "cases": [
+      {
+        "id": "long_b3baa3486a61d6cc",
+        "observed_error": "neither",
+        "complete_faithful": "neither",
+        "clinical_coverage_complete": "neither"
+      },
+      {
+        "id": "long_5fefdb2a79347660",
+        "observed_error": "neither",
+        "complete_faithful": "neither",
+        "clinical_coverage_complete": "both"
+      },
+      {
+        "id": "long_48f1f40212aa6574",
+        "observed_error": "both",
+        "complete_faithful": "neither",
+        "clinical_coverage_complete": "only_b"
+      },
+      {
+        "id": "long_5444aec1786f55c3",
+        "observed_error": "neither",
+        "complete_faithful": "both",
+        "clinical_coverage_complete": "both"
+      },
+      {
+        "id": "long_89f60c1298aaa093",
+        "observed_error": "neither",
+        "complete_faithful": "neither",
+        "clinical_coverage_complete": "neither"
+      },
+      {
+        "id": "long_c8acd9987fc6e1bf",
+        "observed_error": "neither",
+        "complete_faithful": "neither",
+        "clinical_coverage_complete": "neither"
+      },
+      {
+        "id": "long_8b37c849e2e993be",
+        "observed_error": "neither",
+        "complete_faithful": "neither",
+        "clinical_coverage_complete": "only_b"
+      },
+      {
+        "id": "long_263f60c72e2468ec",
+        "observed_error": "neither",
+        "complete_faithful": "neither",
+        "clinical_coverage_complete": "both"
+      },
+      {
+        "id": "long_3a5ce0a2a2aa2089",
+        "observed_error": "neither",
+        "complete_faithful": "neither",
+        "clinical_coverage_complete": "neither"
+      },
+      {
+        "id": "long_1b1bf3aecd9f8ad2",
+        "observed_error": "only_b",
+        "complete_faithful": "neither",
+        "clinical_coverage_complete": "both"
+      }
+    ],
+    "not_clinical_accuracy": true,
+    "old_error_to_complete_faithful": [],
+    "old_error_absent_but_report_incomplete": [],
+    "old_error_to_complete_but_precision_concern": [],
+    "complete_faithful_gained": [],
+    "complete_faithful_lost": [],
+    "paired_generation_seconds": {
+      "a": 1375.3656619526446,
+      "b": 2871.098246095702,
+      "b_over_a": 2.0875163060414965
+    },
+    "interpretation": "Error disappearance in an incomplete report is not complete success. It can reflect correction of the old error, withholding of that content, or both; determine the cause by reading the actual changed segments, never from the report state alone. All clinical judgments are project AI review, not independent medical accuracy. A complete-faithful label means no error was observed."
+  },
+  "not_clinical_accuracy": true,
+  "sha256": {
+    "results/v3/real-data/collected/v2/outputs.jsonl": "94d093af878aef7dc2964579b9759afabc7d6abcc04179e83f5db4a052d556ba",
+    "results/v3/real-data/collected/v3/outputs.jsonl": "f0bf4bb551060227f20cf97435601950e4e1878a731ba0e9137b8d3908aee17d",
+    "results/v3/real-data/collected/without_ledger/outputs.jsonl": "f00271409f5ef9d34b9e1ed6dd3049aed9447ba8d2035c5e2df54f4d3c6855eb",
+    "examples/v3/main20_manifest.json": "875425f54daf76a47fdaf2c6534fa2a63da60af63e595260e16f819dbcfbed32",
+    "examples/v3/final_candidate.lock.json": "21ca039011bbb539a3aaf5fd49c2ea9b8f78e692f8f8665a923237081ab728d0",
+    "results/v3/final/v2_review.json": "e07691f1c1ee84bc1983db551ab21fae3f811505f7551152faef8e99b4336a78",
+    "results/v3/final/v3_review.json": "16b9524989a05ebbf2c205c9e89302a420a395ab2a44e6f2bf8524d410875797",
+    "results/v3/final/without_ledger_review.json": "11944cffeaa7dac32c0ec094cfda6217a8ef43c353fbda3c67b2235bd3008a23"
+  }
+}

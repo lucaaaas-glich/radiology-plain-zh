@@ -1,0 +1,217 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "stage": "final",
+  "cases": [
+    {
+      "id": "long_b3baa3486a61d6cc",
+      "output_sha256": "802461034b5e777d73c882c4d8ad4f744186e99bc5de6c88bf353dac505a7941",
+      "errors": [],
+      "clinical_coverage_complete": true,
+      "precision_concern": true,
+      "readability": "technical",
+      "ledger_review": "not_applicable",
+      "notes_zh": "数值、侧别、既往/当前变化和新出现积液均保留。结论把organized译为有组织的，临床词义不清；病因句使用或连接两项，原文逗号关系含混，记录表达精度顾虑而不强行判明确事实错误。主体专业术语密集，结尾有重复词。"
+    },
+    {
+      "id": "long_9ef37ce93b166517",
+      "output_sha256": "a4b76953d926f27ea746724e866ae889a9d58a79429c355be17bdb90ff29aa71",
+      "errors": [],
+      "clinical_coverage_complete": false,
+      "precision_concern": false,
+      "readability": "technical",
+      "ledger_review": "not_applicable",
+      "notes_zh": "已展示文字保留肺动脉充盈缺损的可疑性、检查质量限制、骨折位置及无移位、3厘米厚度、6毫米结节和12个月复查；没有把不能排除写成确诊。无实变/磨玻璃影及轻度间质增厚一句与两处CORADS 2回退为英文，临床解释不完整。术语密集。"
+    },
+    {
+      "id": "long_5fefdb2a79347660",
+      "output_sha256": "d30d458e7afb3a591cad5c3b6a40d859942ffe094957b4b29dbabe32d190ea4f",
+      "errors": [],
+      "clinical_coverage_complete": true,
+      "precision_concern": false,
+      "readability": "technical",
+      "ledger_review": "not_applicable",
+      "notes_zh": "28句全部得到中文。3–28毫米、上肺野而非上叶、部分钙化/未钙化为主、充血病因的可能性、各处无明显异常限定及最可能肉芽肿来源均保留；活检明确是为排除肿瘤成分，没有改成肿瘤确诊。主要仍用专业术语，患者可读性未验证。"
+    },
+    {
+      "id": "long_0eaad3584df25a63",
+      "output_sha256": "7751c63c9e17f3cb6874e33cbcb3869bd6846a619244a49573599414d2b92d44",
+      "errors": [],
+      "clinical_coverage_complete": false,
+      "precision_concern": true,
+      "readability": "technical",
+      "ledger_review": "not_applicable",
+      "notes_zh": "首句年龄/肿瘤史/卒中日期全部回退，故临床解释不完整。其余保留已做取栓溶栓、胸部CT、可能复发而非确诊、左上叶肺动脉狭窄加重且阻塞、出血性梗死可能性、左下叶纤维化/不张和阴性限定。磨玻璃halo简化为伴磨玻璃影，周围晕状关系不清；增加软组织密度影译为密度增高也有范围/强度歧义，记录精度顾虑而不强判明确错误。"
+    },
+    {
+      "id": "long_48f1f40212aa6574",
+      "output_sha256": "8ceb6de18f3d9cb1174a2663eaa345aca2d9e1c3760fa7fb2ab9a970e2fecb62",
+      "errors": [
+        "anatomy_side",
+        "recommendation"
+      ],
+      "clinical_coverage_complete": true,
+      "precision_concern": true,
+      "readability": "technical",
+      "ledger_review": "not_applicable",
+      "notes_zh": "全部20句生成，20毫米/30HU/肝IV段、T5/T6及可评估范围等均保留。但dependent portions（重力依赖部位，随体位而变）被具体化为肺底部；结尾Consider scheduling被加强为报告建议安排，丢了考虑的建议强度。另discrete译局灶性而非轻微有歧义，deforming spondylosis译变形性脊柱炎易把退变与炎症混淆，保守列为术语精度顾虑，不把该术语单独作为明确错误计数。"
+    },
+    {
+      "id": "long_7d84f26f81b5b22e",
+      "output_sha256": "d22e72647dd28cadd64bdd7e99e36541f9f2c3626199fdb222363883d06d9376",
+      "errors": [],
+      "clinical_coverage_complete": false,
+      "precision_concern": false,
+      "readability": "technical",
+      "ledger_review": "not_applicable",
+      "notes_zh": "原先有斑块但没有溃疡、左肺薄壁囊性影稳定、左肺外侧段结节1.2厘米此前1厘米、结论可能增加2毫米、右肾已切除及左肾上腺2厘米稳定均保留，未观察到明确事实改变。与7/3/2019比较的整句仍为英文，未完成这项检查时间关系的中文解释，因此不完整。术语偏专业。"
+    },
+    {
+      "id": "long_5444aec1786f55c3",
+      "output_sha256": "d148e3e7800868abb9dc63359193f56c9646f6e3658efb8a7001c883cbd4efce",
+      "errors": [],
+      "clinical_coverage_complete": true,
+      "precision_concern": false,
+      "readability": "technical",
+      "ledger_review": "not_applicable",
+      "notes_zh": "11句全部生成，右主肺动脉与上叶全部分支、中叶内侧段、右下叶各列段及左下叶后段的分布均保留。双侧/右为主、双侧弥漫上叶为主肺炎表现、纤维化初期迹象、肝IV段富血供病灶未被改成恶性。未发现明确事实错误；有新冠肺炎肺炎的重复及较生硬的专业用语，但未据此判临床含义改变。"
+    },
+    {
+      "id": "long_d34640bea83a69d9",
+      "output_sha256": "2a265a89ba40b2cc08e98b7df22da088e4d232026db28fe4e15b1116bbf25d25",
+      "errors": [],
+      "clinical_coverage_complete": false,
+      "precision_concern": false,
+      "readability": "technical",
+      "ledger_review": "not_applicable",
+      "notes_zh": "肿瘤进展的各部位、左右肾上腺3.5/5.5厘米对应、其他0.8/1.6/1.2/1/2厘米值、L2/L3浸润、肝病灶部分大部分小、胰尾提示新转移、脾提示梗死及可能骶髂炎均保留，未发现明确改写错误。3个月前10/11/2020比较整句回退，缺少中文时间关系。颅侧排泄系统/分离反应等较难懂，属专业可读性，不能当已实现患者通俗化。"
+    },
+    {
+      "id": "long_89f60c1298aaa093",
+      "output_sha256": "38b00413a39f6c3aec39807a02ac8ea01c0f941c540efef377dadd626b366306",
+      "errors": [],
+      "clinical_coverage_complete": false,
+      "precision_concern": false,
+      "readability": "technical",
+      "ledger_review": "not_applicable",
+      "notes_zh": "保留先前胸片的双侧纤维条索/气管移位与本次气管居中、肺动脉约34毫米提示肺高压、非显著淋巴结、双侧中/基底肺野网状/GGO、轻度柱状支扩、左第5肋前1/3及胸5上平台不到25%陈旧骨折改变等。含异常血管名称的冠脉钙化整句和胸膜腔无异常句回退，因此不完整，未观察到已展示中文的明确事实错误。保留源文本疑点而未猜测具体冠脉名称。"
+    },
+    {
+      "id": "long_0b1f5bc1b9a68604",
+      "output_sha256": "dc7d89b21e8f66fd9deb3381cb443dab5392dbedad3ef9a9710a8109822392b6",
+      "errors": [
+        "omission"
+      ],
+      "clinical_coverage_complete": false,
+      "precision_concern": true,
+      "readability": "technical",
+      "ledger_review": "not_applicable",
+      "notes_zh": "肺结节精确前后测量比较句及肝多发毫米低密度影句回退，整体不完整。其余多项尺寸、数量稳定但长大、26%靶灶增幅、病因可能性与基线不清均保留。第15句把contiguous loop of small intestine只写一段小肠，悄悄遗漏该增厚肠袢与前述积聚相邻的空间关系，计重要关系遗漏。第10句将左髂窝位置笼统套到术后改变且未说明结肠造口，第30句last line of chemotherapy写最后一轮化疗，记录术语/位置精度顾虑而不单独据此扩大明确错误类别。"
+    },
+    {
+      "id": "long_c8acd9987fc6e1bf",
+      "output_sha256": "71d3c5df99ba8cac38ef8490aad1ca86efe41fd2b5ef84057a53e30a7d98a03d",
+      "errors": [],
+      "clinical_coverage_complete": true,
+      "precision_concern": false,
+      "readability": "technical",
+      "ledger_review": "not_applicable",
+      "notes_zh": "17句均有中文。门静脉期、明确的21 05 2020日期、病理大小限定、肝病灶非特异且可能囊肿并稳定、胆囊仅无高密度影而未扩大为无任何结石、其余阴性及妇科术后和总体稳定均保留，未发现明确改写错误。表达仍偏影像专业术语；日期换成中文年月日不产生歧义，不因格式改变强算事实错误。"
+    },
+    {
+      "id": "long_63dbdd7032e14da4",
+      "output_sha256": "885c50e1a19df526dab55ca7f4e0f1440fa922c212a9d5e262c64d679939001e",
+      "errors": [
+        "omission",
+        "anatomy_side"
+      ],
+      "clinical_coverage_complete": false,
+      "precision_concern": false,
+      "readability": "technical",
+      "ledger_review": "not_applicable",
+      "notes_zh": "病史年龄/三周手术并发症句及带日期增强CT句回退，故不完整。第2、15、34句subocclusive均只写肠梗阻，丢失不完全/不全限定。第17句left abdominal flank增加侧腹壁，把肠系膜病灶的位置说成腹壁；原文腹壁轻度炎症是下一句另一发现。其余38°C、33毫米提示肺高压、左右肺分布、可能感染、胆囊术后材料、肾皮质囊肿及结论未见腹内感染灶等保留。不能因大部分数字与否定保留而忽略限定词和部位错误。"
+    },
+    {
+      "id": "long_8b37c849e2e993be",
+      "output_sha256": "a90538381971814da3beb7dd57931690a79437ec015b59f6b31b940e874a4360",
+      "errors": [],
+      "clinical_coverage_complete": true,
+      "precision_concern": false,
+      "readability": "technical",
+      "ledger_review": "not_applicable",
+      "notes_zh": "17句全部生成，既往多次胸膜固定、撤回增强同意、左甲状腺肿压气管右移、最小气管管腔27×8毫米（未错配成结节尺寸）、主肺动脉33毫米、右胸膜结节较原格式21 10 20增长、少量包裹液、肺叶缩小及其他阴性/稳定改变、结论符合复发均保留，未发现明确改写错误。仍以医学专业表达为主。"
+    },
+    {
+      "id": "long_33af35acd9e3d0ba",
+      "output_sha256": "fec4f982309c9adc2a7ac65c954d1d655e3c0709e9a9bb4506e076658ed449c0",
+      "errors": [],
+      "clinical_coverage_complete": false,
+      "precision_concern": true,
+      "readability": "technical",
+      "ledger_review": "not_applicable",
+      "notes_zh": "正确区分排除PE的检查目的、技术差致叶/段动脉不可评价、仅主干未见PE，并保留如仍怀疑需充分补液后复查的条件。淋巴结数值、左下叶实变可能与阻塞有关、右胸水约5厘米、其他左右侧保留。包含原始右肺门/左下叶矛盾的肿块句及前内侧右上肺静脉脂肪间隙句回退，故不完整，未擅自修正原文。major fissure写主要裂、rarefaction写脂肪稀疏，含义不够清楚，按精度顾虑记录；不因原文本身左右冲突给模型强加新事实错误。"
+    },
+    {
+      "id": "long_263f60c72e2468ec",
+      "output_sha256": "a2c64ddc553272348a78eca78b977d688e91ccfea49a6d09f0dc9f1471d0111c",
+      "errors": [],
+      "clinical_coverage_complete": true,
+      "precision_concern": true,
+      "readability": "technical",
+      "ledger_review": "not_applicable",
+      "notes_zh": "14句全部生成。完全性右束支阻滞、92%、已排除PE（不是只写检查目的）、主/叶/段动脉范围、无右心负荷、左侧较多的上叶/舌叶磨玻璃和左下叶外侧段胸膜下实变保留。第10句将实变主要位于双后基底区写成后基底区以实变为主的区域，主要修饰的对象从位置变为影像类型，记录限定范围表达精度顾虑；尚不强判为确定新增或反转事实。新冠肺炎肺炎的重复是语言问题。"
+    },
+    {
+      "id": "long_56b2592a4e7006f7",
+      "output_sha256": "3dac0d89c771760cae7e687a3b7722a5f32afe52ecc8a49d58048e124e6a8f7c",
+      "errors": [],
+      "clinical_coverage_complete": false,
+      "precision_concern": true,
+      "readability": "technical",
+      "ledger_review": "not_applicable",
+      "notes_zh": "年龄/男性/ICU出院日期背景以及PCR日期/鉴别纤维化和炎症的目的两句回退，故不完整。已展示部分保留非周边支气管血管分布、上肺野为主中野较少、双肺底尤其后段、右下叶尖段、纤维化多于炎症等关键关系。subcarinal改写成气管隆嵴旁而没有保留下方定位，按部位精度顾虑记录，未把含混的旁字强判成确定的另一个淋巴结站。鼻胃管邻近关系及其余阴性保留。"
+    },
+    {
+      "id": "long_3a5ce0a2a2aa2089",
+      "output_sha256": "2c7a334431ef0c02925e6d2849cae48cec9389fd5be10a676dc3435b9aa8a687",
+      "errors": [],
+      "clinical_coverage_complete": true,
+      "precision_concern": false,
+      "readability": "technical",
+      "ledger_review": "not_applicable",
+      "notes_zh": "只有纯结构编号1./2.被保留，全部临床内容得到中文，按预注册标准不因编号回退而判不完整。小于3毫米稳定结节、右锁骨下动脉食管后走行且无瘤样扩张、扩大右结肠切除术后、肝大、脾下层状积聚、左卵巢静脉及左主动脉旁淋巴结短轴6毫米、无明显变化均保留，未发现明确改写错误或严重含混。表达仍专业。"
+    },
+    {
+      "id": "long_987f2fc465614129",
+      "output_sha256": "e12ee3c9ba8e0fbaf1e54c17e7ec8c984dae2527e656219098ab27c7f410fe16",
+      "errors": [],
+      "clinical_coverage_complete": false,
+      "precision_concern": true,
+      "readability": "technical",
+      "ledger_review": "not_applicable",
+      "notes_zh": "已展示中文保留右上中肺野周边为主、右肺底中央为主、插管尖端隆突水平、主动脉弓钙化、右肺3/4与总分4/8中度、结论高度提示COVID-19等。8个回退中I.与2.为纯结构，另外右下中区、左上中区/下中区/肺底、皮下气肿与可能纵隔气肿、左肺1/4均是未解释的临床内容，因此不完整。AP仅写床旁正位，未保留具体前后方向；Pleural space写胸腔也较宽，保守记精度顾虑而非明确反转方向或全胸部正常。未观察到其他明确临床事实错误。"
+    },
+    {
+      "id": "long_1b1bf3aecd9f8ad2",
+      "output_sha256": "fbee430fcf54e1d3f15a81fe2e5d60b1320af775aff11c3e14e3a81eda08a7ae",
+      "errors": [],
+      "clinical_coverage_complete": true,
+      "precision_concern": true,
+      "readability": "technical",
+      "ledger_review": "not_applicable",
+      "notes_zh": "15句全部生成，非增强急诊、病史与检查发现区分、右下叶后基底段可能冠状病毒感染、双肺底不张、可引流腹腔积液的否定范围、少量小胆石且无急性炎症、囊肿/无积水、27日手术关系不明、右凸腰椎侧弯及按临床演变随访均保留。apparent thickening写明显增厚，结合原文评估不佳，更谨慎应表达似有；中文同时保留难以准确评估，且apparent本身兼有明显/似乎两义，保守记精度顾虑而非强判确诊反转。lesser pelvis仅写盆腔下部、rarefaction直译脂肪稀疏也有术语精度顾虑。没有据日期27补造月/年，未观察其他明确事实错误。",
+      "terminology_reference": "https://dictionary.cambridge.org/dictionary/english/apparent (dictionary senses include both obvious and seeming; supports conservative ambiguity treatment, not a medical finding)"
+    },
+    {
+      "id": "long_f2007f131c21153c",
+      "output_sha256": "640bf54b583ae6c1f82066d9a052cac87f56035095c8a24bec84c584f107b44c",
+      "errors": [
+        "recommendation"
+      ],
+      "clinical_coverage_complete": false,
+      "precision_concern": false,
+      "readability": "technical",
+      "ledger_review": "not_applicable",
+      "notes_zh": "第25句将consider biopsy改成报告建议进行活检，丢失考虑这一条件/建议强度，与第5例同标准记建议错误。其余已展示内容保留36×21与此前16×7增大、19×24结节、12毫米假结节、15×15腋窝结节、10毫米可能肝血管瘤、51×34×48胰腺与胃底后部接触、12毫米可能脾血管瘤稳定、可能出血及不能排除原发灶等，未见另一个明确错误。COVID病史与持续阴影所在部位句、前次CT是否极早期可见的怀疑句回退，故不完整。原文把舌部写在左下叶本身有部位矛盾，不能把源文本问题算作模型新引入的错误；该句实际未展示中文。"
+    }
+  ]
+}

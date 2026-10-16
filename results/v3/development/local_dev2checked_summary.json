@@ -1,0 +1,42 @@
+{
+  "reports": 2,
+  "not_clinical_accuracy": true,
+  "review_scope": "project AI; not independent, blinded, or clinician review",
+  "mutually_exclusive_outcomes": {
+    "incomplete_without_observed_error": 2
+  },
+  "reports_with_observed_factual_errors": 0,
+  "reports_complete_faithful_chinese": 0,
+  "reports_clinical_coverage_complete": 0,
+  "reports_precision_concern": 0,
+  "reports_fully_generated": 0,
+  "generation_failures": 0,
+  "error_category_report_counts": {},
+  "readability_ai_judgments": {
+    "mixed": 1,
+    "none": 1
+  },
+  "ledger_review_counts": {
+    "observed_issue": 1,
+    "not_available": 1
+  },
+  "segments": {
+    "eligible": 18,
+    "generated": 8,
+    "source_only": 10,
+    "structure": 0,
+    "excluded_instruction": 0
+  },
+  "latency_seconds": {
+    "total": 154.75475245795678,
+    "median": 77.37737622897839,
+    "minimum": 24.138000707956962,
+    "maximum": 130.61675174999982
+  },
+  "generation_cost": {
+    "model_calls": 14,
+    "input_tokens": 14234,
+    "generated_tokens": 2468
+  },
+  "note": "Clinical completeness is an AI review judgment. Fully-generated and per-segment coverage are mechanical; segmentation differs between arms."
+}

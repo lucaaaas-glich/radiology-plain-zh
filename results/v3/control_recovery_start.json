@@ -1,0 +1,16 @@
+{
+  "job_id": 667493,
+  "dependency_job_id": 667218,
+  "previous_state": "TIMEOUT",
+  "previous_end_utc": "2026-10-16T18:58:20Z",
+  "started_utc": "2026-10-16T18:58:30Z",
+  "time_limit_minutes": 60,
+  "completed_before_start": {
+    "v2": 20,
+    "v3": 20,
+    "without_ledger": 5
+  },
+  "remaining_rows": 5,
+  "no_completed_rows_retried": true,
+  "only_original_frozen_cohort": true
+}

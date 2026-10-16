@@ -1,0 +1,28 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "stage": "development_old_reports_only",
+  "cases": [
+    {
+      "id": "real_3000010eb2853496",
+      "output_sha256": "eae18793ddf93bddfd3b7d11462922724862d46b5d3b38c35bfb51a7e2f37ff3",
+      "errors": [
+        "terminology"
+      ],
+      "clinical_coverage_complete": false,
+      "precision_concern": false,
+      "readability": "mixed",
+      "ledger_review": "observed_issue",
+      "notes_zh": "呼吸衰竭被弱化成呼吸困难；14片段只生成4段。清单将排除肺栓塞的检查目的标成技术；复核误把其他id内容算成本句遗漏，并产生长篇无效或截断JSON。"
+    },
+    {
+      "id": "real_2646eef8c69cbba1",
+      "output_sha256": "b2509ef5e92a635ee17a7c119a3954154a2a3e7008d60c25c75279e66a8da98c",
+      "errors": [],
+      "clinical_coverage_complete": false,
+      "precision_concern": false,
+      "readability": "none",
+      "ledger_review": "not_available",
+      "notes_zh": "4段都未完成中文；清单存在重复键、额外字段及顶层格式错误，原文保留。没有显示错误中文不等于成功。"
+    }
+  ]
+}

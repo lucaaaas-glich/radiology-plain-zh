@@ -1,0 +1,45 @@
+{
+  "paired_reports": 4,
+  "counts": {
+    "observed_error": {
+      "neither": 2,
+      "both": 1,
+      "only_a": 1
+    },
+    "complete_faithful": {
+      "only_b": 2,
+      "neither": 2
+    },
+    "clinical_coverage_complete": {
+      "only_b": 2,
+      "neither": 2
+    }
+  },
+  "cases": [
+    {
+      "id": "real_944bae9cd174b3f3",
+      "observed_error": "neither",
+      "complete_faithful": "only_b",
+      "clinical_coverage_complete": "only_b"
+    },
+    {
+      "id": "real_d462b8b6ee6a35a9",
+      "observed_error": "both",
+      "complete_faithful": "neither",
+      "clinical_coverage_complete": "neither"
+    },
+    {
+      "id": "real_3000010eb2853496",
+      "observed_error": "neither",
+      "complete_faithful": "neither",
+      "clinical_coverage_complete": "neither"
+    },
+    {
+      "id": "real_2646eef8c69cbba1",
+      "observed_error": "only_a",
+      "complete_faithful": "only_b",
+      "clinical_coverage_complete": "only_b"
+    }
+  ],
+  "not_clinical_accuracy": true
+}
