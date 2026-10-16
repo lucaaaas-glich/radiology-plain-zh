@@ -38,7 +38,7 @@ def main():
             left+=value
         if left!=20:raise ValueError('Outcome categories do not sum to cohort size')
     ax.set_yticks([0,1],['V2 原流程','V3 事实清单流程'],fontproperties=font,fontsize=13)
-    ax.invert_yaxis();ax.set_xlim(0,20);ax.set_xticks([0,5,10,15,20]);ax.set_xlabel('报告份数（同一批 20 份全新真实长报告）',fontproperties=font,fontsize=11)
+    ax.invert_yaxis();ax.set_xlim(0,20);ax.set_xticks([0,5,10,15,20]);ax.set_xlabel('报告份数（本轮新选取的同一批 20 份真实长报告）',fontproperties=font,fontsize=11)
     ax.set_title('同时看有没有说错，也看有没有讲全',fontproperties=font,fontsize=19,loc='left',pad=25)
     for spine in ax.spines.values():spine.set_visible(False)
     ax.tick_params(length=0,pad=8)
