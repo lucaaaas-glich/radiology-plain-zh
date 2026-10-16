@@ -6,6 +6,16 @@ import json
 from pathlib import Path
 import statistics
 from scripts.summarize_v2 import fingerprint, CATEGORIES, READABILITY, load_rows
+from radplain.common import fingerprint as source_fingerprint
+
+
+def verify_cohort(rows,manifest,stage):
+    expected=manifest['rows'][::4] if stage=='ablation' else manifest['rows']
+    if {r['id'] for r in rows}!={r['id'] for r in expected} or len(rows)!=len(expected):
+        raise ValueError('Final results do not cover the complete predeclared cohort')
+    indexed={r['id']:r for r in expected}
+    if any(source_fingerprint(r['report'])!=indexed[r['id']]['source_sha256'] for r in rows):
+        raise ValueError('Final source report changed')
 
 
 def validate(rows, review):
@@ -60,6 +70,9 @@ def summarize(rows,review):
             'error_category_report_counts':dict(Counter(e for c in indexed.values() for e in c['errors'])),
             'readability_ai_judgments':dict(Counter(c['readability'] for c in indexed.values())),
             'ledger_review_counts':dict(Counter(c['ledger_review'] for c in indexed.values())),
+            'ledger_status_counts':dict(Counter(s.get('ledger_status','not_applicable') for s in eligible)),
+            'generated_with_ledger':sum(s['status']=='generated' and s.get('ledger') is not None for s in eligible),
+            'generated_without_ledger':sum(s['status']=='generated' and s.get('ledger') is None for s in eligible),
             'segments':{'eligible':len(eligible),'generated':sum(s['status']=='generated' for s in eligible),
                         'source_only':sum(s['status']=='source_only' for s in eligible),
                         'structure':sum(s['status']=='structure' for s in segments),
@@ -96,9 +109,20 @@ def main():
     p.add_argument('--outputs',required=True,type=Path)
     p.add_argument('--review',required=True,type=Path)
     p.add_argument('--out',required=True,type=Path)
+    p.add_argument('--stage',required=True,choices=['development','final','ablation'])
     a=p.parse_args()
     if a.out.exists():raise ValueError('Refusing to replace a summary')
-    result=summarize(load_rows(a.outputs),json.loads(a.review.read_text()))
+    rows=load_rows(a.outputs)
+    if a.stage!='development':
+        manifest_path=Path('examples/v3/real_manifest.json')
+        verify_cohort(rows,json.loads(manifest_path.read_text()),a.stage)
+        if not Path('examples/v3/final_candidate.lock.json').exists():
+            raise ValueError('Final candidate has not been frozen')
+    result=summarize(rows,json.loads(a.review.read_text()))
+    result['stage']=a.stage
+    if a.stage!='development':
+        result['cohort_manifest_sha256']=hashlib.sha256(manifest_path.read_bytes()).hexdigest()
+        result['candidate_lock_sha256']=hashlib.sha256(Path('examples/v3/final_candidate.lock.json').read_bytes()).hexdigest()
     result['outputs_file_sha256']=hashlib.sha256(a.outputs.read_bytes()).hexdigest()
     result['review_file_sha256']=hashlib.sha256(a.review.read_bytes()).hexdigest()
     a.out.parent.mkdir(parents=True,exist_ok=True)

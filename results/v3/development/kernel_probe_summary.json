@@ -1,0 +1,35 @@
+{
+  "source": "two OLD synthetic development reports; not final outcomes",
+  "outputs_sha256": "dc4bd54d51e756cfa1b3ddec463eefd9aec718a78c70771cd185f8bbf5e7d1be",
+  "cases": [
+    {
+      "id": "v2_05_en_multi_numbers",
+      "same_output": true,
+      "reference": {
+        "seconds": 2.9978479593992233,
+        "input_tokens": 59,
+        "generation_tokens": 23
+      },
+      "accelerated": {
+        "seconds": 39.274175606667995,
+        "input_tokens": 59,
+        "generation_tokens": 23
+      }
+    },
+    {
+      "id": "v2_11_en_certainty",
+      "same_output": true,
+      "reference": {
+        "seconds": 2.5188483027741313,
+        "input_tokens": 56,
+        "generation_tokens": 19
+      },
+      "accelerated": {
+        "seconds": 2.235991404391825,
+        "input_tokens": 56,
+        "generation_tokens": 19
+      }
+    }
+  ],
+  "caveat": "First accelerated call includes compilation. Second case only modestly faster. Same text on two short cases does not establish model equivalence."
+}

@@ -8,7 +8,7 @@ LABELS={'entity':'对象','location':'部位','quantity':'数值与单位','nega
 
 def public_result(result):
     return {k:([ {a:b for a,b in row.items() if a!='attempts'} for row in value ] if k=='segments' else value)
-            for k,value in result.items() if k!='calls'}
+            for k,value in result.items() if k not in {'calls','ledger_batches'}}
 
 
 def render_text(result):

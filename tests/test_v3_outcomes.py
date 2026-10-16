@@ -1,6 +1,8 @@
 import pytest
 from scripts.summarize_v3 import summarize, compare, faithful
 from scripts.summarize_v2 import fingerprint
+from scripts.summarize_v3 import verify_cohort
+from radplain.common import fingerprint as source_fingerprint
 
 
 def data(error=False):
@@ -41,3 +43,13 @@ def test_pair_comparison_rejects_same_id_with_different_original():
 def test_precision_concern_is_not_declared_faithful():
     _,review=data();c=review['cases'][0];c['clinical_coverage_complete']=True;c['precision_concern']=True
     assert not faithful(c)
+
+
+def test_final_summary_rejects_missing_cases_and_changed_source():
+    rows=[{'id':str(i),'report':'Source '+str(i)} for i in range(40)]
+    manifest={'rows':[{'id':r['id'],'source_sha256':source_fingerprint(r['report'])} for r in rows]}
+    verify_cohort(rows,manifest,'final')
+    verify_cohort(rows[::4],manifest,'ablation')
+    with pytest.raises(ValueError,match='complete'):verify_cohort(rows[:-1],manifest,'final')
+    rows[0]['report']='Different source'
+    with pytest.raises(ValueError,match='source report'):verify_cohort(rows,manifest,'final')

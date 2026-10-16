@@ -5,12 +5,24 @@ from .guard_v2 import spans
 HEADINGS = {
     'clinical information': 'history', 'clinical history': 'history',
     'history': 'history', 'indication': 'history', 'indications': 'history',
+    'reason for request': 'history', 'clinical indication': 'history',
     'technique': 'technique', 'procedure': 'technique', 'examination': 'technique',
     'findings': 'finding', 'results': 'finding',
     'impression': 'impression', 'conclusion': 'impression', 'conclusions': 'impression',
     'recommendation': 'recommendation', 'recommendations': 'recommendation',
 }
 LABEL = re.compile(r'^(?:[IVXLCDM]{1,6}|\d{1,2}|[A-Za-z])\s*[.):]?$', re.I)
+PREFIX = re.compile(r'^(?:[IVXLCDM]{1,6}|\d{1,2}|[A-Za-z])[.)]\s+',re.I)
+
+
+def structural_prefix_length(text):
+    """Only explicit list labels and known headings, never clinical words."""
+    prefix=PREFIX.match(text)
+    offset=prefix.end() if prefix else 0
+    tail=text[offset:]
+    if ':' in tail and tail.split(':',1)[0].strip().casefold() in HEADINGS:
+        offset+=tail.index(':')+1
+    return offset
 
 
 def units(report):
@@ -19,6 +31,15 @@ def units(report):
     if len(report) > 12000:
         raise ValueError('Report exceeds 12000 characters; no truncation')
     raw = spans(report)
+    for index in range(len(raw)-1):
+        item=raw[index]
+        match=re.search(r':\s+((?:\d{1,2}|[A-Za-z])\.)$',item['source'])
+        if match:
+            boundary=item['start']+match.start(1)
+            item['end']=boundary
+            item['source']=report[item['start']:boundary]
+            raw[index+1]['start']=boundary
+            raw[index+1]['source']=report[boundary:raw[index+1]['end']]
     merged = []
     i = 0
     while i < len(raw):
@@ -34,8 +55,9 @@ def units(report):
     role = 'unknown'
     for n, item in enumerate(merged, 1):
         text = item['source'].strip()
-        heading = text.split(':', 1)[0].strip().casefold().rstrip('.')
-        pure = heading in HEADINGS and ':' not in text
+        labelled=PREFIX.sub('',text)
+        heading = labelled.split(':', 1)[0].strip().casefold().rstrip('.')
+        pure = labelled.rstrip(':.').strip().casefold() in HEADINGS
         if heading in HEADINGS and (':' in text or pure):
             role = HEADINGS[heading]
         item.update(id=n, section_hint=role, structure_only=pure)
