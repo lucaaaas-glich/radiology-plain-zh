@@ -69,3 +69,18 @@ def test_chart_keeps_unresolved_precision_concern_separate():
     result=buckets(rows,review)
     assert result=={'faithful_complete':1,'observed_error':0,
                    'incomplete_without_observed_error':1,'remaining_precision_concern':1}
+
+
+def test_stored_candidate_recovery_is_not_counted_as_a_new_model_repair():
+    rows = fixture_rows()
+    rows[0]['result'].update(
+        coverage={'fully_generated': True},
+        postprocessing={'new_model_calls': 0, 'seconds': .01})
+    segment = rows[0]['result']['segments'][0]
+    segment.update(status='generated', original_status='source_only')
+    result = summarize(rows, reviewed(rows))
+    assert result['postprocessing']['restored_source_only_segments'] == 1
+    assert result['postprocessing']['new_model_calls'] == 0
+    assert 'repair_attempted' not in result['evidence_segments']
+    assert result['evidence_segments']['original_trace_multiple_attempts'] == 1
+    assert result['latency_seconds']['total'] == 6
