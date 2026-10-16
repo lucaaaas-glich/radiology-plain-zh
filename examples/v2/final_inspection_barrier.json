@@ -1,9 +1,16 @@
 {
-  "state": "held",
+  "state": "released",
   "created_at_utc": "2026-10-15T22:15:06.857626+00:00",
   "gpu_candidate_lock": "examples/v2/candidate_gpu.lock.json",
   "gpu_candidate_lock_sha256": "990417161871099300b9e99730a73eef1ab4bae2eb70d78446a10a0d70b47ce0",
   "rule": "No final output text may be downloaded, read, scored, or used until all local candidates and settings are committed. Progress counts/failure status only.",
-  "local_candidate_lock": null,
-  "released_at_utc": null
+  "local_candidate_lock": "examples/v2/candidate_local.lock.json",
+  "released_at_utc": "2026-10-16T00:39:46.503134+00:00",
+  "local_candidate_lock_sha256": "78bb2327320778e6c18424b388b379f64586ec4b6d2323174624c33155360deb",
+  "local_candidate_commit": "440db9cfe3c0d9eb2492e11b25788a36f93f9648",
+  "additional_candidate_locks": {
+    "examples/v2/candidate_gpu_recheck.lock.json": "ab2e9db9022315fca021c6a3e6dfe9ae7b9c0aa01a48d0c3e40d40cb7af2f7ff"
+  },
+  "additional_candidate_commit": "440db9cfe3c0d9eb2492e11b25788a36f93f9648",
+  "release_note": "All model, prompt, guard and postprocessing choices made from development only and committed before release. No final prediction text inspected before this record. GPU final text remains remote pending reconnection. Final failures will be reported without retuning these candidates."
 }
