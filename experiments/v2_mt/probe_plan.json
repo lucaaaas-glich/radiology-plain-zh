@@ -1,0 +1,84 @@
+{
+  "stage": "development_only_after_original_v2_final_inspection",
+  "model": {
+    "repo": "JustFrederik/nllb-200-distilled-600M-ct2-int8",
+    "revision": "302d78f00e6fdb50a1064059df7c392b735e9d05",
+    "files": [
+      {
+        "name": ".gitattributes",
+        "size": 1528,
+        "lfs_sha256": null
+      },
+      {
+        "name": "README.md",
+        "size": 3435,
+        "lfs_sha256": null
+      },
+      {
+        "name": "config.json",
+        "size": 159,
+        "lfs_sha256": null
+      },
+      {
+        "name": "model.bin",
+        "size": 622595991,
+        "lfs_sha256": "ed1beaf75134de7505315a5223162f56acff397eff6b50638a500d3936fe707b"
+      },
+      {
+        "name": "sentencepiece.bpe.model",
+        "size": 4852054,
+        "lfs_sha256": "14bb8dfb35c0ffdea7bc01e56cea38b9e3d5efcdcb9c251d6b40538e1aab555a"
+      },
+      {
+        "name": "shared_vocabulary.txt",
+        "size": 2568098,
+        "lfs_sha256": null
+      },
+      {
+        "name": "special_tokens_map.json",
+        "size": 3548,
+        "lfs_sha256": null
+      },
+      {
+        "name": "tokenizer.json",
+        "size": 17331176,
+        "lfs_sha256": "e316b82de11d0f951f370943b3c438311629547285129b0b81dadabd01bca665"
+      },
+      {
+        "name": "tokenizer_config.json",
+        "size": 564,
+        "lfs_sha256": null
+      }
+    ]
+  },
+  "model_original": "facebook/nllb-200-distilled-600M",
+  "source_language": "eng_Latn",
+  "target_language": "zho_Hans",
+  "device": "cpu",
+  "compute_type": "int8",
+  "inter_threads": 1,
+  "intra_threads": 2,
+  "beam_size": 4,
+  "max_input_tokens": 512,
+  "max_decoding_length": 512,
+  "max_generation_seconds": 900,
+  "overall_download_setup_and_run_budget_seconds": 1800,
+  "tokenizer_library": "transformers==4.57.1",
+  "inference_library": "ctranslate2==4.8.3",
+  "sentence_segmentation": "frozen V2 spans, unchanged",
+  "glossary": "frozen V2 38-entry source-linked glossary, unchanged",
+  "guard": "diagnostics only; no automatic claim of factual correctness",
+  "critic": false,
+  "repair": false,
+  "selection_rule": "Consider a new independent evaluation only if all 16 real dev reports finish, fewer than 7 have observed factual errors, at least 6 are complete faithful Chinese, and at least 10 are fully generated; English short dev must not reveal a new severe failure pattern. Otherwise reject this configuration. AI judgments, not clinician validation.",
+  "inputs": {
+    "examples/challenge.jsonl": {
+      "sha256": "d53fa9e1d57cd1da6d89c8505824a3079c1cb6000432dfcaa50cf5856992e848",
+      "filter": "id ending _en"
+    },
+    "data/v2/real/dev.jsonl": {
+      "sha256": "b3d32295a683a3789607b46486136bde9518e6875dad47898a49c25ca587ed3b",
+      "filter": null
+    }
+  }
+}
