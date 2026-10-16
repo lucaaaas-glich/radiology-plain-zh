@@ -67,17 +67,27 @@ def explain(report, generate, progress=None, max_attempts=2, use_ledger=True):
                 translated = validate_translations(parse_json(raw), pending)
                 attempt['translations'] = list(translated.values())
                 checks = {r['id']: review(r['source'], translated[r['id']]['text']) for r in pending}
+                # Weak lexical flags confuse word presence with clinical meaning:
+                # e.g. a definition of mediastinum mentions both lungs. Keep the
+                # full diagnostic trace, but do not prime the bilingual auditor
+                # with those unreliable semantic hints.
+                hard_codes={'quantity','ambiguous_date','date_changed','numeric_value_missing','projection_direction'}
+                hard_checks={key:[flag for flag in check['issues'] if flag['code'] in hard_codes]
+                             for key,check in checks.items()}
                 extra = {'未提供清单的片段id':missing_ledger,
                          '清单范围说明':'只检查实际提供的清单。未提供清单的片段仍要严格双向核对原文与中文；不要评价不存在的清单。'}
                 raw = call('audit', messages(AUDIT_SYSTEM, report, pending, 事实清单=active_ledger,
-                           中文解释=list(translated.values()), 自动提示仅供核对=checks, **extra), 1400, pending)
+                           中文解释=list(translated.values()), 数值日期投照核对提示=hard_checks, **extra), 1400, pending)
                 audit = validate_audit(parse_json(raw), pending)
                 attempt['audit'] = audit
                 attempt['lexical_checks'] = checks
-                feedback = list(audit['issues'])
+                attempt['inapplicable_ledger_issues']=[i for i in audit['issues'] if i['type']=='ledger' and i['id'] not in ledger]
+                # A complaint about a nonexistent checklist is inapplicable;
+                # every Chinese meaning/omission issue still blocks acceptance.
+                feedback = [i for i in audit['issues'] if not (i['type']=='ledger' and i['id'] not in ledger)]
                 # Do not trust or display a critic-rejected checklist. Retry its
                 # Chinese from the ORIGINAL, then require a fresh source audit.
-                for issue in audit['issues']:
+                for issue in feedback:
                     if issue['type']=='ledger':
                         ledger.pop(issue['id'],None)
                         result[issue['id']]['ledger_status']='critic_rejected'
@@ -86,7 +96,7 @@ def explain(report, generate, progress=None, max_attempts=2, use_ledger=True):
                 # critic, not a claimed semantic certificate.
                 for r in pending:
                     for flag in checks[r['id']]['issues']:
-                        if flag['code'] in {'quantity','ambiguous_date','date_changed','numeric_value_missing','projection_direction'}:
+                        if flag['code'] in hard_codes:
                             feedback.append({'id':r['id'],'type':'meaning','reason':flag['detail']})
                     text = translated[r['id']]['text']
                     if chinese_ratio(text) < .45:

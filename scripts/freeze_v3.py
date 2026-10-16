@@ -28,6 +28,7 @@ def main():
     p=argparse.ArgumentParser()
     p.add_argument('--development-request', type=Path, required=True)
     p.add_argument('--development-outputs', type=Path, required=True)
+    p.add_argument('--development-input', type=Path, required=True)
     p.add_argument('--development-review', type=Path, required=True)
     p.add_argument('--selection', type=Path, required=True)
     p.add_argument('--bundle', type=Path, required=True)
@@ -38,8 +39,12 @@ def main():
     rows=load_rows(a.development_outputs)
     review=json.loads(a.development_review.read_text())
     validate(rows,review)
-    if len(rows)!=14:raise ValueError('The preselected 14 old development reports must be completed')
     request=json.loads(a.development_request.read_text())
+    if sha(a.development_input)!=request['input_sha256']:
+        raise ValueError('Development input differs from its queued request')
+    expected=load_rows(a.development_input)
+    if [(r['id'],r['report']) for r in rows]!=[(r['id'],r['report']) for r in expected]:
+        raise ValueError('Every predeclared development case must be completed in order')
     spec=request['arms']['v3']
     for file,digest in spec['code_sha256'].items():
         if sha(file)!=digest:raise ValueError('Candidate changed after development: '+file)
@@ -85,7 +90,7 @@ def main():
     for name,value in [('10-final20.json',main_request),('11-ablation10.json',control_request)]:
         write(a.bundle/'requests'/(name+'.pending'),value)
         write(Path('examples/v3')/name,value)
-    dependencies=[a.development_request,a.development_outputs,a.development_review,a.selection,activation,
+    dependencies=[a.development_request,a.development_input,a.development_outputs,a.development_review,a.selection,activation,
                   Path('docs/v3/预注册评估方案.md'),Path('examples/v3/fla_package_sources.json'),
                   Path('examples/v3/real_manifest.json'),Path('examples/v3/main20_manifest.json'),
                   Path('docs/v3/测试规模修订.md'),Path('examples/v2/candidate_gpu.lock.json')]

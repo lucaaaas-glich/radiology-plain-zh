@@ -190,3 +190,29 @@ def test_critic_rejected_ledger_requires_new_translation_and_source_audit():
     assert writes==2 and result['coverage']['fully_generated']
     assert result['segments'][0]['ledger'] is None
     assert result['segments'][0]['ledger_status']=='critic_rejected'
+
+
+def test_missing_ledger_complaint_cannot_block_but_chinese_omission_still_blocks():
+    def run(meaning_issue):
+        def generate(messages,max_tokens):
+            system=messages[0]['content']
+            if '你提取' in system:return reply({'units':[]})
+            if '你把目标' in system:return reply({'translations':[{'id':1,'text':'未见气胸。'}]})
+            issues=[{'id':1,'type':'ledger','reason':'不存在的清单缺失信息'}]
+            if meaning_issue:issues.append({'id':1,'type':'meaning','reason':'中文意思有错'})
+            return reply({'checked_ids':[1],'issues':issues})
+        return explain('No pneumothorax.',generate)
+    assert run(False)['coverage']['fully_generated']
+    assert not run(True)['coverage']['fully_generated']
+
+
+def test_weak_bilateral_lexical_flag_is_not_passed_to_semantic_auditor():
+    def generate(messages,max_tokens):
+        system=messages[0]['content']
+        if '你提取' in system:return reply({'units':[]})
+        if '你把目标' in system:return reply({'translations':[{'id':1,'text':'纵隔（两肺之间的区域）未见异常。'}]})
+        payload=json.loads(messages[1]['content'])
+        assert payload['数值日期投照核对提示']=={'1':[]}
+        assert 'added_bilateral' not in messages[1]['content']
+        return reply({'checked_ids':[1],'issues':[]})
+    assert explain('Mediastinum is unremarkable.',generate)['coverage']['fully_generated']
