@@ -101,6 +101,18 @@ def summarize(rows, review):
             'repair_attempted': sum(len(s['attempts']) > 1 for s in eligible),
             'repair_accepted': sum(len(s['attempts']) > 1 and s['status'] == 'generated' for s in eligible),
         }
+        if any('postprocessing' in r['result'] for r in rows):
+            counts = result['evidence_segments']
+            counts['original_trace_multiple_attempts'] = counts.pop('repair_attempted')
+            counts['rechecked_generated_with_multiple_original_attempts'] = counts.pop('repair_accepted')
+            result['postprocessing'] = {
+                'restored_source_only_segments': sum(s.get('original_status') == 'source_only'
+                    and s['status'] == 'generated' for s in eligible),
+                'revoked_generated_segments': sum(s.get('original_status') == 'generated'
+                    and s['status'] == 'source_only' for s in eligible),
+                'new_model_calls': sum(r['result'].get('postprocessing', {}).get('new_model_calls', 0) for r in rows),
+                'seconds': sum(r['result'].get('postprocessing', {}).get('seconds', 0) for r in rows),
+                'note': 'Original generation cost and attempts retained; no new repair or semantic verdict inferred.'}
     return result
 
 

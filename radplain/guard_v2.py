@@ -9,9 +9,9 @@ from collections import Counter
 from decimal import Decimal
 from .common import chinese_ratio
 from .fidelity import numeric_review, _number
-from .quantity_v2 import normalized_quantities_text, review_quantities
+from .quantity_v2 import normalized_quantities_text, review_quantities, subunit_sizes_text
 
-VERSION = 'lexical-guard-v2-dev7'
+VERSION = 'lexical-guard-v2-dev8'
 CN = '零〇一二两三四五六七八九十百点半'
 UNIT = r'mm|cm|millimet(?:er|re)s?|centimet(?:er|re)s?|毫米|厘米|months?|个月|月|years?|年|weeks?|星期|周|days?|天'
 ORDINALS = dict(zip(('first second third fourth fifth sixth seventh eighth ninth tenth eleventh twelfth').split(), range(1, 13)))
@@ -76,7 +76,7 @@ FEATURES = [
     ('bilateral', r'\bbilateral\b|\bboth\b|\bbibasa[lr]\b|双(?:侧|肺|肾|下肺|上肺)|两(?:侧|肺|肾)', r'双(?:侧|肺|肾|下肺|上肺)|两侧|左右|两肺|两肾|两边'),
     ('indeterminate', r'\bindeterminate\b|性质待定|不能确定|无法确定|未能确定|尚不能确认', r'待定|未定|不确定|未确定|未明确|不能确定|无法确定|不明确|不能确认|不清楚|无法.{0,3}判断'),
     ('cannot_exclude', r'cannot\s+(?:be\s+)?(?:excluded|exclude|rule\s+out)|不能.{0,3}排除|无法排除', r'不能.{0,3}排除|无法排除|不排除'),
-    ('possible', r'\bmay\b|\bmight\b|\bcould\b|\bpossible\b|\bsuspicious\b|\blikely\b|\bsuggestive\b|可能|可疑', r'可能|可疑|怀疑|考虑|也许|提示|倾向'),
+    ('possible', r'\bmay\b|\bmight\b|\bcould\b|\bpossible\b|\bprobabl[ey]\b|\bsuspicious\b|\blikely\b|\bsuggestive\b|可能|可疑', r'可能|可疑|怀疑|考虑|也许|提示|倾向'),
     ('stable', r'\bstable\b|\bunchanged\b|稳定|无变化|未变', r'稳定|未变|无变化|没有变化|没有改变|没变|相同|一样'),
     ('improved', r'\bdecreased\b|\bimproved\b|\breduced\b|减少|缩小|吸收|好转', r'减少|缩小|变小|减轻|变少|好转|改善|吸收'),
     ('increased', r'\bincreased\b|\benlarged\b|增多|增大', r'增多|增大|增加|变大|扩大|变多|略大|稍大|更大'),
@@ -87,9 +87,9 @@ FEATURES = [
     ('above', r'\babove\b|上方', r'上方|以上|之上'),
     ('below', r'\bbelow\b|下方|膈下', r'下方|以下|膈下|之下'),
     ('lung_base', r'\bbibas\w*\b|\blung\s+bases?\b|肺底', r'肺底|底部|下部|下肺|肺下|基底'),
-    ('upper_lobe', r'\bupper\s+lobes?\b|[肺左右]上叶', r'上叶'),
-    ('lower_lobe', r'\blower\s+lobes?\b|[肺左右]下叶', r'下叶'),
-    ('middle_lobe', r'\bmiddle\s+lobe\b|[肺左右]中叶', r'中叶'),
+    ('upper_lobe', r'\bupper\s+lobes?\b|[肺左右]上(?:肺)?叶', r'上(?:肺)?叶'),
+    ('lower_lobe', r'\blower\s+lobes?\b|[肺左右]下(?:肺)?叶', r'下(?:肺)?叶'),
+    ('middle_lobe', r'\bmiddle\s+lobe\b|[肺左右]中(?:肺)?叶', r'中(?:肺)?叶'),
     ('endotracheal_tube', r'\bendotracheal\s+tube\b|气管插管|气管导管', r'气管.{0,3}(?:插管|导管)|气管插管'),
     ('limited_assessment', r'\blimit\w*\b|poorly\s+assessed|cannot\s+be\s+confirmed|not\s+included|限制|欠清|未能评价|未完全纳入', r'限制|受限|影响|不清|看不清|无法|不能|未能|没有.{0,4}拍|未.{0,4}拍|不在|不包括|未包括|未完全'),
     ('newness', r'\bnew\b|新发|新出现|新增', r'新'),
@@ -103,6 +103,7 @@ FEATURES = [
     ('degree_subtle', r'\bsubtle\b|细微', r'细微|微弱|隐约|轻微|不明显'),
     ('multiple', r'\bmultiple\b|多发|多个', r'多发|多个|多处|多枚|数个|数枚|若干|多种'),
     ('lung_apex', r'\blung\s+ap(?:ex|ices)\b|\bapical\s+pneumothorax\b|肺尖', r'肺尖|尖部'),
+    ('thoracic_spine', r'\b(?:thoracic|dorsal)\s+spine\b|胸椎|胸段脊柱', r'胸椎|胸段脊柱|脊柱胸段'),
 ]
 
 UNCERTAIN = re.compile(r'cannot\s+(?:be\s+)?(?:excluded|exclude|rule\s+out)|不能.{0,3}排除|无法排除|不排除', re.I)
@@ -145,6 +146,9 @@ def negation_text(text):
     # A positive explanation of atelectasis can contain a grammatical negative:
     # 'lung tissue has not fully expanded'. Do not mistake that for no finding.
     text=re.sub(r'(?:没有|未能|未|没能)(?:完全|充分)(?:展开|张开|扩张|充气)', '肺不张', text)
+    # "No less than 1 cm" negates a comparison, not the existence of a finding.
+    text=re.sub(r'\b(?:no|not)\s+(?:less|more)\s+than(?=\s*\d+(?:\.\d+)?\s*(?:cm|mm|centimet(?:er|re)s?|millimet(?:er|re)s?)\b)',
+                'size bound',text,flags=re.I)
     return UNCERTAIN.sub('',text)
 
 
@@ -158,7 +162,7 @@ def review(source, prediction, finish_reason='stop'):
         add('language', '中文比例不足')
     if finish_reason != 'stop':
         add('incomplete', '生成未正常结束，可能不完整')
-    original, output = numeric_sequence(source), numeric_sequence(prediction)
+    original, output = numeric_sequence(subunit_sizes_text(source)), numeric_sequence(subunit_sizes_text(prediction))
     if original != output:
         add('numeric_sequence', f'数值数量或顺序不一致：原文{original}，改写{output}；请保留原文数值顺序，不做计算')
     q, quantity_issues = review_quantities(source, prediction)
@@ -179,8 +183,20 @@ def review(source, prediction, finish_reason='stop'):
     heart_normal_equivalent=bool(re.search(r'心影不大|heart\s+(?:size\s+)?(?:is\s+)?not\s+enlarged',source,re.I) and re.search(r'心脏.{0,5}正常',prediction))
     if src_neg != out_neg and not heart_normal_equivalent:
         add('negation_presence', '否定表达可能丢失或新增；请逐个核对被否定的发现')
+    # Limited positive historical-findings construction from development errors.
+    # Do not apply it to "no known findings" or arbitrary temporal narratives.
+    known_findings = bool(re.search(r'\bfindings\s+(?:were\s+|are\s+)?(?:already|previously)\s+known\b|(?:这些|上述)?发现(?:在此前|在既往)?(?:已知|已经知道|早已知晓)', source, re.I))
+    if known_findings and not src_neg and re.search(r'(?:未见|未发现|没有发现|没有见到)(?!\s*(?:新|新增))', prediction):
+        add('prior_findings_reversed', '原文说这些发现以前已经知道，不能改写为未发现；保留已有发现及其既往时间关系')
     for name, src, target in FEATURES:
-        present, expressed = bool(re.search(src, source, re.I)), bool(re.search(target, prediction, re.I))
+        feature_source=source
+        if name=='possible':
+            # 'No signs suggestive of X' may be faithfully rendered '未见X征象'.
+            # Limit this exception to the explicit negated-signs construction;
+            # an uncertainty phrase in another clause must still be preserved.
+            feature_source=re.sub(r'\b(?:no|without)\s+(?:(?:pleural\s+)?effusion\s+or\s+)?(?:signs?|evidence|findings?|lesions?)\s+(?:suggestive|suspicious)\s+(?:of|for)\b',
+                                  'NEGATED_SIGNS',source,flags=re.I)
+        present, expressed = bool(re.search(src, feature_source, re.I)), bool(re.search(target, prediction, re.I))
         if present and not expressed:
             detail={'recommendation':'原文只是建议，请明确写“报告建议”，不要改成必须或需要',
                     'indeterminate':'请明确保留“性质尚不能确定”，不补充诊断或新检查建议',
@@ -196,7 +212,7 @@ def review(source, prediction, finish_reason='stop'):
             bilateral_source = bool(re.search(FEATURES[2][1], source, re.I))
             if not (name in ('left', 'right') and bilateral_source):
                 add('added_' + name, '出现原句没有的左右侧描述')
-    if re.search(r'lung\s+bases?|bibas\w*|mid.zone|肺底|肺中部',source,re.I) and not re.search(r'\blobes?\b|[上下中]叶',source,re.I) and re.search(r'[上下中]叶',prediction):
+    if re.search(r'lung\s+bases?|bibas\w*|mid.zone|肺底|肺中部',source,re.I) and not re.search(r'\blobes?\b|[上下中](?:肺)?叶',source,re.I) and re.search(r'[上下中](?:肺)?叶',prediction):
         add('zone_became_lobe','肺野位置或肺底不等于肺叶，请保留原文的区域表述')
     for name, src, target in CONCEPTS:
         if re.search(src, source, re.I) and not re.search(target, prediction, re.I):
@@ -211,8 +227,12 @@ def review(source, prediction, finish_reason='stop'):
         add('added_advice', '出现原句没有的建议')
     if administrative_instruction(prediction):
         add('instruction_echo', '输出含疑似行政指令')
-    if re.search(r'左(?:侧)?(?:肺)?中叶',prediction):
+    if re.search(r'左(?:侧)?(?:肺)?中(?:肺)?叶',prediction):
         add('left_middle_lobe', '左肺的肺叶命名有疑点；舌段属于左上叶，不能写成独立的左中叶')
+    if (re.search(r'\bdorsal\s+spine\b', source, re.I)
+            and not re.search(r'\bposterior\b|\bdorsal\s+(?:aspect|surface)\b|后侧|背侧', source, re.I)
+            and re.search(r'(?:胸椎|脊柱|椎体)(?:的)?(?:后侧|后方|背侧)', prediction)):
+        add('dorsal_spine_added_posterior', 'dorsal spine在这里是胸椎这一部位名称，不能据此添加病变在后侧的定位')
     if re.fullmatch(r'\s*(?:follow[ -]?up|随访)\s*[.。:]?\s*',source,re.I) and re.search(r'建议|推荐|需要|应当|应该',prediction):
         add('followup_context_became_advice', '单独的随访标题描述本次检查背景，不能改成新建议')
     return {'version': VERSION, 'scope': 'limited_lexical_checks_not_clinical_validation',

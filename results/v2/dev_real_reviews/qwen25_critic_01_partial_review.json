@@ -1,0 +1,158 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "scope": "Displayed Chinese only; source-only fallback is incomplete, not a correct answer.",
+  "cases": [
+    {
+      "id": "real_0e9c60d4ad638a81",
+      "output_sha256": "49e73fb7cc3c4bee47e0f4d1d5a0f18c6b9fbc805b285530e95cf4353ce92f9f",
+      "errors": [
+        "recommendation",
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "起搏器位置被冠以报告建议；导线改称导管，金属夹句回退。"
+    },
+    {
+      "id": "real_53499b1249f0e7a6",
+      "output_sha256": "be91da43ca802eae314bf7fc9054a80181bc7fb47e2457a9e9b44a49a4db2c6d",
+      "errors": [
+        "recommendation",
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "新增进一步检查建议，将新冠阴性发现写成报告建议；两句回退。"
+    },
+    {
+      "id": "real_4187fbf7eadcb951",
+      "output_sha256": "e58a607603620dea32c11774678bb4770dd3b05e1dce641e6246ee27d1fe9ea0",
+      "errors": [
+        "recommendation",
+        "anatomy_side",
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "把磨玻璃影存在写成建议，胸椎误为脊柱背部；复杂定位句回退。"
+    },
+    {
+      "id": "real_6e2b1d9d0d10b307",
+      "output_sha256": "e15775e371d1887057c51fec62258dded16937cdad24888d7b895984b762a6f9",
+      "errors": [
+        "recommendation"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "引流管存在被写成建议在该处发现；日期改善保留，肺不张句回退。"
+    },
+    {
+      "id": "real_4889613d7b935c76",
+      "output_sha256": "a0993bb12731d1c599dbe099d06b7afb6f7456c6ce0c39c5e3e641bef922c500",
+      "errors": [
+        "recommendation",
+        "omission",
+        "negation",
+        "anatomy_side"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "肺癌病史和肺实质阴性遗漏；病理性淋巴结阴性变成其未改变；脂肪瘤位置从背阔肌下方变附近，多次新增报告建议。"
+    },
+    {
+      "id": "real_99884d41e32a39f8",
+      "output_sha256": "28ee3129a1e55fcad42843ee2b92969caeb61bce13de3d7115ccba61c0f59720",
+      "errors": [
+        "recommendation",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "已进行的增强CT被改成建议检查，多句发现冠以建议；静脉途径遗漏，肺叶两句回退。"
+    },
+    {
+      "id": "real_c6927c378a6e2c87",
+      "output_sha256": "6ff42302d585632d5645552daea4a64c508e2cc378494447385ec56150a8836c",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "舌部浸润消退及小范围残留纤维化保留，全文完成。"
+    },
+    {
+      "id": "real_788c7076b21bef32",
+      "output_sha256": "e707c205f2c3e45a5e8e43d53b52a8b7f74df302762e339c9bf984698db660ae",
+      "errors": [
+        "recommendation",
+        "anatomy_side",
+        "omission",
+        "terminology",
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "肠系膜脂膜炎改为腹膜后脂肪炎，小叶中心型遗漏，侵袭性阴性变成恶性阴性；新增建议，并把请保留left信息的检查提示当作正文。"
+    },
+    {
+      "id": "real_8e3f069b88d7550c",
+      "output_sha256": "b37dd584aea4a6a000a4a729fb8906ef36a69c2c08999b2395f27766e9c881f3",
+      "errors": [
+        "recommendation"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "检查阴性被写成报告建议；前后位泛称正位仍有精度顾虑。"
+    },
+    {
+      "id": "real_20d69a9e8c41860d",
+      "output_sha256": "5b58f8e76ac1ba9d6886567453baef1f6d77a24ff9a0fffcb65ae2626be5a659",
+      "errors": [
+        "recommendation",
+        "omission",
+        "certainty"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "静脉途径、肾盏及数年前时间关系遗漏，部分可能狭窄变成符合；多处发现和附件被冠以建议，末次腹腔气肿阴性遗漏。"
+    },
+    {
+      "id": "real_2f86141ba8fa19ea",
+      "output_sha256": "054664466fe0cd46b8ea6f237cc9d072655c7d9d004e4c59fb24fb8c3bad319c",
+      "errors": [
+        "recommendation",
+        "anatomy_side",
+        "terminology",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "旁间隔型被说成亚隔膜性，肺底片层肺不张变成叶间裂肺不张，亚厘米大小界限和圆柱型遗漏；多次新增报告建议。"
+    },
+    {
+      "id": "real_4d02bd9100fee8f7",
+      "output_sha256": "579c13ebfd99b287cf228be4e39e8593f084d79704c780ccbf777cdb737ab958",
+      "errors": [
+        "recommendation",
+        "anatomy_side",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "肠系膜位置变成腹膜后，单纯囊肿的单纯限定遗漏，多句回退；新增建议前缀。"
+    },
+    {
+      "id": "real_de592071091f2d97",
+      "output_sha256": "def8942172ae6f622e18b7e5ed31577cf9408d40af71eb0ea2219237a935d11e",
+      "errors": [
+        "recommendation",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "无空气支气管征遗漏，其余阴性被冠以建议；两句回退。"
+    }
+  ],
+  "partial_development_review": true,
+  "planned_reports": 16,
+  "completed_reports": 13,
+  "stop_reason": "45 minute overall experiment budget exceeded; remaining reports not treated as correct or incorrect"
+}

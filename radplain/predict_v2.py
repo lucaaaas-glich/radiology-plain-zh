@@ -1,6 +1,7 @@
 """Local v2 CLI. Buffer and check candidates before showing an explanation."""
 import argparse
 import json
+import sys
 import uuid
 import webbrowser
 from pathlib import Path
@@ -49,6 +50,8 @@ def main():
     if mode not in {'evidence','evidence-critic'}:
         p.error('配置里的 mode 无效')
     try:
+        if not a.json:
+            print('正在加载本地模型……', file=sys.stderr, flush=True)
         if a.backend=='mlx':
             from .mlx_backend import MLXBackend
             backend=MLXBackend(model)
@@ -86,9 +89,15 @@ def main():
                 continue
         try:
             if not a.json:
-                print('正在逐句解释和核对，请稍候……')
-            result=explain(report,backend,max_tokens=a.max_tokens,use_critic=mode=='evidence-critic')
-        except ValueError as e:
+                print('正在逐句解释和核对，请稍候……', file=sys.stderr, flush=True)
+            def progress(done, total, status):
+                label={'generated':'已生成中文，仍需对照原文',
+                       'source_only':'本句未完成，保留原文',
+                       'excluded_instruction':'已跳过非影像指令'}[status]
+                print(f'进度 {done}/{total}：{label}', file=sys.stderr, flush=True)
+            result=explain(report,backend,max_tokens=a.max_tokens,use_critic=mode=='evidence-critic',
+                           progress=None if a.json else progress)
+        except (ValueError, RuntimeError) as e:
             if once:
                 p.error(str(e))
             print(str(e))

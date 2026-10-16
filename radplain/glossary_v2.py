@@ -4,6 +4,9 @@ import re
 NCI = 'https://www.cancer.gov/publications/dictionaries/cancer-terms/def/'
 FLEISCHNER = 'https://doi.org/10.1148/radiol.232558'
 ENTRIES = [
+    ('胸椎／胸段脊柱', r'\b(?:thoracic|dorsal)\s+spine\b|胸椎|胸段脊柱', '脊柱中与胸廓肋骨相连的一段；dorsal spine在这里指胸椎，不是某个病变的后侧位置。', 'https://www.srs.org/Patients/Resources/Glossary-of-Terms'),
+    ('亚厘米', r'\bsub[- ]?centimet(?:ers?|res?|ric)\b|亚厘米', '表示大小小于1厘米；只描述大小，不说明性质。', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC8374940/'),
+    ('乳房成形术', r'\bmamm[oa]plast(?:y|ies)\b|乳房成形术|乳房成型术', '通过手术调整或重建乳房，包括增大或缩小等方式；具体手术范围以原文为准。', 'https://www.ncbi.nlm.nih.gov/mesh/68016462'),
     ('左肺舌部／舌段', r'\blingula\w*\b|舌段|舌叶', '左肺上叶的一部分；它不属于独立的左肺中叶。', 'https://training.seer.cancer.gov/lung/anatomy/'),
     ('淋巴结', r'lymph\s+nodes?|淋巴结', '属于免疫系统的小结构，参与过滤淋巴液并帮助身体应对感染等问题。', NCI + 'lymph-node'),
     ('淋巴结肿大／病变', r'lymphadenopathy|淋巴结肿大', '淋巴结出现肿大或病变；这个词本身不能确定原因。', NCI + 'lymphadenopathy'),
@@ -31,7 +34,7 @@ ENTRIES = [
     ('心脏增大', r'\bcardiomegaly\b|心脏增大', '心脏的整体大小或某一部分比通常更大；这个词不确定具体原因。', 'https://my.clevelandclinic.org/health/diseases/21490-enlarged-heart-cardiomegaly'),
     ('肺气肿', 'emphysema|肺气肿', '肺里的小气囊异常膨胀，囊壁受到损伤。', 'https://www.cancer.gov/publications/dictionaries/cancer-terms/def/emphysema'),
     ('纤维化', 'fibro(?:sis|tic)|纤维化', '组织里的纤维成分增多。', 'https://www.cancer.gov/publications/dictionaries/cancer-terms/def/fibrosis'),
-    ('乙状结肠', '(?:colo)?sigmoid(?:\\s+colon)?|乙状结肠', '结肠中连接直肠的S形一段。', 'https://www.cancer.gov/publications/dictionaries/cancer-terms/def/sigmoid-colon'),
+    ('乙状结肠', r'\bsigmoid(?:\s+colon)?\b|乙状结肠', '结肠中连接直肠的S形一段。', 'https://www.cancer.gov/publications/dictionaries/cancer-terms/def/sigmoid-colon'),
     ('膈肌', 'diaphragm\\w*|膈肌', '分隔胸腔和腹腔的薄层肌肉。', 'https://www.cancer.gov/publications/dictionaries/cancer-terms/def/diaphragm'),
     ('支气管扩张', 'bronchiectasis|支气管扩张', '肺内输送空气的管道异常变宽，管壁受到损伤。', 'https://www.nhlbi.nih.gov/health/bronchiectasis'),
     ('肾积水', 'hydronephrosis|肾积水', '肾脏里收集尿液的肾盂扩大，也叫扩张。', 'https://www.niddk.nih.gov/health-information/urologic-diseases/hydronephrosis-newborns'),

@@ -11,9 +11,10 @@ HARD_CODES = frozenset({
     'left','right','bilateral','carina','above','below','lung_base',
     'upper_lobe','lower_lobe','middle_lobe','newness','acute_scope',
     'indeterminate','cannot_exclude','possible','negative_qualifier',
-    'zone_became_lobe','endotracheal_tube','recommendation',
+    'zone_became_lobe','endotracheal_tube','enteric_tube','recommendation',
     'degree_mild','degree_moderate','degree_marked','degree_subtle','multiple',
     'lung_apex','left_middle_lobe','followup_context_became_advice',
+    'thoracic_spine','dorsal_spine_added_posterior','prior_findings_reversed','added_advice',
 })
 
 
@@ -29,7 +30,7 @@ SYSTEM = (
     '数值必须按原句出现的先后顺序逐个保留，不能计算差值、换算单位或改变日期格式。'
     '“现在”和“以前”的数值必须对应，范围和多个尺寸不能变成变化量。'
     '上叶、中叶、下叶必须保留“叶”；肺底、中肺野等区域不能改成肺叶。导管及其尖端不能省略。'
-    '建议检查时明确保留“报告建议”的语气。'
+    '只有原句确实提出检查或治疗建议时才写“报告建议”；仅描述发现时不要写“报告建议”。'
     '程度和数量限定也属于事实：轻度、中度、明显、细微、多发等不能省略。'
     '前文只用来理解本句中的指代，不能把其他句子的发现加入本句。'
     '提供的词义帮助仅供理解，不能据此声称患者存在某病或新增结论。'
@@ -47,7 +48,7 @@ def messages_for(source, context, feedback=None):
     return [{'role': 'system', 'content': SYSTEM}, {'role': 'user', 'content': content}]
 
 
-def explain(report, generate, max_tokens=256, repair=True, use_critic=False):
+def explain(report, generate, max_tokens=256, repair=True, use_critic=False, progress=None):
     if not report.strip():
         raise ValueError('输入不能为空')
     if len(report) > 12000:
@@ -66,6 +67,8 @@ def explain(report, generate, max_tokens=256, repair=True, use_critic=False):
         if administrative_instruction(p['source']):
             row.update(status='excluded_instruction', reason='原文包含疑似行政指令，未作为影像发现解释。')
             output.append(row)
+            if progress:
+                progress(i, len(pieces), row['status'])
             continue
         feedback = None
         for _ in range(2 if repair else 1):
@@ -89,6 +92,8 @@ def explain(report, generate, max_tokens=256, repair=True, use_critic=False):
             row.update(status='source_only', reason='改写仍有需核对的信息，保留原句，未完成此句的中文解释。')
         output.append(row)
         previous.append(p['source'])
+        if progress:
+            progress(i, len(pieces), row['status'])
     eligible = [x for x in output if x['status'] != 'excluded_instruction']
     generated = [x for x in eligible if x['status'] == 'generated']
     return {'version': PROMPT_VERSION, 'use_critic':use_critic,'source_report': report, 'segments': output,

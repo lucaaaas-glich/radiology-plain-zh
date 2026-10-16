@@ -11,11 +11,37 @@ WORDS={'one':1,'two':2,'three':3,'four':4,'five':5,'six':6,'seven':7,'eight':8,'
        'seventy':70,'eighty':80,'ninety':90}
 EN='(?:'+'|'.join(WORDS)+')'
 UNITS=r'(?:millimet(?:er|re)s?|centimet(?:er|re)s?|mm|cm|months?|years?|weeks?|days?)'
-DATES=re.compile(r'(?<!\d)\d{4}[-/]\d{1,2}[-/]\d{1,2}(?!\d)|(?<!\d)\d{1,2}([/ -])\d{1,2}\1\d{4}(?!\d)|\d{4}年\d{1,2}月\d{1,2}日')
+DATES=re.compile(r'(?<!\d)\d{4}[-/]\d{1,2}[-/]\d{1,2}(?!\d)|(?<!\d)\d{1,2}([/ -])\d{1,2}\1\d{4}(?!\d)|\d{4}\s*年\s*\d{1,2}\s*月\s*\d{1,2}\s*日')
 YEAR = r'(?:18|19|20|21)\d{2}'
 EN_CALENDAR = re.compile(rf'\b(?:in|since|during|from|year)\s+({YEAR})\b(?!\s*(?:{UNITS})\b)', re.I)
-CN_CALENDAR = re.compile(rf'(?<!\d)({YEAR})年(?![后前年余多来内间])')
+CN_CALENDAR = re.compile(rf'(?<!\d)({YEAR})\s*年(?!\s*[后前年余多来内间])')
 DURATION_PREFIX = re.compile(r'(?:持续|历时|经过|长达|为期|共|累计|约|超过)\s*$')
+
+
+def subunit_sizes_text(text):
+    """Expand a lexical size limit, without converting measurement units."""
+    text=re.sub(r'\bsub[- ]?(centimet(?:er|re)s?|millimet(?:er|re)s?|centimetric|millimetric)\b',
+                lambda m:'<1 '+('cm' if m[1].lower().startswith('centi') else 'mm'),text,flags=re.I)
+    return re.sub(r'亚\s*(厘米|毫米)(?:级)?',lambda m:'<1 '+('cm' if m[1]=='厘米' else 'mm'),text)
+
+
+def size_bounds(text):
+    """Limited explicit length inequalities; not a general clinical relation parser."""
+    text=subunit_sizes_text(text)
+    groups=[
+        ('<=', r'<=|≤|小于(?:或)?等于|不大于|不超过|至多|\bless\s+than\s+or\s+equal\s+to|\bat\s+most|\bno\s+more\s+than'),
+        ('>=', r'>=|≥|大于(?:或)?等于|不小于|不低于|至少|\bgreater\s+than\s+or\s+equal\s+to|\bat\s+least|\b(?:no|not)\s+less\s+than'),
+        ('<', r'<|小于|不足|不到|低于|\bless\s+than|\bunder'),
+        ('>', r'>|大于|超过|\bgreater\s+than|\bmore\s+than|\bover'),
+    ]
+    operator='|'.join('(?P<op'+str(i)+'>'+pattern+')' for i,(_,pattern) in enumerate(groups))
+    pattern=rf'(?:{operator})\s*(?P<number>\d+(?:\.\d+)?|[{CN}]+)\s*(?P<unit>cm|mm|centimet(?:er|re)s?|millimet(?:er|re)s?|厘米|毫米)(?![a-z])'
+    values=[]
+    for m in re.finditer(pattern,text,re.I):
+        op=next(symbol for i,(symbol,_) in enumerate(groups) if m['op'+str(i)] is not None)
+        unit='cm' if m['unit'].lower().startswith(('cm','centi')) or m['unit']=='厘米' else 'mm'
+        values.append((op,str(_number(m['number']).normalize()),unit))
+    return values
 
 
 def calendar_years(text):
@@ -60,11 +86,12 @@ def dates(text):
 
 
 def normalized_quantities_text(text):
+    text=subunit_sizes_text(text)
     for start, end, year in reversed(calendar_years(text)):
         text=text[:start]+' [YEAR] '+text[end:]
     text=DATES.sub(' [DATE] ',text)
     text=re.sub(r'COVID[ -]?19','COVID',text,flags=re.I)
-    text=re.sub(rf'(\d+(?:\.\d+)?|[{CN}]+)(?:周)?岁',r'\1年',text)
+    text=re.sub(rf'(\d+(?:\.\d+)?|[{CN}]+)(?:\s*周)?\s*岁',r'\1年',text)
     text=re.sub(rf'\b({EN})-(?={UNITS}\b)',r'\1 ',text,flags=re.I)
     def convert_en(m):
         n=sum(WORDS[w.lower()] for w in re.findall(EN,m[1],re.I))
@@ -73,7 +100,7 @@ def normalized_quantities_text(text):
         return str(n)+' '+m[3]
     text=re.sub(rf'\b({EN}(?:[- ]{EN})?)(\s+and\s+a\s+half)?\s+({UNITS})\b',convert_en,text,flags=re.I)
     text=re.sub(rf'\bhalf\s+(?:a\s+)?({UNITS})\b',r'0.5 \1',text,flags=re.I)
-    text=re.sub(rf'(\d+(?:\.\d+)?|[{CN}]+)(?:个)?半\s*(个月|月|年|天|周)',
+    text=re.sub(rf'(\d+(?:\.\d+)?|[{CN}]+)\s*(?:个\s*)?半\s*(个月|月|年|天|周)',
                 lambda m:str(_number(m[1])+Decimal('.5'))+m[2],text)
     text=re.sub(r'(\d+)-(?=(?:months?|years?|weeks?|days?)\b)',r'\1 ',text,flags=re.I)
     return text
@@ -97,6 +124,8 @@ def review_quantities(source,prediction):
     output_years=[year for _,_,year in calendar_years(prediction)]
     if source_years!=output_years:
         issues.append({'code':'date_changed','detail':'日历年份与原文不一致或有遗漏，请保留原年份及其含义'})
+    if size_bounds(source)!=size_bounds(prediction):
+        issues.append({'code':'quantity','detail':'尺寸比较的界限、数值或单位与原文不一致；请保留小于、大于、不超过等原有关系，不把界限改为精确值'})
     q=numeric_review(normalized_quantities_text(source),normalized_quantities_text(prediction))
     if q['warnings']:
         issues.append({'code':'quantity','detail':'；'.join(q['warnings'])})

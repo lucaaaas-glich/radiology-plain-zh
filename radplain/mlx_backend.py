@@ -4,10 +4,20 @@ from pathlib import Path
 
 
 class MLXBackend:
-    def __init__(self, model_path, max_input_tokens=4096):
+    def __init__(self, model_path, max_input_tokens=4096,
+                 memory_limit_bytes=int(5.5 * 1024**3), cache_limit_bytes=128 * 1024**2):
+        if max_input_tokens <= 0 or memory_limit_bytes <= 0 or cache_limit_bytes < 0:
+            raise ValueError('Input/memory limits must be positive and cache limit nonnegative')
         if not Path(model_path).is_dir():
             raise ValueError(f"找不到本地模型目录：{model_path}")
+        import mlx.core as mx
         from mlx_lm import load
+        # MLX's allocation limit is a guideline, not an operating-system hard cap.
+        # A small reusable allocation cache reduces pressure on this 8GB Mac.
+        mx.set_memory_limit(memory_limit_bytes)
+        mx.set_cache_limit(cache_limit_bytes)
+        self.memory_limit_bytes = memory_limit_bytes
+        self.cache_limit_bytes = cache_limit_bytes
         start = time.perf_counter()
         self.model, self.tokenizer = load(model_path)
         self.load_seconds = time.perf_counter() - start

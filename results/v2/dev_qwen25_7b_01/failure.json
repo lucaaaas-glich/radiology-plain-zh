@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "error_type": "TimeoutError",
+  "seconds": 2704.5038114589406,
+  "peak_mlx_allocated_bytes": 4918589548,
+  "peak_process_rss_bytes": 213581824,
+  "note": "Partial outputs retained; no complete-result claim. See code for resource limits."
+}
