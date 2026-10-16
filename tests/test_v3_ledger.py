@@ -118,3 +118,14 @@ def test_schema_failure_keeps_source_and_does_not_leak_failed_candidate():
     assert len(result['calls'])==2
     assert result['segments'][0]['status']=='source_only'
     assert result['segments'][0]['explanation_zh'] is None
+
+
+def test_no_ledger_ablation_performs_real_write_and_audit_without_extraction():
+    def generate(messages,max_tokens):
+        assert '你提取' not in messages[0]['content']
+        if '你把目标' in messages[0]['content']:
+            return reply({'translations':[{'id':1,'text':'未见气胸。'}]})
+        return reply({'checked_ids':[1],'issues':[]})
+    result=explain('No pneumothorax.',generate,use_ledger=False)
+    assert result['coverage']['fully_generated'] and not result['use_ledger']
+    assert len(result['calls'])==2 and result['segments'][0]['ledger'] is None

@@ -8,7 +8,7 @@ from .ledger_v3 import (VERSION, LEDGER_SYSTEM, WRITE_SYSTEM, AUDIT_SYSTEM, mess
 from .structure_v3 import units, chunks
 
 
-def explain(report, generate, progress=None, max_attempts=2):
+def explain(report, generate, progress=None, max_attempts=2, use_ledger=True):
     pieces = units(report)
     if max_attempts not in (1, 2):
         raise ValueError('Only one or two bounded attempts are allowed')
@@ -31,15 +31,19 @@ def explain(report, generate, progress=None, max_attempts=2):
                 break
             attempt = {'attempt': attempt_index+1, 'ids': [r['id'] for r in pending], 'call_start': len(calls)}
             try:
-                raw = call('ledger', messages(LEDGER_SYSTEM, report, pending, 上次检查问题=feedback), 2400, pending)
-                ledger = validate_ledger(parse_json(raw), pending)
+                if use_ledger:
+                    raw = call('ledger', messages(LEDGER_SYSTEM, report, pending, 上次检查问题=feedback), 2400, pending)
+                    ledger = validate_ledger(parse_json(raw), pending)
+                else:
+                    ledger = {}
                 attempt['ledger'] = list(ledger.values())
                 raw = call('write', messages(WRITE_SYSTEM, report, pending, 事实清单=list(ledger.values()), 上次检查问题=feedback), 1600, pending)
                 translated = validate_translations(parse_json(raw), pending)
                 attempt['translations'] = list(translated.values())
                 checks = {r['id']: review(r['source'], translated[r['id']]['text']) for r in pending}
+                extra = {} if use_ledger else {'实验说明':'本实验不提取事实清单，只核对原文与中文，不评价不存在的清单。'}
                 raw = call('audit', messages(AUDIT_SYSTEM, report, pending, 事实清单=list(ledger.values()),
-                           中文解释=list(translated.values()), 自动提示仅供核对=checks), 1400, pending)
+                           中文解释=list(translated.values()), 自动提示仅供核对=checks, **extra), 1400, pending)
                 audit = validate_audit(parse_json(raw), pending)
                 attempt['audit'] = audit
                 attempt['lexical_checks'] = checks
@@ -58,7 +62,7 @@ def explain(report, generate, progress=None, max_attempts=2):
                 for r in pending:
                     if r['id'] not in bad:
                         result[r['id']].update(status='generated', explanation_zh=translated[r['id']]['text'],
-                                               ledger=ledger[r['id']], reason=None)
+                                               ledger=ledger.get(r['id']), reason=None)
                 next_pending = [r for r in pending if r['id'] in bad]
             except (ValueError, TypeError, KeyError) as error:
                 attempt['error'] = str(error)
@@ -73,7 +77,7 @@ def explain(report, generate, progress=None, max_attempts=2):
     rows = [result[r['id']] for r in pieces]
     eligible = [r for r in rows if not r['structure_only']]
     count = sum(r['status']=='generated' for r in eligible)
-    return {'version':VERSION,'source_report':report,'segments':rows,'calls':calls,
+    return {'version':VERSION,'use_ledger':use_ledger,'source_report':report,'segments':rows,'calls':calls,
             'glossary':glossary(report),'seconds':time.perf_counter()-start,
             'coverage':{'generated_segments':count,'eligible_segments':len(eligible),
                         'source_only_segments':len(eligible)-count,
