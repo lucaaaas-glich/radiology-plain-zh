@@ -26,8 +26,9 @@ def main():
     font=FontProperties(fname='/System/Library/Fonts/STHeiti Light.ttc')
     colors=['#36745c','#c45f50','#dcae57','#8b99a5']
     keys=['complete_faithful','observed_error','incomplete_without_observed_error','precision_concern_without_clear_error']
-    labels=['讲全且未发现错误','发现明确事实错误','未发现错误，但没有讲全','讲全但表达有疑问']
-    fig,ax=plt.subplots(figsize=(10.4,4.25),layout='constrained')
+    labels=['讲全且未发现事实或精度问题','发现明确事实错误','未发现错误，但没有讲全','讲全但表达有疑问']
+    fig,ax=plt.subplots(figsize=(10.4,4.8))
+    fig.subplots_adjust(left=.16,right=.98,bottom=.30,top=.74)
     fig.patch.set_facecolor('#fafbf8');ax.set_facecolor('#fafbf8')
     for y,summary in enumerate(summaries):
         left=0
@@ -39,11 +40,11 @@ def main():
         if left!=20:raise ValueError('Outcome categories do not sum to cohort size')
     ax.set_yticks([0,1],['V2 原流程','V3 事实清单流程'],fontproperties=font,fontsize=13)
     ax.invert_yaxis();ax.set_xlim(0,20);ax.set_xticks([0,5,10,15,20]);ax.set_xlabel('报告份数（本轮新选取的同一批 20 份真实长报告）',fontproperties=font,fontsize=11)
-    ax.set_title('同时看有没有说错，也看有没有讲全',fontproperties=font,fontsize=19,loc='left',pad=25)
+    fig.text(.16,.94,'同时看有没有说错，也看有没有讲全',fontproperties=font,fontsize=19,ha='left')
+    fig.text(.16,.86,'项目 AI 逐例复核；非医生评审、非医学准确率',fontproperties=font,fontsize=10,color='#526673',ha='left')
     for spine in ax.spines.values():spine.set_visible(False)
     ax.tick_params(length=0,pad=8)
-    ax.legend(handles=[Patch(facecolor=c,label=l) for c,l in zip(colors,labels)],loc='upper center',bbox_to_anchor=(.5,-.23),ncol=2,frameon=False,prop=font)
-    fig.suptitle('项目 AI 逐例复核；非医生评审、非医学准确率',fontproperties=font,fontsize=10,color='#526673',y=.99)
+    ax.legend(handles=[Patch(facecolor=c,label=l) for c,l in zip(colors,labels)],loc='upper center',bbox_to_anchor=(.5,-.40),ncol=2,frameon=False,prop=font)
     a.out.parent.mkdir(parents=True,exist_ok=True)
     for suffix in ['.png','.svg']:fig.savefig(a.out.with_suffix(suffix),dpi=180,bbox_inches='tight')
     plt.close(fig)

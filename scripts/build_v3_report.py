@@ -105,7 +105,7 @@ def build(source, output, stage):
             columns = len(cells[0])
             if any(len(row) != columns for row in cells):
                 raise ValueError('Unequal Markdown table columns')
-            weights = {2: [0.38, 0.62], 3: [0.25, 0.38, 0.37],
+            weights = {2: [0.38, 0.62], 3: [0.54, 0.23, 0.23],
                        4: [0.34, 0.22, 0.22, 0.22], 5: [0.28, 0.18, 0.18, 0.18, 0.18]}
             widths = [WIDTH*x for x in weights.get(columns, [1/columns]*columns)]
             table = Table(cells, colWidths=widths, repeatRows=1, hAlign='LEFT')
