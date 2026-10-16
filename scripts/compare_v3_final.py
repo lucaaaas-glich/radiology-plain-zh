@@ -1,4 +1,4 @@
-"""Compare complete frozen cohorts, separating corrections from withholding."""
+"""Compare frozen cohorts; report states alone cannot explain error removal."""
 import argparse
 import hashlib
 import json
@@ -12,7 +12,7 @@ def paired_analysis(rows_a, review_a, rows_b, review_b):
     a, b = validate(rows_a, review_a), validate(rows_b, review_b)
     result['old_error_to_complete_faithful'] = [
         key for key in a if a[key]['errors'] and faithful(b[key])]
-    result['old_error_to_incomplete_without_observed_error'] = [
+    result['old_error_absent_but_report_incomplete'] = [
         key for key in a if a[key]['errors'] and not b[key]['errors']
         and not b[key]['clinical_coverage_complete']]
     result['old_error_to_complete_but_precision_concern'] = [
@@ -27,8 +27,10 @@ def paired_analysis(rows_a, review_a, rows_b, review_b):
     result['paired_generation_seconds'] = {'a': ta, 'b': tb,
                                            'b_over_a': tb / ta if ta else None}
     result['interpretation'] = (
-        'Error disappearance with incomplete output is withholding, not demonstrated '
-        'correction. All clinical judgments are project AI review, not independent '
+        'Error disappearance in an incomplete report is not complete success. It '
+        'can reflect correction of the old error, withholding of that content, or '
+        'both; determine the cause by reading the actual changed segments, never '
+        'from the report state alone. All clinical judgments are project AI review, not independent '
         'medical accuracy. A complete-faithful label means no error was observed.')
     return result
 
