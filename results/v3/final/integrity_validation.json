@@ -1,0 +1,12 @@
+{
+  "verified_code_files": {
+    "v2": 23,
+    "v3": 32
+  },
+  "all_match": true,
+  "lock_sha256": "21ca039011bbb539a3aaf5fd49c2ea9b8f78e692f8f8665a923237081ab728d0",
+  "checked_at_utc": "2026-10-16T19:07:58.316799+00:00",
+  "local_current_v3_matches_frozen": true,
+  "old_source_files_unchanged_from_665a9ea": 21,
+  "scope": "Source identity checks only; no new model run or clinical correctness claim"
+}

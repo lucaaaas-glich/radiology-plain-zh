@@ -1,0 +1,50 @@
+{
+  "reports": 2,
+  "not_clinical_accuracy": true,
+  "review_scope": "project AI; not independent, blinded, or clinician review",
+  "mutually_exclusive_outcomes": {
+    "incomplete_without_observed_error": 1,
+    "observed_error": 1
+  },
+  "reports_with_observed_factual_errors": 1,
+  "reports_complete_faithful_chinese": 0,
+  "reports_clinical_coverage_complete": 0,
+  "reports_precision_concern": 1,
+  "reports_fully_generated": 0,
+  "generation_failures": 0,
+  "error_category_report_counts": {
+    "anatomy_side": 1
+  },
+  "readability_ai_judgments": {
+    "mixed": 2
+  },
+  "ledger_review_counts": {
+    "not_reviewed": 2
+  },
+  "ledger_status_counts": {
+    "available": 10,
+    "quotes_validated": 4,
+    "format_failed": 4
+  },
+  "generated_with_ledger": 10,
+  "generated_without_ledger": 2,
+  "segments": {
+    "eligible": 18,
+    "generated": 12,
+    "source_only": 6,
+    "structure": 0,
+    "excluded_instruction": 0
+  },
+  "latency_seconds": {
+    "total": 207.53852608194575,
+    "median": 103.76926304097287,
+    "minimum": 48.69079966598656,
+    "maximum": 158.8477264159592
+  },
+  "generation_cost": {
+    "model_calls": 20,
+    "input_tokens": 19930,
+    "generated_tokens": 3164
+  },
+  "note": "Clinical completeness is an AI review judgment. Fully-generated and per-segment coverage are mechanical; segmentation differs between arms."
+}

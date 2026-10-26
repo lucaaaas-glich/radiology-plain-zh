@@ -1,0 +1,26 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "stage": "development_old_reports_only",
+  "cases": [
+    {
+      "id": "real_3000010eb2853496",
+      "output_sha256": "96c5f30068537552491431a5a0038c3ca41ffc7f5ebe538402c7bede2dcee712",
+      "errors": [],
+      "clinical_coverage_complete": false,
+      "precision_concern": false,
+      "readability": "mixed",
+      "ledger_review": "observed_issue",
+      "notes_zh": "未发现已显示中文中的明确事实错误，但14段只解释8段；呼吸衰竭所在句与重要结论等仍回退。较上一试验错误消失主要伴随该句被隐藏，不能算完整解释能力提高。复核仍把已经表达的注射后时间条件误判为遗漏；清单格式或字段问题也阻止输出。"
+    },
+    {
+      "id": "real_2646eef8c69cbba1",
+      "output_sha256": "daca7ae7be04af5543a023dca7a946b13a26683a6be4a4e8888f742c434e6c57",
+      "errors": [],
+      "clinical_coverage_complete": false,
+      "precision_concern": false,
+      "readability": "none",
+      "ledger_review": "not_available",
+      "notes_zh": "清单的重复location字段和顶层格式错误导致4段全部回退；没有提供中文解释。"
+    }
+  ]
+}

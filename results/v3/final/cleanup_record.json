@@ -1,0 +1,17 @@
+{
+  "completed_at_utc": "2026-10-16T19:40:42.219641+00:00",
+  "evaluation_job_ids_absent_from_queue": [
+    666860,
+    667218,
+    667493
+  ],
+  "own_ssh_master_exit_returncode": 0,
+  "own_caffeinate_pid_stopped": 71946,
+  "obsolete_log_listener_stopped": 69068,
+  "slurm_closeout_sha256": "bb7bec8d1e6548283b74da1fe88707bc6dc1237b585c15c92bc4c42a5b38778d",
+  "github_commit": "1338043",
+  "pull_request": 3,
+  "pull_request_ready_for_review": true,
+  "pull_request_merged": false,
+  "no_other_jobs_modified": true
+}

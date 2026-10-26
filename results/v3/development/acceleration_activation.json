@@ -1,0 +1,36 @@
+{
+  "packages": {
+    "fla-core": "0.5.2",
+    "flash-linear-attention": "0.5.2",
+    "einops": "0.8.2"
+  },
+  "numerical_probe": {
+    "torch_chunk_gated_delta_rule": [
+      {
+        "relative_rms_error": 0.0043350933119654655,
+        "max_abs_error": 3.0517578125e-05
+      },
+      {
+        "relative_rms_error": 0.003107452066615224,
+        "max_abs_error": 0.00029466673731803894
+      }
+    ],
+    "torch_recurrent_gated_delta_rule": [
+      {
+        "relative_rms_error": 0.0,
+        "max_abs_error": 0.0
+      },
+      {
+        "relative_rms_error": 6.822503451076045e-08,
+        "max_abs_error": 1.862645149230957e-09
+      }
+    ]
+  },
+  "implementations": {
+    "torch_chunk_gated_delta_rule": "fla.ops.gated_delta_rule.chunk.chunk_gated_delta_rule",
+    "torch_recurrent_gated_delta_rule": "fla.ops.gated_delta_rule.fused_recurrent.fused_recurrent_gated_delta_rule"
+  },
+  "scope": "Two upstream Gated Delta Rule functions, reference decorator rebuilt with isolated FLA; causal convolution remains the original fallback.",
+  "same_model_weights": true,
+  "both_final_arms_must_share_runtime": true
+}

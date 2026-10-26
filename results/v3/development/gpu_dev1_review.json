@@ -1,0 +1,94 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "stage": "development",
+  "cases": [
+    {
+      "id": "real_944bae9cd174b3f3",
+      "output_sha256": "cc3d7dd0cfdb1cac630bb9b131805a212c6a441ed84d3d4dc7f631315f9b6359",
+      "errors": [
+        "terminology"
+      ],
+      "clinical_coverage_complete": false,
+      "precision_concern": false,
+      "readability": "mixed",
+      "ledger_review": "not_reviewed",
+      "notes_zh": "PA后前位被写成前后位；另有胸膜、心影、肺门回退。"
+    },
+    {
+      "id": "real_b5195f156c0cbe9d",
+      "output_sha256": "70f764aaad82da597272aa4ebb616b4f79de817ae2499f8c12237187f2e45a88",
+      "errors": [
+        "unsupported_addition"
+      ],
+      "clinical_coverage_complete": false,
+      "precision_concern": false,
+      "readability": "mixed",
+      "ledger_review": "not_reviewed",
+      "notes_zh": "把含混的F元数据直接解释为女性；半年度复查及多项腹部临床信息保留英文。"
+    },
+    {
+      "id": "real_d462b8b6ee6a35a9",
+      "output_sha256": "cea840dbcc2bcf0a4cad6187558c7d6bca39d1c212e29e2a5b696f056c3e399b",
+      "errors": [
+        "omission"
+      ],
+      "clinical_coverage_complete": false,
+      "precision_concern": false,
+      "readability": "mixed",
+      "ledger_review": "not_reviewed",
+      "notes_zh": "磨玻璃影句遗漏双下叶后部的后部限定；舌段瘢痕性肺不张回退。"
+    },
+    {
+      "id": "real_3000010eb2853496",
+      "output_sha256": "6cd34879f5e500e45491815107d9be89b3b52d5cb2e5ab08beed81ac55eede5e",
+      "errors": [],
+      "clinical_coverage_complete": false,
+      "precision_concern": false,
+      "readability": "mixed",
+      "ledger_review": "not_reviewed",
+      "notes_zh": "已显示部分未见明确错误；呼吸衰竭、肺栓塞结果和最终分级等大量关键内容未解释。"
+    },
+    {
+      "id": "real_25751d3ec470393d",
+      "output_sha256": "bcd63619e64a9b124d5570d0e3781f7d1d1ffb68635d6e362c6aa37ece5afd95",
+      "errors": [],
+      "clinical_coverage_complete": false,
+      "precision_concern": false,
+      "readability": "mixed",
+      "ledger_review": "not_reviewed",
+      "notes_zh": "日期原样、显著性和严重程度保留；含混冠脉句未解释，属于临床内容不完整。"
+    },
+    {
+      "id": "real_7087fb455870b62c",
+      "output_sha256": "1bad63ea943e6b3dec598c499f12ac965b28971456d011b0611747713103822a",
+      "errors": [],
+      "clinical_coverage_complete": true,
+      "precision_concern": false,
+      "readability": "mixed",
+      "ledger_review": "not_reviewed",
+      "notes_zh": "颈静脉未擅加内部限定；胃管、胸骨固定、主动脉及COPD征象均保留。"
+    },
+    {
+      "id": "real_9aec311bef0d8392",
+      "output_sha256": "6f11eec2bcaa7cf0cd0356d9bf5c2c043b26aec73dcbbd186c56135b47f245fb",
+      "errors": [],
+      "clinical_coverage_complete": false,
+      "precision_concern": true,
+      "readability": "mixed",
+      "ledger_review": "not_reviewed",
+      "notes_zh": "骨折后遗改变回退；浸润括注为炎症渗出过窄，记录表达精度疑问，未据此断言患者有炎症。"
+    },
+    {
+      "id": "real_2646eef8c69cbba1",
+      "output_sha256": "f8ca28320994c4f3e0542000391797629c3dbd5bec51ac00d2e67bb434eed51d",
+      "errors": [
+        "anatomy_side"
+      ],
+      "clinical_coverage_complete": false,
+      "precision_concern": false,
+      "readability": "mixed",
+      "ledger_review": "not_reviewed",
+      "notes_zh": "lower dorsal应保留胸椎定位，译为下背部/脊柱下段使定位漂移；胃管末端与日期稳定性句回退。"
+    }
+  ]
+}

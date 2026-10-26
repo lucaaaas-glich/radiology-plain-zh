@@ -1,0 +1,17 @@
+{
+  "status": "submitted_pending_dependency",
+  "job_id": "667493",
+  "previous_job_id": "667218",
+  "dependency": "afterany:667218",
+  "submitted_utc": "2026-10-16T18:40:16Z",
+  "time_limit_minutes": 60,
+  "conditional_skip_before_model_download_if_complete": true,
+  "reason": "User subsequently requested completion of the same remaining frozen evaluation. Current job extension was denied; no scheduler restriction bypassed.",
+  "code_sha256": {
+    "scripts/resume_v3_remaining.py": "389e3be1c93aa1f45ea9254169af3f5f7ae0b5e5ce6712feaf1869e6ee2cb712",
+    "scripts/run_v3_remaining_a100.sh": "552640010ab3ac66479db72b6e3ab1bfeb036400e51c8b4c292010a32c5ab46d",
+    "scripts/collect_v3_final.py": "d25f106519ed93cdf4755e476901f53c1fca2c57be2778f48854dd553d2c8a67"
+  },
+  "all_local_remote_helper_hashes_match": true,
+  "new_recovery_tests_passed": 3
+}

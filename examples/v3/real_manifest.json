@@ -1,0 +1,317 @@
+{
+  "frozen_at_utc": "2026-10-16T13:40:30.346660+00:00",
+  "outputs_seen": false,
+  "dataset": "BioLaySumm/BioLaySumm2025-LaymanRRG-opensource-track",
+  "revision": "6783ab38f9de28c4372799346f51d3927ae7eb9a",
+  "original_split": "validation",
+  "source_parquet_sha256": "680bd10de398efbbe7cc115aa861bc12f722fcbcd307cd9c3deedacca8941fce",
+  "seed": 37102603,
+  "length_range_chars": [
+    1000,
+    4000
+  ],
+  "strata": [
+    "1000–1499",
+    "1500–1999",
+    "2000–4000"
+  ],
+  "selected_counts": [
+    28,
+    8,
+    4
+  ],
+  "eligible_after_dedup_counts": [
+    68,
+    22,
+    8
+  ],
+  "excluded_previous_unique_reports": 4648,
+  "near_duplicate_jaccard_threshold": 0.8,
+  "near_duplicate_method": "casefolded word 5-gram sets; old reports >=700 chars and all retained candidates",
+  "rejected_near_ids": [],
+  "count": 40,
+  "input_sha256": "5a296d8497a7a0a8c4c9c29f64cb6ff4c1b0e8f70a4f8a417c21ada078ced98c",
+  "rows": [
+    {
+      "id": "long_b3baa3486a61d6cc",
+      "source_sha256": "b3baa3486a61d6cc164d65734207540ebe9061d6525b5d0bac2312cae2eb93a6",
+      "length_chars": 1869,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 1
+    },
+    {
+      "id": "long_29754869109e7fcb",
+      "source_sha256": "29754869109e7fcb5a453f44de848ca5adfc386decf6e374673695746e655c70",
+      "length_chars": 1204,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 0
+    },
+    {
+      "id": "long_9ef37ce93b166517",
+      "source_sha256": "9ef37ce93b166517823fab170b556e6479ca9277be3338994851dae06b393b68",
+      "length_chars": 1491,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 0
+    },
+    {
+      "id": "long_04d60d97e864b921",
+      "source_sha256": "04d60d97e864b9216f73e1c1ba5ebc97014d9e18a3584dd0df37c21223bd2c93",
+      "length_chars": 1866,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 1
+    },
+    {
+      "id": "long_5fefdb2a79347660",
+      "source_sha256": "5fefdb2a7934766018cc2a867566ac42d77d7ddcb11732f4d7a499533e8d96a9",
+      "length_chars": 1856,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 1
+    },
+    {
+      "id": "long_dfd6680f10dc3c91",
+      "source_sha256": "dfd6680f10dc3c9125f133996113b76a71e549e87ae4db6ec76e22c23079aed9",
+      "length_chars": 1009,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 0
+    },
+    {
+      "id": "long_0eaad3584df25a63",
+      "source_sha256": "0eaad3584df25a63d850902aaad716eed5c5fda6afd1e8099a9be99fa9fd238d",
+      "length_chars": 1820,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 1
+    },
+    {
+      "id": "long_618f8b6305897610",
+      "source_sha256": "618f8b6305897610fafa77c95a0077c256abda7a38419e2a470a44789e7b567d",
+      "length_chars": 1192,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 0
+    },
+    {
+      "id": "long_48f1f40212aa6574",
+      "source_sha256": "48f1f40212aa657438478557688c1cfc8c93aac4a7b4a65e318794e32495c0fe",
+      "length_chars": 1461,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 0
+    },
+    {
+      "id": "long_d78f448a4e98a0b9",
+      "source_sha256": "d78f448a4e98a0b946667a099021fdb1d4f5005f2bd11a2efb5648c2cd3a7620",
+      "length_chars": 1567,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 1
+    },
+    {
+      "id": "long_7d84f26f81b5b22e",
+      "source_sha256": "7d84f26f81b5b22e23cce92c08372d7acab815cdd74d290177efe10717e1263f",
+      "length_chars": 1109,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 0
+    },
+    {
+      "id": "long_d035caaa4741bdf9",
+      "source_sha256": "d035caaa4741bdf9ec4e9f65594467bd3d2231fbfff9d03e5e239326f7c1b969",
+      "length_chars": 1190,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 0
+    },
+    {
+      "id": "long_5444aec1786f55c3",
+      "source_sha256": "5444aec1786f55c3fe8d2ad21973b7321af34bb63e70401f7d641e1d1186f7b2",
+      "length_chars": 1132,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 0
+    },
+    {
+      "id": "long_42449a4845cd895a",
+      "source_sha256": "42449a4845cd895aa7aada18cfca9ba4175e68807b04a7850fd5d193d34c1273",
+      "length_chars": 1083,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 0
+    },
+    {
+      "id": "long_d34640bea83a69d9",
+      "source_sha256": "d34640bea83a69d94d60f4bc7e9d4f24186790c7e012d3f194b13c60b2faa1e5",
+      "length_chars": 1998,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 1
+    },
+    {
+      "id": "long_336870be9defaa43",
+      "source_sha256": "336870be9defaa43ecbc9e548a6ccdb0d1ce720e8c30f7b160922ec288c61a5a",
+      "length_chars": 1240,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 0
+    },
+    {
+      "id": "long_89f60c1298aaa093",
+      "source_sha256": "89f60c1298aaa09394641588c214765b67e9e9d75c70e8314f1ba91d65308ac0",
+      "length_chars": 1254,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 0
+    },
+    {
+      "id": "long_22190b667b0d6464",
+      "source_sha256": "22190b667b0d646415196a45943012e445f92200feb576d5c4fe174bd7bff6c4",
+      "length_chars": 1149,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 0
+    },
+    {
+      "id": "long_0b1f5bc1b9a68604",
+      "source_sha256": "0b1f5bc1b9a6860439b5960d31cb0ad492121ce1d15d35824bd27b3cc421613e",
+      "length_chars": 3309,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 2
+    },
+    {
+      "id": "long_0407efd0d05efb3d",
+      "source_sha256": "0407efd0d05efb3df9e1d6caf76abd12f70736f945c289807c5924ae84e10e81",
+      "length_chars": 1215,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 0
+    },
+    {
+      "id": "long_c8acd9987fc6e1bf",
+      "source_sha256": "c8acd9987fc6e1bfd80cf5ddd2f3d9e48658c6fe8b2b006c987cf6ad94e99763",
+      "length_chars": 1117,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 0
+    },
+    {
+      "id": "long_5387f710232ab078",
+      "source_sha256": "5387f710232ab078cb59e2c696baf296714a6682d346c7797b3ab070393fa014",
+      "length_chars": 1700,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 1
+    },
+    {
+      "id": "long_63dbdd7032e14da4",
+      "source_sha256": "63dbdd7032e14da47b73cbff8f40fe1ccd5f2807df8121958d251de984b76c73",
+      "length_chars": 2620,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 2
+    },
+    {
+      "id": "long_ab04b1bece28572f",
+      "source_sha256": "ab04b1bece28572ff459255ce9c787050c095932c1d162385c8aaa554bf17422",
+      "length_chars": 2294,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 2
+    },
+    {
+      "id": "long_8b37c849e2e993be",
+      "source_sha256": "8b37c849e2e993bea6449f8537e3e58ebb0c94db83c46c5494d869eb00d93dfd",
+      "length_chars": 1415,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 0
+    },
+    {
+      "id": "long_edcfb23165bea8d2",
+      "source_sha256": "edcfb23165bea8d28c1adf1b4cd7270d08c2f14ae3481bb28f8bed5d36ab2d4d",
+      "length_chars": 1141,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 0
+    },
+    {
+      "id": "long_33af35acd9e3d0ba",
+      "source_sha256": "33af35acd9e3d0ba2caaaa3a03b5ca756cfc29f9009521efaa64b19a3e4da157",
+      "length_chars": 1562,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 1
+    },
+    {
+      "id": "long_2640a745fd519b42",
+      "source_sha256": "2640a745fd519b42a9e568d23e0e047ba6aece81f562ec07930a4de4a67a7af7",
+      "length_chars": 1109,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 0
+    },
+    {
+      "id": "long_263f60c72e2468ec",
+      "source_sha256": "263f60c72e2468ec26805c4606c97c3658c67b79b2170c8067b419c6b2567624",
+      "length_chars": 1180,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 0
+    },
+    {
+      "id": "long_807f14a2222dc68b",
+      "source_sha256": "807f14a2222dc68bad5c992219a9ab0effe49bf33448fddf8fe3da71daebf35a",
+      "length_chars": 1134,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 0
+    },
+    {
+      "id": "long_56b2592a4e7006f7",
+      "source_sha256": "56b2592a4e7006f76994a0664205b6da3818c24bb5b3fed0982f0348624b273e",
+      "length_chars": 1332,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 0
+    },
+    {
+      "id": "long_e902651bb0c73593",
+      "source_sha256": "e902651bb0c73593bf3afb5efdc97c9b4319e77d0150158f1c83ca88f7757d60",
+      "length_chars": 1249,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 0
+    },
+    {
+      "id": "long_3a5ce0a2a2aa2089",
+      "source_sha256": "3a5ce0a2a2aa2089a77d356b9e57137b8f60fe0b357d25babb7cc16bec5b77c3",
+      "length_chars": 1019,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 0
+    },
+    {
+      "id": "long_7865e55d4d3d13ee",
+      "source_sha256": "7865e55d4d3d13ee0dd493908dc4b608723bb79b31e2be3d6722dcafc4274a09",
+      "length_chars": 1172,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 0
+    },
+    {
+      "id": "long_987f2fc465614129",
+      "source_sha256": "987f2fc4656141296c913524b8c605e8844f495a8ab3475d0fd92529fc8bb062",
+      "length_chars": 1331,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 0
+    },
+    {
+      "id": "long_5aa9f30eb2017006",
+      "source_sha256": "5aa9f30eb2017006bdd30735724c4846ff29796c3898526f6317ec47828cfa3e",
+      "length_chars": 1485,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 0
+    },
+    {
+      "id": "long_1b1bf3aecd9f8ad2",
+      "source_sha256": "1b1bf3aecd9f8ad24c334d87d5b2ee27b6e2832514acf3553fc5b9679e955971",
+      "length_chars": 1428,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 0
+    },
+    {
+      "id": "long_18d8a1fe32eb36dc",
+      "source_sha256": "18d8a1fe32eb36dcfa96e396f409e0999fa130092627ad7714a26855ea504d65",
+      "length_chars": 1131,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 0
+    },
+    {
+      "id": "long_f2007f131c21153c",
+      "source_sha256": "f2007f131c21153c767a0743975a76cee9f1746a43cb1861ef3dcbfaf3bf1035",
+      "length_chars": 2313,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 2
+    },
+    {
+      "id": "long_6eacc566ce6c0bb3",
+      "source_sha256": "6eacc566ce6c0bb34993bfa4a777067d43dda0f4cf768e2e98fa2f6759d27b6f",
+      "length_chars": 1069,
+      "dataset_source": "BIMCV-COVID19",
+      "length_stratum": 0
+    }
+  ],
+  "limitations": "Public English reports, not Chinese hospital originals; patient independence unknown. Long means relative to this dataset. No clinician Chinese reference. Raw text stays untracked."
+}

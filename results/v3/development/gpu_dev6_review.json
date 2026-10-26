@@ -1,0 +1,48 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "stage": "development",
+  "cases": [
+    {
+      "id": "real_944bae9cd174b3f3",
+      "output_sha256": "89524d357b7ce2e204e40722e7db502b563490b85e2b0cbec975ab69a237231d",
+      "errors": [],
+      "clinical_coverage_complete": true,
+      "precision_concern": false,
+      "readability": "mixed",
+      "ledger_review": "no_observed_issue",
+      "notes_zh": "PA后前位正确，临床阳性背景与不提示COVID的影像结论分别保留；心脏增大和心衰替代诊断及不变关系恢复。18/18中文；不把正确的纵隔词义解释误记为新增双侧病变。"
+    },
+    {
+      "id": "real_d462b8b6ee6a35a9",
+      "output_sha256": "f701fda3c6e18b16bef632aef1ae8256fc862e79d8509ddbdaa667d07b426fb6",
+      "errors": [
+        "omission"
+      ],
+      "clinical_coverage_complete": false,
+      "precision_concern": false,
+      "readability": "mixed",
+      "ledger_review": "not_reviewed",
+      "notes_zh": "原先回退的舌段瘢痕性肺不张现已解释；但仍遗漏双下叶后部的后部限定，18/18生成不等于临床事实完整。 核查该句清单仍含原文完整部位关系，但中文漏掉限定，核对员未发现；真实摘录不保证解释忠实。"
+    },
+    {
+      "id": "real_3000010eb2853496",
+      "output_sha256": "86b6008b79965940220bf84177ae6808bce6b4e2d4d06e832507241c23a701e1",
+      "errors": [],
+      "clinical_coverage_complete": false,
+      "precision_concern": true,
+      "readability": "mixed",
+      "ledger_review": "not_reviewed",
+      "notes_zh": "呼吸衰竭、肺栓塞主要所见、双侧实变等已解释；急性PE结论和中重度COVID仍回退。lower lobes简化为下肺，记精度顾虑。"
+    },
+    {
+      "id": "real_2646eef8c69cbba1",
+      "output_sha256": "d6fd96eac33d95987dd600febd0562d2885f603a495b8ae3d9f8c1034f540cc8",
+      "errors": [],
+      "clinical_coverage_complete": true,
+      "precision_concern": false,
+      "readability": "mixed",
+      "ledger_review": "not_available",
+      "notes_zh": "右锁骨下静脉、上腔静脉、胃管食管下1/3、双侧胸膜积液与双肺基底实变稳定、日期和下段胸椎均保留。本例全部从原文生成，没有有效清单，不能将修正归功于清单。"
+    }
+  ]
+}

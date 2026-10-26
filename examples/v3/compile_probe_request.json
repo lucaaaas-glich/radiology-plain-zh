@@ -1,0 +1,19 @@
+{
+  "phase": "development_runtime_probe",
+  "input": "inputs/kernel-old2.jsonl",
+  "input_sha256": "52f23ea2c8d0a2e511e97ee0be53ae123a92fd597d832966e1cb4e437f3bb4cf",
+  "out": "results/compile-probe",
+  "arms": {
+    "runtime_probe": {
+      "directory": "candidates/compile-probe",
+      "module": "compile_probe_v3",
+      "max_input_tokens": 8192,
+      "code_sha256": {
+        "radplain/compile_probe_v3.py": "b2aa0f22117de4ab3adae98be996e91b2a6b0b7351a36f496e3ff1cc08c51901",
+        "radplain/kernel_probe_v3.py": "83a08c0d6bb68e9cb705945d7f01c8c1b6a7bd57a440ddcc3cc64a22fccd569a",
+        "radplain/__init__.py": "b0bd0be201a9be1a0f029b5cc676818aa15231097205d7af3e420a8903e00348"
+      },
+      "kwargs": {}
+    }
+  }
+}

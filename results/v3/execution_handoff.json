@@ -1,0 +1,19 @@
+{
+  "original_job": "666860",
+  "original_state": "CANCELLED intentionally at a completed-row checkpoint",
+  "original_allocation_seconds": 14477,
+  "handoff_utc": "2026-10-16T17:48:08.542883+00:00",
+  "completed_at_handoff": {"v2": 17, "v3": 17, "without_ledger": 0},
+  "continuation_job": "667218",
+  "continuation_start_utc": "2026-10-16T17:48:19+00:00",
+  "continuation_allocation_minutes": 70,
+  "absolute_compute_cutoff_utc": "2026-10-16T18:57:00+00:00",
+  "original_download_sha256": {
+    "results/final20/progress.json": "e40313aef0c33348ec2729022a0664f27551a848ad5d4c6c73d952a727794db5",
+    "results/final20/request.json": "72c49bb682e99519af832c18a1f6eae88f897f45ad71b24b091b32ced0dd99bd",
+    "results/final20/v2/outputs.jsonl": "c0d8e756c898ac5c9a1f75800b2d4da43eee1544c846f84ee1b8c650aebe254f",
+    "results/final20/v3/outputs.jsonl": "2a5bc623126e1d502a81fb48b880ed7e1054d21487b6af743cfe0a3e8410307d"
+  },
+  "all_original_download_hashes_match": true,
+  "note": "Original request did not finish as a whole; runtime.json was not created. Completed output rows retain their actual per-call accounting. Continuation must preserve every completed row, including failures."
+}

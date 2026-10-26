@@ -1,0 +1,22 @@
+{
+  "source_summary_sha256": {
+    "results/v3/final/v2_summary.json": "1ec1992c6e6b11af5b9deb72d0873b323190d39bc510aa9d79ef1ef8cddc4e3d",
+    "results/v3/final/v3_summary.json": "30024b507934e1c65da3e6cd206c71ae1fe74db579582332fc2dc8ed5629aefb"
+  },
+  "cohort_manifest_sha256": "875425f54daf76a47fdaf2c6534fa2a63da60af63e595260e16f819dbcfbed32",
+  "not_clinical_accuracy": true,
+  "outcomes": {
+    "v2": {
+      "precision_concern_without_clear_error": 3,
+      "incomplete_without_observed_error": 8,
+      "complete_faithful": 5,
+      "observed_error": 4
+    },
+    "v3": {
+      "incomplete_without_observed_error": 12,
+      "precision_concern_without_clear_error": 3,
+      "observed_error": 4,
+      "complete_faithful": 1
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "finished_at_utc": "2026-10-16T19:33:51Z",
+  "round_started_at_utc": "2026-10-16T13:33:45Z",
+  "elapsed_until_evaluation_complete_seconds": 21606,
+  "not_all_elapsed_time_is_active_work": true,
+  "jobs": [
+    {
+      "id": 666860,
+      "state": "CANCELLED",
+      "start_utc": "2026-10-16T13:46:51Z",
+      "end_utc": "2026-10-16T17:48:08Z",
+      "allocated_elapsed_seconds": 14477,
+      "reason": "Intentional checkpoint handoff after 17 main pairs; development and model loading also included"
+    },
+    {
+      "id": 667218,
+      "state": "TIMEOUT",
+      "start_utc": "2026-10-16T17:48:19Z",
+      "end_utc": "2026-10-16T18:58:20Z",
+      "allocated_elapsed_seconds": 4201,
+      "model_redownload_seconds_from_log": 1448,
+      "reason": "School allocation time limit after completing main20 and first five controls"
+    },
+    {
+      "id": 667493,
+      "state": "COMPLETED",
+      "start_utc": "2026-10-16T18:58:30Z",
+      "end_utc": "2026-10-16T19:33:51Z",
+      "allocated_elapsed_seconds": 2121,
+      "model_redownload_seconds_from_log": 1471,
+      "download_recovered_from_one_peer_closed_connection": true,
+      "reason": "Only remaining five controls; no completed rows retried"
+    }
+  ],
+  "final_counts": {
+    "v2": 20,
+    "v3": 20,
+    "without_ledger": 10
+  },
+  "all_50_outputs_reviewed": true,
+  "final_model_train_steps_this_round": 0,
+  "source": "Slurm sacct allocation-level rows; displayed scheduler timestamps converted from Australia/Brisbane to UTC. Download durations from final Hugging Face progress lines. Output generation accounting is separate."
+}
