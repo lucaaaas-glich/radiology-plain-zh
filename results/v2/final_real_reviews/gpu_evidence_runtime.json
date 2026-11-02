@@ -1,0 +1,11 @@
+{
+  "count": 24,
+  "mode": "evidence-critic",
+  "arm": "gpu27b_evidence",
+  "generation_seconds": 1691.9349082228728,
+  "input_sha256": "5b5754822d85947f9581bffcbc8444fb5bffbacd7e16275b5a220b6ca75b4768",
+  "candidate_lock_sha256": "990417161871099300b9e99730a73eef1ab4bae2eb70d78446a10a0d70b47ce0",
+  "model_repo": "Qwen/Qwen3.5-27B",
+  "model_revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+  "slurm_job_id": "664840"
+}

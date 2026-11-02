@@ -1,0 +1,322 @@
+{
+  "paired_reports": 48,
+  "counts": {
+    "observed_error": {
+      "both": 0,
+      "only_a": 2,
+      "only_b": 2,
+      "neither": 44
+    },
+    "complete_faithful": {
+      "both": 41,
+      "only_a": 2,
+      "only_b": 4,
+      "neither": 1
+    },
+    "fully_generated": {
+      "both": 46,
+      "only_a": 1,
+      "only_b": 1,
+      "neither": 0
+    }
+  },
+  "cases": [
+    {
+      "id": "v2_01_en_numbers",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_02_en_numbers",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_03_en_range",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_04_en_dimensions",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_05_en_multi_numbers",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_06_en_dates",
+      "observed_error": "neither",
+      "complete_faithful": "only_b",
+      "fully_generated": "only_b"
+    },
+    {
+      "id": "v2_07_en_uncertainty",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_08_en_uncertainty",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_09_en_negation",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_10_en_negation",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_11_en_certainty",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_12_en_limitation",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_13_en_change",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_14_en_change",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_15_en_device",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_16_en_device",
+      "observed_error": "neither",
+      "complete_faithful": "neither",
+      "fully_generated": "only_a"
+    },
+    {
+      "id": "v2_17_en_recommendation",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_18_en_recommendation",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_19_en_normal",
+      "observed_error": "only_a",
+      "complete_faithful": "only_b",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_20_en_jargon",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_21_en_abdomen",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_22_en_bone",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_23_en_injection",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_24_en_conflict",
+      "observed_error": "only_a",
+      "complete_faithful": "only_b",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_25_zh_numbers",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_26_zh_numbers",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_27_zh_range",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_28_zh_dimensions",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_29_zh_multi_numbers",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_30_zh_dates",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_31_zh_uncertainty",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_32_zh_uncertainty",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_33_zh_negation",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_34_zh_negation",
+      "observed_error": "only_b",
+      "complete_faithful": "only_a",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_35_zh_certainty",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_36_zh_limitation",
+      "observed_error": "neither",
+      "complete_faithful": "only_b",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_37_zh_change",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_38_zh_change",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_39_zh_device",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_40_zh_device",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_41_zh_recommendation",
+      "observed_error": "only_b",
+      "complete_faithful": "only_a",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_42_zh_recommendation",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_43_zh_normal",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_44_zh_jargon",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_45_zh_abdomen",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_46_zh_bone",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_47_zh_injection",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "v2_48_zh_conflict",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    }
+  ],
+  "review_scope": "project AI; not blinded, independent, or clinician review",
+  "not_clinical_accuracy": true,
+  "stage": "final",
+  "inputs": {
+    "a_outputs": "results/v2/final_local_evidence/outputs.jsonl",
+    "a_review": "results/v2/final_local_evidence/review.json",
+    "b_outputs": "results/v2/final_gpu_recheck/outputs.jsonl",
+    "b_review": "results/v2/final_gpu_recheck/review.json"
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "scope": "Displayed Chinese only; source-only fallback is incomplete, not a correct answer.",
+  "cases": [
+    {
+      "id": "real_0e9c60d4ad638a81",
+      "output_sha256": "e5c0f583975f26a7731a15127731f6c715e56dcd9dbef15341bfec751afa7589",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "technical",
+      "notes_zh": "未发现明确的临床内容改变，但大部分仍使用专业词，需配合词语解释。"
+    },
+    {
+      "id": "real_53499b1249f0e7a6",
+      "output_sha256": "8b6760f96b99b4b4b09fd4aef55b360c4563c156fda92b167fc6880a741e4770",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "保留的中文未见明确事实改变；新冠肺炎一处词语重复。部分句子只保留原文。"
+    },
+    {
+      "id": "real_4187fbf7eadcb951",
+      "output_sha256": "1d460ced3109cb00e4824a61ed58979fcfeff82e1725a51f54353f9a959d55b4",
+      "errors": [
+        "anatomy_side",
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "胸椎被额外写成胸椎后侧，与前缘骨赘形成不正确的位置描述；复杂长句只保留原文。"
+    },
+    {
+      "id": "real_6e2b1d9d0d10b307",
+      "output_sha256": "a364967b0d32e025e5e7a25df426e39c2bfd9d06bfe172e8a9e79e301802d2e6",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "已生成句子未发现明显事实改变，但比较日期及积液变化句未完成中文改写。"
+    },
+    {
+      "id": "real_4889613d7b935c76",
+      "output_sha256": "9578babd7d94ad34093417a9063440c6df3757cc895e2e4cad81222a9e0046d9",
+      "errors": [
+        "anatomy_side",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "脂肪瘤与背阔肌的下方关系被写成背阔肌处，丢失定位关系；另有原文回退。"
+    },
+    {
+      "id": "real_99884d41e32a39f8",
+      "output_sha256": "58252be3c988cb3fc03186e9b7edc1bd0c6e6cd12540a0983b97fc29c67bc71e",
+      "errors": [
+        "anatomy_side",
+        "number_time",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "乙状结肠缝线被写成降结肠；图像编号与系列编号混淆并漏掉系列5。"
+    },
+    {
+      "id": "real_c6927c378a6e2c87",
+      "output_sha256": "3de8776cc0813d867e1365b51f815ee90a97e940d04e1599a7848a393b0aadcb",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "舌叶的用词不够严谨，列为待核对而非明确错误；残留纤维化句回退。"
+    },
+    {
+      "id": "real_788c7076b21bef32",
+      "output_sha256": "e4eab21645a9df93770d9414bce8bc345ba8fe467393eee9952453d738486580",
+      "errors": [
+        "anatomy_side",
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "结肠/乙状结肠憩室误成结肠脾曲憩室；长句回退。"
+    },
+    {
+      "id": "real_8e3f069b88d7550c",
+      "output_sha256": "c91f9dd4b2ce38a984d8454a1e90690b291c01c68664b1215990204e29d28a8e",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "已生成病史与检查方向未见明确事实改变；无重要病理发现句回退。"
+    },
+    {
+      "id": "real_20d69a9e8c41860d",
+      "output_sha256": "3ad68def048d8623d6675f5165f7095c34c3ba2f404fefed7ac7ddfeb5b15467",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "生成内容未发现明确诊断改变，但黏膜下层位置简化为壁内，精度有损失；多处仅原文，元数据还被合并。"
+    },
+    {
+      "id": "real_2f86141ba8fa19ea",
+      "output_sha256": "ff77c2ed024b285c0ace87621a8179e6317e3ffca0fc236c89062524dcbbaa73",
+      "errors": [
+        "number_time",
+        "anatomy_side",
+        "terminology",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "小于一厘米误成亚毫米；心包改成心前腔；气道周围增厚套用了相邻发现的肺叶部位，薄层状限定被省略。"
+    },
+    {
+      "id": "real_4d02bd9100fee8f7",
+      "output_sha256": "e0038de24844fdfd3597242db3e6e9fbf7a813ad5167c457259a6d7f63b89f68",
+      "errors": [
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "结论漏掉磨玻璃影的细微程度；年份和既往感染句回退。"
+    },
+    {
+      "id": "real_de592071091f2d97",
+      "output_sha256": "67df87b7404fd0bb3e0319bb4fb0e035726b993a5964473282fa803304c999ee",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "ex vacuo写成减压性不够清楚，需核对而未计作明确错误；另有回退，未完成全文。"
+    },
+    {
+      "id": "real_abd463216fac09a8",
+      "output_sha256": "75be4803c1037a61b6e95b613423b8bc29edc2d20cd23a1404bde27f5cf8f8a4",
+      "errors": [
+        "anatomy_side",
+        "unsupported_addition",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "距耻骨联合的距离被新增为上方距离；较大的横突漏掉大小描述；两句回退。"
+    },
+    {
+      "id": "real_b27e89e8eb71724d",
+      "output_sha256": "c2472ec94fe77dc424b0760cc727cf69707e78bcc8cc041703ad4cc827c25e81",
+      "errors": [
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "肺内气腔被写成影像显示方式肺窗，术语含义发生变化。"
+    },
+    {
+      "id": "real_4b40d531f81fd555",
+      "output_sha256": "6f19644396228e305610d1ac2471411d6f92415c579de8ed1111a698a01a6229",
+      "errors": [
+        "anatomy_side",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "右侧肋骨外侧的位置限定遗漏；新出现的实变句回退。"
+    }
+  ]
+}

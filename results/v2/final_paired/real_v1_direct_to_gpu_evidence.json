@@ -1,0 +1,178 @@
+{
+  "paired_reports": 24,
+  "counts": {
+    "observed_error": {
+      "both": 5,
+      "only_a": 16,
+      "only_b": 0,
+      "neither": 3
+    },
+    "complete_faithful": {
+      "both": 3,
+      "only_a": 0,
+      "only_b": 7,
+      "neither": 14
+    },
+    "fully_generated": {
+      "both": 14,
+      "only_a": 10,
+      "only_b": 0,
+      "neither": 0
+    }
+  },
+  "cases": [
+    {
+      "id": "real_7945887a634fd3b2",
+      "observed_error": "only_a",
+      "complete_faithful": "only_b",
+      "fully_generated": "both"
+    },
+    {
+      "id": "real_944bae9cd174b3f3",
+      "observed_error": "only_a",
+      "complete_faithful": "neither",
+      "fully_generated": "only_a"
+    },
+    {
+      "id": "real_a6078e33cf1077ed",
+      "observed_error": "only_a",
+      "complete_faithful": "neither",
+      "fully_generated": "only_a"
+    },
+    {
+      "id": "real_00b223ab1d9049a6",
+      "observed_error": "only_a",
+      "complete_faithful": "only_b",
+      "fully_generated": "both"
+    },
+    {
+      "id": "real_b5195f156c0cbe9d",
+      "observed_error": "both",
+      "complete_faithful": "neither",
+      "fully_generated": "only_a"
+    },
+    {
+      "id": "real_681044615bc68bff",
+      "observed_error": "only_a",
+      "complete_faithful": "only_b",
+      "fully_generated": "both"
+    },
+    {
+      "id": "real_7b39ef479027ca36",
+      "observed_error": "only_a",
+      "complete_faithful": "neither",
+      "fully_generated": "only_a"
+    },
+    {
+      "id": "real_3410dce0e4d6e6ff",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "real_d462b8b6ee6a35a9",
+      "observed_error": "both",
+      "complete_faithful": "neither",
+      "fully_generated": "both"
+    },
+    {
+      "id": "real_9aec311bef0d8392",
+      "observed_error": "only_a",
+      "complete_faithful": "only_b",
+      "fully_generated": "both"
+    },
+    {
+      "id": "real_a7738a4f4eb224ff",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "real_580a77f7f0a8c00f",
+      "observed_error": "only_a",
+      "complete_faithful": "neither",
+      "fully_generated": "only_a"
+    },
+    {
+      "id": "real_3000010eb2853496",
+      "observed_error": "both",
+      "complete_faithful": "neither",
+      "fully_generated": "only_a"
+    },
+    {
+      "id": "real_2646eef8c69cbba1",
+      "observed_error": "only_a",
+      "complete_faithful": "only_b",
+      "fully_generated": "both"
+    },
+    {
+      "id": "real_25751d3ec470393d",
+      "observed_error": "both",
+      "complete_faithful": "neither",
+      "fully_generated": "only_a"
+    },
+    {
+      "id": "real_eb3ac627bd03985a",
+      "observed_error": "only_a",
+      "complete_faithful": "neither",
+      "fully_generated": "both"
+    },
+    {
+      "id": "real_90fdb73f05ecd2ef",
+      "observed_error": "neither",
+      "complete_faithful": "both",
+      "fully_generated": "both"
+    },
+    {
+      "id": "real_a2be02cd61c25242",
+      "observed_error": "only_a",
+      "complete_faithful": "neither",
+      "fully_generated": "only_a"
+    },
+    {
+      "id": "real_4e2270f839a97e0c",
+      "observed_error": "only_a",
+      "complete_faithful": "neither",
+      "fully_generated": "both"
+    },
+    {
+      "id": "real_da8930a7d5f4b569",
+      "observed_error": "only_a",
+      "complete_faithful": "only_b",
+      "fully_generated": "both"
+    },
+    {
+      "id": "real_8ccce4c1f7bf5f41",
+      "observed_error": "only_a",
+      "complete_faithful": "neither",
+      "fully_generated": "only_a"
+    },
+    {
+      "id": "real_2e6e472d9c1e5116",
+      "observed_error": "only_a",
+      "complete_faithful": "neither",
+      "fully_generated": "only_a"
+    },
+    {
+      "id": "real_190581003b759c0a",
+      "observed_error": "only_a",
+      "complete_faithful": "only_b",
+      "fully_generated": "both"
+    },
+    {
+      "id": "real_7087fb455870b62c",
+      "observed_error": "both",
+      "complete_faithful": "neither",
+      "fully_generated": "both"
+    }
+  ],
+  "review_scope": "project AI; not blinded, independent, or clinician review",
+  "not_clinical_accuracy": true,
+  "stage": "final",
+  "inputs": {
+    "a_outputs": "results/v2/real-data/final_v1_direct/outputs.jsonl",
+    "a_review": "results/v2/final_real_reviews/v1_direct_review.json",
+    "b_outputs": "results/v2/real-data/final_gpu_evidence/outputs.jsonl",
+    "b_review": "results/v2/final_real_reviews/gpu_evidence_review.json"
+  }
+}

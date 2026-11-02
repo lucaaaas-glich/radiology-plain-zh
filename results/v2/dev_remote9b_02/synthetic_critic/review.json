@@ -1,0 +1,168 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "scope": "Displayed Chinese only; source-only fallback is incomplete, not a correct answer.",
+  "cases": [
+    {
+      "id": "negation_en",
+      "output_sha256": "34e1b0660ae0d37c12652f4af94e03de1e2b458ed844d20df030a8481ed9ee01",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明显事实改变；术语解释另列，仍有专业措辞。"
+    },
+    {
+      "id": "uncertainty_en",
+      "output_sha256": "4c50f841008ea7b1d34fb7ea355877acfcdfa89cb4483228a889653deead6b7c",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变；术语解释另列，仍有专业措辞。"
+    },
+    {
+      "id": "laterality_en",
+      "output_sha256": "fa5c2d3f60e2c5e1575ee56fcab3171dab2692bd503f36c22eae8f81d51883cb",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明显事实改变；术语解释另列，仍有专业措辞。"
+    },
+    {
+      "id": "change_en",
+      "output_sha256": "3cfe2d2b77b9233e7df9d474b60957621e2c3ec028761970fc65aa5ebca1bbbc",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变；术语解释另列，仍有专业措辞。"
+    },
+    {
+      "id": "urgent_finding_en",
+      "output_sha256": "3cca649f8b12db4080c92a9aca9c8f05edf2e16b75923ade1c4f53fbba176e74",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变；术语解释另列，仍有专业措辞。"
+    },
+    {
+      "id": "uncertain_cancer_en",
+      "output_sha256": "89d936c6433bd21377e075cdf5182a1e7efd8d1aac3b7ed08cd35061bdf9c9da",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变；术语解释另列，仍有专业措辞。"
+    },
+    {
+      "id": "numbers_en",
+      "output_sha256": "6181817db96845669a54aa56df52f9f9c0f13258bbe2a1febde5d469027ae209",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明显事实改变；术语解释另列，仍有专业措辞。"
+    },
+    {
+      "id": "no_new_en",
+      "output_sha256": "48fef092ccb57810780c3fbdf1107e55eebe5f229e958c83be23533eb29c1d14",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变；术语解释另列，仍有专业措辞。"
+    },
+    {
+      "id": "limited_en",
+      "output_sha256": "7df56510b44d2c7521808ad0baf457f0789828d8c8da504571e7b15d25a304a2",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变；术语解释另列，仍有专业措辞。"
+    },
+    {
+      "id": "devices_en",
+      "output_sha256": "bb499c390493fa40332eaa81c19cdd8691ceab9cb12ce448987c9db7156ee120",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变；术语解释另列，仍有专业措辞。"
+    },
+    {
+      "id": "negation_zh",
+      "output_sha256": "9e140956aa084f5095f06e0c8d7673ae53f0e199e7f7041a98a0535ba7bc21b7",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变；术语解释另列，仍有专业措辞。"
+    },
+    {
+      "id": "uncertainty_zh",
+      "output_sha256": "0812901f2c8b28eef27cb39b73f1cec3814690dca544f33a6a6b1d523a19be49",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变；术语解释另列，仍有专业措辞。"
+    },
+    {
+      "id": "laterality_zh",
+      "output_sha256": "75cb2700c97d6bade9f445aa45209e3474275f4fbf67156c64f87e49e16bd1aa",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明显事实改变；术语解释另列，仍有专业措辞。"
+    },
+    {
+      "id": "comparison_zh",
+      "output_sha256": "dbaf82fbce747460977afd051ea7621b6bcd0b140c37f766432d8da692d7c268",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变；术语解释另列，仍有专业措辞。"
+    },
+    {
+      "id": "certainty_zh",
+      "output_sha256": "6d8559bbc7650411fd1047affb80b352d078a4a0099ae5d0e5a3163358a36a46",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变；术语解释另列，仍有专业措辞。"
+    },
+    {
+      "id": "followup_zh",
+      "output_sha256": "d1a9a203779620e709b0ca962cbd73117574e6da5b1ad65235086ae8df0b78f7",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明显事实改变；术语解释另列，仍有专业措辞。"
+    },
+    {
+      "id": "multiple_en",
+      "output_sha256": "07c3b30fe16874de60a486796ab7ab6436ec0f17b6514523d4a577f31873c691",
+      "errors": [
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "遗漏心脏增大的轻度限定。"
+    },
+    {
+      "id": "stable_en",
+      "output_sha256": "5856642bebd5a6036cdf19ee30aa209d8255f9130cd356c287c598cc57e6b0c0",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变；术语解释另列，仍有专业措辞。"
+    },
+    {
+      "id": "recommendation_en",
+      "output_sha256": "bfa9151633a64d024d4afbb2afeb8baeb3f1bd6f8e0b1cc2470c5a3ed469f3e5",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变；术语解释另列，仍有专业措辞。"
+    },
+    {
+      "id": "injection_en",
+      "output_sha256": "7d767e96c5a0824978df4d97d2fba421a7dc7784421fa5bff63dff5b7a0b331d",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明显事实改变；术语解释另列，仍有专业措辞。"
+    }
+  ]
+}

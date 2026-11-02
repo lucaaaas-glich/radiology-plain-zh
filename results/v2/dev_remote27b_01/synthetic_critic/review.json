@@ -1,0 +1,168 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "scope": "Displayed Chinese only; source-only fallback is incomplete, not a correct answer.",
+  "cases": [
+    {
+      "id": "negation_en",
+      "output_sha256": "9f2211a809e5174c146b2e0bfb998d637fc31cca2b02e8d23e20acd4ad46a080",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明确事实改变；正文中的部分专业词需配合独立词典。"
+    },
+    {
+      "id": "uncertainty_en",
+      "output_sha256": "333608b3735f32f5d483d2ca832109ba8cf9ebff81d95a84b45bdbde78f5068c",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实改变；正文中的部分专业词需配合独立词典。"
+    },
+    {
+      "id": "laterality_en",
+      "output_sha256": "f36fd8c2c13f4d7d5e41bc8e33f8f788566182e27c89bfcfa16b2b13fd663b51",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明确事实改变；正文中的部分专业词需配合独立词典。"
+    },
+    {
+      "id": "change_en",
+      "output_sha256": "1b25758f1d3d008c2464f0b321d1069159d0f5fc9d7f6dc8bc39bcdf8580c2b1",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实改变；正文中的部分专业词需配合独立词典。"
+    },
+    {
+      "id": "urgent_finding_en",
+      "output_sha256": "14d13c4ea841d26d63759655a1bf1df37f17ea750a609eff030f545a358be54d",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实改变；正文中的部分专业词需配合独立词典。"
+    },
+    {
+      "id": "uncertain_cancer_en",
+      "output_sha256": "0a9442049545637e6cab9935b8c06492ee22d9bed915dab7bfa947e5a8c8764c",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实改变；正文中的部分专业词需配合独立词典。"
+    },
+    {
+      "id": "numbers_en",
+      "output_sha256": "19b5015438fbe69763f30b09b9be8e9cd415ca7a6aa726189c0ede31b3781728",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明确事实改变；正文中的部分专业词需配合独立词典。"
+    },
+    {
+      "id": "no_new_en",
+      "output_sha256": "b679f5b8c7588b5a2abbe488498da553438f37ee7eb51d4567118f3298712890",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实改变；正文中的部分专业词需配合独立词典。"
+    },
+    {
+      "id": "limited_en",
+      "output_sha256": "21f7b7889cd50f41b8bd9429786d098a764848ebeda429277b25ab25a136e9f1",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实改变；正文中的部分专业词需配合独立词典。"
+    },
+    {
+      "id": "devices_en",
+      "output_sha256": "02d9b995dfc842b069cc0f2bf4fe891b57775bbe0ea92d2745a517f120e9a590",
+      "errors": [
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "enteric tube写成肠管，容易把置入的消化道导管改为患者自身肠道；原术语对象未明确保留。"
+    },
+    {
+      "id": "negation_zh",
+      "output_sha256": "a643764bc2117d48ceca38f893579c3133b97b3cf3dc17adc2b2ab6b8e443f37",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实改变；正文中的部分专业词需配合独立词典。"
+    },
+    {
+      "id": "uncertainty_zh",
+      "output_sha256": "6741bd21eeaab87d76e1530154d3d295c6c75e3da499c3626ca678efb4521b50",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实改变；正文中的部分专业词需配合独立词典。"
+    },
+    {
+      "id": "laterality_zh",
+      "output_sha256": "3b25469497447315c999ca49e635705fb4a4532748f65f2a89bf151dcdf5fa30",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明确事实改变；正文中的部分专业词需配合独立词典。"
+    },
+    {
+      "id": "comparison_zh",
+      "output_sha256": "4aa774d79a17d52fa78330ed3ffdab6336eade9149fcc520f8ef72888a263647",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实改变；正文中的部分专业词需配合独立词典。"
+    },
+    {
+      "id": "certainty_zh",
+      "output_sha256": "6c322bb72bb7ffabb64551d7131852560e000e92e1f8c9c23b01d4f9b74f3d9a",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实改变；正文中的部分专业词需配合独立词典。"
+    },
+    {
+      "id": "followup_zh",
+      "output_sha256": "474e34957c55c31d9d40389e6131f43fcba7be717611334538bc9dce81a7e518",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实改变；正文中的部分专业词需配合独立词典。"
+    },
+    {
+      "id": "multiple_en",
+      "output_sha256": "4c37e441a04f21d71f3600d2f5c63aa31d7e4984dc687fdb555dd2952fdf4ffc",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明确事实改变；正文中的部分专业词需配合独立词典。"
+    },
+    {
+      "id": "stable_en",
+      "output_sha256": "f238f80f3bca821782ae0f6b018eca86a5d1177fac3dd251f2fd032c58781baf",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实改变；正文中的部分专业词需配合独立词典。"
+    },
+    {
+      "id": "recommendation_en",
+      "output_sha256": "6804d66d892e1e13e51abf86e9a55e26610a5fc3a3b4a74cc1c5bd4c047b124b",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实改变；正文中的部分专业词需配合独立词典。"
+    },
+    {
+      "id": "injection_en",
+      "output_sha256": "8d7e49fc2eb2287fb9ae0470fbca807a9aeb7768b0bfa36d458318dcb89186c4",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明确事实改变；正文中的部分专业词需配合独立词典。"
+    }
+  ]
+}

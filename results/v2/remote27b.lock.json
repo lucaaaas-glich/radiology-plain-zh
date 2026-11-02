@@ -1,0 +1,10 @@
+{
+  "repo": "Qwen/Qwen3.5-27B",
+  "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+  "license": "Apache-2.0",
+  "download_dtype": "bfloat16",
+  "inference_quantization": "bitsandbytes NF4 with double quantization, BF16 compute",
+  "parameters": 27781427952,
+  "stage": "development only; no final outputs seen",
+  "retrieved_utc": "2026-10-15T21:18:02.067378+00:00"
+}

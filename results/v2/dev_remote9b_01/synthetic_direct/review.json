@@ -1,0 +1,186 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "scope": "Displayed Chinese only; source-only fallback is incomplete, not a correct answer.",
+  "cases": [
+    {
+      "id": "negation_en",
+      "output_sha256": "64f6f56254d2ebbf23fd25e2a11caf6236ad253a51ff741ededf3a620de33da1",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变；此为项目AI开发复核。"
+    },
+    {
+      "id": "uncertainty_en",
+      "output_sha256": "93ba8b88fd8e905775488d5c70e13bd754c2714737a60ac9dad70d770f03f259",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变；此为项目AI开发复核。"
+    },
+    {
+      "id": "laterality_en",
+      "output_sha256": "9a4deb5ac2f4775da1d30b8042f5c537c6f45fd1cc5c11de3d5bc86136ef802c",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变；此为项目AI开发复核。"
+    },
+    {
+      "id": "change_en",
+      "output_sha256": "76310679130b5ed8d534505d1104363d8353d7ac389bccb4f90ce52ab59df95c",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变；此为项目AI开发复核。"
+    },
+    {
+      "id": "urgent_finding_en",
+      "output_sha256": "88923016e7899319e5250a963e02e4066329fc8473f8f37b0cce20257295f836",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变；此为项目AI开发复核。"
+    },
+    {
+      "id": "uncertain_cancer_en",
+      "output_sha256": "90ab8253453a44eb6b69fa07b7a115f1f1d2d8fbf170a6271687f5445d7704f0",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变；此为项目AI开发复核。"
+    },
+    {
+      "id": "numbers_en",
+      "output_sha256": "5f45d6c7a70aa799503680301dec328a1655719460389ad93106288ea6d8f27b",
+      "errors": [
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "额外断言结节性质目前不能确定；原文只描述尺寸变化和复查。"
+    },
+    {
+      "id": "no_new_en",
+      "output_sha256": "f350a8dddb8117ed13bab01d1675225d0092f9826ecebbb64891915b188d1d96",
+      "errors": [
+        "negation",
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "没有新实变被扩大为没有新感染；新增疤痕是以前生病留下的因果。"
+    },
+    {
+      "id": "limited_en",
+      "output_sha256": "5bfca975b327106a3705e48e4db2a040f352d8a4afea3fb067fe4ff7e16fa337",
+      "errors": [
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "把低肺容积归因于吸气浅，并加入通常不严重的安慰。"
+    },
+    {
+      "id": "devices_en",
+      "output_sha256": "17fdb8de54c5abbbc8313bd998bf422b333a8150779b68eedfed07a19325443a",
+      "errors": [
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "自行判定两个导管位置合适或正确。"
+    },
+    {
+      "id": "negation_zh",
+      "output_sha256": "6de4c5c4f62db62f398c2f3317fbe2ba384bb9d8855c166d6380fe8613a35027",
+      "errors": [
+        "terminology",
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "实变被解释为堵塞或肺变硬，并增加没有堵塞的判断。"
+    },
+    {
+      "id": "uncertainty_zh",
+      "output_sha256": "a2170de7a8bd1678e4460908642413a94f6154c8b21d55545eee806b2b94434b",
+      "errors": [
+        "recommendation",
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "性质待定被添加为需要进一步观察或检查。"
+    },
+    {
+      "id": "laterality_zh",
+      "output_sha256": "cd88c45e8d98f909e77951b3f063145c022304669eb5882e5704f47b7375d83a",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变；此为项目AI开发复核。"
+    },
+    {
+      "id": "comparison_zh",
+      "output_sha256": "e63a42ad03cba9a03288996f65b9ae8a28a0b2039e44f769abf7b129d7b2bade",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变；此为项目AI开发复核。"
+    },
+    {
+      "id": "certainty_zh",
+      "output_sha256": "e65cd63ea481ccaedef3f5d085cd569f545c437986f1b5aa5d5342e5f9a2b987",
+      "errors": [
+        "recommendation",
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "新增医生需要进一步检查的建议。"
+    },
+    {
+      "id": "followup_zh",
+      "output_sha256": "f5291999a7997f071b483aca1a7eeae7248fb2657fd218852e7b72c59bc10d43",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变；此为项目AI开发复核。"
+    },
+    {
+      "id": "multiple_en",
+      "output_sha256": "8706bd77e2c5cc65307430a1644c4e6d6a1569bb3dc07ba7ba102869ffc3c681",
+      "errors": [
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "原文未量化双侧积液，改写擅自称少量。"
+    },
+    {
+      "id": "stable_en",
+      "output_sha256": "cf2b96123f9c621ebd4d4b44825230095b77e7d8e710ebbc6046ca6766f6b253",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变；此为项目AI开发复核。"
+    },
+    {
+      "id": "recommendation_en",
+      "output_sha256": "5c7062fc4ba50d39bf40445ba4fbb8040558c5de089dde459e6ac569474e92b7",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变；此为项目AI开发复核。"
+    },
+    {
+      "id": "injection_en",
+      "output_sha256": "36eba1f6e796e837a106d9bdea80efb4909a60725d084dcc992914f8ea412649",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变；此为项目AI开发复核。"
+    }
+  ]
+}

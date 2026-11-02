@@ -1,0 +1,86 @@
+{
+  "frozen_at_utc": "2026-10-15T22:15:06.857626+00:00",
+  "stage": "GPU candidate chosen using completed development only; no final predictions inspected",
+  "arms": {
+    "gpu27b_evidence": {
+      "backend": "cuda-nf4",
+      "mode": "evidence-critic",
+      "model_repo": "Qwen/Qwen3.5-27B",
+      "model_revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+      "max_tokens": 384,
+      "critic_max_tokens": 512,
+      "temperature": 0,
+      "thinking": false,
+      "weight_quantization": "NF4 double quantization; BF16 compute",
+      "context_policy": "all_previous_source_sentences",
+      "guard_version": "dev6",
+      "glossary_entries": 22
+    }
+  },
+  "selection_reason_zh": "开发短20例1条明确错误、19条完整忠实；真实16例1条明确遗漏、7条完整忠实、8条完整生成、134/143片段。相较9B的6条错误/4条完整忠实，完整生成报告数相同（8），故纳入GPU较强参考。仍有9片段回退、技术术语和导管误译，不称临床可靠。Mac候选尚未冻结，依执行流程补充禁止查看任何最终预测。",
+  "code_sha256": {
+    "radplain/__init__.py": "b0bd0be201a9be1a0f029b5cc676818aa15231097205d7af3e420a8903e00348",
+    "radplain/common.py": "3698bb29475ceb06fd4630cca14023c465f2e8e3a1a149fc890e7e56323927bd",
+    "radplain/data.py": "e570471d3afdc4f2efebd4cbdbdad52ece8fa02e9b69e9ebf7065fad1d31a450",
+    "radplain/evaluate.py": "8ec50abeaa7d512ffe109d56bf458fc859038cd1a7c2deabc887100e76551b1b",
+    "radplain/explain_v2.py": "322fc5324624e6a5b62ee4ccb7f1a7f55de16d88c2d09d443dfb661089df8446",
+    "radplain/fidelity.py": "d92179b82a40fdebe6a0881156d988cdfcc113e404074c9a7039a4f7e981dec0",
+    "radplain/glossary_v2.py": "ee2749960f483609918f82ce385857deba97430efd9b13a7aca4113bf5f4b84c",
+    "radplain/guard_v2.py": "0db0a81fefbdd08937803461485a27e7acbd8d5837e181af3335d6f3bdb7f01f",
+    "radplain/hf_backend_v2.py": "9dcba7849d49b13c23e04ef80c3e45553e08ece98a83c5ebc854e5f8b4679c18",
+    "radplain/mlx_backend.py": "6e0d8c5e24d6847ae0bcfda2f72965574cd656cf848c2120099825d789a3db9d",
+    "radplain/model.py": "511de7b3c95fedb156a7c29fd56def17c0ed3db9e315f87edacb59035b9deb23",
+    "radplain/predict.py": "eab4c4699ccee5e98b48b707e6262075e004bbe1ac58f40becb803b043f37e7b",
+    "radplain/predict_mlx.py": "5899d658628156a8284046d14a2e5ed14de631a5e5b17c86151481cfcab455e0",
+    "radplain/predict_v2.py": "118f493f1fe7a397fe9c38f0ecc9b42862cbfe370e6e3eaf334e4a6e8ee51f42",
+    "radplain/prompts.py": "ed812040abd7bea1235f3adac3c6d2512c6f1e1958ca86e166e1562a02154cb8",
+    "radplain/quantity_v2.py": "214c38a285d1ae21fa6f1e1eb477dc8efa202a3b294eed7d93ee8c08b32e7e72",
+    "radplain/render_v2.py": "8f8d9db8b22d95d26ee5ee81897987620f15df5a3138a2b6165a87cf25f28cd1",
+    "radplain/semantic_v2.py": "5838a85078c08cc97ded897a221ee19aad101e3b8d48f1b1f08941c3291a057c",
+    "radplain/teacher.py": "aa4f31e7e3d8cfa9478e21b5c269a55c3bd2237351d308d44878c10604288e83",
+    "radplain/train.py": "0b666450806aedfeb3e95ba6164fb170dee5a46f151646efa221af7250fc2c1a",
+    "scripts/run_v2_remote_holdout.py": "19749275ac55e4a368c7f8dfdbf08141869b76ec575351cf73fa09d17caffe7a"
+  },
+  "reconstruction": {
+    "base_commit": "eebbd59b0100965317aae6f4de3603ecf0188832",
+    "patch": "examples/v2/gpu27b_dev6.patch",
+    "patch_sha256": "917ce577618d6986765d00856188408bb026f7e5ac9dee423e5a8f6d32504d55"
+  },
+  "model_files_sha256": {
+    "Qwen/Qwen3.5-27B": {
+      "config.json": "f8d190c5b89c1521220f935d2567a587d6e291ed69066a45a106560b05a2174c",
+      "chat_template.jinja": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+      "README.md": "8c6303cd5e89dc378d11fb4b70a0ff9c3cccb55a031133c69d9cbde9481f1a8c",
+      "generation_config.json": "303aba891d66ab63908a7b3cc9163bcb835fdf8b9f6301c73216f3f1eb3992dd",
+      "merges.txt": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d",
+      "LICENSE": "50cbab8a892c5f2993b8c7351a99182507472def3b1374558308605d99b86b32",
+      "model.safetensors-00001-of-00011.safetensors": "9019228d172c87d5603266c2d56672d119e838facffa164de803a1ebf0d716d2",
+      "model.safetensors-00003-of-00011.safetensors": "8aca03689ad0717fb91455809a6670eecca818bea8c0b6bd3a591a8807cc3223",
+      "model.safetensors-00004-of-00011.safetensors": "20f539430c60fa611b3522b8408749a080b63f1fe034e551a6539ef864ca079a",
+      "model.safetensors-00002-of-00011.safetensors": "890ef00c920b01c1c02755088c8d8ca5cdd6a1faa2a9a729eecd00857648b411",
+      "model.safetensors-00006-of-00011.safetensors": "cfa4e6fbfc600854ef6c8e5465d0a1e43832a64b5e539f1e880333e3b1086703",
+      "model.safetensors-00005-of-00011.safetensors": "57a0c074c654f05fc2d6b5112eeec387ac04986e928e42f502993e69aa03a49d",
+      "model.safetensors-00007-of-00011.safetensors": "d426963325b2319cb9e1442bc8b89b9a7748a8f7a907aa4041c11531cda6b014",
+      "model.safetensors-00008-of-00011.safetensors": "fe60dbb9d25354c4eb2a9a59d9b1afd07741c8bebab5870f5eea6eadb4cf9a06",
+      "model.safetensors.index.json": "b3737e9d00bda0e37f0b873629d98bf9b407bef35735b9193c23d9844bcc96a6",
+      "preprocessor_config.json": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+      "tokenizer.json": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+      "tokenizer_config.json": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8",
+      "video_preprocessor_config.json": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+      "vocab.json": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003",
+      "model.safetensors-00011-of-00011.safetensors": "d947ce7483c4109b55039f1359f4494d22390cf123568100abd89816802f097d",
+      "model.safetensors-00009-of-00011.safetensors": "71a153d882242734a1fc7e000734727f00f6ec8ca70b044f5e44fcf97736ef8f",
+      "model.safetensors-00010-of-00011.safetensors": "146745698b9f21940e2982beb1816a0eef3b80d77ab9cd884695b9a08c2697eb"
+    }
+  },
+  "holdout_sha256": {
+    "synthetic": "a528158b924dbd7ff6da9c675e5bd8d8df756a1dc801600ef3cb4ef6f3aafdf7",
+    "real": "5b5754822d85947f9581bffcbc8444fb5bffbacd7e16275b5a220b6ca75b4768"
+  },
+  "development_evidence": {
+    "results/v2/dev_real_reviews/remote27b_01_review.json": "60d62182be37903d1b1a6d26f8a6c363ee911da388299011f0bf5fecf03e4aa6",
+    "results/v2/dev_real_reviews/remote27b_01_summary.json": "fdf62292240ef62513100e8cb1c4972529234cb8ba8703d09d6247f836ba2679",
+    "results/v2/dev_remote27b_01/synthetic_critic/summary.json": "5354ada68f32ef58a3e6571b56dc960edcde9e6844fe21de98537228bb96235a"
+  },
+  "interpretation": "Project AI review, not independent or clinical validation; compare entire systems because local and GPU pipelines differ."
+}

@@ -1,0 +1,32 @@
+{
+  "stage": "final",
+  "title": "预留合成短报告：五种方案",
+  "subtitle": "每种方案使用相同48份输入；错误、回退与精度顾虑分别计数。",
+  "arms": [
+    {
+      "label": "V1 微调1.5B直接改写",
+      "outputs": "results/v2/final_v1_direct/outputs.jsonl",
+      "review": "results/v2/final_v1_direct/review.json"
+    },
+    {
+      "label": "4B直接改写",
+      "outputs": "results/v2/final_local_direct/outputs.jsonl",
+      "review": "results/v2/final_local_direct/review.json"
+    },
+    {
+      "label": "本机4B逐句核对",
+      "outputs": "results/v2/final_local_evidence/outputs.jsonl",
+      "review": "results/v2/final_local_evidence/review.json"
+    },
+    {
+      "label": "学校27B逐句核对",
+      "outputs": "results/v2/final_gpu_evidence/outputs.jsonl",
+      "review": "results/v2/final_gpu_evidence/review.json"
+    },
+    {
+      "label": "27B已有候选重检",
+      "outputs": "results/v2/final_gpu_recheck/outputs.jsonl",
+      "review": "results/v2/final_gpu_recheck/review.json"
+    }
+  ]
+}

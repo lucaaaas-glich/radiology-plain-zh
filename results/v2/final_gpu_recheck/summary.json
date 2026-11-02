@@ -1,0 +1,43 @@
+{
+  "review_scope": "project AI; not independent, blinded, or clinician review",
+  "not_clinical_accuracy": true,
+  "reports": 48,
+  "reports_with_observed_factual_errors": 2,
+  "reports_complete_faithful_chinese": 45,
+  "reports_fully_generated": 47,
+  "reports_no_observed_error_but_incomplete": 1,
+  "error_category_report_counts": {
+    "anatomy_side": 2,
+    "unsupported_addition": 2
+  },
+  "readability_ai_judgments": {
+    "mixed": 32,
+    "plain": 13,
+    "technical": 3
+  },
+  "latency_seconds": {
+    "total": 451.8654798336793,
+    "median": 8.072856243234128,
+    "minimum": 3.245800879201852,
+    "maximum": 18.36268766631838
+  },
+  "generation_completeness_note": "Generation completion is mechanical, not a factual or clinical score.",
+  "evidence_segments": {
+    "eligible": 69,
+    "generated": 68,
+    "source_only": 1,
+    "coverage": 0.9855072463768116,
+    "excluded_instruction": 2,
+    "original_trace_multiple_attempts": 5,
+    "rechecked_generated_with_multiple_original_attempts": 4
+  },
+  "postprocessing": {
+    "restored_source_only_segments": 0,
+    "revoked_generated_segments": 0,
+    "new_model_calls": 0,
+    "seconds": 0.02345983381383121,
+    "note": "Original generation cost and attempts retained; no new repair or semantic verdict inferred."
+  },
+  "outputs_file_sha256": "a259b18a753ef4b739065ccb639d0174422022d11c4c05f5ccdd1de42653b84a",
+  "review_file_sha256": "d307b4fe6e21b5038b395e15ee62e23cba817ee683797996c989daa8450353be"
+}

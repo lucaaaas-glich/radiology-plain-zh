@@ -1,0 +1,152 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "scope": "Displayed Chinese only; source-only fallback is incomplete, not a correct answer.",
+  "cases": [
+    {
+      "id": "real_0e9c60d4ad638a81",
+      "output_sha256": "538ecf565b05ad019bf3c6291da260b694686b426ee114f811a3fa30c1bb2ff9",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "未发现明显的临床内容改变。 部分句子只保留原文，未完成中文解释。"
+    },
+    {
+      "id": "real_53499b1249f0e7a6",
+      "output_sha256": "1f1aab53bdef38073ff070be4214379f24fac6d31b60e3c737fd32abc35266a7",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "未发现明显的临床内容改变。 部分句子只保留原文，未完成中文解释。"
+    },
+    {
+      "id": "real_4187fbf7eadcb951",
+      "output_sha256": "ae7ca9e6bb49dae71cd7f3683cd3a0134f57807dade32a9f604efe03e5f9b75b",
+      "errors": [
+        "anatomy_side",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "复杂气道分布的长句把右上叶后段改成尖段，并重组了部位与程度的对应；胸椎仍为不够准确的背侧脊柱。"
+    },
+    {
+      "id": "real_6e2b1d9d0d10b307",
+      "output_sha256": "7912fd53b099c1c483ebbed4f82b5c472e96896cddf6d90ff66276f28e969b54",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "未发现明显的临床内容改变。 部分句子只保留原文，未完成中文解释。"
+    },
+    {
+      "id": "real_4889613d7b935c76",
+      "output_sha256": "5a6206b33aaec42e6ff624c6e3c7b837b7c2d3517c8cb87ef1b20306a6ebfb56",
+      "errors": [
+        "anatomy_side",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "胸壁病变与背阔肌的下方关系改成区域描述，定位信息丢失。 部分句子只保留原文，未完成中文解释。"
+    },
+    {
+      "id": "real_99884d41e32a39f8",
+      "output_sha256": "a66d722e14a0cabdf0d9b1c3d04782a609c639aa1eb784ee62ee03ba5547424d",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显的临床内容改变。"
+    },
+    {
+      "id": "real_c6927c378a6e2c87",
+      "output_sha256": "4fc5eb4391233d00cf12cc615b3a636422fab05650fa8a48f7dfc41ae14ba4f6",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "未发现明显的临床内容改变。 部分句子只保留原文，未完成中文解释。"
+    },
+    {
+      "id": "real_788c7076b21bef32",
+      "output_sha256": "05256268f83e9f9b1438479394adaf99018d9c99c035279614fd0d2f1666c917",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "未发现明显的临床内容改变。 结肠和乙状结肠范围的译法仍需复核，未计入明确错误。"
+    },
+    {
+      "id": "real_8e3f069b88d7550c",
+      "output_sha256": "3ac61a7607a09bb14d0c44b7cb24c3e27b9efb828e400450ea0cb18bab860b7f",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明显的临床内容改变。"
+    },
+    {
+      "id": "real_20d69a9e8c41860d",
+      "output_sha256": "de338c625d0df0fbb28869dc442d5d0a003d338108bdc899f1ae5c75c4795bad",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显的临床内容改变。 去标识元数据有合并省略；关键医学信息保留。覆盖率包括这些非临床片段，不能当作临床事实数量。"
+    },
+    {
+      "id": "real_2f86141ba8fa19ea",
+      "output_sha256": "400067c70b2bef9ab1df5bd65fbe3342af8ad2300727142ed518074e60780129",
+      "errors": [
+        "omission",
+        "terminology",
+        "anatomy_side"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "遗漏明显程度和慢性支气管炎原因；肉芽肿改为一般结节；支气管周围增厚附加了仅对应后面另一发现的部位。"
+    },
+    {
+      "id": "real_4d02bd9100fee8f7",
+      "output_sha256": "5fab51aa05dcc769ebed136667c8f1af6f4129837f4db545c4157b3c37e7e0e7",
+      "errors": [
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "结论遗漏磨玻璃影轻微的限定，另有片段回退。 部分句子只保留原文，未完成中文解释。"
+    },
+    {
+      "id": "real_de592071091f2d97",
+      "output_sha256": "0b871732b953b38b7e69c6e2ac588b7a04e8bd04f6699bcd4db94074dd8e5119",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "未发现明显的临床内容改变。 部分句子只保留原文，未完成中文解释。"
+    },
+    {
+      "id": "real_abd463216fac09a8",
+      "output_sha256": "636e26344be483329028f99a3178491f9bfb20ab1017467b225dd4229d663e4a",
+      "errors": [
+        "anatomy_side",
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "距骨性标志一定距离被具体化为其正上方的距离，原文未给出该方向。 部分句子只保留原文，未完成中文解释。"
+    },
+    {
+      "id": "real_b27e89e8eb71724d",
+      "output_sha256": "0bc11634191d769ff1fe942016d685f85df5171d2cc82f058cdc56112ce273fe",
+      "errors": [
+        "terminology",
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "乳房成形术被具体化为假体植入；原文没有提供手术类型。"
+    },
+    {
+      "id": "real_4b40d531f81fd555",
+      "output_sha256": "27b0b46fa42118a1a6d255a2a5c1b0f80e5a8d0aa484636424943f30c4e5363a",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显的临床内容改变。"
+    }
+  ]
+}

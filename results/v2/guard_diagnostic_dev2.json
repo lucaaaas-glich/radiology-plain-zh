@@ -1,0 +1,371 @@
+{
+  "version": "lexical-guard-v2-dev2",
+  "note": "AI-authored development diagnostic; not a random sample or clinical validation; valid order changes/conversions are deliberately conservative flags.",
+  "summary": {
+    "problem_pairs": 20,
+    "problem_pairs_flagged": 16,
+    "valid_pairs": 10,
+    "valid_pairs_flagged": 3
+  },
+  "pairs": [
+    {
+      "id": "past_value_swapped",
+      "expected_problem": true,
+      "source": "4 mm, previously 2 mm.",
+      "prediction": "以前4毫米，现在2毫米。",
+      "flagged": true,
+      "issues": [
+        {
+          "code": "prior_measurement",
+          "detail": "以前的测量值未按原文对应：['2']；请明确“以前为…”"
+        }
+      ]
+    },
+    {
+      "id": "wrong_unit",
+      "expected_problem": true,
+      "source": "Follow-up in 8 months.",
+      "prediction": "8周后复查。",
+      "flagged": true,
+      "issues": [
+        {
+          "code": "quantity",
+          "detail": "输出出现原文未直接列出的数值：8周；原文数值未在输出中匹配到：8 months"
+        }
+      ]
+    },
+    {
+      "id": "lost_range",
+      "expected_problem": true,
+      "source": "Follow-up in 5–8 weeks.",
+      "prediction": "8周后复查。",
+      "flagged": true,
+      "issues": [
+        {
+          "code": "numeric_sequence",
+          "detail": "数值数量或顺序不一致：原文['5', '8']，改写['8']；请保留原文数值顺序，不做计算"
+        }
+      ]
+    },
+    {
+      "id": "lost_value",
+      "expected_problem": true,
+      "source": "Nodule 4 mm, previously 2 mm.",
+      "prediction": "结节4毫米。",
+      "flagged": true,
+      "issues": [
+        {
+          "code": "numeric_sequence",
+          "detail": "数值数量或顺序不一致：原文['4', '2']，改写['4']；请保留原文数值顺序，不做计算"
+        },
+        {
+          "code": "quantity",
+          "detail": "原文数值未在输出中匹配到：2 mm"
+        },
+        {
+          "code": "prior_measurement",
+          "detail": "以前的测量值未按原文对应：['2']；请明确“以前为…”"
+        },
+        {
+          "code": "prior_comparison",
+          "detail": "请保留原文的prior_comparison信息"
+        }
+      ]
+    },
+    {
+      "id": "invented_difference",
+      "expected_problem": true,
+      "source": "4 mm, previously 2 mm.",
+      "prediction": "现在4毫米，以前2毫米，增长3毫米。",
+      "flagged": true,
+      "issues": [
+        {
+          "code": "numeric_sequence",
+          "detail": "数值数量或顺序不一致：原文['4', '2']，改写['4', '2', '3']；请保留原文数值顺序，不做计算"
+        },
+        {
+          "code": "quantity",
+          "detail": "输出出现原文未直接列出的数值：3毫米"
+        }
+      ]
+    },
+    {
+      "id": "certainty_removed",
+      "expected_problem": true,
+      "source": "Indeterminate nodule.",
+      "prediction": "是良性结节。",
+      "flagged": true,
+      "issues": [
+        {
+          "code": "indeterminate",
+          "detail": "请保留原文的indeterminate信息"
+        }
+      ]
+    },
+    {
+      "id": "possible_to_definite",
+      "expected_problem": true,
+      "source": "Opacity may represent infection.",
+      "prediction": "阴影就是感染。",
+      "flagged": true,
+      "issues": [
+        {
+          "code": "possible",
+          "detail": "请保留原文的possible信息"
+        }
+      ]
+    },
+    {
+      "id": "negation_removed",
+      "expected_problem": true,
+      "source": "No pneumothorax.",
+      "prediction": "存在气胸。",
+      "flagged": true,
+      "issues": [
+        {
+          "code": "negation_presence",
+          "detail": "否定表达可能丢失或新增；请逐个核对被否定的发现"
+        },
+        {
+          "code": "negation_pneumothorax",
+          "detail": "pneumothorax的否定关系可能改变"
+        }
+      ]
+    },
+    {
+      "id": "negation_association",
+      "expected_problem": true,
+      "source": "No pleural effusion or pneumothorax.",
+      "prediction": "存在胸腔积液，但没有气胸。",
+      "flagged": true,
+      "issues": [
+        {
+          "code": "negation_pleural_effusion",
+          "detail": "pleural_effusion的否定关系可能改变"
+        }
+      ]
+    },
+    {
+      "id": "added_advice",
+      "expected_problem": true,
+      "source": "A right lung nodule.",
+      "prediction": "右肺结节，建议进行CT检查。",
+      "flagged": true,
+      "issues": [
+        {
+          "code": "added_advice",
+          "detail": "出现原句没有的建议"
+        }
+      ]
+    },
+    {
+      "id": "side_flip",
+      "expected_problem": true,
+      "source": "Left pleural effusion.",
+      "prediction": "右侧胸腔积液。",
+      "flagged": true,
+      "issues": [
+        {
+          "code": "left",
+          "detail": "请保留原文的left信息"
+        },
+        {
+          "code": "added_right",
+          "detail": "出现原句没有的左右侧描述"
+        }
+      ]
+    },
+    {
+      "id": "above_below",
+      "expected_problem": true,
+      "source": "Tip 2 cm above carina.",
+      "prediction": "尖端位于气管分叉下方2厘米。",
+      "flagged": true,
+      "issues": [
+        {
+          "code": "above",
+          "detail": "请保留原文的above信息"
+        }
+      ]
+    },
+    {
+      "id": "wrong_carina",
+      "expected_problem": true,
+      "source": "Tip 2 cm above carina.",
+      "prediction": "尖端在气管环上方2厘米。",
+      "flagged": true,
+      "issues": [
+        {
+          "code": "carina",
+          "detail": "请保留原文的carina信息"
+        }
+      ]
+    },
+    {
+      "id": "base_omitted",
+      "expected_problem": true,
+      "source": "Mild bibasal atelectasis.",
+      "prediction": "双肺轻度肺不张。",
+      "flagged": true,
+      "issues": [
+        {
+          "code": "lung_base",
+          "detail": "请保留原文的lung_base信息"
+        }
+      ]
+    },
+    {
+      "id": "direction_reversed",
+      "expected_problem": true,
+      "source": "Left opacity decreased.",
+      "prediction": "左侧阴影增多。",
+      "flagged": true,
+      "issues": [
+        {
+          "code": "improved",
+          "detail": "请保留原文的improved信息"
+        }
+      ]
+    },
+    {
+      "id": "bilateral_directions_swapped",
+      "expected_problem": true,
+      "source": "Right effusion increased, left effusion decreased.",
+      "prediction": "右侧积液减少，左侧积液增多。",
+      "flagged": false,
+      "issues": []
+    },
+    {
+      "id": "sizes_assigned_wrong_organs",
+      "expected_problem": true,
+      "source": "Liver lesion 4 mm; renal lesion 2 mm.",
+      "prediction": "肾脏病灶4毫米；肝脏病灶2毫米。",
+      "flagged": false,
+      "issues": []
+    },
+    {
+      "id": "newness_lost",
+      "expected_problem": true,
+      "source": "No new consolidation.",
+      "prediction": "没有肺实变。",
+      "flagged": true,
+      "issues": [
+        {
+          "code": "newness",
+          "detail": "请保留原文的newness信息"
+        }
+      ]
+    },
+    {
+      "id": "invented_cause",
+      "expected_problem": true,
+      "source": "A calcified left lung nodule.",
+      "prediction": "左肺钙化结节，是以前感染造成的。",
+      "flagged": false,
+      "issues": []
+    },
+    {
+      "id": "acute_scope_lost",
+      "expected_problem": true,
+      "source": "No acute abnormality.",
+      "prediction": "没有任何异常。",
+      "flagged": false,
+      "issues": []
+    },
+    {
+      "id": "straight_numbers",
+      "expected_problem": false,
+      "source": "4 mm, previously 2 mm.",
+      "prediction": "现在4毫米，以前2毫米。",
+      "flagged": false,
+      "issues": []
+    },
+    {
+      "id": "proper_uncertainty",
+      "expected_problem": false,
+      "source": "性质待定的右肺结节。",
+      "prediction": "右肺结节性质尚未确定。",
+      "flagged": false,
+      "issues": []
+    },
+    {
+      "id": "unit_translation",
+      "expected_problem": false,
+      "source": "A 4 mm left lung nodule.",
+      "prediction": "左肺有4毫米的结节。",
+      "flagged": false,
+      "issues": []
+    },
+    {
+      "id": "valid_unit_conversion",
+      "expected_problem": false,
+      "source": "A 2 cm nodule.",
+      "prediction": "有20毫米的结节。",
+      "flagged": true,
+      "issues": [
+        {
+          "code": "numeric_sequence",
+          "detail": "数值数量或顺序不一致：原文['2']，改写['2E+1']；请保留原文数值顺序，不做计算"
+        }
+      ]
+    },
+    {
+      "id": "valid_numeric_reorder",
+      "expected_problem": false,
+      "source": "4 mm, previously 2 mm.",
+      "prediction": "从以前的2毫米变为4毫米。",
+      "flagged": true,
+      "issues": [
+        {
+          "code": "numeric_sequence",
+          "detail": "数值数量或顺序不一致：原文['4', '2']，改写['2', '4']；请保留原文数值顺序，不做计算"
+        }
+      ]
+    },
+    {
+      "id": "plain_atelectasis",
+      "expected_problem": false,
+      "source": "Mild bibasal atelectasis.",
+      "prediction": "双肺底部有少量肺组织没有充分展开。",
+      "flagged": true,
+      "issues": [
+        {
+          "code": "negation_presence",
+          "detail": "否定表达可能丢失或新增；请逐个核对被否定的发现"
+        }
+      ]
+    },
+    {
+      "id": "negative_pair",
+      "expected_problem": false,
+      "source": "No pleural effusion or pneumothorax.",
+      "prediction": "没有胸腔积液，也没有气胸。",
+      "flagged": false,
+      "issues": []
+    },
+    {
+      "id": "correct_sides",
+      "expected_problem": false,
+      "source": "Left pleural effusion. No right pleural effusion.",
+      "prediction": "左侧有胸腔积液，右侧没有胸腔积液。",
+      "flagged": false,
+      "issues": []
+    },
+    {
+      "id": "below_synonym",
+      "expected_problem": false,
+      "source": "Tube tip below diaphragm.",
+      "prediction": "管子尖端位于膈肌之下。",
+      "flagged": false,
+      "issues": []
+    },
+    {
+      "id": "proper_cannot_exclude",
+      "expected_problem": false,
+      "source": "Malignancy cannot be excluded.",
+      "prediction": "目前不能排除恶性病变。",
+      "flagged": false,
+      "issues": []
+    }
+  ]
+}

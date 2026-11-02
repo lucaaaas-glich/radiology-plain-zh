@@ -1,0 +1,12 @@
+{
+  "job_id": "664778",
+  "stage": "development_only",
+  "status": "cancelled_by_project_for_invalid_critic_format",
+  "utc": "2026-10-15T21:00:11.027428+00:00",
+  "completed_direct_reports": 20,
+  "completed_critic_reports_before_cancel": 18,
+  "critic_verdicts": 50,
+  "invalid_verdicts": 37,
+  "cause": "9B emitted unescaped ASCII quotes inside JSON reason strings. Strict parser correctly rejected malformed JSON. Not evidence of incorrect translation or GPU failure.",
+  "next_action": "Test a less fragile strict two-line verdict protocol; preserve all original outputs; holdouts remain unrun."
+}

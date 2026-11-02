@@ -1,0 +1,168 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "scope": "Displayed Chinese only; source-only fallback is incomplete, not a correct answer.",
+  "cases": [
+    {
+      "id": "negation_en",
+      "output_sha256": "d74f366b35b76b8d718fc24104b60a120605d225223e4129977428eedd551a1d",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "逐句核对后未发现明确事实差异；专业词需结合独立词义说明阅读。"
+    },
+    {
+      "id": "uncertainty_en",
+      "output_sha256": "9df01e0735dbdbb71627e36b4692a8a15ceedd20fd44a85490573a04da887187",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对后未发现明确事实差异；专业词需结合独立词义说明阅读。"
+    },
+    {
+      "id": "laterality_en",
+      "output_sha256": "5ca731503a6f12134d341eed43b15ec0194e2e9a9ba55fa3ca85f11e4a37f7bd",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "逐句核对后未发现明确事实差异；专业词需结合独立词义说明阅读。"
+    },
+    {
+      "id": "change_en",
+      "output_sha256": "13a312993dffea1c5f74d9379fcd35ecf63df6daaea35a88e06ec97538025347",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对后未发现明确事实差异；专业词需结合独立词义说明阅读。"
+    },
+    {
+      "id": "urgent_finding_en",
+      "output_sha256": "5e0ad6d8c771ea23751dd7b750e079e4a9710f454b4d3ae53aece192867c7fb2",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对后未发现明确事实差异；专业词需结合独立词义说明阅读。"
+    },
+    {
+      "id": "uncertain_cancer_en",
+      "output_sha256": "10b2fe7c6843df12ff7c758ae99ccddc46e130673cf02334dcf6a42e8f6ebf38",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "可能感染句回退保留英文，仅生成不能排除恶性肿瘤；没有观察到生成错误，但信息不完整。"
+    },
+    {
+      "id": "numbers_en",
+      "output_sha256": "74776302aa8fb6f27137e2a1c23d8cd43b38c491214ce275cae313f1698a85db",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对后未发现明确事实差异；专业词需结合独立词义说明阅读。"
+    },
+    {
+      "id": "no_new_en",
+      "output_sha256": "77a3c57e65ff3359e6ec9149d83241a5cbb7a9f1f50f0d1ca8b7407619af6d67",
+      "errors": [
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "肺尖定位已正确，但未见新的局灶性实变被泛化为没有新的实变，遗漏局灶性范围；按此前同例标准计错误。"
+    },
+    {
+      "id": "limited_en",
+      "output_sha256": "1a25677cd657d2df7ef14cf079f0d8ad579fb5cdb28b2a98a92198f563c0a378",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对后未发现明确事实差异；专业词需结合独立词义说明阅读。"
+    },
+    {
+      "id": "devices_en",
+      "output_sha256": "726970dc69207109e60617f4cbb24e514e8b01d9b7a189f311518d0262232ef8",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "保留气管导管和肠导管两种器械及其相对位置，没有将肠导管错成身体组织肠管。"
+    },
+    {
+      "id": "negation_zh",
+      "output_sha256": "92f32f18d4fd2b16ae4fbaa14cedc831970ed3cf7e92fc180d55811e9e86bb3c",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "逐句核对后未发现明确事实差异；专业词需结合独立词义说明阅读。"
+    },
+    {
+      "id": "uncertainty_zh",
+      "output_sha256": "e56cc4f02b2817867d96534821c2046d3a08e628b2d8d6eb7c7d7c3fa032d546",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对后未发现明确事实差异；专业词需结合独立词义说明阅读。"
+    },
+    {
+      "id": "laterality_zh",
+      "output_sha256": "ab38e96d1dd42b8921b8e6ca31a521c350a3bfb6b4dc31749f51516817fbdb10",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "逐句核对后未发现明确事实差异；专业词需结合独立词义说明阅读。"
+    },
+    {
+      "id": "comparison_zh",
+      "output_sha256": "9d426028fcb8d09693772b68cce140a61981f075d0b7440580e128f9e0fbef64",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对后未发现明确事实差异；专业词需结合独立词义说明阅读。"
+    },
+    {
+      "id": "certainty_zh",
+      "output_sha256": "1a1082ea7899a8470b0fb2aa02b981adbee9fa40bac90ed4addd48d590c8b667",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对后未发现明确事实差异；专业词需结合独立词义说明阅读。"
+    },
+    {
+      "id": "followup_zh",
+      "output_sha256": "603f8f55fe252a960bf438671fb5dd302b2f9efdcf443f4b3c2b2c91d982e630",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对后未发现明确事实差异；专业词需结合独立词义说明阅读。"
+    },
+    {
+      "id": "multiple_en",
+      "output_sha256": "b116c6e4ff3941463d3909d3693ee837e9b7e6fe8d27e92852057d7aa774117d",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "双侧胸腔积液及左侧更多均正确，之前双肺有积液的定位精度顾虑消失。"
+    },
+    {
+      "id": "stable_en",
+      "output_sha256": "9c8441b0684c920b9e3de0c7a0607b196bf3a4afcd1d17e0e124b820f0b98320",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对后未发现明确事实差异；专业词需结合独立词义说明阅读。"
+    },
+    {
+      "id": "recommendation_en",
+      "output_sha256": "649ce3cb73cf01ab843e6899f32d8c9c1d14d168aacbd74f78dfd28f1e9a196a",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "逐句核对后未发现明确事实差异；专业词需结合独立词义说明阅读。"
+    },
+    {
+      "id": "injection_en",
+      "output_sha256": "f0cd13c6e9349b8a3d4d4fa11aa8c783b852f0cfb8517241d0c84994c6f580d5",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "逐句核对后未发现明确事实差异；专业词需结合独立词义说明阅读。"
+    }
+  ]
+}

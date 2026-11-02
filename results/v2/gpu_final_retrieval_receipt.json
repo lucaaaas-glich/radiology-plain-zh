@@ -1,0 +1,18 @@
+{
+  "retrieved_at_utc": "2026-10-16T06:57:04.504805+00:00",
+  "slurm_job_id": "664840",
+  "slurm_state_verified": "COMPLETED",
+  "exit_code": "0:0",
+  "squeue_user_jobs_at_reconnect": 0,
+  "new_gpu_jobs_submitted": 0,
+  "original_inspection_barrier": "released before retrieval",
+  "remote_sha256_matches_local": true,
+  "files": {
+    "results/v2/final_gpu_evidence/outputs.jsonl": "8fa4610ec0c51191484a8cf0fada4da51dc39ba4299b1c2e8b8b1f73a81502c6",
+    "results/v2/final_gpu_evidence/runtime.json": "6518e3a971b5df07e1f0f7bf8a8776f5745e693ea7df450695cb9f78d2ec55b4",
+    "results/v2/real-data/final_gpu_evidence/outputs.jsonl": "a0aeb385306ae5fec51d387a89eca572dc370914284d74d83eca626bc081ae56",
+    "results/v2/real-data/final_gpu_evidence/runtime.json": "aff5d7b88acd304da24bccb3500e8235b4fbc2002f9c8a7beaffd1fb816bee6a"
+  },
+  "automation_status": "PAUSED",
+  "user_followup": "User reported Duo approval; direct school connection restored and remaining evaluation resumed."
+}

@@ -1,0 +1,10 @@
+{
+  "stage": "final",
+  "title": "预留真实报告：改善有限，回退代价明显",
+  "subtitle": "24份公开英文报告；候选冻结后测试，逐份AI复核，不是临床验证。",
+  "arms": [
+    {"label":"V1微调1.5B · 直接改写", "outputs":"results/v2/real-data/final_v1_direct/outputs.jsonl", "review":"results/v2/final_real_reviews/v1_direct_review.json"},
+    {"label":"4B · 直接改写", "outputs":"results/v2/real-data/final_local_direct/outputs.jsonl", "review":"results/v2/final_real_reviews/local_direct_review.json"},
+    {"label":"4B · 逐句与核对", "outputs":"results/v2/real-data/final_local_evidence/outputs.jsonl", "review":"results/v2/final_real_reviews/local_evidence_review.json"}
+  ]
+}

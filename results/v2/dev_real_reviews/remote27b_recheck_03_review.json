@@ -1,0 +1,142 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "scope": "Displayed Chinese only; source-only fallback is incomplete, not a correct answer.",
+  "cases": [
+    {
+      "id": "real_0e9c60d4ad638a81",
+      "output_sha256": "bdb63102d8b0feb1393334131f346db0cd76fc8bffba7fcbcaba8fd1bdbd2010",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "起搏器、电极、轻度浸润、少量积液及可能关系完整保留；术语仍较专业。"
+    },
+    {
+      "id": "real_53499b1249f0e7a6",
+      "output_sha256": "3c16892d967a230af6ffb755564b69d7ca32450f53c73acc7a47ea93de490778",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "恢复被年龄空格规则误拒绝的50岁女性及接触史句；逐句其余展示与已复核旧版完全相同，全文完成且本次未观察到事实差异。"
+    },
+    {
+      "id": "real_4187fbf7eadcb951",
+      "output_sha256": "3790bfbfbf12decfabfae320f77fe86aa97b25a32b0631d8e2f4f4208fdba774",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "最复杂的分布句回退，余下细微肺野改变、胸椎前缘骨赘等保留。"
+    },
+    {
+      "id": "real_6e2b1d9d0d10b307",
+      "output_sha256": "91064384361d0ba5ccc62ee570d30252aa5ffac7508f9bbb1c47a8bd9e33597a",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "日期及积液比较句回退；剩余引流管位置、中肺野与稳定结节保留。"
+    },
+    {
+      "id": "real_4889613d7b935c76",
+      "output_sha256": "6c58f0f54a2be2c73ad49e686c6366ede03ed40d639e04b0908871e6069d413a",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "三个月半及对比日期句回退；癌症背景、手术、肾脏病灶和背阔肌下方位置保留。肺实质阴性一句的限定措辞较拗口。"
+    },
+    {
+      "id": "real_99884d41e32a39f8",
+      "output_sha256": "e9b330d01f97d820bdc4fe0c707677faee111107b57d0d49c4527ab46a2e0b79",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "technical",
+      "notes_zh": "病期、乙状结肠、肺叶、肝病灶位置与两处尺寸及图像索引保留；没有把转移否定翻转或循环生成。"
+    },
+    {
+      "id": "real_c6927c378a6e2c87",
+      "output_sha256": "97d6183652958724a4513590319b937cc783269eebac859a65e418e22aaf4d31",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "舌部局灶浸润消退和少量纤维化遗留保留；舌叶是传统中文术语，此处没有写成独立左中叶。"
+    },
+    {
+      "id": "real_788c7076b21bef32",
+      "output_sha256": "ac20f84f37c883d6a80e55d3afeb7950d54b30aaa58810ab5968e53442a864e1",
+      "errors": [
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "双肾囊肿丢失单纯性限定，结肠乙状段憩室范围写成仅乙状结肠；持续性、肺气肿亚型和胸膜下后段位置等改善但不评为全部事实保留。"
+    },
+    {
+      "id": "real_8e3f069b88d7550c",
+      "output_sha256": "cda5241da4540d4758cdccd622b8265156207005c00fc327049661e67602e90e",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "用力/运动后的肋骨痛病史、前后与斜位摄片及无相关异常保留。"
+    },
+    {
+      "id": "real_20d69a9e8c41860d",
+      "output_sha256": "cbfb48d4a009620b3ca472788e5ea74e9e9ed2fd93427f1bbd6f4daed002cbe9",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "肾积水定位、血栓和侧支循环、几年前已知等完整保留。原文重复及行政占位也被照录，较冗长；造影措辞不够自然。"
+    },
+    {
+      "id": "real_2f86141ba8fa19ea",
+      "output_sha256": "539555fde82b7c9f6bbf558be7a973e6d38f41751ab839f2d76e5da886d3ae26",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "technical",
+      "notes_zh": "恢复小于1厘米、可能感染及需监测；另一句采用原第一候选的中肺叶同义词序。其余展示与旧版相同，全文完成且未观察到事实差异。"
+    },
+    {
+      "id": "real_4d02bd9100fee8f7",
+      "output_sha256": "8ee76915dcad4cb8481a6c77947dfd228106cb7d0b269c7767e572b3c62f44c3",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "恢复2015年手术句，另一个既往新冠段仍回退；其余展示与旧版相同，全文仍未完成。"
+    },
+    {
+      "id": "real_de592071091f2d97",
+      "output_sha256": "4ef9740536342935e8536a5075eb89890d7540209ac3bc3e8a63908ba77ec8c2",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "含气肺的条带句回退，完全/部分塌陷、支气管通畅、空气支气管征阴性及新冠范围保留。"
+    },
+    {
+      "id": "real_abd463216fac09a8",
+      "output_sha256": "1042354b092504a6b0ef3dfdfac85e07362be6fed31fde85bdbd2503437a4454",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "疝内肠段出入口变化句回退；其余多组尺寸、距离、中度扩张、轻度水肿、左侧骨关节关系保留。"
+    },
+    {
+      "id": "real_b27e89e8eb71724d",
+      "output_sha256": "57bd235632d67490d191a93a798f2a706cea3d8bd5ba4a1effe7534c116f7700",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "实变阴性与双侧乳房成形术保留。"
+    },
+    {
+      "id": "real_4b40d531f81fd555",
+      "output_sha256": "92c3967f8fdfe8de30d2842c51da00b75fa61a4437ef6e1595fd865958816fb8",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "肺底定位、新出现、稳定、右侧外侧肋骨与可能转移均保留。"
+    }
+  ],
+  "method_note": "Unchanged displayed text and glossary were mechanically compared with the fully reviewed original; only changed segments were re-reviewed. Historical AI verdicts reused; no new model call.",
+  "changed_cases_reviewed": [
+    "real_53499b1249f0e7a6",
+    "real_2f86141ba8fa19ea",
+    "real_4d02bd9100fee8f7"
+  ]
+}

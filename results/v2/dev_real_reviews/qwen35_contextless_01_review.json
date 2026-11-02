@@ -1,0 +1,165 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "scope": "Displayed Chinese only; source-only fallback is incomplete, not a correct answer.",
+  "cases": [
+    {
+      "id": "real_0e9c60d4ad638a81",
+      "output_sha256": "33962d5903da8e8ebae486551c4481603b51ced3fee75c49bcc5acb29b42b7ac",
+      "errors": [
+        "terminology",
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "去掉前文后，把起搏器导线写成铅管，器材断裂写成骨折；此前dev7唯一完整忠实的报告在此出现新错。"
+    },
+    {
+      "id": "real_53499b1249f0e7a6",
+      "output_sha256": "f4266fbf952ec641fbba57ad08432617e272b55aa22db76df07d502aff72529f",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "年龄/病史句和气胸否定句回退，全文未完成；新冠肺炎一词重复，但未据此判作事实错误。"
+    },
+    {
+      "id": "real_4187fbf7eadcb951",
+      "output_sha256": "46d5cf4d59df19dc618c6b4664554e7ad95b9ce375ad4c3b2724acaaae54f9c6",
+      "errors": [
+        "anatomy_side",
+        "omission",
+        "certainty",
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "右上叶后段被改为尖段、周边位置限定遗漏；dorsal spine写成后脊柱；结论的suggest语气被显示/存在替换。"
+    },
+    {
+      "id": "real_6e2b1d9d0d10b307",
+      "output_sha256": "52305b3a94c1dd7f004b102a67e4281b1fea6d2a2fff9ec554c86fd7b31a4c36",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "日期及积液比较句回退，其余引流管、肺中野和稳定性保留。"
+    },
+    {
+      "id": "real_4889613d7b935c76",
+      "output_sha256": "eeeabc85b5ebb2be62da9f9dfc8e6e2932ef7dc3f8bab9a48f4cb876e9c2e334",
+      "errors": [
+        "anatomy_side"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "淋巴结阴性与静脉给药途径比有上下文版本准确；但脂肪瘤在背阔肌下方仍变成肌处，且两句回退。"
+    },
+    {
+      "id": "real_99884d41e32a39f8",
+      "output_sha256": "9d103a654f016de80d6406c535b24b372e79e08e9e9387a61df70d7d909113f8",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "主要病期、尺寸和结论保留；第IV段下囊膜语序生硬，未确认全部定位精度，不据此计明确错误。"
+    },
+    {
+      "id": "real_c6927c378a6e2c87",
+      "output_sha256": "d59b64ead717f6eeeef8a059b59b192a12eef276cfd7e04980fa21ee1a2bc212",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "舌段定位、浸润消退及残留纤维化均保留，比有前文版本多完成了残留句。"
+    },
+    {
+      "id": "real_788c7076b21bef32",
+      "output_sha256": "7a422ed8a6689907c105179367d0b4505c3aa2dcb8f782b21434bbabb906f2e2",
+      "errors": [
+        "anatomy_side",
+        "omission",
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "同侧积液在上文左侧术后背景下应指左侧，此处凭空写右侧；小叶中心型简为中心性，肠系膜脂膜炎简化后丢失炎症性质。结肠乙状范围简化也有精度顾虑。"
+    },
+    {
+      "id": "real_8e3f069b88d7550c",
+      "output_sha256": "cdbbdf10e3d8e12a09ef8332a08c010e71d457a6dc152dab7c820d44afd4eab7",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "病史及相关阴性保留；前后位仍泛称正位，肋骨片泛称胸片，保留精度顾虑而不判全部忠实。"
+    },
+    {
+      "id": "real_20d69a9e8c41860d",
+      "output_sha256": "58a8b1a6787dcbe964a4d2ffafae1206c0dc37c2544ee44eab7933cf2934d4cf",
+      "errors": [
+        "omission",
+        "recommendation"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "既往已知异常这次未再翻成阴性；但静脉给药及黏膜下层次被泛化，偶然发现前加报告建议前缀，改变陈述性质。"
+    },
+    {
+      "id": "real_2f86141ba8fa19ea",
+      "output_sha256": "b4a2093360f26369e07ef1e14015d07febfd9a3ccdefca861b2ee8de48df5a7d",
+      "errors": [
+        "number_time"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "新冠感染阴性未再扩大成全部肺感染阴性；但亚厘米变成亚毫米，大小界限错误；另有复杂支气管句回退。"
+    },
+    {
+      "id": "real_4d02bd9100fee8f7",
+      "output_sha256": "aa3d76cb281bf74235fe8637684e0674070f3fde02379faab6f574af748fc783",
+      "errors": [
+        "terminology",
+        "negation",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "脐下eventration仍变为腹直肌分离；淋巴结无显著异常丢失显著限定，三句回退，肺裂句中文也不完整。"
+    },
+    {
+      "id": "real_de592071091f2d97",
+      "output_sha256": "f528eb3f3c4ba60377a1ba5efd8c3ffff0550bdb17d935bfaa2f50df6b4321af",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "主要肺不张范围和支气管描述保留，但两肺含气区域条带句回退；ex-vacuo改成减压性仍有术语精度顾虑。"
+    },
+    {
+      "id": "real_abd463216fac09a8",
+      "output_sha256": "da7442baa4d19099148b8dc761becc9ef99ed7913041115f7eb55152139b71ad",
+      "errors": [
+        "omission",
+        "negation"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "静脉给药途径及正常变异性质遗漏，无显著淋巴结异常扩大成无肿大；尺寸和肠袢细节两句回退，未再展示错误的耻骨上方方向。"
+    },
+    {
+      "id": "real_b27e89e8eb71724d",
+      "output_sha256": "fa8393fd7cbfebecb2cf759a28a54d861111ae9ff353ae4673fd44ce309d08f7",
+      "errors": [
+        "anatomy_side",
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "乳房成形术改写比有前文版本准确，但airspace仍译为气道，改变解剖对象。"
+    },
+    {
+      "id": "real_4b40d531f81fd555",
+      "output_sha256": "40cbbdf3b70b00b5173ab35317814664a18c362df21b4671b83cf538772dbf12",
+      "errors": [
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "新出现、左右肺底、稳定性及可能病因保留，但右侧肋弓的外侧部位限定仍遗漏。"
+    }
+  ]
+}

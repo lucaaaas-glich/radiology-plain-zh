@@ -1,0 +1,12 @@
+{
+  "frozen_at_utc": "2026-10-15T20:04:28.610667+00:00",
+  "count": 48,
+  "languages": {
+    "en": 24,
+    "zh": 24
+  },
+  "sha256": "a528158b924dbd7ff6da9c675e5bd8d8df756a1dc801600ef3cb4ef6f3aafdf7",
+  "plan_sha256": "54b7aa5d1d6eefb9cf3f069f3c9941839e46e419844f096099c7bc41a55d204a",
+  "outputs_seen": false,
+  "note": "Freeze before any generated holdout output; AI-authored and reviewed, not clinical validation. No later rewriting of this manifest."
+}

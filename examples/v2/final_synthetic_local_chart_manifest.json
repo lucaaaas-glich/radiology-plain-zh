@@ -1,0 +1,10 @@
+{
+  "stage": "final",
+  "title": "预留短报告：校验后的收益与未完成情况",
+  "subtitle": "48条合成报告，中英各24条；候选冻结后测试，项目AI复核，不是临床验证。",
+  "arms": [
+    {"label":"V1微调1.5B · 直接改写", "outputs":"results/v2/final_v1_direct/outputs.jsonl", "review":"results/v2/final_v1_direct/review.json"},
+    {"label":"4B · 直接改写", "outputs":"results/v2/final_local_direct/outputs.jsonl", "review":"results/v2/final_local_direct/review.json"},
+    {"label":"4B · 逐句与核对", "outputs":"results/v2/final_local_evidence/outputs.jsonl", "review":"results/v2/final_local_evidence/review.json"}
+  ]
+}

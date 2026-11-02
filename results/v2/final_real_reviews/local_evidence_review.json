@@ -1,0 +1,250 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "scope": "Displayed Chinese only; source-only fallback is incomplete, not a correct answer.",
+  "cases": [
+    {
+      "id": "real_7945887a634fd3b2",
+      "output_sha256": "3835e092ae9ac73aff1f3920acb082a374472717ebfc9cbde6bb6f0394f19280",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "导管、欠膨胀、双侧阴影与右侧积液均保留；最重要的高度提示急性肺炎结论句回退，未完成全文。"
+    },
+    {
+      "id": "real_944bae9cd174b3f3",
+      "output_sha256": "8a94633a473aa99ab239eacc461fc97a061b17f1af48012f25179f70289c7194",
+      "errors": [
+        "negation"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "替代诊断心力衰竭反转为未发现心衰证据；大量序号被拆成片段并回退，两条COVID阴性句也回退。该报告不完整且仍有实质错误。"
+    },
+    {
+      "id": "real_a6078e33cf1077ed",
+      "output_sha256": "cb33e9eabf5fe00655e3ed8834937c466991a7cc1a149ca8e30da126dbec73ad",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "两类胸角与心旁位置保留，全部句子生成；磨玻璃影被额外描述为密度较低而未给比较对象，存在精度顾虑。定义中可见血管气道轮廓与已引用词典一致，不视为凭空病因。"
+    },
+    {
+      "id": "real_00b223ab1d9049a6",
+      "output_sha256": "267a912db8fdf83fe5f76ac68f858c7935735ffbde41d1b379d00dc7b662555f",
+      "errors": [
+        "certainty",
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "可能存在右肺底浸润变成肯定有阴影、可能为感染；不确定性从发现转移到新加的病因。左侧肺炎与右颈静脉导管位置保留。"
+    },
+    {
+      "id": "real_b5195f156c0cbe9d",
+      "output_sha256": "34cff7ab3c3be68b0e78e7d3db30ba3ca38f5d3972e407f7780414c7762c9301",
+      "errors": [
+        "unsupported_addition",
+        "terminology",
+        "negation",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "从含混F字段推断女性，给T4b与IIC分别加临床/病理分期类型；支架隔绝瘤体直译为已排除动脉瘤，易成否定诊断且肾下位置遗漏。半年随访及若干序号回退。"
+    },
+    {
+      "id": "real_681044615bc68bff",
+      "output_sha256": "74422cbc4d6c711c718a63bcc97533ac9542dfca01fda87b13268ae4fc42570a",
+      "errors": [
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "胆总管11毫米与可能结石保留；但左下叶磨玻璃影的极轻微程度遗漏。其余主要发现与否定基本对应。"
+    },
+    {
+      "id": "real_7b39ef479027ca36",
+      "output_sha256": "73cde7d3de6e342f3e7349e5aad187461e03751a3a675333f3c67dcb46919ae7",
+      "errors": [
+        "anatomy_side",
+        "omission",
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "胸椎退变误写成脊柱后侧退变；动脉粥样硬化只保留钙化；空气滞留新增双侧范围。左锁骨既往骨折句回退，未完成全文。"
+    },
+    {
+      "id": "real_3410dce0e4d6e6ff",
+      "output_sha256": "bb107108c02ca565c196910003df883c414b740c4eea3eb097fc160ebf1a1d56",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "慢性肺部改变、与先前增强检查相比未见明显变化均保留，并附对比剂释义。"
+    },
+    {
+      "id": "real_d462b8b6ee6a35a9",
+      "output_sha256": "3fd03569289d880b6e851cb71333fc6382daf49fd180049ea0f924049e1c2ea9",
+      "errors": [
+        "anatomy_side",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "后部区域被指定为左上叶后段，双下叶的后部限定未保留；结论中的左下叶囊肿句回退。层厚、重叠距离、肺动脉与囊肿数值保留。"
+    },
+    {
+      "id": "real_9aec311bef0d8392",
+      "output_sha256": "4c3f22d7fd3c21268e8daa6c785fc750048ce74395eb2ed07c3e60ae94ed06e9",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "肺实质阴性、右腋侧胸膜与结合病史和既往片的建议保留；右锁骨中段陈旧骨折提示句未完成中文。"
+    },
+    {
+      "id": "real_a7738a4f4eb224ff",
+      "output_sha256": "5b27716fca190e757ae5e1897ec2112f039db2aec5385772b24dbe1088aeda1b",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "肺实质未见改变及与既往检查无变化保留，没有新增发现。实质一词未另作通俗解释。"
+    },
+    {
+      "id": "real_580a77f7f0a8c00f",
+      "output_sha256": "9721a533102a457c42aed3d339d42bcb425a23262ef1797d35ccaba77d78a0e4",
+      "errors": [
+        "anatomy_side",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "左下肺门的下部定位遗漏；气管旁位置混入右肺，下隆突淋巴结误为下气管旁。56与22毫米保留，但间隔/裂增厚、肝病变和肿瘤分期结论三句回退。"
+    },
+    {
+      "id": "real_3000010eb2853496",
+      "output_sha256": "466f887169df8c0e931282a4a78ae05be021612052909472eea305f622783fc7",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "年龄、D二聚体数值、诊断目的、分支范围及肺炎程度均保留；其他纵隔结构改成纵隔结构，限定词欠精确。结合前句仍明确心脏增大，暂不判为明确否定反转，但不计完整忠实。"
+    },
+    {
+      "id": "real_2646eef8c69cbba1",
+      "output_sha256": "df33160d01b5e3359f5913291658e5c129e67e708b6e4fe12a936d6c496d8bf8",
+      "errors": [
+        "number_time"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "确切既往检查日期被写成该日期以前的检查，改变时间关系；胃管位置句回退。导管尖端和下胸椎硬化保留，没有断言胃管位置正常。"
+    },
+    {
+      "id": "real_25751d3ec470393d",
+      "output_sha256": "52d9a546df66368f030fdd68a7e01ccbb180b2e1781245d3881a8f792f845f92",
+      "errors": [
+        "negation",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "淋巴结未见显著病变被扩大为未见病变，显著限定遗漏；三句病史、日期和变化回退。含混的前降支中度表现未擅自补成具体诊断，但仍难理解；crazy-paving保留英文。"
+    },
+    {
+      "id": "real_eb3ac627bd03985a",
+      "output_sha256": "4c3354302db33059d705af46842a25a00c531391142e99b4bacaee292693087d",
+      "errors": [
+        "number_time",
+        "anatomy_side",
+        "terminology",
+        "negation",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "既往检查日期又改成日期以前；约6毫米病灶尺寸变成所在位置，包膜下定位失真；耻尾线误为耻骨直肠线，并变成通过该线；结肠造口的结肠、显著淋巴结病变的显著等限定遗漏。全部生成仍有多处事实问题。"
+    },
+    {
+      "id": "real_90fdb73f05ecd2ef",
+      "output_sha256": "ee35860abbd9953278c0d5f342c5f6d2d2e3d791253d97159b1f97d19e3d1c91",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "保留相关病理改变这一限定，没有扩大为不存在任何异常；正文仍用病理术语。"
+    },
+    {
+      "id": "real_a2be02cd61c25242",
+      "output_sha256": "d94c379dd4c5a4458acdd07cd878f9415cdcc746628843815ac360f477ec6b7d",
+      "errors": [
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "舌部前后径与横径、甲状腺结节数值和侧别保留；肺气肿的中心腺泡型信息遗漏，检查技术和对比剂句回退。"
+    },
+    {
+      "id": "real_4e2270f839a97e0c",
+      "output_sha256": "bd516dbb2b0e8ac47cca2f767a46ac210ba711d3da6c80f231c8e6259afa9b08",
+      "errors": [
+        "negation",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "五个肺叶和主要分布保留；纵隔淋巴结阴性遗漏显著限定，扩大范围。铺路石征仍是未解释的英文，多处直译专业表达，易读性有限。"
+    },
+    {
+      "id": "real_da8930a7d5f4b569",
+      "output_sha256": "b005b488b0542ae12576042bcec61a2457055ab6d9418f77d6b6a79f86950a3e",
+      "errors": [
+        "negation",
+        "anatomy_side",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "局灶实变的局灶限定遗漏；可见胸部骨结构缩成胸骨并遗漏可见范围，改变解剖范围。正常上限与急性心肺阴性保留。"
+    },
+    {
+      "id": "real_8ccce4c1f7bf5f41",
+      "output_sha256": "a59d5cfb639ee1cf6b88a43e8364b161f0e4d44c30154915a20a4e2d20d482df",
+      "errors": [
+        "anatomy_side",
+        "omission"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "上纵隔增宽的上部限定遗漏，胸内甲状腺肿被进一步指定为纵隔内；病灶变化和残留条索两句回退。积液减少、右移及可能性保留。"
+    },
+    {
+      "id": "real_2e6e472d9c1e5116",
+      "output_sha256": "3e9caab8b168fe99867f5ce4ebb27bad02ac1cd1751b9c13798eef4518dffdab",
+      "errors": [
+        "anatomy_side",
+        "omission",
+        "negation"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "technical",
+      "notes_zh": "腹膜内游离液体误写成腹膜后积液，腹盆腔范围缩为腹腔；左上叶支气管扩张的前方位置遗漏，最后全报告阴性结论又限缩为腹盆腔。32×12毫米的积液句回退。"
+    },
+    {
+      "id": "real_190581003b759c0a",
+      "output_sha256": "9402c23da475b1f735ec5560eab8c15b21e45d28c6cdd539f7a306eecf7b6c9d",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "肺实质阴性、气管导管隆突上方4厘米及右颈静脉中心导管尖端位置保留；没有新增位置正常。专业词仍需理解。"
+    },
+    {
+      "id": "real_7087fb455870b62c",
+      "output_sha256": "73da938ec88beb306a366ad758faaf08284c536599c35a20f134208fe2eca0e6",
+      "errors": [
+        "anatomy_side",
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "原文只说右颈静脉，改写指定为右颈内静脉，加入未经原文确认的更窄部位；胃管位置、胸骨固定、主动脉延长和COPD征象保留。"
+    }
+  ]
+}

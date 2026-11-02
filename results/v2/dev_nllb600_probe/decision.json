@@ -1,0 +1,16 @@
+{
+  "stage": "development_only_after_original_v2_final_inspection",
+  "selected": false,
+  "reason_zh": "16份真实开发报告全部发现事实错误、没有完整忠实解释，未满足预先记录的选择门槛。14份英文短开发也全部有术语错误；该转换与配置不用于患者解释。",
+  "rule_source": "experiments/v2_mt/probe_plan.json",
+  "official_scope_note": "NLLB model card explicitly excludes medical-domain and document use; this was a bounded research diagnostic.",
+  "positive_controls": "Three ordinary/simple English sentences translated plausibly, language prefixes matched, zero unknown target tokens; this sanity check does not validate the conversion or model medically.",
+  "pipeline_cost": {
+    "completed": true,
+    "elapsed_seconds": 209.28640233294573
+  },
+  "peak_process_rss_bytes": 1168670720,
+  "model_revision": "302d78f00e6fdb50a1064059df7c392b735e9d05",
+  "no_new_final_evaluation": true,
+  "original_v2_unchanged": true
+}

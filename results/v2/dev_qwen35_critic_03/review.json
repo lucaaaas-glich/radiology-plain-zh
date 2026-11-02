@@ -1,0 +1,168 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "scope": "Displayed Chinese only; source-only fallback is incomplete, not a correct answer.",
+  "cases": [
+    {
+      "id": "negation_en",
+      "output_sha256": "e3a1983eed6d50b52ab22f8488bab4b29eaac7f76413ef452e4b0a7aa5a99516",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明确事实差异；专业词结合独立词义说明阅读。"
+    },
+    {
+      "id": "uncertainty_en",
+      "output_sha256": "5fc8136c78229751777d93799d7923494d818ac60c4e0cfab6d926771cff41f0",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实差异；专业词结合独立词义说明阅读。"
+    },
+    {
+      "id": "laterality_en",
+      "output_sha256": "df25a6d972a5cba135dd7fce79b37ac7fea7e8c1d080fd8e4ce740dbe1e25fe9",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明确事实差异；专业词结合独立词义说明阅读。"
+    },
+    {
+      "id": "change_en",
+      "output_sha256": "8af280dbc5b1a65c96ddbe01f143bb6abfc8dc53274f877c79e91596960ae7a6",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实差异；专业词结合独立词义说明阅读。"
+    },
+    {
+      "id": "urgent_finding_en",
+      "output_sha256": "9f0ed0e3cd686d6e404548a5470b059b084657de4899d9a84fb3211ce8699fc2",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实差异；专业词结合独立词义说明阅读。"
+    },
+    {
+      "id": "uncertain_cancer_en",
+      "output_sha256": "7f852b1834714666a974ef2bc4f940e144932468ddeb1b3877f41e43c900e8d7",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实差异；专业词结合独立词义说明阅读。"
+    },
+    {
+      "id": "numbers_en",
+      "output_sha256": "0c5f7b647ba86b16b97ab7fa8a52d15a186532194db9970fb756916604722f5d",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实差异；专业词结合独立词义说明阅读。"
+    },
+    {
+      "id": "no_new_en",
+      "output_sha256": "22e2ebde6226b1d07111e14f44eeca356fdf217ef0243e5a43565d16bf96da28",
+      "errors": [
+        "anatomy_side"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "肺尖句回退，但下一句复制前文并再次误成双肺上叶；局部回退未阻止跨句错误传播。"
+    },
+    {
+      "id": "limited_en",
+      "output_sha256": "27d5d24a59b01632d6c33d39acaaf49f0d4c7873ad19298231603f36575eb5ce",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实差异；专业词结合独立词义说明阅读。"
+    },
+    {
+      "id": "devices_en",
+      "output_sha256": "a2c2f7f82f8dc0f3fbcd813d4e8144a323780555318ca2371722919d8cf9781d",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实差异；专业词结合独立词义说明阅读。"
+    },
+    {
+      "id": "negation_zh",
+      "output_sha256": "680f27a0a501576ecd53fb97fe04f999ee00dde8063046b6ea2242a14544a7f1",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明确事实差异；专业词结合独立词义说明阅读。"
+    },
+    {
+      "id": "uncertainty_zh",
+      "output_sha256": "7b3a21dcea51fdd4637c104bf3c8203cc3ff1938f4f9ea22f921e375f60723a9",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实差异；专业词结合独立词义说明阅读。"
+    },
+    {
+      "id": "laterality_zh",
+      "output_sha256": "d1d606c8d47e0377c5528fd20c598c467fd7575da4a04fb840f075ec04f12e0f",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明确事实差异；专业词结合独立词义说明阅读。"
+    },
+    {
+      "id": "comparison_zh",
+      "output_sha256": "aa6fa4943215207a6dc4adb79aac6d7f2145a1e81dca770616a6680cbca803b9",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实差异；专业词结合独立词义说明阅读。"
+    },
+    {
+      "id": "certainty_zh",
+      "output_sha256": "b1aa9a26f546c59e911916ed521cea482e5da1c38c80b9b38a6ce63a5f7e5022",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实差异；专业词结合独立词义说明阅读。"
+    },
+    {
+      "id": "followup_zh",
+      "output_sha256": "c718f10910a9d91a4c6d63f9a56b7e6aae258430dc64959843c16efc84fb396d",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实差异；专业词结合独立词义说明阅读。"
+    },
+    {
+      "id": "multiple_en",
+      "output_sha256": "11dba43b63d4239946ccee575b6a8c75c780e95f6ab1ebbd47b55cb12f976fc4",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "双肺有胸腔积液的定位措辞不严谨，与dev6同标准仅列精度顾虑；未计明确错误，不评为完全忠实。"
+    },
+    {
+      "id": "stable_en",
+      "output_sha256": "02fc7ef81fe2c890ec1aca9f9d668fd22f1dfac5e8315d75b8b3021b8e43c203",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实差异；专业词结合独立词义说明阅读。"
+    },
+    {
+      "id": "recommendation_en",
+      "output_sha256": "4d8e595b404d32c5ecb36a8d30fda61a1fa5a689d075c48af1f9ee5a0227ac21",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明确事实差异；专业词结合独立词义说明阅读。"
+    },
+    {
+      "id": "injection_en",
+      "output_sha256": "c0c8e214accd87858bf6713c65b923d8799e97ff8ac7202de10c24c17e558d97",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明确事实差异；专业词结合独立词义说明阅读。"
+    }
+  ]
+}

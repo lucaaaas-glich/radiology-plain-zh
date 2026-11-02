@@ -1,0 +1,176 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "scope": "Displayed Chinese only; source-only fallback is incomplete, not a correct answer.",
+  "cases": [
+    {
+      "id": "negation_en",
+      "output_sha256": "f524aa7e6947856359cc86d906c028942bb69af0c064a0eec0ee317332dd0795",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明显事实改变；项目AI开发复核。"
+    },
+    {
+      "id": "uncertainty_en",
+      "output_sha256": "e55b06cfb9aec9fb4bc8c904f21a51b4c3e8f49a2e26d9804d3ba8efa336a743",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "上叶改为上肺，解剖定位精度降低，完整保真存疑。"
+    },
+    {
+      "id": "laterality_en",
+      "output_sha256": "5785d0fd050a5461dcf647a5ecdd3ae45b969c0acd8164503b887311bee74ad4",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明显事实改变；项目AI开发复核。"
+    },
+    {
+      "id": "change_en",
+      "output_sha256": "4d2753f058b62e604a19e169668f307e2a835aea64b45eaef7e8a788e2c8c220",
+      "errors": [
+        "terminology",
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "原文只称阴影，新增实变这一更具体的影像描述。"
+    },
+    {
+      "id": "urgent_finding_en",
+      "output_sha256": "31f6fb5b9b5e5765d1ffe924a813e77f4ba07c7ca4bf498f6da4a29d3aaab1cd",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变；项目AI开发复核。"
+    },
+    {
+      "id": "uncertain_cancer_en",
+      "output_sha256": "20f56874c67e8efb08c40f4dddcaed6512657ce707492d65eda652db903d96cd",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变；项目AI开发复核。"
+    },
+    {
+      "id": "numbers_en",
+      "output_sha256": "b76c500c40e39178933d676517d28917dc2512c43127b73093af938aeda80cd1",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明显事实改变；项目AI开发复核。"
+    },
+    {
+      "id": "no_new_en",
+      "output_sha256": "0fbe74266fa7e9f52c43be8d191e44f15cd6c967514246149b568979318e4b96",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变；项目AI开发复核。"
+    },
+    {
+      "id": "limited_en",
+      "output_sha256": "5d6bf1d93f3776fbc550bfb9e309c79a5701fc199a160ed1dfd0378459d2b397",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变；项目AI开发复核。 存在未完成中文解释的片段。"
+    },
+    {
+      "id": "devices_en",
+      "output_sha256": "c6c77f67c59c22b0eb09d760b1c2219186b2c2a599bc89974179618046546b29",
+      "errors": [
+        "omission",
+        "terminology"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "第一句只剩位置和距离，漏掉气管插管尖端这一对象；第二句把肠内导管写成肠管。"
+    },
+    {
+      "id": "negation_zh",
+      "output_sha256": "0242f28ad5a54a2237f9672850e1cf29515ad4c22c40d68ef97dc4afec236dba",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变；项目AI开发复核。"
+    },
+    {
+      "id": "uncertainty_zh",
+      "output_sha256": "fe4dd2bfb76760d2e0b58c4efa5cc06bb40d38b025595f92976d58a9bb9d7d5b",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变；项目AI开发复核。"
+    },
+    {
+      "id": "laterality_zh",
+      "output_sha256": "c2ec76c81d76523aa03900fe2289080c2245a206b5f628182e0706768533224b",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明显事实改变；项目AI开发复核。"
+    },
+    {
+      "id": "comparison_zh",
+      "output_sha256": "8be008d109a58c6f8c3e8e44f07829ca3e02708152a886b4b7f9df2ec95fe97c",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "明确较前吸收被弱化为有变淡趋势，需进一步核对措辞。"
+    },
+    {
+      "id": "certainty_zh",
+      "output_sha256": "5e4f1dac85e5ae4b9da9a746a545e1dcd967f027765ac1b17d5f08e5738f6c62",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变；项目AI开发复核。"
+    },
+    {
+      "id": "followup_zh",
+      "output_sha256": "562b680a0ad7030e749a043499c3fb409a9ee4ed363e74688e7c0a1f72ec811a",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "约7毫米被写成7毫米，省去近似限定。"
+    },
+    {
+      "id": "multiple_en",
+      "output_sha256": "d750ec34aa49067e4259f75cecc39fbda0072f154d0b4451b0aafc4d3f70d432",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明显事实改变；项目AI开发复核。"
+    },
+    {
+      "id": "stable_en",
+      "output_sha256": "deac21a0542cf0ae4d0fb71b07932509a4bd85a2d0acae68d24bc7fcd3dd5f4f",
+      "errors": [
+        "number_time"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "5毫米应修饰结节大小，输出写成5毫米钙化，改变数值所属对象。"
+    },
+    {
+      "id": "recommendation_en",
+      "output_sha256": "061dde772e5fa5f52adcbc27c348195bc441f551b516ebde1d19b3c0004b5c88",
+      "errors": [
+        "recommendation"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "原文为建议复查；改写省去建议语气，直接陈述治疗后复查。"
+    },
+    {
+      "id": "injection_en",
+      "output_sha256": "bab0085d6e3cfa85d7b8d07c3e0b7e31c2fc18503e8eba574890edfdb1906e86",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明显事实改变；项目AI开发复核。"
+    }
+  ]
+}

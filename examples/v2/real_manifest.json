@@ -1,0 +1,70 @@
+{
+  "frozen_at_utc": "2026-10-15T20:21:33.927901+00:00",
+  "outputs_seen": false,
+  "dataset": "BioLaySumm/BioLaySumm2025-LaymanRRG-opensource-track",
+  "revision": "6783ab38f9de28c4372799346f51d3927ae7eb9a",
+  "original_split": "validation",
+  "source_parquet_sha256": "680bd10de398efbbe7cc115aa861bc12f722fcbcd307cd9c3deedacca8941fce",
+  "seed": 37102602,
+  "remaining_pools_by_length": [
+    6505,
+    435,
+    108
+  ],
+  "v1_unique_reports_excluded": 4608,
+  "splits": {
+    "dev": {
+      "count": 16,
+      "file_sha256": "b3d32295a683a3789607b46486136bde9518e6875dad47898a49c25ca587ed3b",
+      "ids": [
+        "real_0e9c60d4ad638a81",
+        "real_53499b1249f0e7a6",
+        "real_4187fbf7eadcb951",
+        "real_6e2b1d9d0d10b307",
+        "real_4889613d7b935c76",
+        "real_99884d41e32a39f8",
+        "real_c6927c378a6e2c87",
+        "real_788c7076b21bef32",
+        "real_8e3f069b88d7550c",
+        "real_20d69a9e8c41860d",
+        "real_2f86141ba8fa19ea",
+        "real_4d02bd9100fee8f7",
+        "real_de592071091f2d97",
+        "real_abd463216fac09a8",
+        "real_b27e89e8eb71724d",
+        "real_4b40d531f81fd555"
+      ]
+    },
+    "holdout": {
+      "count": 24,
+      "file_sha256": "5b5754822d85947f9581bffcbc8444fb5bffbacd7e16275b5a220b6ca75b4768",
+      "ids": [
+        "real_7945887a634fd3b2",
+        "real_944bae9cd174b3f3",
+        "real_a6078e33cf1077ed",
+        "real_00b223ab1d9049a6",
+        "real_b5195f156c0cbe9d",
+        "real_681044615bc68bff",
+        "real_7b39ef479027ca36",
+        "real_3410dce0e4d6e6ff",
+        "real_d462b8b6ee6a35a9",
+        "real_9aec311bef0d8392",
+        "real_a7738a4f4eb224ff",
+        "real_580a77f7f0a8c00f",
+        "real_3000010eb2853496",
+        "real_2646eef8c69cbba1",
+        "real_25751d3ec470393d",
+        "real_eb3ac627bd03985a",
+        "real_90fdb73f05ecd2ef",
+        "real_a2be02cd61c25242",
+        "real_4e2270f839a97e0c",
+        "real_da8930a7d5f4b569",
+        "real_8ccce4c1f7bf5f41",
+        "real_2e6e472d9c1e5116",
+        "real_190581003b759c0a",
+        "real_7087fb455870b62c"
+      ]
+    }
+  },
+  "note": "Public reports; no clinician Chinese labels. Text deduplication is not patient independence. Raw text not redistributed."
+}

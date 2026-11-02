@@ -1,0 +1,41 @@
+{
+  "model": "/scratch/664840/radzh-v2-27b",
+  "compute_dtype": "bfloat16",
+  "weight_quantization": "bitsandbytes_nf4_double_quant",
+  "device": "NVIDIA A100-PCIE-40GB",
+  "slurm_job_id": "664840",
+  "load_seconds": 115.87779927812517,
+  "peak_cuda_allocated_bytes": 18473266176,
+  "peak_cuda_reserved_bytes": 18828230656,
+  "platform": "Linux-4.18.0-553.148.1.el8_10.x86_64-x86_64-with-glibc2.28",
+  "packages": {
+    "torch": "2.14.0",
+    "transformers": "5.19.0",
+    "huggingface_hub": "2.2.0",
+    "safetensors": "0.8.0",
+    "bitsandbytes": "0.50.2",
+    "accelerate": "1.15.0"
+  },
+  "source_files_sha256": {
+    "radplain/__init__.py": "b0bd0be201a9be1a0f029b5cc676818aa15231097205d7af3e420a8903e00348",
+    "radplain/common.py": "3698bb29475ceb06fd4630cca14023c465f2e8e3a1a149fc890e7e56323927bd",
+    "radplain/data.py": "e570471d3afdc4f2efebd4cbdbdad52ece8fa02e9b69e9ebf7065fad1d31a450",
+    "radplain/evaluate.py": "8ec50abeaa7d512ffe109d56bf458fc859038cd1a7c2deabc887100e76551b1b",
+    "radplain/explain_v2.py": "322fc5324624e6a5b62ee4ccb7f1a7f55de16d88c2d09d443dfb661089df8446",
+    "radplain/fidelity.py": "d92179b82a40fdebe6a0881156d988cdfcc113e404074c9a7039a4f7e981dec0",
+    "radplain/glossary_v2.py": "ee2749960f483609918f82ce385857deba97430efd9b13a7aca4113bf5f4b84c",
+    "radplain/guard_v2.py": "0db0a81fefbdd08937803461485a27e7acbd8d5837e181af3335d6f3bdb7f01f",
+    "radplain/hf_backend_v2.py": "9dcba7849d49b13c23e04ef80c3e45553e08ece98a83c5ebc854e5f8b4679c18",
+    "radplain/mlx_backend.py": "6e0d8c5e24d6847ae0bcfda2f72965574cd656cf848c2120099825d789a3db9d",
+    "radplain/model.py": "511de7b3c95fedb156a7c29fd56def17c0ed3db9e315f87edacb59035b9deb23",
+    "radplain/predict.py": "eab4c4699ccee5e98b48b707e6262075e004bbe1ac58f40becb803b043f37e7b",
+    "radplain/predict_mlx.py": "5899d658628156a8284046d14a2e5ed14de631a5e5b17c86151481cfcab455e0",
+    "radplain/predict_v2.py": "118f493f1fe7a397fe9c38f0ecc9b42862cbfe370e6e3eaf334e4a6e8ee51f42",
+    "radplain/prompts.py": "ed812040abd7bea1235f3adac3c6d2512c6f1e1958ca86e166e1562a02154cb8",
+    "radplain/quantity_v2.py": "214c38a285d1ae21fa6f1e1eb477dc8efa202a3b294eed7d93ee8c08b32e7e72",
+    "radplain/render_v2.py": "8f8d9db8b22d95d26ee5ee81897987620f15df5a3138a2b6165a87cf25f28cd1",
+    "radplain/semantic_v2.py": "5838a85078c08cc97ded897a221ee19aad101e3b8d48f1b1f08941c3291a057c",
+    "radplain/teacher.py": "aa4f31e7e3d8cfa9478e21b5c269a55c3bd2237351d308d44878c10604288e83",
+    "radplain/train.py": "0b666450806aedfeb3e95ba6164fb170dee5a46f151646efa221af7250fc2c1a"
+  }
+}

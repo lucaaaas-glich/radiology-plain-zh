@@ -1,0 +1,6 @@
+{
+  "reason": "Mac has8GBphysicalRAM,11GiBdiskavailablebeforedownload and8.82GBsystemswapusedduring4Bexperiments. Avoid loadinglargermodelhere; evaluate9B onauthorizedA100instead.",
+  "partial_download_removed": true,
+  "v1_artifacts_untouched": true,
+  "note": "No9Blocalinferencewasattempted; do notclaimanOOMmeasurement."
+}

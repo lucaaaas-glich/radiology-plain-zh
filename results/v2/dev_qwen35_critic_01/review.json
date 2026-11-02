@@ -1,0 +1,168 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "scope": "Displayed Chinese only; source-only fallback is incomplete, not a correct answer.",
+  "cases": [
+    {
+      "id": "negation_en",
+      "output_sha256": "b8c9fc45bdc29fc98481db46ecb671de4f0130a5f943a3866d877832a4b50166",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明显事实改变。"
+    },
+    {
+      "id": "uncertainty_en",
+      "output_sha256": "a3801708e61c9a814db22460d2d078e356e32212348d67654d0da34deef5e6b9",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变。"
+    },
+    {
+      "id": "laterality_en",
+      "output_sha256": "765e551403f544b1784ff65a160d3bc6c353f8e18f6c70fb3f27cf3fc14678d3",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变。"
+    },
+    {
+      "id": "change_en",
+      "output_sha256": "39830fc5ff55db1f0804bd3b7c9ede964506363c0d781d5ccf160d0b47803462",
+      "errors": [
+        "anatomy_side"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "下叶改成下肺野；肺叶与投影肺野不同。"
+    },
+    {
+      "id": "urgent_finding_en",
+      "output_sha256": "09d8602f51b8080bb2b7bbb08582077e8cc8b3ff040c479b18ff0c326b275f93",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变。"
+    },
+    {
+      "id": "uncertain_cancer_en",
+      "output_sha256": "b772c7283572c330ecbda138316391cab8653d61f561db0cc9298bd45745e3c5",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变。"
+    },
+    {
+      "id": "numbers_en",
+      "output_sha256": "88d86cd1ff8b95c9895342fc670d5d306f1acb7382f743d6fb98595fde6084cb",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明显事实改变。"
+    },
+    {
+      "id": "no_new_en",
+      "output_sha256": "e22239266d973f38c2fc47a9944db5c5b340a22e1a9236b612fbeb096a5d8b0c",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变。"
+    },
+    {
+      "id": "limited_en",
+      "output_sha256": "acddf43d8541caea91c7bcad362d360d466973c3af156202d3853056a46ac716",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变。 肺叶或肺底改成较宽泛的下肺，定位精度有待复核，未计入明确错误。"
+    },
+    {
+      "id": "devices_en",
+      "output_sha256": "fc7dc826bff671a7d99b5e864642d996677b72997892d41698fde39404038be3",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变。"
+    },
+    {
+      "id": "negation_zh",
+      "output_sha256": "4488424a2ba36640a5d7424123b770b5ef9d84b4641785a16b1f5321ff9fcbb8",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变。"
+    },
+    {
+      "id": "uncertainty_zh",
+      "output_sha256": "ad77af6c364f15341e70a2883ca088807131fbda680309192a611dd1727bffe9",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变。"
+    },
+    {
+      "id": "laterality_zh",
+      "output_sha256": "dd4a29adfb11aa0a6308780f753d2e79351f85b42cb60e1e281466245c56e6e0",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明显事实改变。"
+    },
+    {
+      "id": "comparison_zh",
+      "output_sha256": "733b7f1fe625a64d6d4f04acae5bc85cb9c6b231c3de324c354b46c49029db48",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变。"
+    },
+    {
+      "id": "certainty_zh",
+      "output_sha256": "824a4484fd99107d15a455d2406c21eae9a235d13f421ecb28f55f68f9662680",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变。"
+    },
+    {
+      "id": "followup_zh",
+      "output_sha256": "d37183cef18c98802692142fc2158fc2f1397474a2c52989004313bf78f9a9a7",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明显事实改变。"
+    },
+    {
+      "id": "multiple_en",
+      "output_sha256": "33d36096e57abdfec2f5d116df8b1a62ad3eca7ded4deeb4d931cfd14959dfa4",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明显事实改变。"
+    },
+    {
+      "id": "stable_en",
+      "output_sha256": "258e6f03c715a468109f01c57d4f9c04a9d150172d56edd6412ccb59f7189a53",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变。"
+    },
+    {
+      "id": "recommendation_en",
+      "output_sha256": "081612f9e7fe4b2c1408db8b2d31cb8245b12b103866c78d9503188559e89764",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "mixed",
+      "notes_zh": "未发现明显事实改变。 肺叶或肺底改成较宽泛的下肺，定位精度有待复核，未计入明确错误。"
+    },
+    {
+      "id": "injection_en",
+      "output_sha256": "d8998100d3a6e04fbdc6989c9830e11fbfdf8255714848f42246146bed205101",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明显事实改变。"
+    }
+  ]
+}

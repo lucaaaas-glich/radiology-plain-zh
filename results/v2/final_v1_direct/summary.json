@@ -1,0 +1,33 @@
+{
+  "review_scope": "project AI; not independent, blinded, or clinician review",
+  "not_clinical_accuracy": true,
+  "reports": 48,
+  "reports_with_observed_factual_errors": 17,
+  "reports_complete_faithful_chinese": 23,
+  "reports_fully_generated": 48,
+  "reports_no_observed_error_but_incomplete": 0,
+  "error_category_report_counts": {
+    "anatomy_side": 5,
+    "certainty": 2,
+    "change": 1,
+    "negation": 2,
+    "number_time": 2,
+    "omission": 7,
+    "recommendation": 4,
+    "terminology": 3,
+    "unsupported_addition": 4
+  },
+  "readability_ai_judgments": {
+    "plain": 38,
+    "mixed": 10
+  },
+  "latency_seconds": {
+    "total": 32.86934787617065,
+    "median": 0.6784590415190905,
+    "minimum": 0.5118559579132125,
+    "maximum": 0.9341803749557585
+  },
+  "generation_completeness_note": "Generation completion is mechanical, not a factual or clinical score.",
+  "outputs_file_sha256": "506192431ec71f9a2941084f7da75736068fd2e1bc1854f1374acfa54aad3f01",
+  "review_file_sha256": "07da0db9b71f8186c44fdca2d7697956bd1541b38bbc32d3f14e9ce105ecbc19"
+}

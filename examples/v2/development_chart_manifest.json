@@ -1,0 +1,11 @@
+{
+  "stage": "development",
+  "title": "真实开发报告：少出错与完整解释必须一起看",
+  "subtitle": "同一组16份报告；这些样本参与了开发选型，不能当作新测试表现。",
+  "arms": [
+    {"label":"原微调1.5B · 直接改写", "outputs":"results/v2/real-data/dev_student_direct_1024/outputs.jsonl", "review":"results/v2/dev_real_reviews/student_direct_1024_review.json"},
+    {"label":"4B · 直接改写", "outputs":"results/v2/real-data/dev_qwen35_direct_1024/outputs.jsonl", "review":"results/v2/dev_real_reviews/qwen35_direct_1024_review.json"},
+    {"label":"4B · 逐句+复核（dev6）", "outputs":"results/v2/real-data/dev_qwen35_critic_02/outputs.jsonl", "review":"results/v2/dev_real_reviews/qwen35_critic_02_review.json"},
+    {"label":"27B · 逐句+复核（dev6）", "outputs":"results/v2/real-data/dev_remote27b_01/outputs.jsonl", "review":"results/v2/dev_real_reviews/remote27b_01_review.json"}
+  ]
+}

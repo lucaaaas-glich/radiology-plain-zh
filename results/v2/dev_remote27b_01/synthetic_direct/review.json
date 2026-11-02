@@ -1,0 +1,177 @@
+{
+  "reviewer": "project AI; not independent, blinded, or clinician review",
+  "scope": "Displayed Chinese only; source-only fallback is incomplete, not a correct answer.",
+  "cases": [
+    {
+      "id": "negation_en",
+      "output_sha256": "6da5a448312a07d981add534eee8f3e50b0272b77040acb37a3403185c64e991",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "气胸解释成肺漏气，属于容易混淆气体所处位置和来源的简化；作为精度疑点，未单列明确事实错误。"
+    },
+    {
+      "id": "uncertainty_en",
+      "output_sha256": "fe44c16358be11bfcca8fa1db2c91089cd970ff4a441b775fc697f56f1314674",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明确事实改变。"
+    },
+    {
+      "id": "laterality_en",
+      "output_sha256": "7a13bd89d2a2dde78da14b95b8b6c994e95fd5edb138e0cd6d8abf6040fdaa51",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明确事实改变。"
+    },
+    {
+      "id": "change_en",
+      "output_sha256": "8b06d336df491a6d13d3d94454eb92fc81ab3ce5000c0140077c8a1a5d4a229e",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明确事实改变。"
+    },
+    {
+      "id": "urgent_finding_en",
+      "output_sha256": "449c420c599837f796e3e7613d94d5f01f53c08ab7b306c3778576156a50250e",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "气胸解释成肺漏气，属于容易混淆气体所处位置和来源的简化；作为精度疑点，未单列明确事实错误。"
+    },
+    {
+      "id": "uncertain_cancer_en",
+      "output_sha256": "56c4937141cc3bde169c2de6bb25ce1306989ca06d8b7baa8bb49f02c764cb09",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明确事实改变。"
+    },
+    {
+      "id": "numbers_en",
+      "output_sha256": "d77b4589d88a647119719cc1924eafe37ab153572f390b1ee30df23ade5773ce",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明确事实改变。"
+    },
+    {
+      "id": "no_new_en",
+      "output_sha256": "5b3b478f01700460b620f34441352fc20e56e7ab47579de380a03f11120f0254",
+      "errors": [
+        "terminology",
+        "negation"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "没有新实变被解释为没有新的肺炎或感染，把影像描述缩窄为具体病因并扩大排除结论。"
+    },
+    {
+      "id": "limited_en",
+      "output_sha256": "39f11f10ebe9fe2514627a5328d89682a7f3f567acf66590681a40f061fc3b73",
+      "errors": [
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "肺容量低直接解释为吸气不够深，新增了原文未给出的原因。"
+    },
+    {
+      "id": "devices_en",
+      "output_sha256": "90be59682af38ca956e77c9fd5001837b1d95f75a57d55d561385a1aebc2becf",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "胃管与肠管放在同一括号中，容易把导管与自身肠道混淆；作为术语精度疑点，未计明确错误。"
+    },
+    {
+      "id": "negation_zh",
+      "output_sha256": "9675ab4ef01d5769ed847295fc04efa8875fd0cab12496f1fe27cde121153a67",
+      "errors": [
+        "terminology",
+        "negation"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "未见明显实变被直接写成没有明显肺炎，影像表现变成诊断排除。"
+    },
+    {
+      "id": "uncertainty_zh",
+      "output_sha256": "af2db78cc57fd9faabb369b4b07ef34590ea65f62cb68f4ab0879f6ec8023ab7",
+      "errors": [
+        "recommendation",
+        "unsupported_addition"
+      ],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "在性质待定之外新增进一步观察或检查建议。"
+    },
+    {
+      "id": "laterality_zh",
+      "output_sha256": "7a1f0463c9fc32f0539252b45a95f75161eb7806833d404f2a47c655529de42f",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明确事实改变。"
+    },
+    {
+      "id": "comparison_zh",
+      "output_sha256": "c3e2b99637afa9a3bb33939c20ea1df8cdd12df9b4f874ca73a5f9d80cc53b77",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明确事实改变。"
+    },
+    {
+      "id": "certainty_zh",
+      "output_sha256": "70981e68b4a114743d7adf9748fe641496ef3ba2d9c5acfa9f32cb1eca6efce9",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明确事实改变。"
+    },
+    {
+      "id": "followup_zh",
+      "output_sha256": "2f3d3aa357421140accddee1fdc33c06fbca2af56e71eff1a764853f31b0956b",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明确事实改变。"
+    },
+    {
+      "id": "multiple_en",
+      "output_sha256": "d7262cd5bae90314984e4fb0715068339232eeae132e4c478190212264abb7b6",
+      "errors": [],
+      "complete_faithful_chinese": false,
+      "readability": "plain",
+      "notes_zh": "气胸解释成肺漏气，属于容易混淆气体所处位置和来源的简化；作为精度疑点，未单列明确事实错误。"
+    },
+    {
+      "id": "stable_en",
+      "output_sha256": "7cd9414a1074e3107194c2b3128ea351a4ba0e50e04586e64a31b2c92d02d159",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明确事实改变。"
+    },
+    {
+      "id": "recommendation_en",
+      "output_sha256": "514027f0cfa1c4853544121f8f5282815c23cc932f8646cda03ff60d2dfe3e80",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明确事实改变。"
+    },
+    {
+      "id": "injection_en",
+      "output_sha256": "4af6591cfbd9e4ecac3e1ca2e07f20bc9cddc82b6d9571364deb2c8bdcf634f1",
+      "errors": [],
+      "complete_faithful_chinese": true,
+      "readability": "plain",
+      "notes_zh": "未发现明确事实改变。"
+    }
+  ]
+}

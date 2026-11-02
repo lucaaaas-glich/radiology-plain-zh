@@ -1,0 +1,174 @@
+{
+  "frozen_at_utc": "2026-10-16T00:39:19.941710+00:00",
+  "stage": "Local selection based on development only; final predictions not inspected",
+  "development_commit": "c1cd6bcaedf3707953b6703a9b7c115797e797ed",
+  "selection_reason_zh": "选择Qwen3.5-4B 4bit、dev8逐句与核对、全部既往原文、最多一次修订、关闭思考。真实开发16份相对dev7有错9→7、完整忠实1→5、全文生成9→10、片段134→137/143，没有新增有错报告。短开发20份1错、18忠实、19全文生成；复杂报告仍有明显残余错误。7B开发表现及45分钟上限失败、空上下文消融和有限思考预算均不支持替换此方案。保留V1与4B直接改写作为1024 token最终对照。全部选择仅依据开发证据，未查看最终预测；不宣称临床可靠。",
+  "selected_model_provenance": {
+    "repo": "mlx-community/Qwen3.5-4B-4bit",
+    "revision": "0e7ffd5c629ef7719d4cbc04069232580bfa9d9c",
+    "upstream": "Qwen/Qwen3.5-4B",
+    "upstream_revision_at_retrieval": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "note": "Upstream revision at retrieval is not proof of the converter original source revision. Community quantization, not trained by this project.",
+    "local_path": "artifacts/v2/qwen35-4b",
+    "download_seconds": 512.2940721511841,
+    "files": {
+      "model.safetensors": {
+        "bytes": 3034300695,
+        "sha256": "5fb9acd0246866381cf8c5c354c6db1019f6498eec4ccb4f5edcc71ffeacb2db"
+      },
+      "tokenizer_config.json": {
+        "bytes": 1139,
+        "sha256": "e98f1901ac6f0adff67b1d540bfa0c36ac1a0cf59eb72ed78146ef89aafa1182"
+      },
+      "config.json": {
+        "bytes": 3366,
+        "sha256": "f3efc81b2ea8d96a45301037d3ccccbcccdef44a961845c87f286aaddbc6eaaa"
+      },
+      "tokenizer.json": {
+        "bytes": 19989343,
+        "sha256": "87a7830d63fcf43bf241c3c5242e96e62dd3fdc29224ca26fed8ea333db72de4"
+      },
+      "processor_config.json": {
+        "bytes": 1300,
+        "sha256": "14932921ca485d458a04dafd8069fbb0a4505622a48208d19ed247115801385b"
+      },
+      "chat_template.jinja": {
+        "bytes": 7756,
+        "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"
+      },
+      "vocab.json": {
+        "bytes": 6722759,
+        "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+      },
+      "model.safetensors.index.json": {
+        "bytes": 101944,
+        "sha256": "52e534c41f7b97708329c85f762e5882bf48bd5955a422c6ae74eba321e6048a"
+      },
+      "video_preprocessor_config.json": {
+        "bytes": 385,
+        "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
+      },
+      "preprocessor_config.json": {
+        "bytes": 390,
+        "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+      }
+    }
+  },
+  "arms": {
+    "v1_direct": {
+      "backend": "mlx",
+      "temperature": 0,
+      "thinking": false,
+      "max_input_tokens": 4096,
+      "mlx_memory_guideline_bytes": 5905580032,
+      "mlx_cache_limit_bytes": 134217728,
+      "model": "artifacts/mlx-4bit",
+      "mode": "direct",
+      "max_tokens": 1024
+    },
+    "local_direct": {
+      "backend": "mlx",
+      "temperature": 0,
+      "thinking": false,
+      "max_input_tokens": 4096,
+      "mlx_memory_guideline_bytes": 5905580032,
+      "mlx_cache_limit_bytes": 134217728,
+      "model": "artifacts/v2/qwen35-4b",
+      "mode": "direct",
+      "max_tokens": 1024
+    },
+    "local_evidence": {
+      "backend": "mlx",
+      "temperature": 0,
+      "thinking": false,
+      "max_input_tokens": 4096,
+      "mlx_memory_guideline_bytes": 5905580032,
+      "mlx_cache_limit_bytes": 134217728,
+      "model": "artifacts/v2/qwen35-4b",
+      "mode": "evidence-critic",
+      "max_tokens": 384,
+      "critic_max_tokens": 512,
+      "context_policy": "all_previous_source_sentences"
+    }
+  },
+  "code_sha256": {
+    "radplain/__init__.py": "b0bd0be201a9be1a0f029b5cc676818aa15231097205d7af3e420a8903e00348",
+    "radplain/common.py": "3698bb29475ceb06fd4630cca14023c465f2e8e3a1a149fc890e7e56323927bd",
+    "radplain/data.py": "e570471d3afdc4f2efebd4cbdbdad52ece8fa02e9b69e9ebf7065fad1d31a450",
+    "radplain/evaluate.py": "8ec50abeaa7d512ffe109d56bf458fc859038cd1a7c2deabc887100e76551b1b",
+    "radplain/explain_v2.py": "971bd1bacb78e66764f481abe1235826c81ddc135f3813b91582d5802a4edd2f",
+    "radplain/fidelity.py": "d92179b82a40fdebe6a0881156d988cdfcc113e404074c9a7039a4f7e981dec0",
+    "radplain/glossary_v2.py": "f5521346fe40c08b0bf80e1fba018633acb77d38117c0de874809f098382f010",
+    "radplain/guard_v2.py": "784d7c24d8293dee1a08e5ce11b0f844355b50d08ec8dfdb8bc00e73815d6334",
+    "radplain/hf_backend_v2.py": "9dcba7849d49b13c23e04ef80c3e45553e08ece98a83c5ebc854e5f8b4679c18",
+    "radplain/mlx_backend.py": "c11693859c66707ba25936101cd8f28fd58343141131d9c2a690372b65111059",
+    "radplain/model.py": "511de7b3c95fedb156a7c29fd56def17c0ed3db9e315f87edacb59035b9deb23",
+    "radplain/predict.py": "eab4c4699ccee5e98b48b707e6262075e004bbe1ac58f40becb803b043f37e7b",
+    "radplain/predict_mlx.py": "5899d658628156a8284046d14a2e5ed14de631a5e5b17c86151481cfcab455e0",
+    "radplain/predict_v2.py": "313456a67164cc172f0cacf6c466421bdd643e2431d732e43116e17cd7780a53",
+    "radplain/prompts.py": "ed812040abd7bea1235f3adac3c6d2512c6f1e1958ca86e166e1562a02154cb8",
+    "radplain/quantity_v2.py": "d38f6178494ac5839e5f1eea64275abbd0765a97822fd6971ba7474a47b23c0d",
+    "radplain/recheck_v2.py": "917f85bfc6b412a01e192676c67ac935403606d0fbe9a5288accb2610c3c3295",
+    "radplain/render_v2.py": "8f8d9db8b22d95d26ee5ee81897987620f15df5a3138a2b6165a87cf25f28cd1",
+    "radplain/semantic_v2.py": "5838a85078c08cc97ded897a221ee19aad101e3b8d48f1b1f08941c3291a057c",
+    "radplain/teacher.py": "aa4f31e7e3d8cfa9478e21b5c269a55c3bd2237351d308d44878c10604288e83",
+    "radplain/train.py": "0b666450806aedfeb3e95ba6164fb170dee5a46f151646efa221af7250fc2c1a",
+    "scripts/run_v2_pipeline.py": "3e3dd2a112273fab0fd41c4ec3a9b84da127a522f6293208ae1ef1723446c5bc",
+    "scripts/v2_local_preflight.py": "f9fe65247b72bf06702c3664e4ff3a0e166bbd51d141c76e03c5fb913fbf70d9",
+    "scripts/freeze_v2_local.py": "90ceffaaf716fcf5d92bdd1c5f95a979eb1bc130e7b44d5c441ab62ed7cd0391",
+    "configs/v2_local.json": "a4d9ecf9f4aa9429a0c57f955ea877632a61caa3069cc2e38ba2a9ffecf913f5",
+    "requirements-v2-mac.txt": "9a9aa418098dfde5e121d4e46aa92e403777cc49caf2a00451ea25053e3ec8de",
+    "scripts/prepare_v2_local_model.py": "9c014f6e809b4d6c2f05dcab4ab2bc7bde89635edb299ccf01373427b3c01cfe"
+  },
+  "model_files_sha256": {
+    "artifacts/mlx-4bit": {
+      "artifacts/mlx-4bit/LICENSE.txt": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+      "artifacts/mlx-4bit/MODIFICATIONS.txt": "bfff0771fad0cc39180696edcf9a3e358eca787b6a447784a911b1212c5837e2",
+      "artifacts/mlx-4bit/README.md": "748c964f9b7e5f2c3770ce013bbc0153be7c54311d9692c343b6188eefe77ac6",
+      "artifacts/mlx-4bit/UPSTREAM_README.md": "2e1bcd8bd964728a820be709fa0f7b9dd54817a94fd2254c535df70c5e67fada",
+      "artifacts/mlx-4bit/chat_template.jinja": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+      "artifacts/mlx-4bit/config.json": "804b3667cc62ba76ab107049d6ed19db27d3a4a27b4d3e203c7dc44f3e9bf392",
+      "artifacts/mlx-4bit/generation_config.json": "cd5866254bd02b52464b75af06818afa882298a64d30a3819343a4fa4ed16ca9",
+      "artifacts/mlx-4bit/model.safetensors": "70899aac71143e1de7bba76f56bc9155df9e00d0b5272798d2470e41feb1d078",
+      "artifacts/mlx-4bit/model.safetensors.index.json": "19e664257b50911ac12ff231c42e952c210d48d1861f7fa304eb640dd10dccb8",
+      "artifacts/mlx-4bit/tokenizer.json": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8",
+      "artifacts/mlx-4bit/tokenizer_config.json": "dd3ca1fca5dd0c744b508bc8c072a8d59845069d5f38503508ab28ad49b49eca"
+    },
+    "artifacts/v2/qwen35-4b": {
+      "artifacts/v2/qwen35-4b/chat_template.jinja": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+      "artifacts/v2/qwen35-4b/config.json": "f3efc81b2ea8d96a45301037d3ccccbcccdef44a961845c87f286aaddbc6eaaa",
+      "artifacts/v2/qwen35-4b/model.safetensors": "5fb9acd0246866381cf8c5c354c6db1019f6498eec4ccb4f5edcc71ffeacb2db",
+      "artifacts/v2/qwen35-4b/model.safetensors.index.json": "52e534c41f7b97708329c85f762e5882bf48bd5955a422c6ae74eba321e6048a",
+      "artifacts/v2/qwen35-4b/preprocessor_config.json": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+      "artifacts/v2/qwen35-4b/processor_config.json": "14932921ca485d458a04dafd8069fbb0a4505622a48208d19ed247115801385b",
+      "artifacts/v2/qwen35-4b/tokenizer.json": "87a7830d63fcf43bf241c3c5242e96e62dd3fdc29224ca26fed8ea333db72de4",
+      "artifacts/v2/qwen35-4b/tokenizer_config.json": "e98f1901ac6f0adff67b1d540bfa0c36ac1a0cf59eb72ed78146ef89aafa1182",
+      "artifacts/v2/qwen35-4b/video_preprocessor_config.json": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+      "artifacts/v2/qwen35-4b/vocab.json": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+    }
+  },
+  "installed_packages_at_freeze": {
+    "mlx": "0.32.4",
+    "mlx-lm": "0.32.0",
+    "transformers": "5.19.0",
+    "huggingface-hub": "2.2.0",
+    "tokenizers": "0.23.3",
+    "numpy": "2.5.4",
+    "safetensors": "0.8.0"
+  },
+  "holdout_sha256": {
+    "synthetic": "a528158b924dbd7ff6da9c675e5bd8d8df756a1dc801600ef3cb4ef6f3aafdf7",
+    "real": "5b5754822d85947f9581bffcbc8444fb5bffbacd7e16275b5a220b6ca75b4768"
+  },
+  "development_evidence": {
+    "docs/v2/候选选择.md": "8815d9f68191f2301a0242d9173218bff5aa21a0febf572f5212af7d522ce59e",
+    "results/v2/dev_qwen35_critic_04/summary.json": "b8714f29736b79389ab8d22b2cb377136b5812a3b7dbfedfb1982ee47b560774",
+    "results/v2/dev_real_reviews/qwen35_critic_04_summary.json": "21a14e605d3462920a941b20eaaee9bae7d1f9c3f9c99e7d74d04dea81c40a48",
+    "results/v2/dev_real_reviews/paired_4b_dev7_to_dev8.json": "67c32cf7f0896a1b5d7356a498d37a27f038d42587c561d27ce0061d02a9c43b",
+    "results/v2/dev_real_reviews/qwen35_contextless_01_summary.json": "544c0b27b5481a92f0076baa64f0bdac4a7550cff56ff67c956d97b50c1b0f1a",
+    "results/v2/dev_real_reviews/qwen25_critic_01_partial_summary.json": "f565e7f133f96d268a9e6f337121926d9e878c1e07b76f09fe65c146bf589138",
+    "results/v2/dev_qwen25_7b_01/synthetic_critic/summary.json": "76e41134356260fbb85a33e90c6e4cbd7ebaaad518b7277de83378ca91ccbe0b",
+    "results/v2/dev_thinking_critic_01_summary.json": "2a2ca775e46cfbf5c9a11852f38403824dc1b2029e521c3dc2b2eee4819015fa"
+  },
+  "interpretation": "Project AI review, not independent or clinical validation; GPU and local evidence pipelines differ."
+}

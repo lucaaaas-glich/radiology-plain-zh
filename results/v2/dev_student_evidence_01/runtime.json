@@ -1,0 +1,18 @@
+{
+  "split": "dev",
+  "mode": "evidence",
+  "model": "artifacts/mlx-4bit",
+  "count": 20,
+  "input_sha256": "d53fa9e1d57cd1da6d89c8505824a3079c1cb6000432dfcaa50cf5856992e848",
+  "candidate_lock_sha256": null,
+  "git_commit": "d865857acc1e618fa15384a8f9f880b5b5a2a4de",
+  "load_seconds": 1.3007256670389324,
+  "generation_seconds": 28.030673831817694,
+  "peak_mlx_allocated_bytes": 1305031188,
+  "platform": "macOS-26.3.1-arm64-arm-64bit",
+  "source_files_sha256": {
+    "radplain/explain_v2.py": "726c323f62e1c36e95c6d0a61470c93e54ec08b2128cd05cf18b537af5234467",
+    "radplain/glossary_v2.py": "4982173081cf0775e97691b85954fd89055474a7ebe5b10c3f64fc2f1c1c98a7",
+    "radplain/guard_v2.py": "01920943ea25b15a841383c8cb57c23da24ab1adf34e5feb33eb30f7756b61b5"
+  }
+}
