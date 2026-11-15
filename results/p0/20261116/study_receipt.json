@@ -1,0 +1,13 @@
+{
+  "manifest_sha256": "376b8ef2d1dc8c67e3df29cca3f02a72ab9e685ed324b1f006cfbc4c0dd28f6a",
+  "reports": 10,
+  "candidate_outputs": 20,
+  "new_inference_calls": 0,
+  "completed_human_annotations": 0,
+  "files": {
+    "annotations.jsonl": "52c9bbf680f5d8f961020376f92f38cc92199e8a5ace3e68a29ff3e56b255e5a",
+    "historical_arm_mapping.json": "9b098509e595fe7da54c7bd858280a1a000d2b6350e2ef82476d09b788cd4de4",
+    "packet.json": "5f7d51edce13412c3af271ecc2ea3af31d6fd7f7b16978ed5545df2208c3b202",
+    "study.html": "970d26b792c3148c287f74dc38e5ef997fc22611a1cc86baa3a094d3f2a2a296"
+  }
+}

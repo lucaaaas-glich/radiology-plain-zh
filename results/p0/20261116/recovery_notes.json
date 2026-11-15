@@ -1,0 +1,34 @@
+{
+  "status": "initial_local_preparation_only",
+  "model_execution_performed": false,
+  "missing_for_original_baseline": [
+    "artifacts/base-model at student revision recorded in assets.json"
+  ],
+  "teacher_redownload_needed_for_existing_label_audit": false,
+  "optimizer_resume_available": false,
+  "other_asset_validation": {
+    "adapter_headers": "224 F32 tensors / 4358144 parameters; checked header and payload bounds",
+    "merged_model": "338 tensors; index shard paths and header/payload bounds checked; full weight hash NOT rechecked",
+    "mlx_v1": "732 tensors; index/header/payload bounds checked; full weight hash NOT rechecked",
+    "mlx_v2": "1221 tensors; index/header/payload bounds checked; full weight hash NOT rechecked",
+    "merged_historical_small_file_hashes": "11 small files match saved export manifest; 2 large shards not rehashed",
+    "verification_kind": "project AI executed read-only structural inspection; not model-load test"
+  },
+  "dataset_provenance": {
+    "revision": "6783ab38f9de28c4372799346f51d3927ae7eb9a",
+    "local_card": "artifacts/provenance/dataset_README.md",
+    "official_pinned_card": "https://huggingface.co/datasets/BioLaySumm/BioLaySumm2025-LaymanRRG-opensource-track/blob/6783ab38f9de28c4372799346f51d3927ae7eb9a/README.md",
+    "observation": "Pinned card contains schema and split sizes, no license/terms field. Do not infer dataset terms from project code MIT or model Apache license.",
+    "status": "terms_record_incomplete; raw reports remain in ignored local directories"
+  },
+  "pending": [
+    "near-duplicate/template-family grouping",
+    "source-fact human annotation and timing",
+    "quality-filter reliability and group difference audit",
+    "new final-set availability and selection",
+    "base model restoration and execution smoke",
+    "actual GPU budget measurement"
+  ],
+  "human_review_completed": 0,
+  "training_ready": false
+}

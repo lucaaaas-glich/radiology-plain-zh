@@ -1,0 +1,132 @@
+{
+  "phase": "P0_initial_local_audit",
+  "audit_date_local": "2026-11-16",
+  "data": {
+    "train": {
+      "rows": 4096,
+      "format_accepted": 4066,
+      "source_counts": {
+        "PadChest": 2867,
+        "BIMCV-COVID19": 1148,
+        "OpenI": 81
+      },
+      "raw_fields_preserved": true,
+      "journal_equal_by_id": true,
+      "files": {
+        "data/pilot_v1/train.jsonl": "84a105d7e654e29b0b1cc5a3c74ce3db12580e42d800a9a9de6e054d1cede67b",
+        "data/pilot_v1/train.zh.jsonl": "a3a0c9ab66d3bda769806c8688548e515e14dac2e80c3d9bffcc68491ea7d999",
+        "data/pilot_v1/train.teacher-journal.jsonl": "6531dcab788592a6e21e3cfe76343be42ada7453f49d317ad1d9f028f720a334"
+      }
+    },
+    "validation": {
+      "rows": 256,
+      "format_accepted": 250,
+      "source_counts": {
+        "PadChest": 189,
+        "BIMCV-COVID19": 63,
+        "OpenI": 4
+      },
+      "raw_fields_preserved": true,
+      "journal_equal_by_id": true,
+      "files": {
+        "data/pilot_v1/validation.jsonl": "29f5d4b6d3831052bf2ed8742352288968d0a104f6ec124f02511d874f0b0852",
+        "data/pilot_v1/validation.zh.jsonl": "54e92fcb9cc7818e697f8a1bd3421cce23a3cd5dd47fb8fc65979476ffd5411e",
+        "data/pilot_v1/validation.teacher-journal.jsonl": "02f4d1f7370a3e5dbf324a2f1f9592140907f9b8069ca6c1699b4b04362d3af1"
+      }
+    },
+    "test": {
+      "rows": 256,
+      "format_accepted": 249,
+      "source_counts": {
+        "PadChest": 184,
+        "BIMCV-COVID19": 66,
+        "OpenI": 6
+      },
+      "raw_fields_preserved": true,
+      "journal_equal_by_id": true,
+      "files": {
+        "data/pilot_v1/test.jsonl": "72ac13ab565cfbac790ce6105b342c8cd49133e97f9979852af716ce16fe3017",
+        "data/pilot_v1/test.zh.jsonl": "e3c89873cd1207c58ef1728e3023a01bb4387ef3e3d674bddcd0b4e1a0ba4f71",
+        "data/pilot_v1/test.teacher-journal.jsonl": "1965942354f7a1aae55529c8aefc7d69ac53f34004fe45e15252f871b65851f2"
+      }
+    }
+  },
+  "v1_exact_cross_split_overlap": 0,
+  "adapters": {
+    "best": {
+      "sha256": "f5ff4f1d241c0b03181634ca4601b327d7d19dff883110d1108a1a8aa8d08494",
+      "bytes": 17462432
+    },
+    "epoch-1": {
+      "sha256": "a932605bb7a6faed1e9fe19322802ff372c1e90a646bca574b8486063cf87839",
+      "bytes": 17462432
+    },
+    "epoch-2": {
+      "sha256": "f5ff4f1d241c0b03181634ca4601b327d7d19dff883110d1108a1a8aa8d08494",
+      "bytes": 17462432
+    }
+  },
+  "model_versions": {
+    "teacher": {
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+    },
+    "student": {
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+    }
+  },
+  "weight_inventory": {
+    "base-model": {
+      "directory_present": false,
+      "weight_files": 0,
+      "weight_bytes": 0,
+      "full_weight_hash_rechecked": false,
+      "model_load_tested": false
+    },
+    "merged-model": {
+      "directory_present": true,
+      "weight_files": 2,
+      "weight_bytes": 3087466936,
+      "full_weight_hash_rechecked": false,
+      "model_load_tested": false
+    },
+    "mlx-4bit": {
+      "directory_present": true,
+      "weight_files": 1,
+      "weight_bytes": 868629082,
+      "full_weight_hash_rechecked": false,
+      "model_load_tested": false
+    },
+    "v2/qwen35-4b": {
+      "directory_present": true,
+      "weight_files": 1,
+      "weight_bytes": 3034300695,
+      "full_weight_hash_rechecked": false,
+      "model_load_tested": false
+    }
+  },
+  "historical_training": {
+    "trainable_parameters": 4358144,
+    "optimizer_steps": 510,
+    "elapsed_seconds": 562.6568494730163,
+    "gpu": "NVIDIA A100-PCIE-40GB"
+  },
+  "checks": {
+    "jsonl_parse_and_alignment": true,
+    "adapter_sha_recomputed": true,
+    "clinical_fidelity_reviewed": false,
+    "near_duplicates_reviewed": false,
+    "new_training_started": false,
+    "gpu_connected": false
+  },
+  "limitations": [
+    "Format acceptance is not factual correctness.",
+    "New local hashes are snapshots, not proof of equality to an absent historic hash.",
+    "Only small adapter weights were fully hashed; larger models were not loaded.",
+    "Merged and MLX V1 weights include old fine-tuning and cannot be B0.",
+    "V1 saves adapters, not optimizer/scheduler/RNG/data-progress resume states.",
+    "Dataset usage terms need source verification; source availability is not permission.",
+    "This audit does not claim a new independent final evaluation set exists."
+  ]
+}

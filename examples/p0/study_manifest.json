@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "status": "development_learning_selection_not_final_test",
+  "selection_date_local": "2026-11-16",
+  "display_seed": 3710261116,
+  "selection_reason": "Purposeful old failures plus old controls to develop a human review protocol; no new evaluation estimate.",
+  "human_annotations_completed": 0,
+  "historical_review_type": "project AI, not clinician or independent human gold",
+  "inputs": {
+    "sources": {
+      "path": "data/v3/real/main20.jsonl",
+      "sha256": "f77a8eef5f354176f0084b3dee5e11fcc446e67427b020d9fb0ce7cbf4e1d143"
+    },
+    "v2": {
+      "path": "results/v3/real-data/collected/v2/outputs.jsonl",
+      "sha256": "94d093af878aef7dc2964579b9759afabc7d6abcc04179e83f5db4a052d556ba"
+    },
+    "v3": {
+      "path": "results/v3/real-data/collected/v3/outputs.jsonl",
+      "sha256": "f0bf4bb551060227f20cf97435601950e4e1878a731ba0e9137b8d3908aee17d"
+    },
+    "v2_review": {
+      "path": "results/v3/final/v2_review.json",
+      "sha256": "e07691f1c1ee84bc1983db551ab21fae3f811505f7551152faef8e99b4336a78"
+    },
+    "v3_review": {
+      "path": "results/v3/final/v3_review.json",
+      "sha256": "16b9524989a05ebbf2c205c9e89302a420a395ab2a44e6f2bf8524d410875797"
+    }
+  },
+  "cases": [
+    {
+      "id": "long_b3baa3486a61d6cc",
+      "source_sha256": "b3baa3486a61d6cc164d65734207540ebe9061d6525b5d0bac2312cae2eb93a6",
+      "historical_main20_position": 1,
+      "discussion_topic": "definitions_and_incompleteness"
+    },
+    {
+      "id": "long_5fefdb2a79347660",
+      "source_sha256": "5fefdb2a7934766018cc2a867566ac42d77d7ddcb11732f4d7a499533e8d96a9",
+      "historical_main20_position": 3,
+      "discussion_topic": "location_precision_control"
+    },
+    {
+      "id": "long_48f1f40212aa6574",
+      "source_sha256": "48f1f40212aa657438478557688c1cfc8c93aac4a7b4a65e318794e32495c0fe",
+      "historical_main20_position": 5,
+      "discussion_topic": "recommendation_strength"
+    },
+    {
+      "id": "long_5444aec1786f55c3",
+      "source_sha256": "5444aec1786f55c3fe8d2ad21973b7321af34bb63e70401f7d641e1d1186f7b2",
+      "historical_main20_position": 7,
+      "discussion_topic": "historical_faithful_control"
+    },
+    {
+      "id": "long_0b1f5bc1b9a68604",
+      "source_sha256": "0b1f5bc1b9a6860439b5960d31cb0ad492121ce1d15d35824bd27b3cc421613e",
+      "historical_main20_position": 10,
+      "discussion_topic": "quantity_dimension_and_omission"
+    },
+    {
+      "id": "long_63dbdd7032e14da4",
+      "source_sha256": "63dbdd7032e14da47b73cbff8f40fe1ccd5f2807df8121958d251de984b76c73",
+      "historical_main20_position": 12,
+      "discussion_topic": "anatomy_and_omission"
+    },
+    {
+      "id": "long_8b37c849e2e993be",
+      "source_sha256": "8b37c849e2e993bea6449f8537e3e58ebb0c94db83c46c5494d869eb00d93dfd",
+      "historical_main20_position": 13,
+      "discussion_topic": "location_precision"
+    },
+    {
+      "id": "long_3a5ce0a2a2aa2089",
+      "source_sha256": "3a5ce0a2a2aa2089a77d356b9e57137b8f60fe0b357d25babb7cc16bec5b77c3",
+      "historical_main20_position": 17,
+      "discussion_topic": "section_number_false_alarm"
+    },
+    {
+      "id": "long_1b1bf3aecd9f8ad2",
+      "source_sha256": "1b1bf3aecd9f8ad24c334d87d5b2ee27b6e2832514acf3553fc5b9679e955971",
+      "historical_main20_position": 19,
+      "discussion_topic": "terminology_and_unsupported_cause"
+    },
+    {
+      "id": "long_f2007f131c21153c",
+      "source_sha256": "f2007f131c21153c767a0743975a76cee9f1746a43cb1861ef3dcbfaf3bf1035",
+      "historical_main20_position": 20,
+      "discussion_topic": "recommendation_and_missing_content"
+    }
+  ]
+}

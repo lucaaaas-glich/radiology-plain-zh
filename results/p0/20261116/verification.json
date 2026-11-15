@@ -1,0 +1,33 @@
+{
+  "phase": "initial_local_preparation",
+  "test_runs": [
+    {
+      "command": "python3 -m unittest discover -s tests -p test_p0_study_packet.py -v",
+      "passed": 5
+    },
+    {
+      "command": "python3 -m unittest discover -s tests -p test_exposure_manifest.py -v",
+      "passed": 9
+    }
+  ],
+  "study_packet_checked": {
+    "reports": 10,
+    "historical_candidates": 20,
+    "human_annotations": 0,
+    "input_file_shas": 5,
+    "historical_output_review_binding": "matched",
+    "html_static_structure": "10 articles, 30 details panels, no scripts or external resources"
+  },
+  "exposure_cli_exit": 2,
+  "exposure_exit_reason": "Explicitly retained current Chinese CLI input historical-usage uncertainty; no malformed source JSONL or missing registered mandatory files.",
+  "legacy_tracked_files_modified": false,
+  "new_model_calls": 0,
+  "gpu_jobs_submitted": 0,
+  "source_files": {
+    "scripts/audit_p0_assets.py": "9c5a913533c1898420c8dc72efe603730941714bd0069cff20a081100c21ba33",
+    "scripts/build_exposure_manifest.py": "23e6f20db48e94495bc4c825de2044134cbb2dce372b9cd60baa4632be1ad70d",
+    "scripts/build_p0_study_packet.py": "3fad4f67baa6fa2c9c66c59c11c491531f6cec593bf5b497b9e3d9484e04c91c",
+    "tests/test_exposure_manifest.py": "e33e4d5d5cdb10173f7c52bd5afd41429d99c38161cd18520dd04ee4b96df130",
+    "tests/test_p0_study_packet.py": "b47acc70c4378813e86e089a9cd5fa03c56c3a1a4c7622332f5c716fabfca91d"
+  }
+}

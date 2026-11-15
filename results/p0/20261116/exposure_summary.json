@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "scope": "Existing local V1, V2 and V3 files only; no new evaluation cohort created",
+  "hash_algorithm": "sha256(UTF-8(re.sub(r'\\s+', ' ', text.casefold()).strip()))",
+  "limitations": {
+    "inventory_complete_scope": "Registered local V1--V3 files and record evidence only; not proof of complete historical, template, near-duplicate, patient, or pretraining independence",
+    "outputs_seen_false_is_current_unseen_evidence": false,
+    "reserved_only_meaning": "Reservation exists, but no local generation evidence was found; not a claim of unviewed or unseen text",
+    "template_and_near_duplicate_audit": "pending",
+    "patient_independence": "unknown",
+    "diagnostic_fragment_parent_linkage": "pending",
+    "parquet_rows_inspected": false,
+    "foundation_model_pretraining_exposure": "unknown",
+    "historical_sources_outside_local_snapshot": "unknown",
+    "new_final_set_available": false
+  },
+  "summary": {
+    "unique_hashes": 4790,
+    "usage_status_counts": {
+      "actual_used": 4769,
+      "reserved_only": 20,
+      "unknown": 1
+    },
+    "issues_count": 1,
+    "inventory_complete": false
+  },
+  "v3_final_execution": {
+    "arms": {
+      "v2": {
+        "source_path": "results/v3/real-data/collected/v2/outputs.jsonl",
+        "expected_records": 20,
+        "observed_records": 20,
+        "unique_report_hashes": 20
+      },
+      "v3": {
+        "source_path": "results/v3/real-data/collected/v3/outputs.jsonl",
+        "expected_records": 20,
+        "observed_records": 20,
+        "unique_report_hashes": 20
+      },
+      "without_ledger": {
+        "source_path": "results/v3/real-data/collected/without_ledger/outputs.jsonl",
+        "expected_records": 10,
+        "observed_records": 10,
+        "unique_report_hashes": 10
+      }
+    },
+    "unique_reports_across_arms": 20,
+    "ablation_is_primary_subset": true
+  },
+  "cohorts": {
+    "data/pilot_v1/train.jsonl": {
+      "expected_records": 4096,
+      "unique_hashes": 4096,
+      "source_type": "real_report",
+      "usage_status_counts": {
+        "actual_used": 4096
+      }
+    },
+    "data/pilot_v1/validation.jsonl": {
+      "expected_records": 256,
+      "unique_hashes": 256,
+      "source_type": "real_report",
+      "usage_status_counts": {
+        "actual_used": 256
+      }
+    },
+    "data/pilot_v1/test.jsonl": {
+      "expected_records": 256,
+      "unique_hashes": 256,
+      "source_type": "real_report",
+      "usage_status_counts": {
+        "actual_used": 256
+      }
+    },
+    "examples/challenge.jsonl": {
+      "expected_records": 20,
+      "unique_hashes": 20,
+      "source_type": "synthetic_report",
+      "usage_status_counts": {
+        "actual_used": 20
+      }
+    },
+    "data/v2/real/dev.jsonl": {
+      "expected_records": 16,
+      "unique_hashes": 16,
+      "source_type": "real_report",
+      "usage_status_counts": {
+        "actual_used": 16
+      }
+    },
+    "data/v2/real/holdout.jsonl": {
+      "expected_records": 24,
+      "unique_hashes": 24,
+      "source_type": "real_report",
+      "usage_status_counts": {
+        "actual_used": 24
+      }
+    },
+    "examples/v2/holdout.jsonl": {
+      "expected_records": 48,
+      "unique_hashes": 48,
+      "source_type": "synthetic_report",
+      "usage_status_counts": {
+        "actual_used": 48
+      }
+    },
+    "data/v3/real/holdout.jsonl": {
+      "expected_records": 40,
+      "unique_hashes": 40,
+      "source_type": "real_report",
+      "usage_status_counts": {
+        "reserved_only": 20,
+        "actual_used": 20
+      }
+    },
+    "data/v3/real/main20.jsonl": {
+      "expected_records": 20,
+      "unique_hashes": 20,
+      "source_type": "real_report",
+      "usage_status_counts": {
+        "actual_used": 20
+      }
+    },
+    "data/v3/development/dev5-old4.jsonl": {
+      "expected_records": 4,
+      "unique_hashes": 4,
+      "source_type": "real_report",
+      "usage_status_counts": {
+        "actual_used": 4
+      }
+    },
+    "data/v2/thinking_dev_pairs.jsonl": {
+      "expected_records": 38,
+      "unique_hashes": 29,
+      "source_type": "diagnostic_fragment",
+      "usage_status_counts": {
+        "actual_used": 29
+      }
+    }
+  },
+  "issues": [
+    {
+      "code": "current_text_usage_evidence_unknown",
+      "source_path": "examples/中文报告.txt",
+      "record_number": 1
+    }
+  ],
+  "inventory_complete_scope": "registered local V1-V3 files only",
+  "full_local_manifest": {
+    "path": "data/p0/exposure-20261116/manifest.json",
+    "sha256": "1782653dc0dcba20d06f5e6b08c516116d701526aecf2bd869265c81376db4b1",
+    "bytes": 8699472
+  },
+  "source_types": {
+    "real_report": 4688,
+    "synthetic_report": 68,
+    "diagnostic_fragment": 29,
+    "synthetic_probe": 6
+  },
+  "registered_file_count": 191,
+  "expected_cli_exit_code": 2,
+  "interpretation": "One unresolved usage-evidence item for the current Chinese CLI sample, not a malformed source file. Do not infer a fresh final test set from this inventory."
+}
