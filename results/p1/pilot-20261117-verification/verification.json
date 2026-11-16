@@ -1,0 +1,51 @@
+{
+  "schema": "p1-reload-check-v1",
+  "status": "passed",
+  "checks": {
+    "engineering_only": true,
+    "final_test_read": false,
+    "formal_effectiveness_claim": false,
+    "adapter_nonempty_finite": true,
+    "adapter_reloaded_exactly": true
+  },
+  "hashes": {
+    "config": "47620b96d49231268dae7fb477b08bb4db408ee6797a86f346182a32ea34519a",
+    "preflight": "87fa2b50273d4af094a48e72f12f277c276fa8a42bbdf17a807b085dcd0aa96f",
+    "training": "4f654b2564ddc79e9adfc3ee169c77e6eea3655004112fc4f31ce71bf0ec0523",
+    "history": "44d3a8acc63e3f57ff404dc50a874242cef2918043d741e55b914aab4fd43610",
+    "selection": "c5714a3ae2db13f07dc0b333c58753a204e080765727ea5178e4babc184fdeb3",
+    "model_provenance": "596963aec8df8c0fabe036d6c2db9bf6be7105e2bea2a9cf33f21f408e3d6824",
+    "development_file": "f2c1c5d68d9e1e92837554d8520a3e6211ecd9d44633b106da29ad828ebc44b5",
+    "development_selection": "b1dba36f2a0413d80c7c3e4d83eb6450bc796777d822fcc9de84b33408f430f8",
+    "adapter_config": "871d46ca7e96aedb1d8f24267cadbdc3af576a0a131144d365ebfaa431e583de",
+    "generation_plan": "f20887b12ef5a8e4594fc904ffdb97b7f230bf7477e916438162c6d7ae3b01c4",
+    "adapter_weights": "db9e82f151eca0e5c0fee269647b95a1ff85f52807408c4818049eb431c2b4b7",
+    "original_base_lock": "783de88f7f3661b9f2b7167190f19fd5584649934ab427fc02704dcedef39354",
+    "decoding_config": "6c1e9529de4f57792c43ea8a918b14b1da190cf56fd416183a79a8881e7e61a8",
+    "original_base_raw": "21ad5ed90ed8434eccb699ffff22820a2eb689e8f2ba08faf2ad87a2c71c8024",
+    "saved_reloaded_pilot_adapter_raw": "e0dda57627bfd98999c8803c33d554fec88e0832a2b69ce173dbc39bf4614a6e"
+  },
+  "timing_seconds": {
+    "original_base_load": 0.8641821402125061,
+    "original_base_generation": 11.957266738638282,
+    "saved_reloaded_pilot_adapter_load": 1.0933171827346087,
+    "saved_reloaded_pilot_adapter_generation": 19.358146147802472,
+    "total": 41.3307973658666
+  },
+  "completion": {
+    "original_base": {
+      "requested": 10,
+      "generated": 10,
+      "eos_completed": 10,
+      "nonempty": 10,
+      "contains_han": 10
+    },
+    "saved_reloaded_pilot_adapter": {
+      "requested": 10,
+      "generated": 10,
+      "eos_completed": 10,
+      "nonempty": 10,
+      "contains_han": 10
+    }
+  }
+}

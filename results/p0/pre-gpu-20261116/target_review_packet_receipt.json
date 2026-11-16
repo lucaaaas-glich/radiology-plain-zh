@@ -1,0 +1,15 @@
+{
+  "inputs_sha256": {
+    "data/p0/pre-gpu-20261116/target-audit/packet.jsonl": "e0badbaf21175c22b6f33fef879dbf5a34c0ff8c2514f90f8f66f4c17c99d512",
+    "examples/p0/real_target_audit_manifest.json": "c3c10c001d46ce9eaaeb57899977b91da03821300b857129df9c0635964e5990",
+    "results/p0/pre-gpu-20261116/target_ai_review_summary.json": "efbf9907dfa40cb36d190ec6d75446eeb549fd073008d0345309766af466fd7f",
+    "results/p0/pre-gpu-20261116/target_ai_review_01_12.json": "9b1343d1d6ebb2b90848eec185d63910ed82797282a7f393dc0751a52067db04",
+    "results/p0/pre-gpu-20261116/target_ai_review_13_18.json": "a18ed3799b0d77cc72c15824cbc9319f112e5ef3044226215a1625a880dcd30c"
+  },
+  "builder_sha256": "f97f8bcdbeafbe46eb7346b9f7a2464bb935ceba328fa86666786d44294602db",
+  "outputs_sha256": {
+    "annotations.template.json": "c8e488e54845d2ef7a5a92c34ae3b08c205372ba6d9e167f4c1f1f37170fc171",
+    "receipt.json": "774c29c9207e6b3f8d72c920d105ab3f203d5f7171d5c7bba7b17cd2608a65cb",
+    "review.html": "17b1bad77b61ba0620bb5e2feb15e24faccee47749764ae03b66737f47b0a247"
+  }
+}

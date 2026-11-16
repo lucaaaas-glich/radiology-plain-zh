@@ -1,0 +1,9 @@
+{
+  "artifact": "P1_A100先导实测.md",
+  "sha256": "fa3ba7a2c01d4586e9bedf43c15fa59b124e89d3a81a8e6d0ac68ffd70fee3f2",
+  "report_source": "docs/p1/A100先导实测与下一步.md",
+  "code_commit": "3488550aa4efd9fdfc02e5139e9d851851253de5",
+  "new_human_reviews_completed": 0,
+  "gpu_job": "771477",
+  "model_quality_improvement_claim": false
+}

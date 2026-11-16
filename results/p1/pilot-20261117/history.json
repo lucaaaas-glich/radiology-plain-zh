@@ -1,0 +1,9 @@
+[
+  {
+    "epoch": 1,
+    "train_answer_token_loss": 1.276757061948353,
+    "validation_answer_token_loss": 1.3242847620482614,
+    "optimizer_steps": 6,
+    "elapsed_seconds": 19.39615621836856
+  }
+]

@@ -1,0 +1,109 @@
+{
+  "purpose": "post_run_exploratory_source_consistency_notes_not_formal_quality_scoring",
+  "reviewer": "project_AI",
+  "human_reviews": 0,
+  "all_20_outputs_read_against_10_sources": true,
+  "final_test_used": false,
+  "output_files_sha256": {
+    "saved_reloaded_pilot_adapter.jsonl": "e0dda57627bfd98999c8803c33d554fec88e0832a2b69ce173dbc39bf4614a6e",
+    "original_base.jsonl": "21ad5ed90ed8434eccb699ffff22820a2eb689e8f2ba08faf2ad87a2c71c8024"
+  },
+  "limitations": [
+    "Old development examples; no independent human or clinician review.",
+    "No preannotated necessary-fact gold standard; do not derive clinical accuracy or a formal improvement rate.",
+    "One tiny training run; isolated observed changes are not evidence of S1 versus S0.",
+    "Notes are source-text comparisons, not a determination of image truth or patient health."
+  ],
+  "cases": [
+    {
+      "position": 1,
+      "id": "2c11a85744c017b05378ba9266e0da6cb9519d58c155f23070afe6c507ccc5bd",
+      "source_sha256": "b252317521d91bd67f346d515f0b8b215f438e9ca7342182ee6a15f5e582696c",
+      "base_output_sha256": "62d57255778ddd1cd39a0f4119d2e035efcd66a7231cf5193a96abc4e0d0865a",
+      "pilot_output_sha256": "62d57255778ddd1cd39a0f4119d2e035efcd66a7231cf5193a96abc4e0d0865a",
+      "base_note_zh": "两臂均把含糊日期具体化，并出现原文不支持的月份表达。",
+      "pilot_note_zh": "同基座。"
+    },
+    {
+      "position": 2,
+      "id": "b7b80d41587b42320e980c49435c46db5beb74dfaa0ba3a524671d10669887d9",
+      "source_sha256": "687495e49663be600f4a74956463cf2eeab7a98805570fa932b26657385211f7",
+      "base_output_sha256": "9a4aa396d3d8aa2b06d83884bcf3e76cc145eda832e14e585e7176c4a1da3de9",
+      "pilot_output_sha256": "6148ed364cd2ddb267e3827e7208cc0db87666287f1364f4897a69d22a54b876",
+      "base_note_zh": "把部位和病变模式概括成肺部病变，未讲全原文限定。",
+      "pilot_note_zh": "相同的部位/模式信息仍缺失，血管相关描述更含糊。"
+    },
+    {
+      "position": 3,
+      "id": "383cd0e9dd061c40965c864656072d1a3a9e9721761baf1d1b6f03b5d08181fe",
+      "source_sha256": "a897e71024b9acd36ef3b89568b5e20b21a97c5001192d9a3a01fe1b99be721c",
+      "base_output_sha256": "ef91b404af0fc7728ff21bb6b3258d485b54b2e5afcbd409cd29b3efa577d917",
+      "pilot_output_sha256": "aff78b65c09798febeef58c3b790abe8f0db436cb670c568c55f739fe9079dd6",
+      "base_note_zh": "心胸比例正常被泛化为更宽泛的正常判断，模式表达也有变化。",
+      "pilot_note_zh": "类似范围扩大，另使用了原文未提供的男性代词。"
+    },
+    {
+      "position": 4,
+      "id": "e59ff8463503ab6c19c22c524ad741a33aa749d5b8fee762ddfc25906b2504d4",
+      "source_sha256": "6309aededd7ad1f63c8c3f5c47dd914e42aa2f39950e2ce7ad64fbf9c29dd165",
+      "base_output_sha256": "1cdefa4cf92d0af59f71ab0a7fb4022a0e86075e9b2ed38035a08cd7dbe81fa0",
+      "pilot_output_sha256": "212707f6a56f286604e41fe1cb9cc2d0c932e6df63a30c6cf0ecee3289b90d5f",
+      "base_note_zh": "补入原文没有的更具体解剖定位。",
+      "pilot_note_zh": "部分技术因素的关系被弱化为可能的技术原因，且遗漏双侧等限定。"
+    },
+    {
+      "position": 5,
+      "id": "64324bb79be348a66c97ec56e4e6c33b664e50b906b13ce193be16f15a20dfc7",
+      "source_sha256": "e0fcb6d7e5309547797d07bcb54d976f98dc8a1fd5a756459375d6ec10699566",
+      "base_output_sha256": "5deb694500aec2d1797799603443575826bd0e1e66bb7d0dd60a7897d81cf1e3",
+      "pilot_output_sha256": "2e317a448a620e3f097fa44c5d343a5188098d01cb4881eec2aef979c653c25c",
+      "base_note_zh": "把较宽的疾病名称缩窄，否定范围也变宽。",
+      "pilot_note_zh": "器械结构被说成器械数量，另把一个解剖结构改成其他结构。"
+    },
+    {
+      "position": 6,
+      "id": "f56cc6d306ca9c4843db979835abea9bf3bc287f34288a93beab1ae2b865d3b3",
+      "source_sha256": "c6de211fcfb93d90dc5bce444df3f5e0674750f40cc64802e2b69797e07d8c54",
+      "base_output_sha256": "dc6fbe13c33d579012e2d521c00998e3ac419c6b4833c4a54ab8c497ec71260c",
+      "pilot_output_sha256": "6ebd8ccdd3ba94bbf01a8ac39c68c7667b80227ef45f11748433c8f6b1c1a557",
+      "base_note_zh": "遗漏昨天这个比较时间，并有部位精度和器械/影像术语问题。",
+      "pilot_note_zh": "恢复了昨天，肺下部措辞也更贴近源文；器械及影像术语问题仍存在。"
+    },
+    {
+      "position": 7,
+      "id": "8e7ef2b19fd71b14589c14766db9cdb46e8f798c4276194169b3646a49232eaf",
+      "source_sha256": "007bef7232a4281268bc844eebbe0217a659fc8fcf992301dc9e845bd69611dd",
+      "base_output_sha256": "774804a88d4c59a1a6d1e5a562f1f871c7aff7c87fd27a5a609cca74cf80aea2",
+      "pilot_output_sha256": "30968f77da8b634599a597240958c792db1ae6e77758a0a30a07f3d85d63a0b7",
+      "base_note_zh": "部分术语表达不自然，局部位置被具体化。",
+      "pilot_note_zh": "新增当前就诊时间及后部病变的侧别/病因判断，并遗漏拍摄方法等信息。"
+    },
+    {
+      "position": 8,
+      "id": "69c2049b27d0b4a1c3c96f0e840a0e7f01cfab9f2fe2abdd4186e13c2408f72a",
+      "source_sha256": "febf9de9086443e81ae3acc1f4718687b10a34435a9496933ddf0f7e358a5b16",
+      "base_output_sha256": "51bcfc24c3aee5417293325a9943589acaec2bc4268c3f4bf2391edc80aac568",
+      "pilot_output_sha256": "9c21f011e5e263f0c20587de6a559e85ce7fc8a8f6f564fe650b6eb312a294ed",
+      "base_note_zh": "保留主要变化内容，但术语没有通俗解释。",
+      "pilot_note_zh": "把原文病变类型换成结节，并新增数量减少这一具体解释。"
+    },
+    {
+      "position": 9,
+      "id": "57376ab8332c81ce0ee5c5c6eb1b61a1a072d195d78fbe5687352c6ab74e16eb",
+      "source_sha256": "1b4d3ebbb7dd36cca05afa4c7b0c6db543998e0dc84bb2f1db19becb56d2661d",
+      "base_output_sha256": "8e5c6cec74c6880ae5a72850622fa4fdb073501b9aa8ab052ad6374576a81174",
+      "pilot_output_sha256": "41a913843e7573d840b32a01fb3595d8bc1c7008ab7e30b49929c490d8404a22",
+      "base_note_zh": "把膈肌位置关联到更具体的肺部区域。",
+      "pilot_note_zh": "仍有同类位置问题，并丢失前方限定。"
+    },
+    {
+      "position": 10,
+      "id": "8f3a1a364328bb2abe85d0738bf1b77055c6731e8e8dc44ccc8d85b180596bf0",
+      "source_sha256": "62737e38030f63bd26659a60e673827a9fd35f4fbac67051ece7a703dcce256b",
+      "base_output_sha256": "c1fb55394c43d40754a63acfaf50d3734de6b0f0da2da722fb73238607123d30",
+      "pilot_output_sha256": "ff7647b29fd61b2e3ca4b0f29c8e56c9149cf34a81f545b8be10b670e0708804",
+      "base_note_zh": "遗漏了源文已消退这一核心变化。",
+      "pilot_note_zh": "同样遗漏已消退，未修复该问题。"
+    }
+  ]
+}

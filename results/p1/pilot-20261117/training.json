@@ -1,0 +1,52 @@
+{
+  "mode": "pilot",
+  "purpose": "engineering_pilot_not_formal_effectiveness",
+  "config": {
+    "student_model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "seed": 371026,
+    "pilot_train_size": 96,
+    "pilot_validation_size": 32,
+    "max_sequence_length": 1152,
+    "epochs": 1,
+    "learning_rate": 0.0001,
+    "train_batch_size": 4,
+    "gradient_accumulation_steps": 4,
+    "expected_effective_batch_size": 16,
+    "expected_optimizer_steps": 6,
+    "lora_rank": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_answer_token_loss": 1.276757061948353,
+      "validation_answer_token_loss": 1.3242847620482614,
+      "optimizer_steps": 6,
+      "elapsed_seconds": 19.39615621836856
+    }
+  ],
+  "optimizer_steps": 6,
+  "final_test_read": false,
+  "training_completed": true,
+  "formal_effectiveness_claim": false,
+  "gradient_norms_before_clipping": [
+    1.5475883483886719,
+    1.0447989702224731,
+    1.046441912651062,
+    0.8399266600608826,
+    0.8891506791114807,
+    0.7749711871147156
+  ],
+  "nonzero_gradient_steps": 6,
+  "elapsed_seconds": 19.403017454314977,
+  "total_parameters": 1548072448,
+  "trainable_parameters": 4358144,
+  "peak_allocated_bytes": 9736893440,
+  "peak_reserved_bytes": 17075011584,
+  "gpu": "NVIDIA A100-PCIE-40GB",
+  "torch": "2.14.0+cu130",
+  "cuda": "13.0",
+  "slurm_job_id": "771477"
+}

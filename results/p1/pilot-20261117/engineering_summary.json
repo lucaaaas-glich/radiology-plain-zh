@@ -1,0 +1,60 @@
+{
+  "date_local": "2026-11-17",
+  "job_id": "771477",
+  "status": "engineering_pilot_passed",
+  "gpu_training_verified": true,
+  "formal_model_quality_comparison_completed": false,
+  "model_quality_improved": null,
+  "human_review_completed": 0,
+  "new_final_test_read": false,
+  "default_model_replaced": false,
+  "training_reports": 96,
+  "development_reports": 32,
+  "old_development_generation_reports": 10,
+  "generation_arms": 2,
+  "optimizer_steps": 6,
+  "nonzero_gradient_steps": 6,
+  "trainable_parameters": 4358144,
+  "trainable_fraction": 0.0028152067467064694,
+  "timing_seconds": {
+    "slurm_total": 104,
+    "training_loop_with_dev_and_save": 19.403017454314977,
+    "reload_verification_total": 41.3307973658666
+  },
+  "training_peak_GiB": {
+    "allocated": 9.068188667297363,
+    "reserved": 15.90234375
+  },
+  "checks": {
+    "engineering_only": true,
+    "final_test_read": false,
+    "formal_effectiveness_claim": false,
+    "adapter_nonempty_finite": true,
+    "adapter_reloaded_exactly": true
+  },
+  "completion": {
+    "original_base": {
+      "requested": 10,
+      "generated": 10,
+      "eos_completed": 10,
+      "nonempty": 10,
+      "contains_han": 10
+    },
+    "saved_reloaded_pilot_adapter": {
+      "requested": 10,
+      "generated": 10,
+      "eos_completed": 10,
+      "nonempty": 10,
+      "contains_han": 10
+    }
+  },
+  "download_verified_files": 27,
+  "frozen_bundle_verified_files": 17,
+  "frozen_commit": "3488550aa4efd9fdfc02e5139e9d851851253de5",
+  "limitations": [
+    "Not a formal S0/S1 comparison or a new final evaluation.",
+    "Pilot objective was engineering validation; old-development outputs still contain observed source-consistency problems.",
+    "No human or clinical review. Rule-screened S1 quality gate remains unpassed.",
+    "Saved adapter only; exact optimizer/RNG training resume remains unimplemented."
+  ]
+}
