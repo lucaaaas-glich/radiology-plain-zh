@@ -1,0 +1,179 @@
+{
+  "version": "p1-real-quality-validation-summary-v1",
+  "reviewer_type": "project_AI_not_independent_clinical",
+  "human_reviews": 0,
+  "review_sha256": "671a7c673346a7d112abd766ca3e84fdb7b65d40fe0c1a3ca9053c6558d0528c",
+  "manifest_sha256": "a474a05e4fa5a45447b4235ccd20fc456a24762e51b5e1be8ad1288f6f983089",
+  "packet_sha256": "d922ad98463de7b916ba88c5419b1a03b27fdea067a517b95ff441808957d508",
+  "counts_overlap": true,
+  "overall": {
+    "cases": 30,
+    "observed_factual_error": 15,
+    "required_information_missing": 14,
+    "unjudgeable": 15,
+    "label_decidability": {
+      "clear_observed_issue": 20,
+      "no_observed_issue_in_assessable_content": 4,
+      "unjudgeable_without_clear_issue": 6
+    },
+    "old_flag_assessment": {
+      "false_alarm": 6,
+      "mixed": 3,
+      "no_flag_no_observed_issue": 3,
+      "no_flag_observed_issue": 11,
+      "supported": 1,
+      "unclear": 6
+    }
+  },
+  "by_source": {
+    "BIMCV-COVID19": {
+      "cases": 10,
+      "observed_factual_error": 5,
+      "required_information_missing": 5,
+      "unjudgeable": 5,
+      "label_decidability": {
+        "clear_observed_issue": 6,
+        "no_observed_issue_in_assessable_content": 1,
+        "unjudgeable_without_clear_issue": 3
+      },
+      "old_flag_assessment": {
+        "false_alarm": 2,
+        "mixed": 1,
+        "no_flag_observed_issue": 4,
+        "unclear": 3
+      }
+    },
+    "OpenI": {
+      "cases": 10,
+      "observed_factual_error": 7,
+      "required_information_missing": 4,
+      "unjudgeable": 6,
+      "label_decidability": {
+        "clear_observed_issue": 8,
+        "unjudgeable_without_clear_issue": 2
+      },
+      "old_flag_assessment": {
+        "false_alarm": 2,
+        "no_flag_observed_issue": 5,
+        "supported": 1,
+        "unclear": 2
+      }
+    },
+    "PadChest": {
+      "cases": 10,
+      "observed_factual_error": 3,
+      "required_information_missing": 5,
+      "unjudgeable": 4,
+      "label_decidability": {
+        "clear_observed_issue": 6,
+        "no_observed_issue_in_assessable_content": 3,
+        "unjudgeable_without_clear_issue": 1
+      },
+      "old_flag_assessment": {
+        "false_alarm": 2,
+        "mixed": 2,
+        "no_flag_no_observed_issue": 3,
+        "no_flag_observed_issue": 2,
+        "unclear": 1
+      }
+    }
+  },
+  "by_length_bin": {
+    "long": {
+      "cases": 8,
+      "observed_factual_error": 7,
+      "required_information_missing": 7,
+      "unjudgeable": 6,
+      "label_decidability": {
+        "clear_observed_issue": 7,
+        "unjudgeable_without_clear_issue": 1
+      },
+      "old_flag_assessment": {
+        "false_alarm": 1,
+        "mixed": 1,
+        "no_flag_observed_issue": 4,
+        "unclear": 2
+      }
+    },
+    "medium": {
+      "cases": 13,
+      "observed_factual_error": 6,
+      "required_information_missing": 4,
+      "unjudgeable": 5,
+      "label_decidability": {
+        "clear_observed_issue": 8,
+        "no_observed_issue_in_assessable_content": 3,
+        "unjudgeable_without_clear_issue": 2
+      },
+      "old_flag_assessment": {
+        "false_alarm": 4,
+        "mixed": 1,
+        "no_flag_no_observed_issue": 2,
+        "no_flag_observed_issue": 3,
+        "supported": 1,
+        "unclear": 2
+      }
+    },
+    "short": {
+      "cases": 9,
+      "observed_factual_error": 2,
+      "required_information_missing": 3,
+      "unjudgeable": 4,
+      "label_decidability": {
+        "clear_observed_issue": 5,
+        "no_observed_issue_in_assessable_content": 1,
+        "unjudgeable_without_clear_issue": 3
+      },
+      "old_flag_assessment": {
+        "false_alarm": 1,
+        "mixed": 1,
+        "no_flag_no_observed_issue": 1,
+        "no_flag_observed_issue": 4,
+        "unclear": 2
+      }
+    }
+  },
+  "by_old_flag_presence": {
+    "has_flag": {
+      "cases": 12,
+      "observed_factual_error": 7,
+      "required_information_missing": 6,
+      "unjudgeable": 6,
+      "label_decidability": {
+        "clear_observed_issue": 9,
+        "no_observed_issue_in_assessable_content": 1,
+        "unjudgeable_without_clear_issue": 2
+      },
+      "old_flag_assessment": {
+        "false_alarm": 6,
+        "mixed": 3,
+        "supported": 1,
+        "unclear": 2
+      }
+    },
+    "no_flag": {
+      "cases": 18,
+      "observed_factual_error": 8,
+      "required_information_missing": 8,
+      "unjudgeable": 9,
+      "label_decidability": {
+        "clear_observed_issue": 11,
+        "no_observed_issue_in_assessable_content": 3,
+        "unjudgeable_without_clear_issue": 4
+      },
+      "old_flag_assessment": {
+        "no_flag_no_observed_issue": 3,
+        "no_flag_observed_issue": 11,
+        "unclear": 4
+      }
+    }
+  },
+  "limits": [
+    "Project-AI exploratory review, not independent clinical or human gold; human reviews remain zero.",
+    "Equal source quotas and rare-stratum coverage do not support a population error-rate estimate.",
+    "All sources/targets come from the old training pool; this is screen validation, not a new model final test.",
+    "No new screening candidate was read or executed. Candidate code/configuration must be frozen before validating, and validation findings must not be used to tune while retaining an independent-validation claim."
+  ],
+  "required_information_missing_scope": "Includes source qualifiers, anatomic precision, relations and technical metadata; this is not independently clinician-adjudicated medical necessity.",
+  "candidate_evaluation_performed": false
+}

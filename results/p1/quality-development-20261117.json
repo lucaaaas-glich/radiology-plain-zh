@@ -1,0 +1,206 @@
+{
+  "purpose": "Old-development-only diagnostics for a conservative P1 risk candidate; not generalization or clinical accuracy",
+  "candidate_lock": {
+    "version": "p1-conservative-risk-dev1",
+    "frozen_at_utc": "2026-11-16T17:39:31.810243+00:00",
+    "rule_and_test_sha256": {
+      "radplain/quality_p1.py": "72ba0bbfae28462c4ae51e583904ad4c325e9565b7c5d952ec52cc73be516b4f",
+      "tests/test_p1_quality.py": "6e93416e8cec33f35a760e8fed5cf049d4223b3765af7c26113ce737bf4b90a5",
+      "radplain/quality_p0.py": "89fd18a185fc65245aa7e6a02e979ba2b411b3b63ed1dba739a05f79be8ccad1",
+      "radplain/quantity_v2.py": "d38f6178494ac5839e5f1eea64275abbd0765a97822fd6971ba7474a47b23c0d",
+      "radplain/fidelity.py": "d92179b82a40fdebe6a0881156d988cdfcc113e404074c9a7039a4f7e981dec0",
+      "radplain/guard_v2.py": "784d7c24d8293dee1a08e5ce11b0f844355b50d08ec8dfdb8bc00e73815d6334",
+      "radplain/common.py": "3698bb29475ceb06fd4630cca14023c465f2e8e3a1a149fc890e7e56323927bd"
+    },
+    "development_input_sha256": {
+      "old_training_audit": {
+        "path": "data/p0/pre-gpu-20261116/target-audit/packet.jsonl",
+        "sha256": "e0badbaf21175c22b6f33fef879dbf5a34c0ff8c2514f90f8f66f4c17c99d512"
+      },
+      "old_pilot_base": {
+        "path": "data/p1/20261117/downloaded/data/p1/pilot-20261117-verification/original_base.jsonl",
+        "sha256": "21ad5ed90ed8434eccb699ffff22820a2eb689e8f2ba08faf2ad87a2c71c8024"
+      },
+      "old_pilot_adapter": {
+        "path": "data/p1/20261117/downloaded/data/p1/pilot-20261117-verification/saved_reloaded_pilot_adapter.jsonl",
+        "sha256": "e0dda57627bfd98999c8803c33d554fec88e0832a2b69ce173dbc39bf4614a6e"
+      }
+    },
+    "new_validation_content_read": false,
+    "new_final_content_read": false,
+    "human_review_count": 0,
+    "candidate_policy": "Only clear_issue is eligible for automatic risk exclusion; retain review_needed and report its distribution. Never infer clinical correctness.",
+    "validation_policy": "Root evaluates separately on the new frozen validation; do not tune this candidate after those outputs are read.",
+    "development_diagnostics_sha256": "2d485aedce976b3a475bfc439ec38f1e1850e3d6675865cd0e67acbd83e56002"
+  },
+  "comparisons": 38,
+  "unique_sources": 28,
+  "unique_source_target_pairs": 37,
+  "counts_by_old_input": {
+    "old_training_audit": {
+      "review_needed": 9,
+      "no_supported_issue_found": 8,
+      "clear_issue": 1
+    },
+    "old_pilot_base": {
+      "clear_issue": 1,
+      "no_supported_issue_found": 6,
+      "review_needed": 3
+    },
+    "old_pilot_adapter": {
+      "clear_issue": 3,
+      "no_supported_issue_found": 4,
+      "review_needed": 3
+    }
+  },
+  "rule_hit_reports": {
+    "ambiguous_date_needs_review": 3,
+    "central_line_not_matched": 4,
+    "resolution_not_preserved": 3,
+    "consolidation_possible_substitution": 4,
+    "date_information_needs_review": 1,
+    "infiltrate_possible_substitution": 2,
+    "nasogastric_tube_endpoint_not_matched": 1,
+    "vp_shunt_unsupported_normal_position": 1,
+    "ambiguous_date_incompatible": 2,
+    "cardiothoracic_normal_scope": 2,
+    "pacemaker_chambers_as_device_count": 1
+  },
+  "clear_issue_cases": [
+    {
+      "old_input": "old_training_audit",
+      "position": 11,
+      "codes": [
+        "vp_shunt_unsupported_normal_position"
+      ]
+    },
+    {
+      "old_input": "old_pilot_base",
+      "position": 1,
+      "codes": [
+        "ambiguous_date_incompatible"
+      ]
+    },
+    {
+      "old_input": "old_pilot_adapter",
+      "position": 1,
+      "codes": [
+        "ambiguous_date_incompatible"
+      ]
+    },
+    {
+      "old_input": "old_pilot_adapter",
+      "position": 5,
+      "codes": [
+        "pacemaker_chambers_as_device_count"
+      ]
+    },
+    {
+      "old_input": "old_pilot_adapter",
+      "position": 8,
+      "codes": [
+        "consolidation_possible_substitution"
+      ]
+    }
+  ],
+  "known_development_false_alarm_corrected": [
+    {
+      "cases": "old training audit 5, 13, 17",
+      "change": "English month/month-year and faithful Chinese calendar expressions no longer generate quantity/calendar mismatches. Other independent issues may remain."
+    },
+    {
+      "cases": "old training audit 6",
+      "change": "The initial new candidate failed to recognize an already-present no-longer-visible paraphrase of resolution. Added the observed conservative synonym before freezing; initial diagnostic retained."
+    }
+  ],
+  "known_development_underflag_corrected": [
+    {
+      "cases": "old pilot adapter 5",
+      "change": "One device count assertion repeated in a parenthetical alias is treated as one local relation. Separate device clauses still downgrade to review_needed."
+    }
+  ],
+  "prior_ai_issues_still_without_new_rule_signal": [
+    {
+      "position": 5,
+      "prior_ai_issue_types": [
+        "age_context_qualifier_omitted"
+      ]
+    },
+    {
+      "position": 8,
+      "prior_ai_issue_types": [
+        "anatomic_extent_precision_lost"
+      ]
+    },
+    {
+      "position": 10,
+      "prior_ai_issue_types": [
+        "acquisition_metadata_omitted"
+      ]
+    },
+    {
+      "position": 12,
+      "prior_ai_issue_types": [
+        "unsupported_mechanical_relation",
+        "morphology_specificity_lost"
+      ]
+    },
+    {
+      "position": 16,
+      "prior_ai_issue_types": [
+        "finding_pattern_omission",
+        "certainty_precision",
+        "readability"
+      ]
+    },
+    {
+      "position": 18,
+      "prior_ai_issue_types": [
+        "location_qualifier_omission",
+        "terminology_review_needed"
+      ]
+    }
+  ],
+  "review_needed_examples": [
+    {
+      "cases": "old training audit 3, 4",
+      "reason": "Selecting one plausible ambiguous date interpretation is review_needed, not a proven incorrect date."
+    },
+    {
+      "cases": "old training audit 7, 13",
+      "reason": "Suspicious finding-to-diagnosis substitutions in multi-finding reports require review."
+    },
+    {
+      "cases": "old training audit 9 and pilot 6",
+      "reason": "Device endpoint/detail omission or unmatched central-line terminology remains review_needed."
+    },
+    {
+      "cases": "old pilot 3 and 10 in both arms",
+      "reason": "Possible normality-scope expansion and missing resolution meaning remain review_needed."
+    }
+  ],
+  "remaining_false_positive_risk": "No independent human review was done. Matched development examples and synthetic tests cannot establish high precision; missing synonym/context can still create flags.",
+  "human_review_count": 0,
+  "tests": {
+    "command": ".venv-mac/bin/python -m pytest tests/test_p1_quality.py tests/test_p0_quality.py -q",
+    "passed": 33,
+    "new_p1_tests": 27,
+    "old_p0_tests": 6
+  },
+  "limitations": [
+    "No supported issue found does not establish source faithfulness, clinical correctness or completeness.",
+    "review_needed is a retained review queue, not an automatic rejection or confirmed error label.",
+    "Rules were developed on old 18 training-target audits and 10 old pilot-development reports; these are development evidence only.",
+    "New human reviews remain zero; neither prior project-AI notes nor rule outputs are human gold.",
+    "Date formats and terminology lexicons are finite; ambiguity and source errors are not resolved by this screen.",
+    "Clear substitutions require unique local correspondence; multi-finding reports are deliberately downgraded to review_needed.",
+    "Explicit quantity changes cover mm/cm and day/week/month/year; organ/value binding and implicit measurements remain unchecked.",
+    "Normality, resolution and missing device endpoints are narrow lexical checks; plausible synonyms and cross-sentence references can be missed.",
+    "Absence of a target word is not generally proof of omission; most such signals require review."
+  ],
+  "local_artifacts_sha256": {
+    "candidate_diagnostics.local.jsonl": "2d485aedce976b3a475bfc439ec38f1e1850e3d6675865cd0e67acbd83e56002",
+    "candidate_lock.json": "6ddcd136ef62de3aeaa05453543ba5605a0723b9d9e4127f33241da8d6feae6a",
+    "initial_diagnostics.json": "49049322175321de3b3f729ac3ac8ec80c1673585c68f0b64547da36a7a18215"
+  }
+}

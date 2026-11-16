@@ -1,0 +1,97 @@
+{
+  "schema": "p1-source-lock-v1",
+  "purpose": "controlled_source_consistency_comparison_AI_review_not_clinical",
+  "source_file_sha256": "6c7fdd330984ab26608f2d72532f3ee3071d3337ea1ce0cc2ac1f313b990c327",
+  "rows": [
+    {
+      "id": "2c11a85744c017b05378ba9266e0da6cb9519d58c155f23070afe6c507ccc5bd",
+      "source_sha256": "b252317521d91bd67f346d515f0b8b215f438e9ca7342182ee6a15f5e582696c"
+    },
+    {
+      "id": "b7b80d41587b42320e980c49435c46db5beb74dfaa0ba3a524671d10669887d9",
+      "source_sha256": "687495e49663be600f4a74956463cf2eeab7a98805570fa932b26657385211f7"
+    },
+    {
+      "id": "383cd0e9dd061c40965c864656072d1a3a9e9721761baf1d1b6f03b5d08181fe",
+      "source_sha256": "a897e71024b9acd36ef3b89568b5e20b21a97c5001192d9a3a01fe1b99be721c"
+    },
+    {
+      "id": "e59ff8463503ab6c19c22c524ad741a33aa749d5b8fee762ddfc25906b2504d4",
+      "source_sha256": "6309aededd7ad1f63c8c3f5c47dd914e42aa2f39950e2ce7ad64fbf9c29dd165"
+    },
+    {
+      "id": "64324bb79be348a66c97ec56e4e6c33b664e50b906b13ce193be16f15a20dfc7",
+      "source_sha256": "e0fcb6d7e5309547797d07bcb54d976f98dc8a1fd5a756459375d6ec10699566"
+    },
+    {
+      "id": "f56cc6d306ca9c4843db979835abea9bf3bc287f34288a93beab1ae2b865d3b3",
+      "source_sha256": "c6de211fcfb93d90dc5bce444df3f5e0674750f40cc64802e2b69797e07d8c54"
+    },
+    {
+      "id": "8e7ef2b19fd71b14589c14766db9cdb46e8f798c4276194169b3646a49232eaf",
+      "source_sha256": "007bef7232a4281268bc844eebbe0217a659fc8fcf992301dc9e845bd69611dd"
+    },
+    {
+      "id": "69c2049b27d0b4a1c3c96f0e840a0e7f01cfab9f2fe2abdd4186e13c2408f72a",
+      "source_sha256": "febf9de9086443e81ae3acc1f4718687b10a34435a9496933ddf0f7e358a5b16"
+    },
+    {
+      "id": "57376ab8332c81ce0ee5c5c6eb1b61a1a072d195d78fbe5687352c6ab74e16eb",
+      "source_sha256": "1b4d3ebbb7dd36cca05afa4c7b0c6db543998e0dc84bb2f1db19becb56d2661d"
+    },
+    {
+      "id": "8f3a1a364328bb2abe85d0738bf1b77055c6731e8e8dc44ccc8d85b180596bf0",
+      "source_sha256": "62737e38030f63bd26659a60e673827a9fd35f4fbac67051ece7a703dcce256b"
+    },
+    {
+      "id": "d6723643f3e863d7b8868c02d6da25f260924cb847057923d63e207d632aca0d",
+      "source_sha256": "d5b05ccc83775bce17e867e0c9c1bdfce02bc411ea480122a3c8dae45e461863"
+    },
+    {
+      "id": "0178b84309233a6e71cc2aa213b6e527b28f025f1bdef4da3e033a39df5ac953",
+      "source_sha256": "18e209fcfad46332d37c4091cb91a016a610850ee7545a5edb1cb4bc82a703f2"
+    },
+    {
+      "id": "95b496a56055a01b1836c581c7c3ea4400dfe639ae83bd5691af9983f045f492",
+      "source_sha256": "2f289ed20bfb4f576141d50e40aff3bc4176a9b9d558350bfb4935bd6ed41f07"
+    },
+    {
+      "id": "45971e0110afd4294044dd0807b35725580186dbc75061c0dea7b2d7e4306db5",
+      "source_sha256": "fe04121b05ad31f08b614ffcc4a14568f1b7f224712d17a15d016c283d7e5b3f"
+    },
+    {
+      "id": "d29ce27b84284935986ad79428a46f7e5415db61001ef12e029c1a57c3e5c384",
+      "source_sha256": "0e6ed80f8230dd8cafecf72b6483580338681bc21c1357cf87e0b1fd7a1d7852"
+    },
+    {
+      "id": "5165c47acc58ef377ea4584d7e1bfe7949b363b4d38c753519e216272050ede9",
+      "source_sha256": "034d9caa9bf4ddaf9ff3f8b882aef486c473b0c193754f82b276b2e17d0a1ec1"
+    },
+    {
+      "id": "5003a3c7640409d4d04bb82f1fce2360c5fbd744beff445e01b3d7b03605b3cd",
+      "source_sha256": "9907728e0bb56f43965803a0803cab84bb48fd58be861f7b4a331532ad512a83"
+    },
+    {
+      "id": "4dbcad3ffea3e3d8743cc28bb5675830aade2fd84c1f9e1f4714477929752057",
+      "source_sha256": "b8aa4758f513e515b72ce340b852821263721176bc40793abd1eab9d212d9e19"
+    },
+    {
+      "id": "74a1dc8194a8ccc9c2b26659492ba052f91af585b7a2f3100711f3d6baa65f17",
+      "source_sha256": "43afe718bc5409e05a8ebc99b7d8bb509251a968302f3fe3607c6ecaadd90d50"
+    },
+    {
+      "id": "1eeeee4b6515c10f6bf1bc1febb3d5d597886851a5fa5c538470e6396bccee7a",
+      "source_sha256": "5163295c83400f93da58d0ce0e1378a256512c319b3febc650e95ef99396823c"
+    }
+  ],
+  "decode": {
+    "do_sample": false,
+    "max_new_tokens": 512,
+    "max_input_tokens": 4096
+  },
+  "training_config_sha256": "6a04f043cc0eef66542898bc7b4368da6d4f3309fe7fe93f0faa2315990f7a74",
+  "training_inputs_sha256": {
+    "S0": "77d91afcc46b85d4975b19e5c3c2c73cc6f320f3774ccea2b94dfcbc94c3e64d",
+    "S1": "c64bd895142725c8e41398971985081fc4a59cd2eec6a1646db826afd6f359ec"
+  }
+}

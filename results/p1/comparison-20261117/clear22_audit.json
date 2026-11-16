@@ -1,0 +1,606 @@
+{
+  "version": "p1-clear22-project-ai-audit-v1",
+  "purpose": "supplementary_review_of_frozen_rule_clear_flags_not_clinical_validation",
+  "reviewer": "project_AI_p1_gpu_preflight",
+  "human_reviews": 0,
+  "independent_clinical_review": false,
+  "new_comparison_model_outputs_seen": false,
+  "rules_changed": false,
+  "selection_changed_by_this_audit": false,
+  "inputs_sha256": {
+    "screen": "90028a1820985b95fc581775a7301f9793f46b871ec4dcb32ce42c7b76ccd514",
+    "original_training": "a3a0c9ab66d3bda769806c8688548e515e14dac2e80c3d9bffcc68491ea7d999",
+    "original_selection": "cba55584bd615a547e1549e1d38a869f63a802739749aee1d92abe73e369e8d8"
+  },
+  "scope": {
+    "screened_records": 4096,
+    "format_accepted_pool": 4066,
+    "reviewed_accepted_clear_cases": 22,
+    "not_reviewed_format_rejected_clear_cases": 1,
+    "clear_flag_instances": 23,
+    "duplicate_clear_instances": 1
+  },
+  "procedure": {
+    "full_sources_read_before_full_target_review": true,
+    "strict_source_blinded": false,
+    "initial_flag_metadata_exposed_target_snippets": true,
+    "notes_zh": [
+      "初次读取筛查清单时嵌套issues同时暴露了部分目标证据；随后按完整源文优先、再完整目标核对。不能声称严格盲审。",
+      "只裁定level=clear_issue的标志；其余review_needed提示和整篇目标质量未作穷尽审核。"
+    ]
+  },
+  "assessment_definitions_zh": {
+    "supported": "源与目标的文本差异足以支持当前clear标志；不是临床错误或伤害的独立认证。",
+    "false_alarm": "当前clear标志被完整源文否定，或所用匹配关系错误；不等于整篇目标全部正确。",
+    "unjudgeable": "源文有歧义或解释边界，不能确认该标志达到明确错误程度。",
+    "mixed": "同一案例的多个clear标志得到相互不同的支持与误报判断；本轮无此类案例。"
+  },
+  "counts": {
+    "supported": 13,
+    "false_alarm": 4,
+    "unjudgeable": 5,
+    "mixed": 0
+  },
+  "original_S0_excluded_six": {
+    "count": 6,
+    "ids": [
+      "f9c91a0934fa93064554654a18a8d2a7538d542df08b3ff454d243a933a9cbd9",
+      "b3811c5d63f04a0cb557247b9df1de36a1f6a091eb73002bea4094365f99acd8",
+      "0e509e5cf036ab89b95ebc00d22457720edf56e95de6abcc986064b475a8a649",
+      "7839e4dcdca47b618f2f6e67adbc28ae909af0c39bb9ef38fdf75d404c3d09ff",
+      "def388b620c56c722d066955273a834a26461da7b12e45d10f05b1556898aa53",
+      "8e6030d3900bb96aedcbbeb1e1ca48ca654151ad9c9c3eb4901a708ec8d6a598"
+    ],
+    "counts": {
+      "supported": 4,
+      "false_alarm": 1,
+      "unjudgeable": 1,
+      "mixed": 0
+    }
+  },
+  "limitations_zh": [
+    "这是同项目AI补充审查，人工审核数为零，不是独立临床金标准。",
+    "只检查筛查器已标clear的22条，不能估计全池漏报率或整体筛选质量。",
+    "术语替换的supported只表示源一致性差异，不据此断言真实临床感染状态。",
+    "本文件不修改筛查器、旧选择或数据；任何后续组合筛选政策应另外前瞻冻结。"
+  ],
+  "cases": [
+    {
+      "audit_id": "C01",
+      "id": "f9c91a0934fa93064554654a18a8d2a7538d542df08b3ff454d243a933a9cbd9",
+      "source_sha256": "8090615212a8baacdf4edba489b8147d92f58e1ccbeb13675ea6fe750d7aa191",
+      "target_sha256": "e68184440fb024b9d04d12beeab0f05bd63aa5ed041ea00c4d940d271f70a5a4",
+      "assessment": "false_alarm",
+      "clear_issue_assessments": [
+        {
+          "issue_index": 1,
+          "code": "infiltrate_possible_substitution",
+          "assessment": "false_alarm",
+          "notes_zh": [
+            "源文已明确把影像表现与稳定的支气管肺炎联系起来；目标保留这一疾病名称及稳定状态。因此本标志所称目标引入了源文没有的新概念不成立。该结论仅否定此clear标志，不等于证明译文逐字完整。"
+          ]
+        }
+      ],
+      "notes_zh": [
+        "源文已明确把影像表现与稳定的支气管肺炎联系起来；目标保留这一疾病名称及稳定状态。因此本标志所称目标引入了源文没有的新概念不成立。该结论仅否定此clear标志，不等于证明译文逐字完整。"
+      ],
+      "in_original_S0": true,
+      "in_original_S1": false,
+      "original_S0_excluded_from_S1": true,
+      "human_review": false
+    },
+    {
+      "audit_id": "C02",
+      "id": "cf80d9b54196a4bec9075c75cd4bdae9e1c81eb7a2fc4f14a652f7f7aea2c195",
+      "source_sha256": "39852816c995b346b7094d4bbcedda7ca31f2c9f81e76ec8b85a95ea9cc8b604",
+      "target_sha256": "cd9d2a708b9603ea8ffaad5bfbe050d2a8252983c0b4794dcd5a81b98b08f3a5",
+      "assessment": "supported",
+      "clear_issue_assessments": [
+        {
+          "issue_index": 1,
+          "code": "ambiguous_date_incompatible",
+          "assessment": "supported",
+          "notes_zh": [
+            "源文数字日期虽允许日月顺序两种解释，目标给出的日月组合均不对应这些解释；比较日期发生了可直接核对的改变。"
+          ]
+        }
+      ],
+      "notes_zh": [
+        "源文数字日期虽允许日月顺序两种解释，目标给出的日月组合均不对应这些解释；比较日期发生了可直接核对的改变。"
+      ],
+      "in_original_S0": false,
+      "in_original_S1": false,
+      "original_S0_excluded_from_S1": false,
+      "human_review": false
+    },
+    {
+      "audit_id": "C03",
+      "id": "d3358475728ca4a7da8f37c23468fdb9fea217cf0074ce4cbd63581e03f5371d",
+      "source_sha256": "43b54196705ed5f7163ed064f3673f639b4eba461332f66e136ef08ff2ff68a6",
+      "target_sha256": "7bb523e370894c36f7ab2417197081894cb11819a3ad83223230012eaff51c6e",
+      "assessment": "unjudgeable",
+      "clear_issue_assessments": [
+        {
+          "issue_index": 1,
+          "code": "explicit_date_changed",
+          "assessment": "unjudgeable",
+          "notes_zh": [
+            "源文日期串本身包含四个连续数字片段，格式有损坏；规则截出其中三个数字并认定唯一日期，证据不足。目标规范化日期仍需人工澄清，但不能把被截取的日期当作已确定金标准。"
+          ]
+        }
+      ],
+      "notes_zh": [
+        "源文日期串本身包含四个连续数字片段，格式有损坏；规则截出其中三个数字并认定唯一日期，证据不足。目标规范化日期仍需人工澄清，但不能把被截取的日期当作已确定金标准。"
+      ],
+      "in_original_S0": false,
+      "in_original_S1": false,
+      "original_S0_excluded_from_S1": false,
+      "human_review": false
+    },
+    {
+      "audit_id": "C04",
+      "id": "491c56df9e79de6342b22a8df96b380a91d851356bf7b3574c5ce66de5fc5ab1",
+      "source_sha256": "7110fad0629ae89d8518b8cd72fb9e97b11814f96db57a63d6d2573a4f02939c",
+      "target_sha256": "2153b9e74c378248eb657a5adb7aff24c117e41b980ede31651b68d7c879b741",
+      "assessment": "supported",
+      "clear_issue_assessments": [
+        {
+          "issue_index": 1,
+          "code": "infiltrate_possible_substitution",
+          "assessment": "supported",
+          "notes_zh": [
+            "源文否定的是非特异的肺浸润影，目标将观察对象收窄为感染影；两种影像描述的概念范围不相同，支持源一致性层面的术语替换风险。仅核查词义范围，不据此判断患者临床上是否存在感染。"
+          ]
+        }
+      ],
+      "notes_zh": [
+        "源文否定的是非特异的肺浸润影，目标将观察对象收窄为感染影；两种影像描述的概念范围不相同，支持源一致性层面的术语替换风险。仅核查词义范围，不据此判断患者临床上是否存在感染。"
+      ],
+      "in_original_S0": false,
+      "in_original_S1": false,
+      "original_S0_excluded_from_S1": false,
+      "human_review": false
+    },
+    {
+      "audit_id": "C05",
+      "id": "b3811c5d63f04a0cb557247b9df1de36a1f6a091eb73002bea4094365f99acd8",
+      "source_sha256": "5479031b0a08cb35ab214f1257d709c3234e150c3e30ccd2cc7bd8785cc83101",
+      "target_sha256": "80462098a640c7b747f5cac3d8b8eb981db5d0acb48e95983b55b53d0986ad5b",
+      "assessment": "supported",
+      "clear_issue_assessments": [
+        {
+          "issue_index": 1,
+          "code": "infiltrate_possible_substitution",
+          "assessment": "supported",
+          "notes_zh": [
+            "目标把未见肺浸润这一影像观察改写成未见肺部感染迹象，增加了原文未给出的病因性概念；积液的否定本身有原文支持。支持的是浸润与感染概念替换标志，而非临床诊断结论。"
+          ]
+        }
+      ],
+      "notes_zh": [
+        "目标把未见肺浸润这一影像观察改写成未见肺部感染迹象，增加了原文未给出的病因性概念；积液的否定本身有原文支持。支持的是浸润与感染概念替换标志，而非临床诊断结论。"
+      ],
+      "in_original_S0": true,
+      "in_original_S1": false,
+      "original_S0_excluded_from_S1": true,
+      "human_review": false
+    },
+    {
+      "audit_id": "C06",
+      "id": "0e509e5cf036ab89b95ebc00d22457720edf56e95de6abcc986064b475a8a649",
+      "source_sha256": "b5702027693731ae18910de97ad1c0cbf860e21c7a9ff3f1c1834808fdfbf006",
+      "target_sha256": "92d5f0d757583c4b8ce0b790a71fad209275179d79419480ec7153ff136bd453",
+      "assessment": "unjudgeable",
+      "clear_issue_assessments": [
+        {
+          "issue_index": 1,
+          "code": "endotracheal_tube_unsupported_normal_position",
+          "assessment": "unjudgeable",
+          "notes_zh": [
+            "原文对气管导管使用in place并带一个缺乏参照物的距离数字，并非只列器械名称。in place究竟仅表示在位还是含位置到位的意思无法凭此残句明断，不能把位置正确的目标表述直接认作已证实新增。目标另把该数字解释成导管长度，也需要澄清，但不是本clear标志所核查的内容。"
+          ]
+        }
+      ],
+      "notes_zh": [
+        "原文对气管导管使用in place并带一个缺乏参照物的距离数字，并非只列器械名称。in place究竟仅表示在位还是含位置到位的意思无法凭此残句明断，不能把位置正确的目标表述直接认作已证实新增。目标另把该数字解释成导管长度，也需要澄清，但不是本clear标志所核查的内容。"
+      ],
+      "in_original_S0": true,
+      "in_original_S1": false,
+      "original_S0_excluded_from_S1": true,
+      "human_review": false
+    },
+    {
+      "audit_id": "C07",
+      "id": "1fafc62b3a9b007974d78eeefaa9d4f9efce8fa208c21dbc480a3dad6d202f05",
+      "source_sha256": "9f8540efda53edf053b6ce47d93b2eef680962164607acf563ebbdbc271241b6",
+      "target_sha256": "d73e1e13567d382f64b5513d2689b3c2c05bffbc6dd8df3f4bcb54f654db2a98",
+      "assessment": "supported",
+      "clear_issue_assessments": [
+        {
+          "issue_index": 1,
+          "code": "ambiguous_date_incompatible",
+          "assessment": "supported",
+          "notes_zh": [
+            "目标比较日期与源文数字日期的两种日月解释均不一致；这一具体日期差异可以直接核对。"
+          ]
+        }
+      ],
+      "notes_zh": [
+        "目标比较日期与源文数字日期的两种日月解释均不一致；这一具体日期差异可以直接核对。"
+      ],
+      "in_original_S0": false,
+      "in_original_S1": false,
+      "original_S0_excluded_from_S1": false,
+      "human_review": false
+    },
+    {
+      "audit_id": "C08",
+      "id": "7839e4dcdca47b618f2f6e67adbc28ae909af0c39bb9ef38fdf75d404c3d09ff",
+      "source_sha256": "c953934c682eea1c2d9b369d032a2ba46f46035dec9f6ad46bbdd76ed06d88a9",
+      "target_sha256": "bb6c537dbf91a80e702ecc3819570bdb433c775d23603bf2aac0ca0daa40d09e",
+      "assessment": "supported",
+      "clear_issue_assessments": [
+        {
+          "issue_index": 1,
+          "code": "infiltrate_possible_substitution",
+          "assessment": "supported",
+          "notes_zh": [
+            "目标把未指定病因的浸润表述成炎症或感染，支持本次概念替换标志。另有独立且明确的定位差异：源文肺舌部被写成左肺下叶；这条附加观察不代替对本clear标志的核对。"
+          ]
+        }
+      ],
+      "notes_zh": [
+        "目标把未指定病因的浸润表述成炎症或感染，支持本次概念替换标志。另有独立且明确的定位差异：源文肺舌部被写成左肺下叶；这条附加观察不代替对本clear标志的核对。"
+      ],
+      "in_original_S0": true,
+      "in_original_S1": false,
+      "original_S0_excluded_from_S1": true,
+      "human_review": false
+    },
+    {
+      "audit_id": "C09",
+      "id": "b923af7ccd06c2eef13bcaeb089a880dc851a6e1ad09638740bb66256d015c9f",
+      "source_sha256": "71e0c0466d9c24a264d0db4aa28a39fe614ca7bced55c01d642e09b91771b8d3",
+      "target_sha256": "9caa4d8f39cac14945a1fb6d111ecb5f424aa6eb865ac3787b26c16bb0d7bb8a",
+      "assessment": "unjudgeable",
+      "clear_issue_assessments": [
+        {
+          "issue_index": 2,
+          "code": "nasogastric_tube_unsupported_normal_position",
+          "assessment": "unjudgeable",
+          "notes_zh": [
+            "源文明确评价气管导管位置良好，但鼻胃管只写in place；目标对二者均说位置正确。鼻胃管句子的in place存在在位与到位的语义边界，足以请求复核，但不足以作为无需判断的明确错误。非clear的日期提示未在本审计中裁定。"
+          ]
+        }
+      ],
+      "notes_zh": [
+        "源文明确评价气管导管位置良好，但鼻胃管只写in place；目标对二者均说位置正确。鼻胃管句子的in place存在在位与到位的语义边界，足以请求复核，但不足以作为无需判断的明确错误。非clear的日期提示未在本审计中裁定。"
+      ],
+      "in_original_S0": false,
+      "in_original_S1": false,
+      "original_S0_excluded_from_S1": false,
+      "human_review": false
+    },
+    {
+      "audit_id": "C10",
+      "id": "5e5091f0f0d003bfd13f71918de921c2f7bd8f61b1dee07a38250fe6749bc5fc",
+      "source_sha256": "e313fb615eac68bb6aae1c0978a65301d6e1eadd975eefbf3f447255e16e7d50",
+      "target_sha256": "87ae9ed7b03eb0c4a70710ae95000b6e04e23fb895e4891b92e4d253e77987ff",
+      "assessment": "supported",
+      "clear_issue_assessments": [
+        {
+          "issue_index": 1,
+          "code": "infiltrate_possible_substitution",
+          "assessment": "supported",
+          "notes_zh": [
+            "源文未见当前浸润影，目标改成未见肺部感染迹象，病因性术语替换可从文本直接识别。此处仅支持该源一致性风险，不将它解释为临床感染有无已经得到确认。"
+          ]
+        }
+      ],
+      "notes_zh": [
+        "源文未见当前浸润影，目标改成未见肺部感染迹象，病因性术语替换可从文本直接识别。此处仅支持该源一致性风险，不将它解释为临床感染有无已经得到确认。"
+      ],
+      "in_original_S0": false,
+      "in_original_S1": false,
+      "original_S0_excluded_from_S1": false,
+      "human_review": false
+    },
+    {
+      "audit_id": "C11",
+      "id": "1d176cf30e3716a0c97c7a56f913522fed21322a7fe44c5d1db26ab02ae8954a",
+      "source_sha256": "7e8e5eaaff7cb403fcb5077c2047ef577a11119b4a51099385d752ae8c71017d",
+      "target_sha256": "b2204b06018dd28194603e867763d864dfb5fefdd34191f51bba251bc80048e2",
+      "assessment": "false_alarm",
+      "clear_issue_assessments": [
+        {
+          "issue_index": 1,
+          "code": "explicit_date_changed",
+          "assessment": "false_alarm",
+          "notes_zh": [
+            "源文包含不同检查的时间信息：一次X线的完整日期和另一次CT的年份。目标保留的是后者并仍保留前次X线的相对时间；规则错误地把CT年份与另一次X线日期配对为冲突。省略完整日期可以另讨论，但不支持此处日期被改错的clear结论。"
+          ]
+        }
+      ],
+      "notes_zh": [
+        "源文包含不同检查的时间信息：一次X线的完整日期和另一次CT的年份。目标保留的是后者并仍保留前次X线的相对时间；规则错误地把CT年份与另一次X线日期配对为冲突。省略完整日期可以另讨论，但不支持此处日期被改错的clear结论。"
+      ],
+      "in_original_S0": false,
+      "in_original_S1": false,
+      "original_S0_excluded_from_S1": false,
+      "human_review": false
+    },
+    {
+      "audit_id": "C12",
+      "id": "def388b620c56c722d066955273a834a26461da7b12e45d10f05b1556898aa53",
+      "source_sha256": "278ef2dd4e5875b6efb3afa1ddf9863f663f283d7e4b6984094a12f73d8dc555",
+      "target_sha256": "ef5162b1bbc0b35cb63d135626967edf5c8aa730b7b7a297ed5f8c6ac4c81cb3",
+      "assessment": "supported",
+      "clear_issue_assessments": [
+        {
+          "issue_index": 1,
+          "code": "infiltrate_possible_substitution",
+          "assessment": "supported",
+          "notes_zh": [
+            "源文未见明确肺浸润影，目标却否定明显感染；非特异影像观察被改为病因性判断，支持该概念替换标志。并不据此评价实际临床感染状态。"
+          ]
+        }
+      ],
+      "notes_zh": [
+        "源文未见明确肺浸润影，目标却否定明显感染；非特异影像观察被改为病因性判断，支持该概念替换标志。并不据此评价实际临床感染状态。"
+      ],
+      "in_original_S0": true,
+      "in_original_S1": false,
+      "original_S0_excluded_from_S1": true,
+      "human_review": false
+    },
+    {
+      "audit_id": "C13",
+      "id": "6b5460e753a643473302064d77621933db9de67f094ac3743a3a16d9acc594fa",
+      "source_sha256": "700d55f698620d88e64fa27ac3dcba2b6b476300bce0171dfd0a785d787dee76",
+      "target_sha256": "7dcc3adc397daf2f9fb17580408dc5a95d02fccf160a5983d77b82fbd3c456d6",
+      "assessment": "supported",
+      "clear_issue_assessments": [
+        {
+          "issue_index": 1,
+          "code": "infiltrate_possible_substitution",
+          "assessment": "supported",
+          "notes_zh": [
+            "目标保留了需要结合临床的限制，但仍将源文的浸润影替换成感染迹象；限制语保留不使两个概念完全等价。支持术语范围改变这一标志，不升级为临床正确性结论。"
+          ]
+        }
+      ],
+      "notes_zh": [
+        "目标保留了需要结合临床的限制，但仍将源文的浸润影替换成感染迹象；限制语保留不使两个概念完全等价。支持术语范围改变这一标志，不升级为临床正确性结论。"
+      ],
+      "in_original_S0": false,
+      "in_original_S1": false,
+      "original_S0_excluded_from_S1": false,
+      "human_review": false
+    },
+    {
+      "audit_id": "C14",
+      "id": "adac1fee81de9460355ceb73f8b1b03b5daf9b712fcd0fd3a0f3bf2a9d483e20",
+      "source_sha256": "9b1d57040c5cafe5ddbf4f75deefc929d7655afbaac42d15bc66a9f6866c6c0a",
+      "target_sha256": "94fc214161cb2344582689b057a295d6ee4f993766d20fcb975c0bc57189c688",
+      "assessment": "supported",
+      "clear_issue_assessments": [
+        {
+          "issue_index": 1,
+          "code": "infiltrate_possible_substitution",
+          "assessment": "supported",
+          "notes_zh": [
+            "目标在否定浸润的基础上增加了积液与感染两个原文未给出的对象，支持新增或不等价概念替换风险。"
+          ]
+        }
+      ],
+      "notes_zh": [
+        "目标在否定浸润的基础上增加了积液与感染两个原文未给出的对象，支持新增或不等价概念替换风险。"
+      ],
+      "in_original_S0": false,
+      "in_original_S1": false,
+      "original_S0_excluded_from_S1": false,
+      "human_review": false
+    },
+    {
+      "audit_id": "C15",
+      "id": "a2f014a888d03918111bc6dc35d04a5bb4bb9b761ffd57900b2ea536caf2b2c1",
+      "source_sha256": "62b6d34a16a6109ebe670bc8ebcbeedb5d65a0c8a8ae5a9893e7a03e45a479d7",
+      "target_sha256": "0b535d71d1e38a7730c9932f3f4a9c9afe1826014d84b08cf3ab17385419eaba",
+      "assessment": "false_alarm",
+      "clear_issue_assessments": [
+        {
+          "issue_index": 1,
+          "code": "infiltrate_possible_substitution",
+          "assessment": "false_alarm",
+          "notes_zh": [
+            "源文已给出双侧影像改变可能与新冠相关的解释，目标也保留双侧及可能性；本标志所称感染相关概念完全不在源文中不成立。浸润这一观察词被简化可另作保真度讨论，但不是无依据新增感染概念的明确证据。该标志在原筛查记录中重复出现两次，仅算一个案例。"
+          ]
+        },
+        {
+          "issue_index": 2,
+          "code": "infiltrate_possible_substitution",
+          "assessment": "false_alarm",
+          "notes_zh": [
+            "源文已给出双侧影像改变可能与新冠相关的解释，目标也保留双侧及可能性；本标志所称感染相关概念完全不在源文中不成立。浸润这一观察词被简化可另作保真度讨论，但不是无依据新增感染概念的明确证据。该标志在原筛查记录中重复出现两次，仅算一个案例。"
+          ],
+          "duplicate_of_issue_index": 1
+        }
+      ],
+      "notes_zh": [
+        "源文已给出双侧影像改变可能与新冠相关的解释，目标也保留双侧及可能性；本标志所称感染相关概念完全不在源文中不成立。浸润这一观察词被简化可另作保真度讨论，但不是无依据新增感染概念的明确证据。该标志在原筛查记录中重复出现两次，仅算一个案例。"
+      ],
+      "in_original_S0": false,
+      "in_original_S1": false,
+      "original_S0_excluded_from_S1": false,
+      "human_review": false
+    },
+    {
+      "audit_id": "C16",
+      "id": "feb4a2b161c3712b0eaebb213a3ca275bf0e58c46380cb83b7ebc282f92a7001",
+      "source_sha256": "a4067bf69a548c0cda44cf936ba8e1c97d7ba8f2b5bdcd886b385a28ad05515b",
+      "target_sha256": "633a417a53c79b73d6e735ef60ac2a286eec084a7846833508b906a13ac5b406",
+      "assessment": "supported",
+      "clear_issue_assessments": [
+        {
+          "issue_index": 1,
+          "code": "infiltrate_possible_substitution",
+          "assessment": "supported",
+          "notes_zh": [
+            "源文否定肺浸润及明显异常，目标将其改为未发现肺部感染，改变了非特异影像描述的概念范围；支持此替换风险，不推断真实临床状态。"
+          ]
+        }
+      ],
+      "notes_zh": [
+        "源文否定肺浸润及明显异常，目标将其改为未发现肺部感染，改变了非特异影像描述的概念范围；支持此替换风险，不推断真实临床状态。"
+      ],
+      "in_original_S0": false,
+      "in_original_S1": false,
+      "original_S0_excluded_from_S1": false,
+      "human_review": false
+    },
+    {
+      "audit_id": "C17",
+      "id": "41f00a3f84da0c76c3d663565d754e6c9653ad129694ce6f806f9833c00ef4ac",
+      "source_sha256": "0a76894ca5c37f6abdff7bdb8891b2c5c1fd8082a2f8d4711b410088bac14694",
+      "target_sha256": "31aaea6516342f7025d29b485b21a8be268e3a1a0c249421c2934984127482d6",
+      "assessment": "unjudgeable",
+      "clear_issue_assessments": [
+        {
+          "issue_index": 1,
+          "code": "nasogastric_tube_unsupported_normal_position",
+          "assessment": "unjudgeable",
+          "notes_zh": [
+            "鼻胃管原文为in place，目标为放置正确；该短语在位与到位的边界不足以在此匿名文本中确证，宜复核而不能直接当作已证实位置判断新增。另一个非clear的中心导管提示不属于本次裁定范围。"
+          ]
+        }
+      ],
+      "notes_zh": [
+        "鼻胃管原文为in place，目标为放置正确；该短语在位与到位的边界不足以在此匿名文本中确证，宜复核而不能直接当作已证实位置判断新增。另一个非clear的中心导管提示不属于本次裁定范围。"
+      ],
+      "in_original_S0": false,
+      "in_original_S1": false,
+      "original_S0_excluded_from_S1": false,
+      "human_review": false
+    },
+    {
+      "audit_id": "C18",
+      "id": "8e6030d3900bb96aedcbbeb1e1ca48ca654151ad9c9c3eb4901a708ec8d6a598",
+      "source_sha256": "62404109059ec5a83a644f42b7292a68e85c14ccf6eab944577f71d0c98db1ce",
+      "target_sha256": "cb09d9e4c8f7a8c9c17a6864fac4f257def178118e899218201eaa74cf94a232",
+      "assessment": "supported",
+      "clear_issue_assessments": [
+        {
+          "issue_index": 1,
+          "code": "infiltrate_possible_substitution",
+          "assessment": "supported",
+          "notes_zh": [
+            "源文仅否定明确浸润，目标替换成炎症或感染迹象，加入了原文未提出的病因性概念；支持文本层面的概念替换风险，不据此评价临床感染状态。"
+          ]
+        }
+      ],
+      "notes_zh": [
+        "源文仅否定明确浸润，目标替换成炎症或感染迹象，加入了原文未提出的病因性概念；支持文本层面的概念替换风险，不据此评价临床感染状态。"
+      ],
+      "in_original_S0": true,
+      "in_original_S1": false,
+      "original_S0_excluded_from_S1": true,
+      "human_review": false
+    },
+    {
+      "audit_id": "C19",
+      "id": "8f29af02e1858032b968f762db290b05de09b9a72f03508ec4dd6cbc88a36628",
+      "source_sha256": "6a93848a1cfad69b5164ca472ce6fc16eac8d7773779acc4ebfc4e6dc12ab783",
+      "target_sha256": "15254594967272845ef2bb2fd10d626f4fef868740fb7c64714bd897308b1c67",
+      "assessment": "unjudgeable",
+      "clear_issue_assessments": [
+        {
+          "issue_index": 1,
+          "code": "infiltrate_possible_substitution",
+          "assessment": "unjudgeable",
+          "notes_zh": [
+            "原文影像发现与新冠的临床怀疑相符，目标保留了这一怀疑语气及分布，但用炎症通俗化了浸润。由于源文已有疑似感染背景，不能仅靠词表判断这种通俗化是否达到明确错误程度；需要保留为待判断，不能用clear标签代替事实审查。"
+          ]
+        }
+      ],
+      "notes_zh": [
+        "原文影像发现与新冠的临床怀疑相符，目标保留了这一怀疑语气及分布，但用炎症通俗化了浸润。由于源文已有疑似感染背景，不能仅靠词表判断这种通俗化是否达到明确错误程度；需要保留为待判断，不能用clear标签代替事实审查。"
+      ],
+      "in_original_S0": false,
+      "in_original_S1": false,
+      "original_S0_excluded_from_S1": false,
+      "human_review": false
+    },
+    {
+      "audit_id": "C20",
+      "id": "57ae18aaa19bafb0139a9d1d367887c54f9c88643aa4d7fd29752e30449d66f2",
+      "source_sha256": "3a17024d883073e798614d848741603ff152be0f6ab4f283d3321ef2bfb644c2",
+      "target_sha256": "92a3d62a9268b2eddc29003a5d293a302dd18063661e99ccfd3cd67cd837d6fb",
+      "assessment": "supported",
+      "clear_issue_assessments": [
+        {
+          "issue_index": 1,
+          "code": "consolidation_possible_substitution",
+          "assessment": "supported",
+          "notes_zh": [
+            "原文未见实变，目标改为未见肺炎；影像形态与疾病诊断并不等价，目标否定的对象被改变，支持这一术语替换标志。"
+          ]
+        }
+      ],
+      "notes_zh": [
+        "原文未见实变，目标改为未见肺炎；影像形态与疾病诊断并不等价，目标否定的对象被改变，支持这一术语替换标志。"
+      ],
+      "in_original_S0": false,
+      "in_original_S1": false,
+      "original_S0_excluded_from_S1": false,
+      "human_review": false
+    },
+    {
+      "audit_id": "C21",
+      "id": "e2a2257bdf1301bc3650ed79b0669cdef8d4ef870f8bdf98a54f5e35351567a5",
+      "source_sha256": "affe976f431252cbdff74061c70a1ceeded0244d37242a0be4c87592e1b44eee",
+      "target_sha256": "dcbcda8c51776b901db5aabe0a62e8bf3cc39696c8166ea228738b45dd7606f8",
+      "assessment": "supported",
+      "clear_issue_assessments": [
+        {
+          "issue_index": 1,
+          "code": "vp_shunt_unsupported_normal_position",
+          "assessment": "supported",
+          "notes_zh": [
+            "源文只提及分流导管，没有评价其位置，目标增加了位置正常的结论；这一新增判断缺少原文依据。"
+          ]
+        }
+      ],
+      "notes_zh": [
+        "源文只提及分流导管，没有评价其位置，目标增加了位置正常的结论；这一新增判断缺少原文依据。"
+      ],
+      "in_original_S0": false,
+      "in_original_S1": false,
+      "original_S0_excluded_from_S1": false,
+      "human_review": false
+    },
+    {
+      "audit_id": "C22",
+      "id": "bf7ab429503d9282623804a33129ad5789eaf9f70844fa01b3eb018f7f3ea059",
+      "source_sha256": "b731c78aeac62652789568478aff2e2ad763d63edacc22b8b86323c789291ea4",
+      "target_sha256": "29661660db85fdd6d7382873802bd7c661c26b6b401d3173d5b1196983135161",
+      "assessment": "false_alarm",
+      "clear_issue_assessments": [
+        {
+          "issue_index": 1,
+          "code": "endotracheal_tube_unsupported_normal_position",
+          "assessment": "false_alarm",
+          "notes_zh": [
+            "源文已明确评价气管导管放置合适，目标位置正确是受支持的对应表述。因此器械位置正常判断无来源这一clear标志误报；这不代表目标其他句子都已通过审核。"
+          ]
+        }
+      ],
+      "notes_zh": [
+        "源文已明确评价气管导管放置合适，目标位置正确是受支持的对应表述。因此器械位置正常判断无来源这一clear标志误报；这不代表目标其他句子都已通过审核。"
+      ],
+      "in_original_S0": false,
+      "in_original_S1": false,
+      "original_S0_excluded_from_S1": false,
+      "human_review": false
+    }
+  ]
+}

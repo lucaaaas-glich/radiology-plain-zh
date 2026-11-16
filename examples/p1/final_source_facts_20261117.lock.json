@@ -1,0 +1,13 @@
+{
+  "frozen_at_utc": "2026-11-16T17:48:47.058805+00:00",
+  "source_review_files_sha256": {
+    "data/p1/comparison-20261117/source-review/final40_01_14.json": "2a373d04edbc7d8eaa7491245e5a034df90f88adbf19db43de3b504109076697",
+    "data/p1/comparison-20261117/source-review/final40_15_27.json": "a31a2473a461b5544fdf45d005ca7fdbd4ffeb3b859df43499d09fbe7b497923",
+    "data/p1/comparison-20261117/source-review/final40_28_40.json": "e5b4dd4751a3c41e5f3608617a46e0ffc49195561dfe4ed4b030bf3f6d189435"
+  },
+  "reports": 40,
+  "fact_groups": 337,
+  "required_fact_groups": 324,
+  "human_reviews": 0,
+  "candidate_outputs_seen": false
+}

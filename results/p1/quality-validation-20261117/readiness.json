@@ -1,0 +1,32 @@
+{
+  "version": "p1-quality-validation-readiness-v1",
+  "human_reviews": 0,
+  "reviewer_type": "project_AI_not_independent_clinical",
+  "new_screening_candidate_executed": false,
+  "new_screening_code_or_outputs_read_by_validation_reviewer": false,
+  "candidate_developer_instructed_to_avoid_new_validation_materials": true,
+  "root_received_generic_progress_remarks_before_candidate_freeze_status_known": true,
+  "full_clinical_blinding_claimed": false,
+  "synthetic_pairs": 30,
+  "synthetic_control_and_perturbed_targets": 60,
+  "real_validation_cases": 30,
+  "old60_unchanged": true,
+  "old18_id_and_source_overlap": 0,
+  "packet_replay_byte_identical": true,
+  "review_bindings_verified": 30,
+  "artifacts_sha256": {
+    "examples/p1/quality_validation_20261117.jsonl": "ce37a21e1945ad7e574dd012270b43730af7d799c78ddc9a6138428beaf3063d",
+    "examples/p1/quality_validation_protocol_20261117.json": "3b0d52212e0958a79b8bde24780b2c5a8ad9b06c6dad93f54926f16be25464a7",
+    "examples/p1/real_quality_validation_manifest_20261117.json": "a474a05e4fa5a45447b4235ccd20fc456a24762e51b5e1be8ad1288f6f983089",
+    "scripts/select_p1_quality_validation.py": "6a8b49cb2d5c23a546fc03487aa81600e3cb143faf04aa7a69756fdd9955b4cc",
+    "results/p1/quality-validation-20261117/real_ai_review.json": "671a7c673346a7d112abd766ca3e84fdb7b65d40fe0c1a3ca9053c6558d0528c",
+    "results/p1/quality-validation-20261117/real_ai_review_summary.json": "cca847d87ae666935083544e97b3f223991cf804be526d3bc258149c10f33dec"
+  },
+  "execution_gate": "Record candidate implementation/configuration SHA freeze before any validation run. Do not use validation results to tune while retaining a prospective-independent-validation claim.",
+  "limits": [
+    "This is a separated project-AI review workflow, not independent clinical gold or a population estimate.",
+    "Source-first notes and labels were recorded before old-flag inspection; old flags were reviewed separately after judgments.",
+    "Generic non-identifying progress remarks were shared with the coordinator; a fully blinded review is not claimed.",
+    "The real validation sample audits historical training targets and does not select or certify the final model test."
+  ]
+}

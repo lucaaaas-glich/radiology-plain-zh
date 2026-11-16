@@ -1,0 +1,52 @@
+{
+  "version": "p1-controlled-risk-selection-20261117",
+  "purpose": "controlled_source_consistency_comparison_AI_review_not_clinical",
+  "reviewer_provenance": "project_AI_source_first_review_no_human_or_clinician_gold",
+  "human_reviews_completed": 0,
+  "candidate_rules": "new quality_p1; previous P0 rules and results retained",
+  "S1_policy": "exclude only clear_issue; retain review_needed and no_supported_issue_found; unchanged original targets",
+  "sample_size_per_arm": 1024,
+  "minimum_per_arm": 512,
+  "sampling_seed": 3710261117,
+  "training_seed": 371026,
+  "training_epochs": 2,
+  "checkpoint_selection": "Choose lowest development answer/EOS-token loss separately for each arm; earlier epoch breaks exact ties. Development source-consistency probes are descriptive only and cannot change the candidate, checkpoint rule or final test.",
+  "training_hyperparameters": "shared P1 SFT candidate configuration; source/length/feature matching; report actual token and runtime differences",
+  "quality_validation": {
+    "new_synthetic_pairs": 30,
+    "new_real_training_targets": 30,
+    "freeze_rules_before_validation": true,
+    "readiness_for_controlled_experiment": "Prespecified engineering/data-policy study: no more than 1/30 synthetic controls falsely clear-flagged; no more than 1 observed false clear-flag in 30 source-reviewed real targets; at least 512 eligible unique groups per arm; all omissions/unknowns reported. This gate authorizes studying the policy, not labeling unflagged data clinically correct.",
+    "on_failure": "Retain failures; do not tune on these validation outputs or claim readiness. A further version needs new validation."
+  },
+  "development_generation_reports": 20,
+  "final_reports": 40,
+  "final_sampling": {
+    "normalized_char_length_by_source_quotas": [
+      {"min":0,"max":199,"source":"PadChest","n":8},
+      {"min":0,"max":199,"source":"BIMCV-COVID19","n":3},
+      {"min":0,"max":199,"source":"OpenI","n":1},
+      {"min":200,"max":599,"source":"PadChest","n":7},
+      {"min":200,"max":599,"source":"BIMCV-COVID19","n":3},
+      {"min":200,"max":599,"source":"OpenI","n":2},
+      {"min":600,"max":999,"source":"PadChest","n":2},
+      {"min":600,"max":999,"source":"BIMCV-COVID19","n":5},
+      {"min":600,"max":999,"source":"OpenI","n":1},
+      {"min":1000,"max":1499,"source":"BIMCV-COVID19","n":4},
+      {"min":1500,"max":1999,"source":"BIMCV-COVID19","n":3},
+      {"min":2000,"max":4000,"source":"BIMCV-COVID19","n":1}
+    ],
+    "selection": "source-only, unique text group, exclude all registered historical hashes/families and possible fragment parents, seeded sample then seeded order",
+    "population_claim": false,
+    "limitations": "Stratified diagnostic sample; all eight 1000+ character reports are from BIMCV, so length and source effects cannot be separated. Patient and pretraining independence unknown."
+  },
+  "generation": {"max_input_tokens":4096,"do_sample":false,"max_new_tokens":512,"truncate_input":false},
+  "final_arms": ["base","S0","S1"],
+  "primary_report_status": ["source_error","incomplete","unjudgeable","pass"],
+  "status_priority": "source_error > incomplete > unjudgeable > pass; preserve orthogonal completeness/precision/readability flags",
+  "required_facts": "Record source facts/evidence before viewing any generated output, including polarity, location, quantity roles, temporal/uncertainty relations and source recommendations. Redundant wording and identifiers are not mandatory; acquisition details only required if they limit interpretation. Preserve source ambiguities as unresolved; do not invent gold medical judgments.",
+  "final_review": "All 120 outputs source-compared, model names hidden during review where feasible; same source facts for all arms; no manual target rewriting or post-final tuning.",
+  "statistics": "Paired report-level counts and bootstrap differences with seed3710261117, 2000 resamples; Wilson intervals for pass proportions; not clinical accuracy or patient comprehension.",
+  "training_resume": "fresh runs only; saved epoch adapters are not exact optimizer/RNG resume",
+  "failures": "All frozen reports remain in denominators; token limit, runtime error and uncertain review reported separately. No selection by favorable final outcome."
+}

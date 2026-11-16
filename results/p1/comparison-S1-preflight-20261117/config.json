@@ -1,0 +1,16 @@
+{
+  "student_model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "seed": 371026,
+  "max_sequence_length": 1152,
+  "epochs": 2,
+  "learning_rate": 0.0001,
+  "train_batch_size": 4,
+  "gradient_accumulation_steps": 4,
+  "expected_effective_batch_size": 16,
+  "expected_optimizer_steps": 128,
+  "lora_rank": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.05,
+  "status": "frozen_controlled_risk_selection_experiment_AI_review_not_clinical"
+}

@@ -1,0 +1,521 @@
+{
+  "version": "p1-real-quality-validation-20261117-v1",
+  "frozen_at_utc": "2026-11-16T17:33:33.316010+00:00",
+  "purpose": "Prospective validation of training-target screening, not model final evaluation",
+  "selection_completed_before_semantic_review": true,
+  "new_screening_code_or_results_read": false,
+  "reviewer_type": "project_AI_not_independent_clinical",
+  "human_reviews": 0,
+  "accepted_training_rows": 4066,
+  "eligible_after_old18_exclusion": 4048,
+  "seed": 3710261117,
+  "sample_size": 30,
+  "prior_audit_id_overlap": 0,
+  "prior_audit_source_hash_overlap": 0,
+  "inputs_sha256": {
+    "data/pilot_v1/train.zh.jsonl": "a3a0c9ab66d3bda769806c8688548e515e14dac2e80c3d9bffcc68491ea7d999",
+    "data/p0/pre-gpu-20261116/quality/per_sample.jsonl": "1a5f6caccabc68205acf5b6ae074842e34ae148ea596efae103cd3f97e976598",
+    "examples/p0/real_target_audit_manifest.json": "c3c10c001d46ce9eaaeb57899977b91da03821300b857129df9c0635964e5990",
+    "examples/p1/quality_validation_protocol_20261117.json": "3b0d52212e0958a79b8bde24780b2c5a8ad9b06c6dad93f54926f16be25464a7"
+  },
+  "selector_sha256": "6a8b49cb2d5c23a546fc03487aa81600e3cb143faf04aa7a69756fdd9955b4cc",
+  "packet_path": "data/p1/quality-validation-20261117/real_packet.jsonl",
+  "packet_sha256": "d922ad98463de7b916ba88c5419b1a03b27fdea067a517b95ff441808957d508",
+  "stratum_counts": [
+    {
+      "source": "BIMCV-COVID19",
+      "length_bin": "long",
+      "old_has_rule_flag": false,
+      "eligible": 101,
+      "selected": 2
+    },
+    {
+      "source": "BIMCV-COVID19",
+      "length_bin": "long",
+      "old_has_rule_flag": true,
+      "eligible": 47,
+      "selected": 1
+    },
+    {
+      "source": "BIMCV-COVID19",
+      "length_bin": "medium",
+      "old_has_rule_flag": false,
+      "eligible": 411,
+      "selected": 2
+    },
+    {
+      "source": "BIMCV-COVID19",
+      "length_bin": "medium",
+      "old_has_rule_flag": true,
+      "eligible": 85,
+      "selected": 2
+    },
+    {
+      "source": "BIMCV-COVID19",
+      "length_bin": "short",
+      "old_has_rule_flag": false,
+      "eligible": 430,
+      "selected": 2
+    },
+    {
+      "source": "BIMCV-COVID19",
+      "length_bin": "short",
+      "old_has_rule_flag": true,
+      "eligible": 57,
+      "selected": 1
+    },
+    {
+      "source": "OpenI",
+      "length_bin": "long",
+      "old_has_rule_flag": false,
+      "eligible": 5,
+      "selected": 2
+    },
+    {
+      "source": "OpenI",
+      "length_bin": "long",
+      "old_has_rule_flag": true,
+      "eligible": 1,
+      "selected": 1
+    },
+    {
+      "source": "OpenI",
+      "length_bin": "medium",
+      "old_has_rule_flag": false,
+      "eligible": 56,
+      "selected": 3
+    },
+    {
+      "source": "OpenI",
+      "length_bin": "medium",
+      "old_has_rule_flag": true,
+      "eligible": 2,
+      "selected": 2
+    },
+    {
+      "source": "OpenI",
+      "length_bin": "short",
+      "old_has_rule_flag": false,
+      "eligible": 16,
+      "selected": 2
+    },
+    {
+      "source": "PadChest",
+      "length_bin": "long",
+      "old_has_rule_flag": false,
+      "eligible": 6,
+      "selected": 1
+    },
+    {
+      "source": "PadChest",
+      "length_bin": "long",
+      "old_has_rule_flag": true,
+      "eligible": 1,
+      "selected": 1
+    },
+    {
+      "source": "PadChest",
+      "length_bin": "medium",
+      "old_has_rule_flag": false,
+      "eligible": 688,
+      "selected": 2
+    },
+    {
+      "source": "PadChest",
+      "length_bin": "medium",
+      "old_has_rule_flag": true,
+      "eligible": 253,
+      "selected": 2
+    },
+    {
+      "source": "PadChest",
+      "length_bin": "short",
+      "old_has_rule_flag": false,
+      "eligible": 1657,
+      "selected": 2
+    },
+    {
+      "source": "PadChest",
+      "length_bin": "short",
+      "old_has_rule_flag": true,
+      "eligible": 232,
+      "selected": 2
+    }
+  ],
+  "source_counts": {
+    "BIMCV-COVID19": 10,
+    "PadChest": 10,
+    "OpenI": 10
+  },
+  "old_flag_presence_counts": {
+    "has_flag": 12,
+    "no_flag": 18
+  },
+  "cases": [
+    {
+      "id": "bfaa525b4ce2d3ea2141d5b9d9314af1766d2be34bbfc20ada7e985cfed980c3",
+      "source": "BIMCV-COVID19",
+      "length_bin": "medium",
+      "old_has_rule_flag": true,
+      "old_flags": [
+        "explicit_negation_marker_missing",
+        "quantity_mismatch"
+      ],
+      "normalized_source_sha256": "bfaa525b4ce2d3ea2141d5b9d9314af1766d2be34bbfc20ada7e985cfed980c3",
+      "target_sha256": "a22ece8fdd2450a91b1ba947226390c2694514ebfe3c907f450761f68d4fd587",
+      "source_characters": 312,
+      "target_characters": 85
+    },
+    {
+      "id": "463a191850d406bb1e1793d42a0eccd6b7f13f876568b6a28400f6b4910c32f4",
+      "source": "PadChest",
+      "length_bin": "medium",
+      "old_has_rule_flag": false,
+      "old_flags": [],
+      "normalized_source_sha256": "463a191850d406bb1e1793d42a0eccd6b7f13f876568b6a28400f6b4910c32f4",
+      "target_sha256": "110e28b5bfc12aa53f7a8ce75b2c4fd51fd68f757dfe509c0d7bbb7b9e9eed75",
+      "source_characters": 396,
+      "target_characters": 123
+    },
+    {
+      "id": "17e5ec5ff5fa7a74ac5d8f5536b58f2859f89bd956d73ba1ea33ff4034f2700e",
+      "source": "PadChest",
+      "length_bin": "short",
+      "old_has_rule_flag": true,
+      "old_flags": [
+        "ambiguous_date_reinterpreted",
+        "date_mismatch"
+      ],
+      "normalized_source_sha256": "17e5ec5ff5fa7a74ac5d8f5536b58f2859f89bd956d73ba1ea33ff4034f2700e",
+      "target_sha256": "1fe169361897dccc89f81bd826e9fdf438ac574ae630d872918eb45ef9307520",
+      "source_characters": 101,
+      "target_characters": 31
+    },
+    {
+      "id": "159a2ad11ea316ad34822629dc5cf7cf4ea8c0b0a1e06bde0aa3d63099d6415a",
+      "source": "OpenI",
+      "length_bin": "medium",
+      "old_has_rule_flag": false,
+      "old_flags": [],
+      "normalized_source_sha256": "159a2ad11ea316ad34822629dc5cf7cf4ea8c0b0a1e06bde0aa3d63099d6415a",
+      "target_sha256": "6dcc8af9ab55bb0b9533f6b3fd791f1a44a6031d225d20e98ada1b1daba7302a",
+      "source_characters": 375,
+      "target_characters": 96
+    },
+    {
+      "id": "349059e256debfd45cda05eca4cc6b5ea4dcd1b47fb4e7281afea487643b5b12",
+      "source": "PadChest",
+      "length_bin": "short",
+      "old_has_rule_flag": false,
+      "old_flags": [],
+      "normalized_source_sha256": "349059e256debfd45cda05eca4cc6b5ea4dcd1b47fb4e7281afea487643b5b12",
+      "target_sha256": "eb0bc6d563aaf061eb500574fd2f0f33aa5254c13261de90268e1106fb907daf",
+      "source_characters": 65,
+      "target_characters": 24
+    },
+    {
+      "id": "1d397b856b6804b788d7e79c7ad3d1ab5b260d82fed75bd68e14f8ef9abcbef5",
+      "source": "OpenI",
+      "length_bin": "long",
+      "old_has_rule_flag": true,
+      "old_flags": [
+        "quantity_mismatch"
+      ],
+      "normalized_source_sha256": "1d397b856b6804b788d7e79c7ad3d1ab5b260d82fed75bd68e14f8ef9abcbef5",
+      "target_sha256": "be074ff5ed052a028725f6fe2d057060f32e5453dc66da2524c1a154bdd167bc",
+      "source_characters": 894,
+      "target_characters": 257
+    },
+    {
+      "id": "d079f669d19fe625e72e06671e034786dc5716f108b6731b72f9097075ec49b9",
+      "source": "OpenI",
+      "length_bin": "medium",
+      "old_has_rule_flag": false,
+      "old_flags": [],
+      "normalized_source_sha256": "d079f669d19fe625e72e06671e034786dc5716f108b6731b72f9097075ec49b9",
+      "target_sha256": "931e54a6e1d0cb3b3cb4d1211708b8879e997e04044e14fa7bbd293ae48c7602",
+      "source_characters": 321,
+      "target_characters": 96
+    },
+    {
+      "id": "3f44910ca26aad4ca32775d97bd1293c7cbd6faa035f65fdc448f50ddbc99bbf",
+      "source": "BIMCV-COVID19",
+      "length_bin": "medium",
+      "old_has_rule_flag": false,
+      "old_flags": [],
+      "normalized_source_sha256": "3f44910ca26aad4ca32775d97bd1293c7cbd6faa035f65fdc448f50ddbc99bbf",
+      "target_sha256": "42f0b42c3d70db0f2e974752c64fed921b9244ad747f31b8029b124c2b253356",
+      "source_characters": 247,
+      "target_characters": 55
+    },
+    {
+      "id": "0320917678b79a911e6db04fb44ae33fed7048a1ff393b8e200a8f67c9d54d1e",
+      "source": "PadChest",
+      "length_bin": "short",
+      "old_has_rule_flag": true,
+      "old_flags": [
+        "calendar_year_mismatch",
+        "quantity_mismatch"
+      ],
+      "normalized_source_sha256": "0320917678b79a911e6db04fb44ae33fed7048a1ff393b8e200a8f67c9d54d1e",
+      "target_sha256": "50d63591b43027ba12056f7b5fda76de9a83cc0fb8751b3ced29ad4fe9c06d8e",
+      "source_characters": 134,
+      "target_characters": 38
+    },
+    {
+      "id": "aae579fc19d06c7cbf7550338501e03e0cd30135afa65a2e1af9ea838f581c7e",
+      "source": "PadChest",
+      "length_bin": "long",
+      "old_has_rule_flag": false,
+      "old_flags": [],
+      "normalized_source_sha256": "aae579fc19d06c7cbf7550338501e03e0cd30135afa65a2e1af9ea838f581c7e",
+      "target_sha256": "b996be04a7473376ba518e6721d67e634b75a3dd209ea68ad63cc54f3bd44d3e",
+      "source_characters": 757,
+      "target_characters": 187
+    },
+    {
+      "id": "5f6020ffde0cee071393716cf0d5705d84e554fc09fa265753d1da3856a7b27e",
+      "source": "BIMCV-COVID19",
+      "length_bin": "short",
+      "old_has_rule_flag": false,
+      "old_flags": [],
+      "normalized_source_sha256": "5f6020ffde0cee071393716cf0d5705d84e554fc09fa265753d1da3856a7b27e",
+      "target_sha256": "d7ec31ea314452a0706a9cee84d42240e7423a8f446bbf225c332d7e717cc90e",
+      "source_characters": 54,
+      "target_characters": 16
+    },
+    {
+      "id": "057ae4c1773a511fbb6bab183e71371426ee94b99528368cd73ac58c709f0386",
+      "source": "BIMCV-COVID19",
+      "length_bin": "long",
+      "old_has_rule_flag": true,
+      "old_flags": [
+        "quantity_mismatch"
+      ],
+      "normalized_source_sha256": "057ae4c1773a511fbb6bab183e71371426ee94b99528368cd73ac58c709f0386",
+      "target_sha256": "d3d53a2de8f7806b30968dde36e17edca2cc0d673b912258d4f1165f6a40d113",
+      "source_characters": 1371,
+      "target_characters": 342
+    },
+    {
+      "id": "6101fdfc59bb1ef16c56ff0ad410c94468456be295046c586bc37bcb85a4ab7f",
+      "source": "BIMCV-COVID19",
+      "length_bin": "long",
+      "old_has_rule_flag": false,
+      "old_flags": [],
+      "normalized_source_sha256": "6101fdfc59bb1ef16c56ff0ad410c94468456be295046c586bc37bcb85a4ab7f",
+      "target_sha256": "948cf0adbd07be8ea01bb78446d64114c6572cee74b2237bc5a73f75e0507936",
+      "source_characters": 1181,
+      "target_characters": 297
+    },
+    {
+      "id": "f29ac0f4e5bda08b42d5bbb71c035ac4c1d5d213d94004837330348bae243887",
+      "source": "OpenI",
+      "length_bin": "long",
+      "old_has_rule_flag": false,
+      "old_flags": [],
+      "normalized_source_sha256": "f29ac0f4e5bda08b42d5bbb71c035ac4c1d5d213d94004837330348bae243887",
+      "target_sha256": "f44aeb4a181fcbe4a781a6e7180fb5c7acb425ab192978c19eca5999e56ece6d",
+      "source_characters": 636,
+      "target_characters": 161
+    },
+    {
+      "id": "774734b3af364903be9ecd41b2c1276c2a592029e36508a0b7643b5806d63cda",
+      "source": "OpenI",
+      "length_bin": "long",
+      "old_has_rule_flag": false,
+      "old_flags": [],
+      "normalized_source_sha256": "774734b3af364903be9ecd41b2c1276c2a592029e36508a0b7643b5806d63cda",
+      "target_sha256": "f2f8a55dce011e1173d7c8ccc2ee0552f3731bbf775dce310937388e182d8675",
+      "source_characters": 750,
+      "target_characters": 183
+    },
+    {
+      "id": "290e8d086c2d2ba1142d3228d0851f54c902047479273ef96998a6d0a00d8609",
+      "source": "PadChest",
+      "length_bin": "medium",
+      "old_has_rule_flag": true,
+      "old_flags": [
+        "calendar_year_mismatch",
+        "quantity_mismatch"
+      ],
+      "normalized_source_sha256": "290e8d086c2d2ba1142d3228d0851f54c902047479273ef96998a6d0a00d8609",
+      "target_sha256": "7ba180e701832dfcc0b8ef01c07f9422d2fb457e4a2e13e4464d2096a1e4fd34",
+      "source_characters": 488,
+      "target_characters": 109
+    },
+    {
+      "id": "f321c57099e6f208e5c678620ce4151916587e51f4f20d31e094106ed65df485",
+      "source": "OpenI",
+      "length_bin": "short",
+      "old_has_rule_flag": false,
+      "old_flags": [],
+      "normalized_source_sha256": "f321c57099e6f208e5c678620ce4151916587e51f4f20d31e094106ed65df485",
+      "target_sha256": "9c9334fc32e77e4049c714076e92e7116feacc1236c926d19758e2867be00cd3",
+      "source_characters": 131,
+      "target_characters": 49
+    },
+    {
+      "id": "d71a78869415dc8b2a5b607514b1e97d96ea1c2ed22f0a02258f46a2ae9bc5ca",
+      "source": "BIMCV-COVID19",
+      "length_bin": "medium",
+      "old_has_rule_flag": true,
+      "old_flags": [
+        "exclusive_laterality_mismatch"
+      ],
+      "normalized_source_sha256": "d71a78869415dc8b2a5b607514b1e97d96ea1c2ed22f0a02258f46a2ae9bc5ca",
+      "target_sha256": "3e7151ab02e7d9484e4331cde43dd04e3950bf93112300de298f6d9dcebc317b",
+      "source_characters": 433,
+      "target_characters": 98
+    },
+    {
+      "id": "65d415cfc98b3ed2a7d29b078188023e4551c5532b37cc34e2fd6e61b673d95b",
+      "source": "OpenI",
+      "length_bin": "medium",
+      "old_has_rule_flag": true,
+      "old_flags": [
+        "explicit_negation_marker_missing"
+      ],
+      "normalized_source_sha256": "65d415cfc98b3ed2a7d29b078188023e4551c5532b37cc34e2fd6e61b673d95b",
+      "target_sha256": "4aebd0c7b952ffc73591e0d849b66466201a0c6883dabc21bf876c9b0dca7551",
+      "source_characters": 217,
+      "target_characters": 38
+    },
+    {
+      "id": "95c8625571056b61af4ddfb76e31a31140d23aa368c44c998c5a3a7db3f6424c",
+      "source": "OpenI",
+      "length_bin": "short",
+      "old_has_rule_flag": false,
+      "old_flags": [],
+      "normalized_source_sha256": "95c8625571056b61af4ddfb76e31a31140d23aa368c44c998c5a3a7db3f6424c",
+      "target_sha256": "c3a5cc5c18ad15433a1918c6e753288feec1f9cab7eb6f8a6f2fd92bc6bd4dbe",
+      "source_characters": 143,
+      "target_characters": 61
+    },
+    {
+      "id": "3fd4c558d9150faf58d6acd381ccdf6bda57e342614f375e3ca3f7e25b85f15e",
+      "source": "BIMCV-COVID19",
+      "length_bin": "medium",
+      "old_has_rule_flag": false,
+      "old_flags": [],
+      "normalized_source_sha256": "3fd4c558d9150faf58d6acd381ccdf6bda57e342614f375e3ca3f7e25b85f15e",
+      "target_sha256": "8f3efb95fbb99c7214492710f15edd98f5f1889da11d26094ba2863886cd56ed",
+      "source_characters": 380,
+      "target_characters": 79
+    },
+    {
+      "id": "3f97ef6a9244306e313ea12e0ec748054bb0dada947353f9d6f0c9bc61af841a",
+      "source": "OpenI",
+      "length_bin": "medium",
+      "old_has_rule_flag": true,
+      "old_flags": [
+        "exclusive_laterality_mismatch"
+      ],
+      "normalized_source_sha256": "3f97ef6a9244306e313ea12e0ec748054bb0dada947353f9d6f0c9bc61af841a",
+      "target_sha256": "91763341ba32220032f5ad4dac0b77df78744863c55198bdeff7d420bd3dd439",
+      "source_characters": 272,
+      "target_characters": 68
+    },
+    {
+      "id": "5581dbda99c032e584e6559699b331758c7c6ffb20fbf7b0674200c0031dfb43",
+      "source": "PadChest",
+      "length_bin": "medium",
+      "old_has_rule_flag": true,
+      "old_flags": [
+        "ambiguous_date_reinterpreted",
+        "date_mismatch"
+      ],
+      "normalized_source_sha256": "5581dbda99c032e584e6559699b331758c7c6ffb20fbf7b0674200c0031dfb43",
+      "target_sha256": "59abc3415674cd16422bd9d8bb99101682d867813ba1a0ad25659312f20f0fd2",
+      "source_characters": 207,
+      "target_characters": 57
+    },
+    {
+      "id": "acf38a448df38f4f4779f41de3e6ba28398821bd0cd45531965f3b060eeb3a08",
+      "source": "PadChest",
+      "length_bin": "short",
+      "old_has_rule_flag": false,
+      "old_flags": [],
+      "normalized_source_sha256": "acf38a448df38f4f4779f41de3e6ba28398821bd0cd45531965f3b060eeb3a08",
+      "target_sha256": "8b1553ed0e2a61fde96e49474f1bbd89b6ed4c44c434f8e3d4965acf6b995f60",
+      "source_characters": 38,
+      "target_characters": 28
+    },
+    {
+      "id": "779e351fb46235a80bfa9454922586437273a026569e8d7fbff716a0e7fe1b56",
+      "source": "OpenI",
+      "length_bin": "medium",
+      "old_has_rule_flag": false,
+      "old_flags": [],
+      "normalized_source_sha256": "779e351fb46235a80bfa9454922586437273a026569e8d7fbff716a0e7fe1b56",
+      "target_sha256": "9be79ac4b902923fce32e7c092f24eb506e491493a8dd7b921658ff48311391a",
+      "source_characters": 280,
+      "target_characters": 109
+    },
+    {
+      "id": "3608ed0175a4b64ad9831202af48d5981f573f0e0617c66981c3f0594cbcc080",
+      "source": "BIMCV-COVID19",
+      "length_bin": "short",
+      "old_has_rule_flag": true,
+      "old_flags": [
+        "date_mismatch"
+      ],
+      "normalized_source_sha256": "3608ed0175a4b64ad9831202af48d5981f573f0e0617c66981c3f0594cbcc080",
+      "target_sha256": "55b4c77d4a18cebec8b80553a741b3dd5bf44fe596558343cb43aea1b8a6567b",
+      "source_characters": 154,
+      "target_characters": 39
+    },
+    {
+      "id": "93691f730f4da900a85227d4caaf3f9cfc51d266a425cdc0681eaf378f8d18d9",
+      "source": "BIMCV-COVID19",
+      "length_bin": "long",
+      "old_has_rule_flag": false,
+      "old_flags": [],
+      "normalized_source_sha256": "93691f730f4da900a85227d4caaf3f9cfc51d266a425cdc0681eaf378f8d18d9",
+      "target_sha256": "9e9a0e2f7466df3da8e4180971da895d0e55a718b62df74c40cf2be9ec5d68ab",
+      "source_characters": 800,
+      "target_characters": 183
+    },
+    {
+      "id": "60be6dd624a9dacd12f5eff99615133ff7a28aaa4c53cc7cc35749b634fa60c7",
+      "source": "PadChest",
+      "length_bin": "long",
+      "old_has_rule_flag": true,
+      "old_flags": [
+        "date_mismatch"
+      ],
+      "normalized_source_sha256": "60be6dd624a9dacd12f5eff99615133ff7a28aaa4c53cc7cc35749b634fa60c7",
+      "target_sha256": "117bc4dd6b5bd4a56f6df495974c7a5f6eb578c4948048df3e4c2fb30dc0700a",
+      "source_characters": 780,
+      "target_characters": 193
+    },
+    {
+      "id": "78772f5babe5c1bab3b857c88401ceea967a289dc8b1371e5fecd5fb6d613d5a",
+      "source": "PadChest",
+      "length_bin": "medium",
+      "old_has_rule_flag": false,
+      "old_flags": [],
+      "normalized_source_sha256": "78772f5babe5c1bab3b857c88401ceea967a289dc8b1371e5fecd5fb6d613d5a",
+      "target_sha256": "6cdcea973b67105bb734fd9fe9776a7bec9a6b6cbede91fd48df03f7b800539a",
+      "source_characters": 239,
+      "target_characters": 65
+    },
+    {
+      "id": "951d9f03828a64504c24af09a2ca5ec8a5dda05e4ffaffc2145eb207a0ca10e6",
+      "source": "BIMCV-COVID19",
+      "length_bin": "short",
+      "old_has_rule_flag": false,
+      "old_flags": [],
+      "normalized_source_sha256": "951d9f03828a64504c24af09a2ca5ec8a5dda05e4ffaffc2145eb207a0ca10e6",
+      "target_sha256": "c50a117911d747d99c692c8c577a2ae98920350ede0592f9c08b3e5ca1a8c804",
+      "source_characters": 92,
+      "target_characters": 22
+    }
+  ],
+  "limits": [
+    "Equal source quotas and coverage of rare strata are purposive, not a population-weighted random sample.",
+    "Only old P0 flags were used for stratification; they are not correctness labels.",
+    "This pool belongs to historical training; it does not establish model evaluation independence.",
+    "No human or independent clinical review has been completed by this selection step."
+  ]
+}

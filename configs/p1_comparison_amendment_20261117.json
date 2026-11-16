@@ -1,0 +1,57 @@
+{
+  "version": "p1-exploratory-audited-risk-selection-amendment-v1",
+  "declared_utc": "2026-11-16T17:48:47.059558+00:00",
+  "before_formal_training_and_model_predictions": true,
+  "supersedes_original_protocol_fields": [
+    "S1_policy",
+    "quality_validation.readiness_for_controlled_experiment"
+  ],
+  "reason": "Prospective rule validation misses all 15 AI-observed factual-error real targets; complete22 clear audit finds4 false alarms and5 uncertain cases. Avoid excluding known false/uncertain flags. Keep the rule and original proposal unchanged.",
+  "S1_policy": "Exclude only original frozen clear_issue AND supported in complete22 project-AI audit; retain false_alarm, mixed, unjudgeable, review_needed and no_supported. Original targets unchanged.",
+  "study_type": "exploratory prospective B0/S0/S1 outcome comparison; original30 screen-validation is NOT independent validation of this amended combination",
+  "human_reviews": 0,
+  "audit_counts": {
+    "false_alarm": 4,
+    "supported": 13,
+    "unjudgeable": 5
+  },
+  "shared_of_1024": 1020,
+  "pretraining_predictions_read": false,
+  "frozen_rules_changed": false,
+  "same_training_config_and_dev_checkpoint_rule": true,
+  "final40_source_facts_lock_sha256": "10a8b745ff7e3f62afc48867b925b20b8733273aa4439de1f5a3452b0e1f7f05",
+  "reviewed_data_selection_sha256": "af5931b10c54b70b4a5b61367891e1b9f0683288ceeee91886fb1ce1e2497e7f",
+  "review_scoring": {
+    "fact_statuses": [
+      "faithful",
+      "less_precise",
+      "missing",
+      "contradicted",
+      "unjudgeable"
+    ],
+    "priority": [
+      "source_error",
+      "incomplete",
+      "unjudgeable",
+      "pass"
+    ],
+    "complete_faithful_chinese": "pass, no precision issue, completed Chinese (no raw untranslated required information)",
+    "coverage": "(faithful+less_precise)/required facts; also report faithful-only; unchanged denominator includes ambiguous facts",
+    "readability": [
+      "fluent",
+      "needs_revision",
+      "hard_to_read"
+    ],
+    "readability_is_patient_test": false,
+    "explanation": "General term explanation is not wrong simply because source omitted it; unsupported patient-specific assertion is a source error. Ambiguous source meanings stay unresolved."
+  },
+  "unchanged": [
+    "final40 and dev20 identities",
+    "model revision",
+    "greedy decode limits",
+    "training size/epochs/seed/matching",
+    "dev loss checkpoint selection",
+    "source-first fact review and no final tuning",
+    "retain every frozen case and failure"
+  ]
+}

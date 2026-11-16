@@ -1,0 +1,62 @@
+{
+  "purpose": "prospective_screen_validation_not_clinical",
+  "human_reviews": 0,
+  "bindings_sha256": {
+    "results/p1/quality-validation-20261117/real_ai_review.json": "671a7c673346a7d112abd766ca3e84fdb7b65d40fe0c1a3ca9053c6558d0528c",
+    "results/p1/quality-validation-20261117/screen_counts.json": "0bd7b73def1a394a61a46efd65de27f7216e6a00f9b835e457cb1274c52f51ad"
+  },
+  "synthetic": {
+    "control": {
+      "n": 30,
+      "new_status_counts": {
+        "no_supported_issue_found": 29,
+        "review_needed": 1
+      },
+      "old_any_flag": 4
+    },
+    "perturbed": {
+      "n": 30,
+      "new_status_counts": {
+        "clear_issue": 6,
+        "review_needed": 9,
+        "no_supported_issue_found": 15
+      },
+      "old_any_flag": 10
+    }
+  },
+  "real": {
+    "cases": 30,
+    "status_counts": {
+      "review_needed": 11,
+      "no_supported_issue_found": 19
+    },
+    "project_AI_labels_overlap": {
+      "observed_factual_error": {
+        "n": 15,
+        "status_counts": {
+          "review_needed": 8,
+          "no_supported_issue_found": 7
+        }
+      },
+      "required_information_missing": {
+        "n": 14,
+        "status_counts": {
+          "no_supported_issue_found": 8,
+          "review_needed": 6
+        }
+      },
+      "unjudgeable": {
+        "n": 15,
+        "status_counts": {
+          "review_needed": 8,
+          "no_supported_issue_found": 7
+        }
+      }
+    },
+    "observed_false_clear_flags": 0,
+    "clear_flags_total": 0
+  },
+  "prespecified_false_clear_gate_passes": true,
+  "interpretation": "The low-false-clear gate is vacuous for the real sample because zero real targets are clear-flagged. All 15 AI-observed factual-error targets remain eligible. This is NOT validation of meaningful data-quality improvement; a full clear-flag audit and prospective policy amendment precede GPU.",
+  "rules_retuned_after_validation": false
+}

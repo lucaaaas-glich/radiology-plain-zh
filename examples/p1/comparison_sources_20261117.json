@@ -1,0 +1,444 @@
+{
+  "purpose": "controlled_source_consistency_comparison_AI_review_not_clinical",
+  "protocol_sha256": "bcfbca6929a722667b9ab803f1acad75b7d3654fba30b15dd18bcabfb5038002",
+  "source_pool_sha256": "680bd10de398efbbe7cc115aa861bc12f722fcbcd307cd9c3deedacca8941fce",
+  "grouping_sha256": "5a1abd41e908b187ea7a92baaf19e030ad7e63aadfd3df202ccac07c42f8cb10",
+  "development_file_sha256": "777d68fad3cb2907a2b3b45b0e022eccd5a462a02fd6fd0878ab4bc1c258f8c6",
+  "manifests": {
+    "development20": {
+      "path": "data/p1/comparison-20261117/evaluation/development20.jsonl",
+      "source_file_sha256": "6c7fdd330984ab26608f2d72532f3ee3071d3337ea1ce0cc2ac1f313b990c327",
+      "rows": [
+        {
+          "id": "2c11a85744c017b05378ba9266e0da6cb9519d58c155f23070afe6c507ccc5bd",
+          "source_sha256": "b252317521d91bd67f346d515f0b8b215f438e9ca7342182ee6a15f5e582696c",
+          "group": "2c11a85744c017b05378ba9266e0da6cb9519d58c155f23070afe6c507ccc5bd",
+          "source": "BIMCV-COVID19",
+          "normalized_length": 69
+        },
+        {
+          "id": "b7b80d41587b42320e980c49435c46db5beb74dfaa0ba3a524671d10669887d9",
+          "source_sha256": "687495e49663be600f4a74956463cf2eeab7a98805570fa932b26657385211f7",
+          "group": "b7b80d41587b42320e980c49435c46db5beb74dfaa0ba3a524671d10669887d9",
+          "source": "PadChest",
+          "normalized_length": 263
+        },
+        {
+          "id": "383cd0e9dd061c40965c864656072d1a3a9e9721761baf1d1b6f03b5d08181fe",
+          "source_sha256": "a897e71024b9acd36ef3b89568b5e20b21a97c5001192d9a3a01fe1b99be721c",
+          "group": "383cd0e9dd061c40965c864656072d1a3a9e9721761baf1d1b6f03b5d08181fe",
+          "source": "BIMCV-COVID19",
+          "normalized_length": 292
+        },
+        {
+          "id": "e59ff8463503ab6c19c22c524ad741a33aa749d5b8fee762ddfc25906b2504d4",
+          "source_sha256": "6309aededd7ad1f63c8c3f5c47dd914e42aa2f39950e2ce7ad64fbf9c29dd165",
+          "group": "e59ff8463503ab6c19c22c524ad741a33aa749d5b8fee762ddfc25906b2504d4",
+          "source": "BIMCV-COVID19",
+          "normalized_length": 254
+        },
+        {
+          "id": "64324bb79be348a66c97ec56e4e6c33b664e50b906b13ce193be16f15a20dfc7",
+          "source_sha256": "e0fcb6d7e5309547797d07bcb54d976f98dc8a1fd5a756459375d6ec10699566",
+          "group": "64324bb79be348a66c97ec56e4e6c33b664e50b906b13ce193be16f15a20dfc7",
+          "source": "PadChest",
+          "normalized_length": 243
+        },
+        {
+          "id": "f56cc6d306ca9c4843db979835abea9bf3bc287f34288a93beab1ae2b865d3b3",
+          "source_sha256": "c6de211fcfb93d90dc5bce444df3f5e0674750f40cc64802e2b69797e07d8c54",
+          "group": "f56cc6d306ca9c4843db979835abea9bf3bc287f34288a93beab1ae2b865d3b3",
+          "source": "PadChest",
+          "normalized_length": 356
+        },
+        {
+          "id": "8e7ef2b19fd71b14589c14766db9cdb46e8f798c4276194169b3646a49232eaf",
+          "source_sha256": "007bef7232a4281268bc844eebbe0217a659fc8fcf992301dc9e845bd69611dd",
+          "group": "8e7ef2b19fd71b14589c14766db9cdb46e8f798c4276194169b3646a49232eaf",
+          "source": "PadChest",
+          "normalized_length": 322
+        },
+        {
+          "id": "69c2049b27d0b4a1c3c96f0e840a0e7f01cfab9f2fe2abdd4186e13c2408f72a",
+          "source_sha256": "febf9de9086443e81ae3acc1f4718687b10a34435a9496933ddf0f7e358a5b16",
+          "group": "69c2049b27d0b4a1c3c96f0e840a0e7f01cfab9f2fe2abdd4186e13c2408f72a",
+          "source": "BIMCV-COVID19",
+          "normalized_length": 68
+        },
+        {
+          "id": "57376ab8332c81ce0ee5c5c6eb1b61a1a072d195d78fbe5687352c6ab74e16eb",
+          "source_sha256": "1b4d3ebbb7dd36cca05afa4c7b0c6db543998e0dc84bb2f1db19becb56d2661d",
+          "group": "57376ab8332c81ce0ee5c5c6eb1b61a1a072d195d78fbe5687352c6ab74e16eb",
+          "source": "PadChest",
+          "normalized_length": 111
+        },
+        {
+          "id": "8f3a1a364328bb2abe85d0738bf1b77055c6731e8e8dc44ccc8d85b180596bf0",
+          "source_sha256": "62737e38030f63bd26659a60e673827a9fd35f4fbac67051ece7a703dcce256b",
+          "group": "8f3a1a364328bb2abe85d0738bf1b77055c6731e8e8dc44ccc8d85b180596bf0",
+          "source": "PadChest",
+          "normalized_length": 122
+        },
+        {
+          "id": "d6723643f3e863d7b8868c02d6da25f260924cb847057923d63e207d632aca0d",
+          "source_sha256": "d5b05ccc83775bce17e867e0c9c1bdfce02bc411ea480122a3c8dae45e461863",
+          "group": "d6723643f3e863d7b8868c02d6da25f260924cb847057923d63e207d632aca0d",
+          "source": "BIMCV-COVID19",
+          "normalized_length": 228
+        },
+        {
+          "id": "0178b84309233a6e71cc2aa213b6e527b28f025f1bdef4da3e033a39df5ac953",
+          "source_sha256": "18e209fcfad46332d37c4091cb91a016a610850ee7545a5edb1cb4bc82a703f2",
+          "group": "0178b84309233a6e71cc2aa213b6e527b28f025f1bdef4da3e033a39df5ac953",
+          "source": "PadChest",
+          "normalized_length": 261
+        },
+        {
+          "id": "95b496a56055a01b1836c581c7c3ea4400dfe639ae83bd5691af9983f045f492",
+          "source_sha256": "2f289ed20bfb4f576141d50e40aff3bc4176a9b9d558350bfb4935bd6ed41f07",
+          "group": "95b496a56055a01b1836c581c7c3ea4400dfe639ae83bd5691af9983f045f492",
+          "source": "BIMCV-COVID19",
+          "normalized_length": 219
+        },
+        {
+          "id": "45971e0110afd4294044dd0807b35725580186dbc75061c0dea7b2d7e4306db5",
+          "source_sha256": "fe04121b05ad31f08b614ffcc4a14568f1b7f224712d17a15d016c283d7e5b3f",
+          "group": "45971e0110afd4294044dd0807b35725580186dbc75061c0dea7b2d7e4306db5",
+          "source": "PadChest",
+          "normalized_length": 137
+        },
+        {
+          "id": "d29ce27b84284935986ad79428a46f7e5415db61001ef12e029c1a57c3e5c384",
+          "source_sha256": "0e6ed80f8230dd8cafecf72b6483580338681bc21c1357cf87e0b1fd7a1d7852",
+          "group": "d29ce27b84284935986ad79428a46f7e5415db61001ef12e029c1a57c3e5c384",
+          "source": "PadChest",
+          "normalized_length": 65
+        },
+        {
+          "id": "5165c47acc58ef377ea4584d7e1bfe7949b363b4d38c753519e216272050ede9",
+          "source_sha256": "034d9caa9bf4ddaf9ff3f8b882aef486c473b0c193754f82b276b2e17d0a1ec1",
+          "group": "5165c47acc58ef377ea4584d7e1bfe7949b363b4d38c753519e216272050ede9",
+          "source": "PadChest",
+          "normalized_length": 191
+        },
+        {
+          "id": "5003a3c7640409d4d04bb82f1fce2360c5fbd744beff445e01b3d7b03605b3cd",
+          "source_sha256": "9907728e0bb56f43965803a0803cab84bb48fd58be861f7b4a331532ad512a83",
+          "group": "5003a3c7640409d4d04bb82f1fce2360c5fbd744beff445e01b3d7b03605b3cd",
+          "source": "PadChest",
+          "normalized_length": 89
+        },
+        {
+          "id": "4dbcad3ffea3e3d8743cc28bb5675830aade2fd84c1f9e1f4714477929752057",
+          "source_sha256": "b8aa4758f513e515b72ce340b852821263721176bc40793abd1eab9d212d9e19",
+          "group": "4dbcad3ffea3e3d8743cc28bb5675830aade2fd84c1f9e1f4714477929752057",
+          "source": "PadChest",
+          "normalized_length": 222
+        },
+        {
+          "id": "74a1dc8194a8ccc9c2b26659492ba052f91af585b7a2f3100711f3d6baa65f17",
+          "source_sha256": "43afe718bc5409e05a8ebc99b7d8bb509251a968302f3fe3607c6ecaadd90d50",
+          "group": "74a1dc8194a8ccc9c2b26659492ba052f91af585b7a2f3100711f3d6baa65f17",
+          "source": "PadChest",
+          "normalized_length": 93
+        },
+        {
+          "id": "1eeeee4b6515c10f6bf1bc1febb3d5d597886851a5fa5c538470e6396bccee7a",
+          "source_sha256": "5163295c83400f93da58d0ce0e1378a256512c319b3febc650e95ef99396823c",
+          "group": "1eeeee4b6515c10f6bf1bc1febb3d5d597886851a5fa5c538470e6396bccee7a",
+          "source": "PadChest",
+          "normalized_length": 110
+        }
+      ]
+    },
+    "final40": {
+      "path": "data/p1/comparison-20261117/evaluation/final40.jsonl",
+      "source_file_sha256": "3673949c92b1366b7da5d14b55fcaf3debfe42ca9dc491e43d48e1e677720034",
+      "rows": [
+        {
+          "id": "01f72aaaf8abb950faa7d3c030d227a1bdedc62586f9e8050f0facceb42daf34",
+          "source_sha256": "b65f297534a03b364cf5346011d10cf2310dd27692140bce10d027f30f7b314c",
+          "group": "01f72aaaf8abb950faa7d3c030d227a1bdedc62586f9e8050f0facceb42daf34",
+          "source": "PadChest",
+          "normalized_length": 368
+        },
+        {
+          "id": "a8dd10c62b0c852ecfc9b962ea93a933bb9db22be78919e8f881f16f01add452",
+          "source_sha256": "c2788781f82511cd8488e934830f86597bb9428538bf2e4de469d4ef4f93dc79",
+          "group": "a8dd10c62b0c852ecfc9b962ea93a933bb9db22be78919e8f881f16f01add452",
+          "source": "BIMCV-COVID19",
+          "normalized_length": 178
+        },
+        {
+          "id": "023994987130935a8434f3c9b728cc47ff15516fdd12c77f29f59e813e711651",
+          "source_sha256": "0b469057a099934c72dc47b577bced49f52a14b47eb4731e5bc10799597cfd0c",
+          "group": "023994987130935a8434f3c9b728cc47ff15516fdd12c77f29f59e813e711651",
+          "source": "BIMCV-COVID19",
+          "normalized_length": 2451
+        },
+        {
+          "id": "44acc2e1305c47150898696f5bd11f65fec5d24c535cf7c561ffd902627b66aa",
+          "source_sha256": "80e6ddb0953da20f0f28d603b04c6888a1ae1c5180d0825007073bbbcf674224",
+          "group": "44acc2e1305c47150898696f5bd11f65fec5d24c535cf7c561ffd902627b66aa",
+          "source": "BIMCV-COVID19",
+          "normalized_length": 1333
+        },
+        {
+          "id": "35329635f7c6582c42efa7b419b49e467db4b3de88ef9f848a74514e288ee082",
+          "source_sha256": "caa33b082d9e061331e32e646cb68da8b354dbc68304d6c51d2fc4bad2b8f1f3",
+          "group": "35329635f7c6582c42efa7b419b49e467db4b3de88ef9f848a74514e288ee082",
+          "source": "OpenI",
+          "normalized_length": 171
+        },
+        {
+          "id": "cff484c8d197867662686cc1f144c0b6c78030618ae3ee42f22e5603135a1ff4",
+          "source_sha256": "a5312b5336b0ece14a493f69124a10e463866b39134c6e6ee96407b6ec0c33d1",
+          "group": "cff484c8d197867662686cc1f144c0b6c78030618ae3ee42f22e5603135a1ff4",
+          "source": "BIMCV-COVID19",
+          "normalized_length": 141
+        },
+        {
+          "id": "73707803adce63d46a5dd64fc3bbb02056baf2d5c5e1319b15ff58d558e99b42",
+          "source_sha256": "19344eeefdd06e6b54cd8d6a6aefa1a71d440a45354fdb6ad4e07f8754e6bc75",
+          "group": "73707803adce63d46a5dd64fc3bbb02056baf2d5c5e1319b15ff58d558e99b42",
+          "source": "PadChest",
+          "normalized_length": 179
+        },
+        {
+          "id": "8f78d7f04716164b0dfb56241b3866b0810f15c15278b62fbdd13b8166bf78a4",
+          "source_sha256": "f06e83a4b6f838539600466b237212d5e25d5f31dd04386a093082463c5fedc8",
+          "group": "8f78d7f04716164b0dfb56241b3866b0810f15c15278b62fbdd13b8166bf78a4",
+          "source": "BIMCV-COVID19",
+          "normalized_length": 1071
+        },
+        {
+          "id": "d15567f93dce3761c4308e0131ebe77f1507b8c7c3a9cbea647e3011725868d0",
+          "source_sha256": "3ca1184a48179c0ac451d07c2c59dbb2b4edb25dc93666cf68f53e36892c9c55",
+          "group": "d15567f93dce3761c4308e0131ebe77f1507b8c7c3a9cbea647e3011725868d0",
+          "source": "PadChest",
+          "normalized_length": 310
+        },
+        {
+          "id": "2645afcec5ce6d66718acb5fb7676d77d23e624f89bb9e0bb989a124f39fd344",
+          "source_sha256": "5a3fb6ac4faa13b7a430f31a75bbd89fe56946a5a9fefce51e77e47c58ce9b8d",
+          "group": "2645afcec5ce6d66718acb5fb7676d77d23e624f89bb9e0bb989a124f39fd344",
+          "source": "BIMCV-COVID19",
+          "normalized_length": 1805
+        },
+        {
+          "id": "fd2f6346e774d1c460ceac99269e3f03021b4aac7341ccf8299afc1b1b1b61f0",
+          "source_sha256": "4220ad0e81a7a82774bfd7a794bda19882a9a53d700ac0bf3f7364cadf50c9e3",
+          "group": "fd2f6346e774d1c460ceac99269e3f03021b4aac7341ccf8299afc1b1b1b61f0",
+          "source": "BIMCV-COVID19",
+          "normalized_length": 60
+        },
+        {
+          "id": "ff1bffa49db0f339b91ef155cd1c7152dc2408266649b0841920d4d7d2f335b6",
+          "source_sha256": "dcde1901d197bed1ca988530c4b05ffadca77623ea289b92c60ef6636d233544",
+          "group": "ff1bffa49db0f339b91ef155cd1c7152dc2408266649b0841920d4d7d2f335b6",
+          "source": "OpenI",
+          "normalized_length": 237
+        },
+        {
+          "id": "9fd91063ec4764dab7556c0282d28790931e690b0b781765fdc37f0ce7b55a7a",
+          "source_sha256": "d0e5535cb2d305d114c04588dbed4acf9ddf5bc4881693a0dfd53c12b8ae8feb",
+          "group": "9fd91063ec4764dab7556c0282d28790931e690b0b781765fdc37f0ce7b55a7a",
+          "source": "BIMCV-COVID19",
+          "normalized_length": 520
+        },
+        {
+          "id": "8f2d35fb9c4a9137273fecb81a5ee281c400dab027a9e28c4dcd26490eab6231",
+          "source_sha256": "a1a37ca3704a23c0dc0d5e390de265819af477b5cd144cb942522c5c2fe44880",
+          "group": "8f2d35fb9c4a9137273fecb81a5ee281c400dab027a9e28c4dcd26490eab6231",
+          "source": "BIMCV-COVID19",
+          "normalized_length": 1164
+        },
+        {
+          "id": "950b3d2dfbb4effb010d179199d3693e8c1fd639c1c80a5de612abebdffb1c39",
+          "source_sha256": "aee07dff698d1c018bf44a6101689d0b3d8d7666fa990f7e19b07385a510f706",
+          "group": "950b3d2dfbb4effb010d179199d3693e8c1fd639c1c80a5de612abebdffb1c39",
+          "source": "OpenI",
+          "normalized_length": 640
+        },
+        {
+          "id": "ed68bbc3541a9b3c1ea1f589ebeb769e5fc70963c30d87231e5b38f2861ac0e7",
+          "source_sha256": "4373b3ebd572c092a762f2cd28b6c6af9d94f40caed2fb5b096dced2e3e3a276",
+          "group": "ed68bbc3541a9b3c1ea1f589ebeb769e5fc70963c30d87231e5b38f2861ac0e7",
+          "source": "PadChest",
+          "normalized_length": 261
+        },
+        {
+          "id": "809afa0ec0d26b97550114677d39a9ed613dc094f083c856f33cae61309f386a",
+          "source_sha256": "8933d08da344408451dee11d153e93c90ec275b86227aa41cc668ce3cf583ec5",
+          "group": "809afa0ec0d26b97550114677d39a9ed613dc094f083c856f33cae61309f386a",
+          "source": "PadChest",
+          "normalized_length": 287
+        },
+        {
+          "id": "12f20b6485f97bb0fd3850f269148dab1d1dd9c85c7abe74d254f1b2a478e9e2",
+          "source_sha256": "b76d9c1250eebd34508e217a76cd218329e7ad69b3377a7b51d92c6cd9bf09f5",
+          "group": "12f20b6485f97bb0fd3850f269148dab1d1dd9c85c7abe74d254f1b2a478e9e2",
+          "source": "BIMCV-COVID19",
+          "normalized_length": 627
+        },
+        {
+          "id": "f8761265b1012803f7e7f128b2f12bd98b5b751bba664be7acc90c2bfb94955a",
+          "source_sha256": "f8888eb2bc82a842d90fa0ad31a82c31d594d44ece8fb9177c69c0eddd1d4e3a",
+          "group": "f8761265b1012803f7e7f128b2f12bd98b5b751bba664be7acc90c2bfb94955a",
+          "source": "PadChest",
+          "normalized_length": 166
+        },
+        {
+          "id": "a737c819d2a84711cdd1bdbba6f3ff3cdaa76f1f82125be6eb1eec48452a55e3",
+          "source_sha256": "249c7aed4d9139a525da88630ecbd8fafc22d384dd8714eb5700d7c83ea2d7f3",
+          "group": "a737c819d2a84711cdd1bdbba6f3ff3cdaa76f1f82125be6eb1eec48452a55e3",
+          "source": "PadChest",
+          "normalized_length": 793
+        },
+        {
+          "id": "ac554a350bfe09865ee95f7ccc53f402102b56854ea6e37017b598e7ebbe1bd7",
+          "source_sha256": "5e3f4371ab341a6c4083afd1f608c3d9bf30d0353d5c33ef733ef3ed8c29cb3e",
+          "group": "ac554a350bfe09865ee95f7ccc53f402102b56854ea6e37017b598e7ebbe1bd7",
+          "source": "PadChest",
+          "normalized_length": 618
+        },
+        {
+          "id": "a4ad4ddd41781f979968d59fa0bf681c57238fe184df9989651aa1e4182829d4",
+          "source_sha256": "9e05645416ddf0652eef5571120aa4b47bbd0141cf8c541e848e2181d55af353",
+          "group": "a4ad4ddd41781f979968d59fa0bf681c57238fe184df9989651aa1e4182829d4",
+          "source": "BIMCV-COVID19",
+          "normalized_length": 670
+        },
+        {
+          "id": "0b86f78f7faf7a6a10fadf0ca8b359aeadda8201407d932f14b4c693f1f174b6",
+          "source_sha256": "649e28b9e2fbb099fc30f955c080bca65ffad5882285ca0f6c1d9613d1b4884e",
+          "group": "0b86f78f7faf7a6a10fadf0ca8b359aeadda8201407d932f14b4c693f1f174b6",
+          "source": "BIMCV-COVID19",
+          "normalized_length": 274
+        },
+        {
+          "id": "565c580031b55e43f5727588407087b1d0f45db6c74672473d4046d06387dcf4",
+          "source_sha256": "32d992cc61413b07bd3784fe8f76daa2fc8c88d9c3b34587572d4414d333cb86",
+          "group": "565c580031b55e43f5727588407087b1d0f45db6c74672473d4046d06387dcf4",
+          "source": "BIMCV-COVID19",
+          "normalized_length": 638
+        },
+        {
+          "id": "e360da4546f2e9907e2b3087357b0d73b0ec98405f5d3f458b7a33bb4170f6e0",
+          "source_sha256": "a14aa246b6e85a6145ba81894472d26defae8219f487cf21ecd14d1ecb39e7c5",
+          "group": "e360da4546f2e9907e2b3087357b0d73b0ec98405f5d3f458b7a33bb4170f6e0",
+          "source": "PadChest",
+          "normalized_length": 188
+        },
+        {
+          "id": "7fe4d7401d1b103f265758c50df2d4f58f5fab8216a3bea60fe70f6db958d1be",
+          "source_sha256": "16e530d1b7b665e78556d53e3352e81e262d1af944b870376b03c786932e46bd",
+          "group": "7fe4d7401d1b103f265758c50df2d4f58f5fab8216a3bea60fe70f6db958d1be",
+          "source": "PadChest",
+          "normalized_length": 167
+        },
+        {
+          "id": "c5686930b9a871e99e2f45b6607e6dabca2ba931c61f9529d393719e5b7223a7",
+          "source_sha256": "e7b1d191c243114ea61aaf62ebada2e2396339d7738a8be7818b9928ea153b6a",
+          "group": "c5686930b9a871e99e2f45b6607e6dabca2ba931c61f9529d393719e5b7223a7",
+          "source": "PadChest",
+          "normalized_length": 53
+        },
+        {
+          "id": "217811ba8f674a835db56920b87a386a5907f235067e1ca76300dc7e9a2b0e36",
+          "source_sha256": "44cdfd8d77230a64e2105ba09881dfee6576061f42612b13ecffab7ac2e2596d",
+          "group": "217811ba8f674a835db56920b87a386a5907f235067e1ca76300dc7e9a2b0e36",
+          "source": "BIMCV-COVID19",
+          "normalized_length": 621
+        },
+        {
+          "id": "8a85793226500754e92e8b620af23aa360d1259d68bf3f2326f09884cfe374ff",
+          "source_sha256": "179b3a00cfe77c3b96e0c7ab02ea4fc8d6a180ef019444a39942c9af2d83f00d",
+          "group": "8a85793226500754e92e8b620af23aa360d1259d68bf3f2326f09884cfe374ff",
+          "source": "BIMCV-COVID19",
+          "normalized_length": 247
+        },
+        {
+          "id": "47440269a04dd820665e8efe4887f5f761e3bbb1d547fc4ab4c6d5ab9a4ac774",
+          "source_sha256": "a43d0dd9347bc2c423b7496cf613b08c07623af346470526047e3f83f867c93b",
+          "group": "47440269a04dd820665e8efe4887f5f761e3bbb1d547fc4ab4c6d5ab9a4ac774",
+          "source": "OpenI",
+          "normalized_length": 362
+        },
+        {
+          "id": "63bca2782842ca504b3dfc2b44b9f48aa66663fe7c146b015337c6d1d22c7ed4",
+          "source_sha256": "1f9acd166a3a437b25fdf086c7e8b8a5848ceb52973fe2760fa56ff202a4afac",
+          "group": "63bca2782842ca504b3dfc2b44b9f48aa66663fe7c146b015337c6d1d22c7ed4",
+          "source": "BIMCV-COVID19",
+          "normalized_length": 1226
+        },
+        {
+          "id": "7450ac831035c1a7aaec8dc9073926b3aabb6ff47160530e634ad4d1b7bba268",
+          "source_sha256": "2583cfed9c1d3d149385314cb122c47868fbab452fbf7a7a1386cd501147ca08",
+          "group": "7450ac831035c1a7aaec8dc9073926b3aabb6ff47160530e634ad4d1b7bba268",
+          "source": "PadChest",
+          "normalized_length": 113
+        },
+        {
+          "id": "4ad03e1ca4a30a786c012da6492517535a2b9584a8836adb6a4dfab596da0edb",
+          "source_sha256": "41776cc35287fc78d909ac74ee9681c5e735c66547d395ddb5629ddb8a7fcf35",
+          "group": "4ad03e1ca4a30a786c012da6492517535a2b9584a8836adb6a4dfab596da0edb",
+          "source": "BIMCV-COVID19",
+          "normalized_length": 1705
+        },
+        {
+          "id": "40efbd9b3bae7e550f72ad09de817102aa63c24afc49c683d01ed38b7c8260ca",
+          "source_sha256": "49102f7c67560d9befc54e8f0948caed0cb6065aec39b24006adaeac9779a11a",
+          "group": "40efbd9b3bae7e550f72ad09de817102aa63c24afc49c683d01ed38b7c8260ca",
+          "source": "BIMCV-COVID19",
+          "normalized_length": 1875
+        },
+        {
+          "id": "3e04e91bbfce9d25c1f8ead1211974ecd9acd38d5f634e6d9e5e7a32c2a9de0b",
+          "source_sha256": "eb19294e68c13cb30b1f13d827ea032fe6c1af06f8c56db279dfb0395b68ea31",
+          "group": "3e04e91bbfce9d25c1f8ead1211974ecd9acd38d5f634e6d9e5e7a32c2a9de0b",
+          "source": "PadChest",
+          "normalized_length": 144
+        },
+        {
+          "id": "9c02aa75c304496bb8455f4ba244592ab3263b6ff950e7b96433049352135ec1",
+          "source_sha256": "be0d4317bc50b313ce2cf0664bc801c7f498303eb9ec16a2be3f01bbc1ca8120",
+          "group": "9c02aa75c304496bb8455f4ba244592ab3263b6ff950e7b96433049352135ec1",
+          "source": "BIMCV-COVID19",
+          "normalized_length": 722
+        },
+        {
+          "id": "6b2a5fcdb66e9cf8fabb0f4c71d6248036d1d8a1e409d9b65cbe826639d5caf1",
+          "source_sha256": "0b927bc04b40d0c9d7d47e7b4d8a7086b3af01ac36ac68153936e4ef9118556f",
+          "group": "6b2a5fcdb66e9cf8fabb0f4c71d6248036d1d8a1e409d9b65cbe826639d5caf1",
+          "source": "PadChest",
+          "normalized_length": 237
+        },
+        {
+          "id": "fd2f5f7fef90f922fc9411911d3caa86f5833ecfbbddb235c35ef08eea84ed42",
+          "source_sha256": "b7f451b7e93bafd40bc41509e8866210a5b25744fa8393b876e49c103a27b654",
+          "group": "fd2f5f7fef90f922fc9411911d3caa86f5833ecfbbddb235c35ef08eea84ed42",
+          "source": "PadChest",
+          "normalized_length": 193
+        },
+        {
+          "id": "d2652c10408ea042f47233a7f66083a6539a1f3380684cb264e3ee8dfb3b7009",
+          "source_sha256": "d3a89fe93f4d30db8f9d7fe30b6617ff03bd206a08acacfb0975eec5eee5137b",
+          "group": "d2652c10408ea042f47233a7f66083a6539a1f3380684cb264e3ee8dfb3b7009",
+          "source": "PadChest",
+          "normalized_length": 301
+        },
+        {
+          "id": "8eb87de4a85b10b520663422378e2da70d793f64a3f22149d809c876b0f503af",
+          "source_sha256": "dbbcd9efb8fd55864219209457f8651b6adfa2556ebde3a1ec454d1e4cde7c77",
+          "group": "8eb87de4a85b10b520663422378e2da70d793f64a3f22149d809c876b0f503af",
+          "source": "PadChest",
+          "normalized_length": 215
+        }
+      ]
+    }
+  },
+  "model_predictions_seen": false,
+  "final_source_reference_or_teacher_target_read": false,
+  "human_reviews": 0
+}

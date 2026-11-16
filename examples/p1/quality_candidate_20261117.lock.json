@@ -1,0 +1,16 @@
+{
+  "frozen_at_utc": "2026-11-16T17:39:31.810243+00:00",
+  "version": "p1-conservative-risk-dev1",
+  "files_sha256": {
+    "radplain/quality_p1.py": "72ba0bbfae28462c4ae51e583904ad4c325e9565b7c5d952ec52cc73be516b4f",
+    "tests/test_p1_quality.py": "6e93416e8cec33f35a760e8fed5cf049d4223b3765af7c26113ce737bf4b90a5",
+    "radplain/quality_p0.py": "89fd18a185fc65245aa7e6a02e979ba2b411b3b63ed1dba739a05f79be8ccad1",
+    "radplain/quantity_v2.py": "d38f6178494ac5839e5f1eea64275abbd0765a97822fd6971ba7474a47b23c0d",
+    "radplain/fidelity.py": "d92179b82a40fdebe6a0881156d988cdfcc113e404074c9a7039a4f7e981dec0",
+    "radplain/guard_v2.py": "784d7c24d8293dee1a08e5ce11b0f844355b50d08ec8dfdb8bc00e73815d6334",
+    "radplain/common.py": "3698bb29475ceb06fd4630cca14023c465f2e8e3a1a149fc890e7e56323927bd"
+  },
+  "original_local_lock_sha256": "6ddcd136ef62de3aeaa05453543ba5605a0723b9d9e4127f33241da8d6feae6a",
+  "candidate_policy": "Only clear_issue is eligible for automatic risk exclusion; retain review_needed and report its distribution. Never infer clinical correctness.",
+  "human_reviews": 0
+}

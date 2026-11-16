@@ -1,0 +1,59 @@
+{
+  "version": "p1-independent-quality-validation-20261117-v1",
+  "frozen_at_utc": "2026-11-16T17:32:37.382131+00:00",
+  "purpose": "Independent prospective validation of a frozen training-target screening candidate, not model final evaluation",
+  "reviewer_type": "project_AI_not_independent_clinical",
+  "human_reviews": 0,
+  "new_screening_implementation_or_outputs_read": false,
+  "synthetic": {
+    "pairs": 30,
+    "control_targets": 30,
+    "single_perturbation_targets": 30,
+    "all_split": "validation",
+    "old_60_pairs_unchanged": true,
+    "old_pairs_sha256": "ee4dea4d2e9159b02a8c6e66cf7434a0857eb74aa07908e850498e0d58eda5e2",
+    "new_pairs_path": "examples/p1/quality_validation_20261117.jsonl",
+    "new_pairs_sha256": "ce37a21e1945ad7e574dd012270b43730af7d799c78ddc9a6138428beaf3063d",
+    "new_source_hash_overlap_with_old_60": 0,
+    "use_rule": "Do not run or inspect candidate responses on this validation set until candidate code/configuration hashes have been frozen. Do not tune on results and still call this set independent validation."
+  },
+  "real_target_sampling": {
+    "pool": "Original V1 train.zh rows with teacher_accepted exactly true",
+    "expected_accepted_rows": 4066,
+    "exclude_prior_manifest": "examples/p0/real_target_audit_manifest.json",
+    "exclude_prior_ids": 18,
+    "sample_size": 30,
+    "seed": 3710261117,
+    "source_quota": 10,
+    "sources": [
+      "BIMCV-COVID19",
+      "OpenI",
+      "PadChest"
+    ],
+    "strata": [
+      "original dataset source",
+      "frozen old-P0 features.length_bin",
+      "presence of any frozen old-P0 flag"
+    ],
+    "allocation": "Within each source give one slot to every nonempty length-by-oldflag stratum, then repeatedly give one additional slot to strata ordered by decreasing eligible size and lexical tie-break until source quota 10; never exceed stratum capacity. Sample deterministically from ID-sorted strata using random.Random(seed).",
+    "selection_reads": "Metadata and source/target bytes for hashing only; semantic source/target inspection occurs only after manifest and packet freeze. No new screening results are read.",
+    "same_training_group_exclusion": "Not required: this audits the original training-target pool and does not define an independent model final test."
+  },
+  "source_first_review": {
+    "sequence": [
+      "Read source and list its explicit facts/relations/qualifiers before judging target.",
+      "Compare the target to source meaning; do not use old flags as correctness labels.",
+      "Record definite source inconsistency, source information missing and any unjudgeable component separately; categories may overlap.",
+      "Assess old rule flags separately only after source-target judgment."
+    ],
+    "unjudgeable": "Do not invent missing source meaning or adjudicate imaging truth. Unclear terminology, ambiguous dates and source contradictions remain unresolved.",
+    "human_reviews": 0,
+    "required_information_missing_scope": "Includes explicit relations, qualifiers, anatomical precision and acquisition metadata; does not imply clinically necessary information adjudicated by a clinician."
+  },
+  "constraints": [
+    "No GPU, SSH, model execution or new final model-test selection in this preparation.",
+    "Do not modify existing V1/V2/V3 data, old synthetic 60 pairs or the existing old18 review.",
+    "Real source text and synthetic target text derived from real reports remain ignored under data/p1/quality-validation-20261117.",
+    "The stratified sample is not a population estimate or independent clinical gold standard."
+  ]
+}
