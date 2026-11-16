@@ -1,0 +1,36 @@
+{
+  "schema": "p1-evaluation-manifest-v1",
+  "purpose": "controlled_source_consistency_comparison_AI_review_not_clinical",
+  "arm": "S0",
+  "epoch": 2,
+  "status": "completed",
+  "quality_correctness_claim": false,
+  "hashes": {
+    "identity": "66085ae955bbc7a61b91b826993b60eb03fd68287894e680eee1d9579cb2d4b9",
+    "input_lock": "9bacaf3eeec2f562565a58c41c3acba68c1c5d0c6c25c8da86dc09fde9206068",
+    "sources": "6c7fdd330984ab26608f2d72532f3ee3071d3337ea1ce0cc2ac1f313b990c327",
+    "journal": "42d0f9fcd8b26b9c8c2b563d715e4b9a1b2ef722edc00f1dfa9d287e7f47895a",
+    "attempt": "6b8a7d34ff2ad1fde5cefec30060125df3bfa3239dd807a4b5542cd7d6097785"
+  },
+  "counts": {
+    "requested": 20,
+    "terminal": 20,
+    "completed": 20,
+    "failed": 0,
+    "pending": 0,
+    "eos_completed": 20
+  },
+  "tokens": {
+    "input_tokens": 3732,
+    "output_tokens": 769
+  },
+  "elapsed_seconds": {
+    "generation_all_terminal_rows": 33.594951471313834,
+    "current_attempt": 40.26402465533465,
+    "current_model_load": 5.194786022882909
+  },
+  "memory_bytes": {
+    "peak_allocated": 3136301568,
+    "peak_reserved": 3328180224
+  }
+}

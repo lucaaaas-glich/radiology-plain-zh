@@ -1,0 +1,16 @@
+[
+  {
+    "epoch": 1,
+    "train_answer_token_loss": 1.148964864201379,
+    "validation_answer_token_loss": 1.0874578728990736,
+    "optimizer_steps": 64,
+    "elapsed_seconds": 72.89117870200425
+  },
+  {
+    "epoch": 2,
+    "train_answer_token_loss": 0.9905488116135708,
+    "validation_answer_token_loss": 1.0430314437023498,
+    "optimizer_steps": 128,
+    "elapsed_seconds": 143.66887821117416
+  }
+]

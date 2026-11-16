@@ -1,0 +1,14 @@
+{
+  "human_reviews": 0,
+  "blinding": "candidate letters independently shuffled per report; mapping excluded from reviewers; not independent clinical judgment",
+  "files_sha256": {
+    "data/p1/comparison-20261117/blind-review/randomization_seed.private.json": "60c4e03dd7e589b833ac679dd2eb58be772667e304042bd763cd5a7d697b3aac",
+    "data/p1/comparison-20261117/blind-review/packet_01_14.json": "35f56079fd7a2439e26846d7659c3762106e6a1dcea46b02fe26b59fe6df5303",
+    "data/p1/comparison-20261117/blind-review/arm_mapping.private.json": "d0f95d1c8d2e3792305daef624e8afd58ee00f1459c92ba0f9f69c87901d2d7c",
+    "data/p1/comparison-20261117/blind-review/packet_15_27.json": "a3e78cac21eec63d318e7a7d4fa89fb05e9925ffea69e39aab8d347b24c90a27",
+    "data/p1/comparison-20261117/blind-review/packet_28_40.json": "78aa745e03285211f3bb02f6b97966205215e1b72ae6f7e98bfa5435631bccc5",
+    "examples/p1/final_source_facts_20261117.lock.json": "10a8b745ff7e3f62afc48867b925b20b8733273aa4439de1f5a3452b0e1f7f05",
+    "examples/p1/final40_reviewed_20261117.lock.json": "5603701c63a040fd5b246079c7b6afdfb71c2c4ba38b221ab5f80754a1bc43c1",
+    "data/p1/comparison-20261117/blind_review_instructions.txt": "6bd07159750cadb8366288aceb504d4315c10d8ba72955acf26bd4d35018f104"
+  }
+}

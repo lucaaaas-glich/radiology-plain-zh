@@ -1,0 +1,186 @@
+{
+  "state": "finished_all_fixed_commands",
+  "steps": [
+    {
+      "args": [
+        "-m",
+        "radplain.train_p1",
+        "train",
+        "--mode",
+        "sft",
+        "--config",
+        "configs/p1_sft_comparison_20261117.json",
+        "--data",
+        "data/p1/comparison-20261117/prepared-reviewed/S0",
+        "--tokenizer",
+        "/scratch/771578/radzh-p1-comparison-base",
+        "--model",
+        "/scratch/771578/radzh-p1-comparison-base",
+        "--out",
+        "artifacts/p1/comparison-20261117-S0"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 156.5303831808269
+    },
+    {
+      "args": [
+        "-m",
+        "radplain.train_p1",
+        "train",
+        "--mode",
+        "sft",
+        "--config",
+        "configs/p1_sft_comparison_20261117.json",
+        "--data",
+        "data/p1/comparison-20261117/prepared-reviewed/S1",
+        "--tokenizer",
+        "/scratch/771578/radzh-p1-comparison-base",
+        "--model",
+        "/scratch/771578/radzh-p1-comparison-base",
+        "--out",
+        "artifacts/p1/comparison-20261117-S1"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 157.05657591624185
+    },
+    {
+      "args": [
+        "-m",
+        "radplain.evaluate_p1",
+        "--arm",
+        "base",
+        "--sources",
+        "data/p1/comparison-20261117/evaluation/development20.jsonl",
+        "--input-lock",
+        "examples/p1/development20_reviewed_20261117.lock.json",
+        "--model",
+        "/scratch/771578/radzh-p1-comparison-base",
+        "--out",
+        "data/p1/comparison-20261117-development20-base",
+        "--public-out",
+        "results/p1/comparison-20261117-development20-base"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 31.28056468628347
+    },
+    {
+      "args": [
+        "-m",
+        "radplain.evaluate_p1",
+        "--arm",
+        "S0",
+        "--sources",
+        "data/p1/comparison-20261117/evaluation/development20.jsonl",
+        "--input-lock",
+        "examples/p1/development20_reviewed_20261117.lock.json",
+        "--model",
+        "/scratch/771578/radzh-p1-comparison-base",
+        "--out",
+        "data/p1/comparison-20261117-development20-S0",
+        "--public-out",
+        "results/p1/comparison-20261117-development20-S0",
+        "--adapter",
+        "artifacts/p1/comparison-20261117-S0/epoch-2",
+        "--epoch",
+        "2"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 44.29219233011827
+    },
+    {
+      "args": [
+        "-m",
+        "radplain.evaluate_p1",
+        "--arm",
+        "S1",
+        "--sources",
+        "data/p1/comparison-20261117/evaluation/development20.jsonl",
+        "--input-lock",
+        "examples/p1/development20_reviewed_20261117.lock.json",
+        "--model",
+        "/scratch/771578/radzh-p1-comparison-base",
+        "--out",
+        "data/p1/comparison-20261117-development20-S1",
+        "--public-out",
+        "results/p1/comparison-20261117-development20-S1",
+        "--adapter",
+        "artifacts/p1/comparison-20261117-S1/epoch-2",
+        "--epoch",
+        "2"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 44.98069103714079
+    },
+    {
+      "args": [
+        "-m",
+        "radplain.evaluate_p1",
+        "--arm",
+        "base",
+        "--sources",
+        "data/p1/comparison-20261117/evaluation/final40.jsonl",
+        "--input-lock",
+        "examples/p1/final40_reviewed_20261117.lock.json",
+        "--model",
+        "/scratch/771578/radzh-p1-comparison-base",
+        "--out",
+        "data/p1/comparison-20261117-final40-base",
+        "--public-out",
+        "results/p1/comparison-20261117-final40-base"
+      ],
+      "exit_code": 2,
+      "elapsed_seconds": 124.83005891507491
+    },
+    {
+      "args": [
+        "-m",
+        "radplain.evaluate_p1",
+        "--arm",
+        "S0",
+        "--sources",
+        "data/p1/comparison-20261117/evaluation/final40.jsonl",
+        "--input-lock",
+        "examples/p1/final40_reviewed_20261117.lock.json",
+        "--model",
+        "/scratch/771578/radzh-p1-comparison-base",
+        "--out",
+        "data/p1/comparison-20261117-final40-S0",
+        "--public-out",
+        "results/p1/comparison-20261117-final40-S0",
+        "--adapter",
+        "artifacts/p1/comparison-20261117-S0/epoch-2",
+        "--epoch",
+        "2"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 201.38730126293376
+    },
+    {
+      "args": [
+        "-m",
+        "radplain.evaluate_p1",
+        "--arm",
+        "S1",
+        "--sources",
+        "data/p1/comparison-20261117/evaluation/final40.jsonl",
+        "--input-lock",
+        "examples/p1/final40_reviewed_20261117.lock.json",
+        "--model",
+        "/scratch/771578/radzh-p1-comparison-base",
+        "--out",
+        "data/p1/comparison-20261117-final40-S1",
+        "--public-out",
+        "results/p1/comparison-20261117-final40-S1",
+        "--adapter",
+        "artifacts/p1/comparison-20261117-S1/epoch-2",
+        "--epoch",
+        "2"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 205.96997322514653
+    }
+  ],
+  "elapsed_wall_seconds": 966.3425245285034,
+  "slurm_job_id": "771578",
+  "final_quality_selection": false
+}

@@ -1,0 +1,9 @@
+{
+  "epoch": 2,
+  "adapter_path": "epoch-2",
+  "validation_answer_token_loss": 1.0441328762087432,
+  "criterion": "lowest validation answer/EOS-token cross-entropy",
+  "final_test_read": false,
+  "mode": "sft",
+  "formal_effectiveness_claim": false
+}
