@@ -1,0 +1,49 @@
+{
+  "purpose": "explicit_posthoc_annotation_sensitivity_not_primary_test",
+  "created_utc": "2026-11-16T18:20:57.898968+00:00",
+  "prior_plan_sha256": "e6a03ee609fcc2688ff8ae0ee590ce2404f38838f224d403f0cc2b49696eee20",
+  "human_reviews": 0,
+  "primary_arm_results_not_yet_known": true,
+  "arm_mapping_seen": false,
+  "cases_selected_from_source_annotation_scope_not_arm_results": true,
+  "primary_denominator": 324,
+  "narrow_sensitivity_denominator": 322,
+  "broad_sensitivity_denominator": 320,
+  "narrow_remove": [
+    {
+      "position": 4,
+      "id": "44acc2e1305c47150898696f5bd11f65fec5d24c535cf7c561ffd902627b66aa",
+      "fact_id": "F01",
+      "source_sha256": "80e6ddb0953da20f0f28d603b04c6888a1ae1c5180d0825007073bbbcf674224",
+      "frozen_fact_sha256": "2dbf0e429f50f351c194e3848e19286d5ea788a7551546441db565c3fc94ade3",
+      "reason_zh": "常规静脉增强检查方法被列为必需；原文未说明该方法造成解释限制，与预先协议及其他报告常规增强方法可选口径不一致。"
+    },
+    {
+      "position": 8,
+      "id": "8f78d7f04716164b0dfb56241b3866b0810f15c15278b62fbdd13b8166bf78a4",
+      "fact_id": "F01",
+      "source_sha256": "f06e83a4b6f838539600466b237212d5e25d5f31dd04386a093082463c5fedc8",
+      "frozen_fact_sha256": "51caf238d1942c8cb604ab549842ee259379568b9d0cc2276c07cd615a4de8e5",
+      "reason_zh": "常规静脉增强检查方法被列为必需；原文未说明该方法造成解释限制，与预先协议及其他报告常规增强方法可选口径不一致。"
+    }
+  ],
+  "broad_additional_remove": [
+    {
+      "position": 14,
+      "id": "8f2d35fb9c4a9137273fecb81a5ee281c400dab027a9e28c4dcd26490eab6231",
+      "fact_id": "F13",
+      "source_sha256": "a1a37ca3704a23c0dc0d5e390de265819af477b5cd144cb942522c5c2fe44880",
+      "frozen_fact_sha256": "2289e6b86f8974ce382a889f08fe0f5294486755ab80826bdf82d9c55ceccc9f",
+      "reason_zh": "常规非增强扫描条件被预先视为限制，但源文没有具体声明其造成解释受限；作为宽敏感性方案，另看将纯采集方法设为可选时结果。"
+    },
+    {
+      "position": 36,
+      "id": "9c02aa75c304496bb8455f4ba244592ab3263b6ff950e7b96433049352135ec1",
+      "fact_id": "F01",
+      "source_sha256": "be0d4317bc50b313ce2cf0664bc801c7f498303eb9ec16a2be3f01bbc1ca8120",
+      "frozen_fact_sha256": "b435d6d53f57eca2acc8862dd451ee44e76e92d3a2a27e18588a00e1e69cfc58",
+      "reason_zh": "常规非增强扫描条件被预先视为限制，但源文没有具体声明其造成解释受限；作为宽敏感性方案，另看将纯采集方法设为可选时结果。"
+    }
+  ],
+  "scope": "All reports remain; no clinical facts, noncontrast-related clinical conclusions or explicit diagnostic limitations removed. Main locked324-fact result preserved. Report any change in ranking without selecting the favorable scenario."
+}

@@ -1,0 +1,410 @@
+{
+  "purpose": "posthoc_annotation_scope_sensitivity_not_replacement_for_frozen_primary",
+  "human_reviews": 0,
+  "primary_preserved": true,
+  "plan_sha256": "76069d26c8925f0bc12da461868a3e68ff81246073196c94e1edc1ee87b727a7",
+  "primary_sha256": "6b2007d4aad8751bcc8fe28153b31ab3bb24afd013c39007e321e4ce72e00b8b",
+  "results": {
+    "narrow": {
+      "base": {
+        "reports": 40,
+        "required_facts": 322,
+        "fact_statuses": {
+          "less_precise": 52,
+          "contradicted": 68,
+          "faithful": 170,
+          "missing": 27,
+          "unjudgeable": 5
+        },
+        "covered": 222,
+        "coverage_micro_fraction": 0.6894409937888198,
+        "coverage_macro_fraction": 0.7112976606726606,
+        "faithful_only": 170,
+        "faithful_micro_fraction": 0.5279503105590062,
+        "faithful_macro_fraction": 0.5435428922928922,
+        "affected_cases": [
+          {
+            "position": 4,
+            "id": "44acc2e1305c47150898696f5bd11f65fec5d24c535cf7c561ffd902627b66aa",
+            "candidate": "B",
+            "removed_statuses": {
+              "F01": "faithful"
+            },
+            "retained_source_error": true,
+            "remaining_fact_missing": 2,
+            "remaining_fact_contradicted": 4,
+            "remaining_fact_unjudgeable": 1,
+            "remaining_fact_less_precise": 1,
+            "original_precision_issue": true,
+            "original_unjudgeable": true
+          },
+          {
+            "position": 8,
+            "id": "8f78d7f04716164b0dfb56241b3866b0810f15c15278b62fbdd13b8166bf78a4",
+            "candidate": "C",
+            "removed_statuses": {
+              "F01": "faithful"
+            },
+            "retained_source_error": true,
+            "remaining_fact_missing": 1,
+            "remaining_fact_contradicted": 1,
+            "remaining_fact_unjudgeable": 0,
+            "remaining_fact_less_precise": 4,
+            "original_precision_issue": true,
+            "original_unjudgeable": false
+          }
+        ],
+        "primary_full_faithful": 5,
+        "affected_cases_all_remain_source_error": true
+      },
+      "S0": {
+        "reports": 40,
+        "required_facts": 322,
+        "fact_statuses": {
+          "less_precise": 63,
+          "faithful": 150,
+          "unjudgeable": 10,
+          "contradicted": 62,
+          "missing": 37
+        },
+        "covered": 213,
+        "coverage_micro_fraction": 0.6614906832298136,
+        "coverage_macro_fraction": 0.7108314833314833,
+        "faithful_only": 150,
+        "faithful_micro_fraction": 0.4658385093167702,
+        "faithful_macro_fraction": 0.48335895585895583,
+        "affected_cases": [
+          {
+            "position": 4,
+            "id": "44acc2e1305c47150898696f5bd11f65fec5d24c535cf7c561ffd902627b66aa",
+            "candidate": "C",
+            "removed_statuses": {
+              "F01": "missing"
+            },
+            "retained_source_error": true,
+            "remaining_fact_missing": 1,
+            "remaining_fact_contradicted": 3,
+            "remaining_fact_unjudgeable": 1,
+            "remaining_fact_less_precise": 2,
+            "original_precision_issue": true,
+            "original_unjudgeable": true
+          },
+          {
+            "position": 8,
+            "id": "8f78d7f04716164b0dfb56241b3866b0810f15c15278b62fbdd13b8166bf78a4",
+            "candidate": "B",
+            "removed_statuses": {
+              "F01": "missing"
+            },
+            "retained_source_error": true,
+            "remaining_fact_missing": 4,
+            "remaining_fact_contradicted": 4,
+            "remaining_fact_unjudgeable": 0,
+            "remaining_fact_less_precise": 2,
+            "original_precision_issue": true,
+            "original_unjudgeable": false
+          }
+        ],
+        "primary_full_faithful": 3,
+        "affected_cases_all_remain_source_error": true
+      },
+      "S1": {
+        "reports": 40,
+        "required_facts": 322,
+        "fact_statuses": {
+          "less_precise": 66,
+          "faithful": 143,
+          "contradicted": 67,
+          "unjudgeable": 10,
+          "missing": 36
+        },
+        "covered": 209,
+        "coverage_micro_fraction": 0.6490683229813664,
+        "coverage_macro_fraction": 0.7019366281866282,
+        "faithful_only": 143,
+        "faithful_micro_fraction": 0.4440993788819876,
+        "faithful_macro_fraction": 0.4685781117031117,
+        "affected_cases": [
+          {
+            "position": 4,
+            "id": "44acc2e1305c47150898696f5bd11f65fec5d24c535cf7c561ffd902627b66aa",
+            "candidate": "A",
+            "removed_statuses": {
+              "F01": "missing"
+            },
+            "retained_source_error": true,
+            "remaining_fact_missing": 1,
+            "remaining_fact_contradicted": 5,
+            "remaining_fact_unjudgeable": 1,
+            "remaining_fact_less_precise": 3,
+            "original_precision_issue": true,
+            "original_unjudgeable": true
+          },
+          {
+            "position": 8,
+            "id": "8f78d7f04716164b0dfb56241b3866b0810f15c15278b62fbdd13b8166bf78a4",
+            "candidate": "A",
+            "removed_statuses": {
+              "F01": "missing"
+            },
+            "retained_source_error": true,
+            "remaining_fact_missing": 3,
+            "remaining_fact_contradicted": 4,
+            "remaining_fact_unjudgeable": 0,
+            "remaining_fact_less_precise": 2,
+            "original_precision_issue": true,
+            "original_unjudgeable": false
+          }
+        ],
+        "primary_full_faithful": 3,
+        "affected_cases_all_remain_source_error": true
+      }
+    },
+    "broad": {
+      "base": {
+        "reports": 40,
+        "required_facts": 320,
+        "fact_statuses": {
+          "less_precise": 52,
+          "contradicted": 67,
+          "faithful": 170,
+          "missing": 26,
+          "unjudgeable": 5
+        },
+        "covered": 222,
+        "coverage_micro_fraction": 0.69375,
+        "coverage_macro_fraction": 0.7141277472527473,
+        "faithful_only": 170,
+        "faithful_micro_fraction": 0.53125,
+        "faithful_macro_fraction": 0.5460266585266585,
+        "affected_cases": [
+          {
+            "position": 4,
+            "id": "44acc2e1305c47150898696f5bd11f65fec5d24c535cf7c561ffd902627b66aa",
+            "candidate": "B",
+            "removed_statuses": {
+              "F01": "faithful"
+            },
+            "retained_source_error": true,
+            "remaining_fact_missing": 2,
+            "remaining_fact_contradicted": 4,
+            "remaining_fact_unjudgeable": 1,
+            "remaining_fact_less_precise": 1,
+            "original_precision_issue": true,
+            "original_unjudgeable": true
+          },
+          {
+            "position": 8,
+            "id": "8f78d7f04716164b0dfb56241b3866b0810f15c15278b62fbdd13b8166bf78a4",
+            "candidate": "C",
+            "removed_statuses": {
+              "F01": "faithful"
+            },
+            "retained_source_error": true,
+            "remaining_fact_missing": 1,
+            "remaining_fact_contradicted": 1,
+            "remaining_fact_unjudgeable": 0,
+            "remaining_fact_less_precise": 4,
+            "original_precision_issue": true,
+            "original_unjudgeable": false
+          },
+          {
+            "position": 14,
+            "id": "8f2d35fb9c4a9137273fecb81a5ee281c400dab027a9e28c4dcd26490eab6231",
+            "candidate": "B",
+            "removed_statuses": {
+              "F13": "contradicted"
+            },
+            "retained_source_error": true,
+            "remaining_fact_missing": 0,
+            "remaining_fact_contradicted": 3,
+            "remaining_fact_unjudgeable": 0,
+            "remaining_fact_less_precise": 2,
+            "original_precision_issue": true,
+            "original_unjudgeable": false
+          },
+          {
+            "position": 36,
+            "id": "9c02aa75c304496bb8455f4ba244592ab3263b6ff950e7b96433049352135ec1",
+            "candidate": "B",
+            "removed_statuses": {
+              "F01": "missing"
+            },
+            "retained_source_error": true,
+            "remaining_fact_missing": 0,
+            "remaining_fact_contradicted": 2,
+            "remaining_fact_unjudgeable": 0,
+            "remaining_fact_less_precise": 1,
+            "original_precision_issue": true,
+            "original_unjudgeable": false
+          }
+        ],
+        "primary_full_faithful": 5,
+        "affected_cases_all_remain_source_error": true
+      },
+      "S0": {
+        "reports": 40,
+        "required_facts": 320,
+        "fact_statuses": {
+          "less_precise": 63,
+          "faithful": 150,
+          "unjudgeable": 10,
+          "contradicted": 61,
+          "missing": 36
+        },
+        "covered": 213,
+        "coverage_micro_fraction": 0.665625,
+        "coverage_macro_fraction": 0.7128607041107041,
+        "faithful_only": 150,
+        "faithful_micro_fraction": 0.46875,
+        "faithful_macro_fraction": 0.4852096052096052,
+        "affected_cases": [
+          {
+            "position": 4,
+            "id": "44acc2e1305c47150898696f5bd11f65fec5d24c535cf7c561ffd902627b66aa",
+            "candidate": "C",
+            "removed_statuses": {
+              "F01": "missing"
+            },
+            "retained_source_error": true,
+            "remaining_fact_missing": 1,
+            "remaining_fact_contradicted": 3,
+            "remaining_fact_unjudgeable": 1,
+            "remaining_fact_less_precise": 2,
+            "original_precision_issue": true,
+            "original_unjudgeable": true
+          },
+          {
+            "position": 8,
+            "id": "8f78d7f04716164b0dfb56241b3866b0810f15c15278b62fbdd13b8166bf78a4",
+            "candidate": "B",
+            "removed_statuses": {
+              "F01": "missing"
+            },
+            "retained_source_error": true,
+            "remaining_fact_missing": 4,
+            "remaining_fact_contradicted": 4,
+            "remaining_fact_unjudgeable": 0,
+            "remaining_fact_less_precise": 2,
+            "original_precision_issue": true,
+            "original_unjudgeable": false
+          },
+          {
+            "position": 14,
+            "id": "8f2d35fb9c4a9137273fecb81a5ee281c400dab027a9e28c4dcd26490eab6231",
+            "candidate": "C",
+            "removed_statuses": {
+              "F13": "contradicted"
+            },
+            "retained_source_error": true,
+            "remaining_fact_missing": 2,
+            "remaining_fact_contradicted": 3,
+            "remaining_fact_unjudgeable": 0,
+            "remaining_fact_less_precise": 3,
+            "original_precision_issue": true,
+            "original_unjudgeable": false
+          },
+          {
+            "position": 36,
+            "id": "9c02aa75c304496bb8455f4ba244592ab3263b6ff950e7b96433049352135ec1",
+            "candidate": "A",
+            "removed_statuses": {
+              "F01": "missing"
+            },
+            "retained_source_error": true,
+            "remaining_fact_missing": 2,
+            "remaining_fact_contradicted": 3,
+            "remaining_fact_unjudgeable": 0,
+            "remaining_fact_less_precise": 0,
+            "original_precision_issue": true,
+            "original_unjudgeable": false
+          }
+        ],
+        "primary_full_faithful": 3,
+        "affected_cases_all_remain_source_error": true
+      },
+      "S1": {
+        "reports": 40,
+        "required_facts": 320,
+        "fact_statuses": {
+          "less_precise": 66,
+          "faithful": 143,
+          "contradicted": 66,
+          "unjudgeable": 10,
+          "missing": 35
+        },
+        "covered": 209,
+        "coverage_micro_fraction": 0.653125,
+        "coverage_macro_fraction": 0.7041335978835979,
+        "faithful_only": 143,
+        "faithful_micro_fraction": 0.446875,
+        "faithful_macro_fraction": 0.4705369861619862,
+        "affected_cases": [
+          {
+            "position": 4,
+            "id": "44acc2e1305c47150898696f5bd11f65fec5d24c535cf7c561ffd902627b66aa",
+            "candidate": "A",
+            "removed_statuses": {
+              "F01": "missing"
+            },
+            "retained_source_error": true,
+            "remaining_fact_missing": 1,
+            "remaining_fact_contradicted": 5,
+            "remaining_fact_unjudgeable": 1,
+            "remaining_fact_less_precise": 3,
+            "original_precision_issue": true,
+            "original_unjudgeable": true
+          },
+          {
+            "position": 8,
+            "id": "8f78d7f04716164b0dfb56241b3866b0810f15c15278b62fbdd13b8166bf78a4",
+            "candidate": "A",
+            "removed_statuses": {
+              "F01": "missing"
+            },
+            "retained_source_error": true,
+            "remaining_fact_missing": 3,
+            "remaining_fact_contradicted": 4,
+            "remaining_fact_unjudgeable": 0,
+            "remaining_fact_less_precise": 2,
+            "original_precision_issue": true,
+            "original_unjudgeable": false
+          },
+          {
+            "position": 14,
+            "id": "8f2d35fb9c4a9137273fecb81a5ee281c400dab027a9e28c4dcd26490eab6231",
+            "candidate": "A",
+            "removed_statuses": {
+              "F13": "contradicted"
+            },
+            "retained_source_error": true,
+            "remaining_fact_missing": 2,
+            "remaining_fact_contradicted": 4,
+            "remaining_fact_unjudgeable": 0,
+            "remaining_fact_less_precise": 4,
+            "original_precision_issue": true,
+            "original_unjudgeable": false
+          },
+          {
+            "position": 36,
+            "id": "9c02aa75c304496bb8455f4ba244592ab3263b6ff950e7b96433049352135ec1",
+            "candidate": "C",
+            "removed_statuses": {
+              "F01": "missing"
+            },
+            "retained_source_error": true,
+            "remaining_fact_missing": 1,
+            "remaining_fact_contradicted": 3,
+            "remaining_fact_unjudgeable": 0,
+            "remaining_fact_less_precise": 0,
+            "original_precision_issue": true,
+            "original_unjudgeable": false
+          }
+        ],
+        "primary_full_faithful": 3,
+        "affected_cases_all_remain_source_error": true
+      }
+    }
+  },
+  "report_level_adjudication_needed": false
+}

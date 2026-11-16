@@ -1,0 +1,19 @@
+{
+  "created_utc": "2026-11-16T18:16:05.867278+00:00",
+  "stage": "during_blinded_review_before_unblinding",
+  "human_reviews": 0,
+  "candidate_model_data_or_decode_changed": false,
+  "frozen_fact_denominator_changed": false,
+  "clarifications": [
+    {
+      "topic": "generic_normal_tail",
+      "rule_zh": "明确覆盖器官、区域及原阴性范围的概括可以覆盖事实；孤立的其余无异常不自动覆盖所有未提及的必需阴性项目、具体排除和限定。无需逐字复述，但必须有可定位的语义覆盖。",
+      "reason": "落实原协议中每项required事实需要覆盖的要求；不依据组间效果调整。",
+      "completed_batch_15_27_recheck": "reviewer confirmed no labels depended on generic-tail automatic coverage; no prior labels changed"
+    }
+  ],
+  "limitations": [
+    "Operational clarification occurred during review, not all detailed examples were preregistered. Model identities remained hidden from all three reviewers.",
+    "Source-annotation concerns retained separately; frozen primary denominator remains324, optional sensitivity is explicitly posthoc."
+  ]
+}

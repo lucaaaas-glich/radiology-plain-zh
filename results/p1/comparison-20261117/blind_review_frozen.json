@@ -1,0 +1,15 @@
+{
+  "frozen_at_utc": "2026-11-16T18:29:33.112331+00:00",
+  "human_reviews": 0,
+  "source_reports": 40,
+  "candidate_outputs": 120,
+  "required_fact_labels": 972,
+  "review_sha256": {
+    "01_14": "c3f685a1738ee37641467971aa0516c1c68b79303967b52e983c6e5b547f6012",
+    "15_27": "f176a55b92ba97d25ed285558adf62385f3299aae8aa0e263cd2a15d2fc7f567",
+    "28_40": "2c8f4b84e37f79bef1dcee8ff696a8b55f31fb95e588e20341ce5aa15f6bdf6f"
+  },
+  "all_reviewers_arm_names_seen": false,
+  "root_mapping_not_yet_opened": true,
+  "root_spot_check_sha256": "077d9c0006783d01c90a310728dd63c424aad8311243f4b23a2f18974382efc1"
+}

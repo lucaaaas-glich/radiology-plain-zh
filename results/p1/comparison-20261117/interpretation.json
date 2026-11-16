@@ -1,0 +1,168 @@
+{
+  "purpose": "descriptive_interpretation_not_extra_model_selection",
+  "primary_result_sha256": "6b2007d4aad8751bcc8fe28153b31ab3bb24afd013c39007e321e4ce72e00b8b",
+  "human_reviews": 0,
+  "length_subgroups": {
+    "under1000": {
+      "base": {
+        "reports": 32,
+        "complete_faithful_chinese": 5,
+        "source_error": 24,
+        "incomplete": 8,
+        "precision_issue": 17,
+        "required_facts": 178,
+        "faithful_facts": 99,
+        "covered_facts": 127,
+        "source_counts": {
+          "PadChest": 17,
+          "BIMCV-COVID19": 11,
+          "OpenI": 4
+        }
+      },
+      "S0": {
+        "reports": 32,
+        "complete_faithful_chinese": 3,
+        "source_error": 20,
+        "incomplete": 9,
+        "precision_issue": 25,
+        "required_facts": 178,
+        "faithful_facts": 91,
+        "covered_facts": 129,
+        "source_counts": {
+          "PadChest": 17,
+          "BIMCV-COVID19": 11,
+          "OpenI": 4
+        }
+      },
+      "S1": {
+        "reports": 32,
+        "complete_faithful_chinese": 3,
+        "source_error": 21,
+        "incomplete": 9,
+        "precision_issue": 25,
+        "required_facts": 178,
+        "faithful_facts": 90,
+        "covered_facts": 129,
+        "source_counts": {
+          "PadChest": 17,
+          "BIMCV-COVID19": 11,
+          "OpenI": 4
+        }
+      }
+    },
+    "atleast1000": {
+      "base": {
+        "reports": 8,
+        "complete_faithful_chinese": 0,
+        "source_error": 8,
+        "incomplete": 7,
+        "precision_issue": 8,
+        "required_facts": 146,
+        "faithful_facts": 73,
+        "covered_facts": 97,
+        "source_counts": {
+          "BIMCV-COVID19": 8
+        }
+      },
+      "S0": {
+        "reports": 8,
+        "complete_faithful_chinese": 0,
+        "source_error": 8,
+        "incomplete": 8,
+        "precision_issue": 8,
+        "required_facts": 146,
+        "faithful_facts": 59,
+        "covered_facts": 84,
+        "source_counts": {
+          "BIMCV-COVID19": 8
+        }
+      },
+      "S1": {
+        "reports": 8,
+        "complete_faithful_chinese": 0,
+        "source_error": 8,
+        "incomplete": 8,
+        "precision_issue": 8,
+        "required_facts": 146,
+        "faithful_facts": 53,
+        "covered_facts": 80,
+        "source_counts": {
+          "BIMCV-COVID19": 8
+        }
+      }
+    }
+  },
+  "paired_error_changes": {
+    "base_to_S0": {
+      "error_absent_in_b_positions": [
+        1,
+        12,
+        15,
+        17,
+        37,
+        38,
+        40
+      ],
+      "new_error_in_b_positions": [
+        6,
+        29,
+        32
+      ],
+      "among_error_absent_b_full_faithful": [
+        17
+      ],
+      "among_error_absent_b_still_incomplete": [
+        15,
+        37,
+        40
+      ],
+      "among_error_absent_b_other_precision_or_unknown": [
+        1,
+        12,
+        38
+      ]
+    },
+    "base_to_S1": {
+      "error_absent_in_b_positions": [
+        12,
+        15,
+        17,
+        37,
+        38,
+        40
+      ],
+      "new_error_in_b_positions": [
+        6,
+        29,
+        32
+      ],
+      "among_error_absent_b_full_faithful": [
+        17
+      ],
+      "among_error_absent_b_still_incomplete": [
+        15,
+        37,
+        40
+      ],
+      "among_error_absent_b_other_precision_or_unknown": [
+        12,
+        38
+      ]
+    },
+    "S0_to_S1": {
+      "error_absent_in_b_positions": [],
+      "new_error_in_b_positions": [
+        1
+      ],
+      "among_error_absent_b_full_faithful": [],
+      "among_error_absent_b_still_incomplete": [],
+      "among_error_absent_b_other_precision_or_unknown": []
+    }
+  },
+  "statistical_notes": [
+    "Paired bootstrap for identical S0/S1 full-faithfulness and incomplete indicator vectors degenerates to [0,0] on this fixed sample. This is not evidence of population equivalence or zero uncertainty.",
+    "Report-level intervals condition on40selectedreports and one modelseed; they do not include training variation or clinical-review uncertainty.",
+    "All8longreports areBIMCV: cannot isolate lengthfromsource.",
+    "Error disappearance with missing/precision/unknown content is not a complete improvement and does not prove that omission caused error disappearance."
+  ]
+}

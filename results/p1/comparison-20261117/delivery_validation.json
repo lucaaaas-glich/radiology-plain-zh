@@ -1,0 +1,13 @@
+{
+  "tests_passed": 130,
+  "new_or_changed_public_files_checked": 10,
+  "complete_real_text_matches_at_least40chars": 0,
+  "legacy_tracked_files_modified_since_e119179": 0,
+  "report_links_exist": true,
+  "user_report_sha256": "fa54469101e4ab624fe62675dc32186430175f2a22fb408646f05fba1152d979",
+  "report_path": "/Users/jiangfu/Documents/Codex/2026-10-16/ni-k/outputs/P1_\u8bad\u7ec3\u7b54\u6848\u590d\u6838\u4e0eA100\u5bf9\u6bd4\u7ed3\u679c.md",
+  "all_runtime_and_data_frozen_files_match_deployed_bundle": true,
+  "human_reviews": 0,
+  "independent_agent_numeric_privacy_weight_and_receipt_audit_passed": true,
+  "independent_agent_public_files_checked": 89
+}

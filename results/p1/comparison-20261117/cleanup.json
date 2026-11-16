@@ -1,0 +1,13 @@
+{
+  "checked_at_utc": "2026-11-16T18:36:11.814276+00:00",
+  "slurm_job": "771578",
+  "job_terminal": "COMPLETED 0:0",
+  "user_queue_checked_empty_after_collection": true,
+  "own_ssh_master_closed": true,
+  "own_caffeinate_stopped": {
+    "pid": 24415,
+    "command": "caffeinate -dimsu -t 5400"
+  },
+  "other_jobs_or_processes_cancelled": false,
+  "automation_reactivated": false
+}

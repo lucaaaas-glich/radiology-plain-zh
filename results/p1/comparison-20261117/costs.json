@@ -1,0 +1,116 @@
+{
+  "human_reviews": 0,
+  "purpose": "engineering_costs_not_quality",
+  "job_elapsed_seconds": 978,
+  "arms": {
+    "base": {
+      "reports": 40,
+      "generation_counts": {
+        "requested": 40,
+        "terminal": 40,
+        "completed": 39,
+        "failed": 1,
+        "pending": 0,
+        "eos_completed": 39
+      },
+      "tokens": {
+        "input_tokens": 10998,
+        "output_tokens": 4464
+      },
+      "generation_seconds": 114.91495397640392,
+      "mean_report_seconds": 2.872873849410098,
+      "median_report_seconds": 1.6469862721860409,
+      "p90_report_seconds": 6.279066576156765,
+      "max_report_seconds": 13.081151247024536,
+      "model_load_seconds": 4.767965845298022,
+      "evaluation_attempt_seconds": 121.31562680890784,
+      "memory_bytes": {
+        "peak_allocated": 3162689536,
+        "peak_reserved": 3376414720
+      },
+      "nonempty_outputs": 40,
+      "han_outputs": 40
+    },
+    "S0": {
+      "reports": 40,
+      "generation_counts": {
+        "requested": 40,
+        "terminal": 40,
+        "completed": 40,
+        "failed": 0,
+        "pending": 0,
+        "eos_completed": 40
+      },
+      "tokens": {
+        "input_tokens": 10998,
+        "output_tokens": 4411
+      },
+      "generation_seconds": 188.24749244190753,
+      "mean_report_seconds": 4.706187311047688,
+      "median_report_seconds": 2.7540165733080357,
+      "p90_report_seconds": 9.674235559999943,
+      "max_report_seconds": 21.215838253032416,
+      "model_load_seconds": 6.766424434725195,
+      "evaluation_attempt_seconds": 197.25089642824605,
+      "memory_bytes": {
+        "peak_allocated": 3179688960,
+        "peak_reserved": 3388997632
+      },
+      "nonempty_outputs": 40,
+      "han_outputs": 40,
+      "training": {
+        "elapsed_seconds": 142.16399127803743,
+        "optimizer_steps": 128,
+        "nonzero_gradient_steps": 128,
+        "trainable_parameters": 4358144,
+        "total_parameters": 1548072448,
+        "peak_allocated_bytes": 9860828160,
+        "peak_reserved_bytes": 30574379008
+      },
+      "selected_epoch": 2
+    },
+    "S1": {
+      "reports": 40,
+      "generation_counts": {
+        "requested": 40,
+        "terminal": 40,
+        "completed": 40,
+        "failed": 0,
+        "pending": 0,
+        "eos_completed": 40
+      },
+      "tokens": {
+        "input_tokens": 10998,
+        "output_tokens": 4417
+      },
+      "generation_seconds": 192.3130073370412,
+      "mean_report_seconds": 4.80782518342603,
+      "median_report_seconds": 2.8207939791027457,
+      "p90_report_seconds": 9.915174356661737,
+      "max_report_seconds": 21.542858954053372,
+      "model_load_seconds": 7.063399582635611,
+      "evaluation_attempt_seconds": 201.7249625371769,
+      "memory_bytes": {
+        "peak_allocated": 3179688960,
+        "peak_reserved": 3388997632
+      },
+      "nonempty_outputs": 40,
+      "han_outputs": 40,
+      "training": {
+        "elapsed_seconds": 143.67540486901999,
+        "optimizer_steps": 128,
+        "nonzero_gradient_steps": 128,
+        "trainable_parameters": 4358144,
+        "total_parameters": 1548072448,
+        "peak_allocated_bytes": 9860828160,
+        "peak_reserved_bytes": 30574379008
+      },
+      "selected_epoch": 2
+    }
+  },
+  "identical_output_pairs": {
+    "base_vs_S0": 0,
+    "base_vs_S1": 0,
+    "S0_vs_S1": 13
+  }
+}
