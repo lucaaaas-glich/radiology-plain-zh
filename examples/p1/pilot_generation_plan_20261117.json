@@ -1,0 +1,62 @@
+{
+  "purpose": "engineering_save_reload_and_generation_smoke_only",
+  "date_local": "2026-11-17",
+  "source": "old_development_only_not_final_test",
+  "validation_file_sha256": "f2c1c5d68d9e1e92837554d8520a3e6211ecd9d44633b106da29ad828ebc44b5",
+  "selection": "first 10 rows of fixed pilot validation in source order",
+  "reports": [
+    {
+      "id": "2c11a85744c017b05378ba9266e0da6cb9519d58c155f23070afe6c507ccc5bd",
+      "source_sha256": "b252317521d91bd67f346d515f0b8b215f438e9ca7342182ee6a15f5e582696c"
+    },
+    {
+      "id": "b7b80d41587b42320e980c49435c46db5beb74dfaa0ba3a524671d10669887d9",
+      "source_sha256": "687495e49663be600f4a74956463cf2eeab7a98805570fa932b26657385211f7"
+    },
+    {
+      "id": "383cd0e9dd061c40965c864656072d1a3a9e9721761baf1d1b6f03b5d08181fe",
+      "source_sha256": "a897e71024b9acd36ef3b89568b5e20b21a97c5001192d9a3a01fe1b99be721c"
+    },
+    {
+      "id": "e59ff8463503ab6c19c22c524ad741a33aa749d5b8fee762ddfc25906b2504d4",
+      "source_sha256": "6309aededd7ad1f63c8c3f5c47dd914e42aa2f39950e2ce7ad64fbf9c29dd165"
+    },
+    {
+      "id": "64324bb79be348a66c97ec56e4e6c33b664e50b906b13ce193be16f15a20dfc7",
+      "source_sha256": "e0fcb6d7e5309547797d07bcb54d976f98dc8a1fd5a756459375d6ec10699566"
+    },
+    {
+      "id": "f56cc6d306ca9c4843db979835abea9bf3bc287f34288a93beab1ae2b865d3b3",
+      "source_sha256": "c6de211fcfb93d90dc5bce444df3f5e0674750f40cc64802e2b69797e07d8c54"
+    },
+    {
+      "id": "8e7ef2b19fd71b14589c14766db9cdb46e8f798c4276194169b3646a49232eaf",
+      "source_sha256": "007bef7232a4281268bc844eebbe0217a659fc8fcf992301dc9e845bd69611dd"
+    },
+    {
+      "id": "69c2049b27d0b4a1c3c96f0e840a0e7f01cfab9f2fe2abdd4186e13c2408f72a",
+      "source_sha256": "febf9de9086443e81ae3acc1f4718687b10a34435a9496933ddf0f7e358a5b16"
+    },
+    {
+      "id": "57376ab8332c81ce0ee5c5c6eb1b61a1a072d195d78fbe5687352c6ab74e16eb",
+      "source_sha256": "1b4d3ebbb7dd36cca05afa4c7b0c6db543998e0dc84bb2f1db19becb56d2661d"
+    },
+    {
+      "id": "8f3a1a364328bb2abe85d0738bf1b77055c6731e8e8dc44ccc8d85b180596bf0",
+      "source_sha256": "62737e38030f63bd26659a60e673827a9fd35f4fbac67051ece7a703dcce256b"
+    }
+  ],
+  "training_config_sha256": "47620b96d49231268dae7fb477b08bb4db408ee6797a86f346182a32ea34519a",
+  "training_data_sha256": "a596099e9af4031b0c519403e247024a082ebb191deb21257e3294b4be1cbd9e",
+  "decode": {
+    "do_sample": false,
+    "max_new_tokens": 256
+  },
+  "arms": [
+    "original_base",
+    "saved_reloaded_pilot_adapter"
+  ],
+  "quality_claim": false,
+  "human_review_completed": 0,
+  "model_predictions_seen": false
+}

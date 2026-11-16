@@ -125,6 +125,7 @@ def train(config_path, data_dir, tokenizer_path, model_path, output, mode, base_
         scheduler = get_linear_schedule_with_warmup(optimizer, int(total_steps * 0.06), total_steps)
         accumulation = config["gradient_accumulation_steps"]
         start, history, best, best_epoch, update = time.perf_counter(), [], math.inf, None, 0
+        gradient_norms = []
         torch.cuda.reset_peak_memory_stats()
         for epoch in range(1, config["epochs"] + 1):
             model.train()
@@ -146,7 +147,8 @@ def train(config_path, data_dir, tokenizer_path, model_path, output, mode, base_
                     weighted_loss += float(loss.item()) * count
                     tokens += count
                     (loss * (count / group_tokens)).backward()
-                torch.nn.utils.clip_grad_norm_(parameters, 1.0, error_if_nonfinite=True)
+                gradient_norm = float(torch.nn.utils.clip_grad_norm_(parameters, 1.0, error_if_nonfinite=True))
+                gradient_norms.append(gradient_norm)
                 optimizer.step()
                 scheduler.step()
                 if not all(bool(torch.isfinite(parameter).all()) for parameter in parameters):
@@ -154,6 +156,7 @@ def train(config_path, data_dir, tokenizer_path, model_path, output, mode, base_
                 update += 1
                 print(json.dumps({"epoch": epoch, "optimizer_step": update,
                                   "planned_steps": total_steps,
+                                  "gradient_norm_before_clipping": gradient_norm,
                                   "train_answer_token_loss": weighted_loss / tokens}), flush=True)
             model.eval()
             dev_loss, dev_tokens = 0.0, 0
@@ -182,6 +185,8 @@ def train(config_path, data_dir, tokenizer_path, model_path, output, mode, base_
                 best, best_epoch = score, epoch
         if update != total_steps:
             raise RuntimeError(f"Optimizer step count mismatch: {update} != {total_steps}")
+        if not any(value > 0 for value in gradient_norms):
+            raise RuntimeError("No nonzero trainable gradient was observed")
         torch.cuda.synchronize()
         write_new_json(output / "history.json", history)
         write_new_json(output / "selection.json", {
@@ -194,6 +199,8 @@ def train(config_path, data_dir, tokenizer_path, model_path, output, mode, base_
         summary = {"mode": mode, "purpose": report["purpose"], "config": config,
                    "history": history, "optimizer_steps": update, "final_test_read": False,
                    "training_completed": True, "formal_effectiveness_claim": False,
+                   "gradient_norms_before_clipping": gradient_norms,
+                   "nonzero_gradient_steps": sum(value > 0 for value in gradient_norms),
                    "elapsed_seconds": time.perf_counter() - start,
                    "total_parameters": sum(parameter.numel() for parameter in model.parameters()),
                    "trainable_parameters": sum(parameter.numel() for parameter in parameters),
