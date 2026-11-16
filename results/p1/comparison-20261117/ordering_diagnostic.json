@@ -1,0 +1,12 @@
+{
+  "source_files_sha256": {
+    "S0": "77d91afcc46b85d4975b19e5c3c2c73cc6f320f3774ccea2b94dfcbc94c3e64d",
+    "S1": "c64bd895142725c8e41398971985081fc4a59cd2eec6a1646db826afd6f359ec"
+  },
+  "reports_per_arm": 1024,
+  "common_report_ids": 1020,
+  "replacements": 4,
+  "same_position_report_ids": 895,
+  "common_ids_shifted_positions": 125,
+  "interpretation": "Both arms use same deterministic sampling/shuffle algorithms and training seed, but filtering shifts some common examples within matched strata before the final shuffle. This experiment compares the complete selection policy; it does not isolate four target substitutions with all common batch positions held fixed. No model outputs used or data changed."
+}

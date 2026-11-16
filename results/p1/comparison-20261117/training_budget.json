@@ -1,0 +1,27 @@
+{
+  "mode": "same_example_and_update_budget_not_exact_token_budget",
+  "frozen_training_commit": "28c3eba5e16610e416cb1d1761421ea2a8eb2c03",
+  "arms": {
+    "S0": {
+      "reports": 1024,
+      "development_reports": 40,
+      "sequence_exclusions": 0,
+      "input_tokens_per_epoch": 244182,
+      "answer_eos_tokens_per_epoch": 46077,
+      "answer_eos_tokens_all_epochs": 92154,
+      "optimizer_steps": 128,
+      "preflight_sha256": "12b09ae138b1a889e1b0ca03046781c30c68b9ceaef2440e87300f6c817f443a"
+    },
+    "S1": {
+      "reports": 1024,
+      "development_reports": 40,
+      "sequence_exclusions": 0,
+      "input_tokens_per_epoch": 244226,
+      "answer_eos_tokens_per_epoch": 46099,
+      "answer_eos_tokens_all_epochs": 92198,
+      "optimizer_steps": 128,
+      "preflight_sha256": "f643f19f38839d81fabcabab6eb0bca77eeff0d8f4d17e87be53de8cee669356"
+    }
+  },
+  "answer_token_difference_fraction": 0.00047746164029776244
+}
