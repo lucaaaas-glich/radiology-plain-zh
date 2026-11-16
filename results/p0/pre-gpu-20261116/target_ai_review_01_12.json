@@ -1,0 +1,182 @@
+{
+  "reviewer_type": "project_AI_not_independent_clinical",
+  "human_reviews": 0,
+  "cases": [
+    {
+      "id": "5983da4e7f6911382a62d57b3e790da063352c9f6e9a88fd9dd939c0a05bbf7a",
+      "normalized_source_sha256": "5983da4e7f6911382a62d57b3e790da063352c9f6e9a88fd9dd939c0a05bbf7a",
+      "target_sha256": "abefd729b194e825b284e2ed95f8ff9e2735cc166cf4a3844dca0c035dce9f56",
+      "bucket": "flagged",
+      "observed_factual_error": true,
+      "required_information_missing": true,
+      "unjudgeable": true,
+      "flag_assessment": "mixed",
+      "issue_types": [
+        "device_endpoint_relation_changed",
+        "date_disambiguation_not_supported_by_source"
+      ],
+      "notes_zh": "把导管末端所在改成连接关系，未保留原有位置关系；日期被具体化，但源文不足以判定日月顺序是否真的写错。"
+    },
+    {
+      "id": "11d2d8e96588c2f0ee7ed1450188c430c5bb3735b7044d164cbf89733e195b4e",
+      "normalized_source_sha256": "11d2d8e96588c2f0ee7ed1450188c430c5bb3735b7044d164cbf89733e195b4e",
+      "target_sha256": "6ea7791afa81b16bda2ef6abfa3c0b0de3a6e42cd755997609f0f37e18ffac5a",
+      "bucket": "flagged",
+      "observed_factual_error": true,
+      "required_information_missing": true,
+      "unjudgeable": true,
+      "flag_assessment": "false_alarm",
+      "issue_types": [
+        "anterior_posterior_reversal",
+        "resolution_weakened",
+        "source_redaction_limits_review"
+      ],
+      "notes_zh": "既有侧别告警未获支持；另发现前后方位反转，并把已消退弱化为有所改善。原文有遮蔽词，无法补判被遮蔽内容。"
+    },
+    {
+      "id": "c28ef3e4e1b19cd852d2cd32d16a747e1a24f4d2ba69c08268243e720880c4ad",
+      "normalized_source_sha256": "c28ef3e4e1b19cd852d2cd32d16a747e1a24f4d2ba69c08268243e720880c4ad",
+      "target_sha256": "62685c72190fb4724abc295cbecfb0a1f3a5cadba9964b084b3764bceb85c181",
+      "bucket": "flagged",
+      "observed_factual_error": false,
+      "required_information_missing": false,
+      "unjudgeable": true,
+      "flag_assessment": "mixed",
+      "issue_types": [
+        "date_disambiguation_not_supported_by_source"
+      ],
+      "notes_zh": "主要影像描述对应；把含糊日期选定为具体日月。歧义告警有依据，但不能据源文确认日期必然错误。"
+    },
+    {
+      "id": "0626de1ff4408b74d48c108a80536ab0e96725d3dee3b26ddd1d7453cf5dbd4e",
+      "normalized_source_sha256": "0626de1ff4408b74d48c108a80536ab0e96725d3dee3b26ddd1d7453cf5dbd4e",
+      "target_sha256": "516dcbed149ac0a99c94927b208a084039e35c527b39a27d4214c0fae0a2d629",
+      "bucket": "flagged",
+      "observed_factual_error": false,
+      "required_information_missing": false,
+      "unjudgeable": true,
+      "flag_assessment": "mixed",
+      "issue_types": [
+        "date_disambiguation_not_supported_by_source"
+      ],
+      "notes_zh": "主要程度和比较结论对应；日期被单向解释。歧义告警有依据，实际日月顺序仍无法判定。"
+    },
+    {
+      "id": "8bd71382351e0738d7c13b71c043123e53ab5946970b7d8510d3734dbfba80f8",
+      "normalized_source_sha256": "8bd71382351e0738d7c13b71c043123e53ab5946970b7d8510d3734dbfba80f8",
+      "target_sha256": "dd9379a41aad703c0d815b7aa63a3fad3760b37eb69742eddc7cf4d9a563a158",
+      "bucket": "flagged",
+      "observed_factual_error": false,
+      "required_information_missing": true,
+      "unjudgeable": false,
+      "flag_assessment": "false_alarm",
+      "issue_types": [
+        "age_context_qualifier_omitted"
+      ],
+      "notes_zh": "年份和月份已正确保留，现有年份及数量告警属误报；另遗漏了正常性判断所附的年龄背景限定。"
+    },
+    {
+      "id": "a9e98df9ae1c01d4c09c24b87d6566bf0b5cc4fc745a917798e2f28fb8586b7f",
+      "normalized_source_sha256": "a9e98df9ae1c01d4c09c24b87d6566bf0b5cc4fc745a917798e2f28fb8586b7f",
+      "target_sha256": "d075413219f15bd763e44c20b5243ae908706343fa52b180cb9608af5a487dbe",
+      "bucket": "flagged",
+      "observed_factual_error": true,
+      "required_information_missing": true,
+      "unjudgeable": false,
+      "flag_assessment": "supported",
+      "issue_types": [
+        "unsupported_infection_diagnosis",
+        "comparison_date_omitted"
+      ],
+      "notes_zh": "把影像征象改成已确定的感染，并遗漏明确的比较日期；日期遗漏告警得到支持。"
+    },
+    {
+      "id": "d538e47c76abd8f85a073c439b86daba4722b82123b4276aa3364f4e1d9df07c",
+      "normalized_source_sha256": "d538e47c76abd8f85a073c439b86daba4722b82123b4276aa3364f4e1d9df07c",
+      "target_sha256": "e36510fefe78888c28f313a174169edbd132428fe440cae38c5f9390d903b2f6",
+      "bucket": "no_known_rule_flag",
+      "observed_factual_error": true,
+      "required_information_missing": true,
+      "unjudgeable": true,
+      "flag_assessment": "no_flag_observed_issue",
+      "issue_types": [
+        "imaging_term_replaced_by_diagnosis",
+        "finding_concept_changed",
+        "specific_anatomic_sign_lost",
+        "source_internal_anatomic_inconsistency"
+      ],
+      "notes_zh": "影像征象被改成病因诊断及另一种组织改变，具体部位征象也未保留；原文自身解剖关系矛盾，不能还原真实位置。"
+    },
+    {
+      "id": "023ad7bc800e35dfd78601149b594367b12828c87674d0f7b516c10cf8dc5aad",
+      "normalized_source_sha256": "023ad7bc800e35dfd78601149b594367b12828c87674d0f7b516c10cf8dc5aad",
+      "target_sha256": "cbd5b3d76e46bdb067cd97ae4ff4d06414bed7c6060eaf940afcc14054723cea",
+      "bucket": "no_known_rule_flag",
+      "observed_factual_error": false,
+      "required_information_missing": true,
+      "unjudgeable": false,
+      "flag_assessment": "no_flag_observed_issue",
+      "issue_types": [
+        "anatomic_extent_precision_lost"
+      ],
+      "notes_zh": "复合解剖范围被缩窄，其他主要描述基本对应；将部位信息损失与明确事实反转分开记录。"
+    },
+    {
+      "id": "054655699715c131cf2ec12ae1b2b2984be7ba07fb46070a2f3893b04c348809",
+      "normalized_source_sha256": "054655699715c131cf2ec12ae1b2b2984be7ba07fb46070a2f3893b04c348809",
+      "target_sha256": "f1f212d9aa4ce01e89b0cf5345e7bf72532ca705a0d83adc315f9d116db3d6de",
+      "bucket": "no_known_rule_flag",
+      "observed_factual_error": false,
+      "required_information_missing": true,
+      "unjudgeable": false,
+      "flag_assessment": "no_flag_observed_issue",
+      "issue_types": [
+        "device_distal_endpoint_omitted"
+      ],
+      "notes_zh": "器械远端所在被简化为器械整体位置，丢失关键关系限定；未据此推断实际器械位置错误。"
+    },
+    {
+      "id": "b8ae3944fdf9b5752b7de859a7fac19dd9ecdc896f755e90b5d9c0e5277ae545",
+      "normalized_source_sha256": "b8ae3944fdf9b5752b7de859a7fac19dd9ecdc896f755e90b5d9c0e5277ae545",
+      "target_sha256": "f3130d895f31cf9f4c2c909005e6fdbeef19423c24fb81554f5dd167f0d87b85",
+      "bucket": "no_known_rule_flag",
+      "observed_factual_error": false,
+      "required_information_missing": true,
+      "unjudgeable": false,
+      "flag_assessment": "no_flag_observed_issue",
+      "issue_types": [
+        "acquisition_metadata_omitted"
+      ],
+      "notes_zh": "拍摄方向、体位和便携采集信息被笼统带过；这是源文技术信息不完整，未判定为临床事实反转。"
+    },
+    {
+      "id": "e2a2257bdf1301bc3650ed79b0669cdef8d4ef870f8bdf98a54f5e35351567a5",
+      "normalized_source_sha256": "e2a2257bdf1301bc3650ed79b0669cdef8d4ef870f8bdf98a54f5e35351567a5",
+      "target_sha256": "dcbcda8c51776b901db5aabe0a62e8bf3cc39696c8166ea228738b45dd7606f8",
+      "bucket": "no_known_rule_flag",
+      "observed_factual_error": true,
+      "required_information_missing": false,
+      "unjudgeable": false,
+      "flag_assessment": "no_flag_observed_issue",
+      "issue_types": [
+        "unsupported_device_position_reassurance"
+      ],
+      "notes_zh": "原文仅列出器械，目标额外断言其位置正常；这种正常性判断没有源文依据。"
+    },
+    {
+      "id": "0dc353b36648a95e79bcdecf82fdb1fc17f600ea312f0fb88f27b56ba47e2b53",
+      "normalized_source_sha256": "0dc353b36648a95e79bcdecf82fdb1fc17f600ea312f0fb88f27b56ba47e2b53",
+      "target_sha256": "0343b677df768260913103d330b6864a442796cf4ecf76d677b5f29f6bf50879",
+      "bucket": "no_known_rule_flag",
+      "observed_factual_error": true,
+      "required_information_missing": true,
+      "unjudgeable": false,
+      "flag_assessment": "no_flag_observed_issue",
+      "issue_types": [
+        "unsupported_mechanical_relation",
+        "morphology_specificity_lost"
+      ],
+      "notes_zh": "把影像边界征象改写为机械受压关系，并弱化骨性形态描述；主要不确定性及进一步检查建议仍保留。"
+    }
+  ]
+}

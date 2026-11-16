@@ -1,0 +1,18 @@
+{
+  "version": "p1-provisional-rule-screen-v1",
+  "status": "engineering_preparation_not_human_quality_validated",
+  "seed": 3710261116,
+  "requested_per_arm": 1024,
+  "minimum_per_arm": 512,
+  "development_reports": 40,
+  "pilot_train_size": 96,
+  "pilot_validation_size": 32,
+  "group_representative_policy": "One seeded representative per text group, chosen without reading quality flags",
+  "matching_features": ["source", "length_bin", "quantity_presence", "negation_presence", "uncertainty_presence", "temporal_presence", "target_length_bin"],
+  "target_character_bin_boundaries": [80, 200, 500],
+  "s0": "common-support stratified random from eligible original synthetic targets, with allocation capped by S1 capacity",
+  "s1": "same per-stratum counts, from no_known_rule_flag original synthetic targets",
+  "label_editing": false,
+  "formal_training_authorized_by_this_manifest": false,
+  "new_final_evaluation_selected": false
+}

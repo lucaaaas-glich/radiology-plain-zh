@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "purpose": "Descriptive aggregation of the preselected old-training-target project-AI audit",
+  "reviewer_type": "project_AI_not_independent_clinical",
+  "human_reviews": 0,
+  "inputs_sha256": {
+    "examples/p0/real_target_audit_manifest.json": "c3c10c001d46ce9eaaeb57899977b91da03821300b857129df9c0635964e5990",
+    "data/p0/pre-gpu-20261116/target-audit/packet.jsonl": "e0badbaf21175c22b6f33fef879dbf5a34c0ff8c2514f90f8f66f4c17c99d512",
+    "results/p0/pre-gpu-20261116/target_ai_review_01_12.json": "9b1343d1d6ebb2b90848eec185d63910ed82797282a7f393dc0751a52067db04",
+    "results/p0/pre-gpu-20261116/target_ai_review_13_18.json": "a18ed3799b0d77cc72c15824cbc9319f112e5ef3044226215a1625a880dcd30c"
+  },
+  "frozen_upstream_inputs_sha256": {
+    "data/pilot_v1/train.zh.jsonl": "a3a0c9ab66d3bda769806c8688548e515e14dac2e80c3d9bffcc68491ea7d999",
+    "data/p0/pre-gpu-20261116/quality/per_sample.jsonl": "1a5f6caccabc68205acf5b6ae074842e34ae148ea596efae103cd3f97e976598"
+  },
+  "integrity": {
+    "manifest_records": 18,
+    "packet_records": 18,
+    "review_records": 18,
+    "unique_review_ids": 18,
+    "unique_normalized_source_hashes": 18,
+    "unique_target_hashes": 18,
+    "source_text_hashes_verified": 18,
+    "target_text_hashes_verified": 18,
+    "ordered_id_source_target_bucket_bindings_verified": true,
+    "frozen_rule_flags_verified": true,
+    "packet_file_sha_verified": true,
+    "upstream_file_shas_verified": true,
+    "duplicate_ids_or_sources": 0
+  },
+  "overall": {
+    "cases": 18,
+    "observed_factual_error": 8,
+    "required_information_missing": 12,
+    "unjudgeable": 8,
+    "flag_assessment": {
+      "false_alarm": 4,
+      "mixed": 3,
+      "no_flag_no_observed_issue": 1,
+      "no_flag_observed_issue": 9,
+      "supported": 1
+    },
+    "overlap_combinations": {
+      "observed_factual_error=false|required_information_missing=false|unjudgeable=false": 2,
+      "observed_factual_error=false|required_information_missing=false|unjudgeable=true": 2,
+      "observed_factual_error=false|required_information_missing=true|unjudgeable=false": 4,
+      "observed_factual_error=false|required_information_missing=true|unjudgeable=true": 2,
+      "observed_factual_error=true|required_information_missing=false|unjudgeable=false": 1,
+      "observed_factual_error=true|required_information_missing=false|unjudgeable=true": 1,
+      "observed_factual_error=true|required_information_missing=true|unjudgeable=false": 3,
+      "observed_factual_error=true|required_information_missing=true|unjudgeable=true": 3
+    }
+  },
+  "by_preselected_bucket": {
+    "flagged": {
+      "cases": 6,
+      "observed_factual_error": 3,
+      "required_information_missing": 4,
+      "unjudgeable": 4,
+      "flag_assessment": {
+        "false_alarm": 2,
+        "mixed": 3,
+        "supported": 1
+      },
+      "overlap_combinations": {
+        "observed_factual_error=false|required_information_missing=false|unjudgeable=true": 2,
+        "observed_factual_error=false|required_information_missing=true|unjudgeable=false": 1,
+        "observed_factual_error=true|required_information_missing=true|unjudgeable=false": 1,
+        "observed_factual_error=true|required_information_missing=true|unjudgeable=true": 2
+      }
+    },
+    "no_known_rule_flag": {
+      "cases": 6,
+      "observed_factual_error": 3,
+      "required_information_missing": 5,
+      "unjudgeable": 1,
+      "flag_assessment": {
+        "no_flag_observed_issue": 6
+      },
+      "overlap_combinations": {
+        "observed_factual_error=false|required_information_missing=true|unjudgeable=false": 3,
+        "observed_factual_error=true|required_information_missing=false|unjudgeable=false": 1,
+        "observed_factual_error=true|required_information_missing=true|unjudgeable=false": 1,
+        "observed_factual_error=true|required_information_missing=true|unjudgeable=true": 1
+      }
+    },
+    "random_remaining": {
+      "cases": 6,
+      "observed_factual_error": 2,
+      "required_information_missing": 3,
+      "unjudgeable": 3,
+      "flag_assessment": {
+        "false_alarm": 2,
+        "no_flag_no_observed_issue": 1,
+        "no_flag_observed_issue": 3
+      },
+      "overlap_combinations": {
+        "observed_factual_error=false|required_information_missing=false|unjudgeable=false": 2,
+        "observed_factual_error=false|required_information_missing=true|unjudgeable=true": 2,
+        "observed_factual_error=true|required_information_missing=false|unjudgeable=true": 1,
+        "observed_factual_error=true|required_information_missing=true|unjudgeable=false": 1
+      }
+    }
+  },
+  "by_actual_flag_presence": {
+    "has_rule_flag": {
+      "cases": 8,
+      "observed_factual_error": 4,
+      "required_information_missing": 4,
+      "unjudgeable": 5,
+      "flag_assessment": {
+        "false_alarm": 4,
+        "mixed": 3,
+        "supported": 1
+      },
+      "overlap_combinations": {
+        "observed_factual_error=false|required_information_missing=false|unjudgeable=false": 1,
+        "observed_factual_error=false|required_information_missing=false|unjudgeable=true": 2,
+        "observed_factual_error=false|required_information_missing=true|unjudgeable=false": 1,
+        "observed_factual_error=true|required_information_missing=false|unjudgeable=true": 1,
+        "observed_factual_error=true|required_information_missing=true|unjudgeable=false": 1,
+        "observed_factual_error=true|required_information_missing=true|unjudgeable=true": 2
+      }
+    },
+    "no_rule_flag": {
+      "cases": 10,
+      "observed_factual_error": 4,
+      "required_information_missing": 8,
+      "unjudgeable": 3,
+      "flag_assessment": {
+        "no_flag_no_observed_issue": 1,
+        "no_flag_observed_issue": 9
+      },
+      "overlap_combinations": {
+        "observed_factual_error=false|required_information_missing=false|unjudgeable=false": 1,
+        "observed_factual_error=false|required_information_missing=true|unjudgeable=false": 3,
+        "observed_factual_error=false|required_information_missing=true|unjudgeable=true": 2,
+        "observed_factual_error=true|required_information_missing=false|unjudgeable=false": 1,
+        "observed_factual_error=true|required_information_missing=true|unjudgeable=false": 2,
+        "observed_factual_error=true|required_information_missing=true|unjudgeable=true": 1
+      }
+    }
+  },
+  "bucket_by_actual_flag_presence": {
+    "flagged": {
+      "has_rule_flag": 6,
+      "no_rule_flag": 0
+    },
+    "no_known_rule_flag": {
+      "has_rule_flag": 0,
+      "no_rule_flag": 6
+    },
+    "random_remaining": {
+      "has_rule_flag": 2,
+      "no_rule_flag": 4
+    }
+  },
+  "label_conventions": {
+    "overlap": "All three boolean outcomes may overlap; their counts must not be added as disjoint case totals.",
+    "observed_factual_error": "An authored project-AI judgment of explicit source inconsistency or unsupported case-specific assertion; not an image-truth or clinical-accuracy judgment.",
+    "required_information_missing": "Includes loss of explicit source qualifiers, relations, anatomic specificity and technical acquisition information. The field name does not mean independently clinician-adjudicated clinical necessity or harm.",
+    "unjudgeable": "At least one aspect remains unresolved, including source ambiguity, redaction, internal inconsistency or terminology; other aspects may still support definite findings.",
+    "flag_assessment": "Assesses existing rule flags separately from other observed target problems. A false alarm can coexist with an unrelated observed target error; no-flag observed issue may be an omission without a definite factual error."
+  },
+  "limitations": [
+    "This is project-AI-assisted review, not independent clinical review; human reviews completed: zero.",
+    "The fixed stratified eighteen-case exploratory sample is not a population estimate or unbiased accuracy estimate.",
+    "The random_remaining bucket was sampled only after removing the other twelve selected cases; it is not an unbiased sample of all training data.",
+    "Counts describe these selected source/target pairs, not filter sensitivity, specificity, clinical correctness or unseen model performance.",
+    "The absence of an observed issue is not proof of correctness. Medical terminology and source ambiguity may still require qualified human adjudication.",
+    "No review labels, training-screening rules, historical data or final evaluation selections were changed by this summarizer."
+  ],
+  "summarizer_sha256": "c65f16915c5ab1ac5fb6837af3f596414ffb50ba43b55acf8505bfe87640ac7c"
+}

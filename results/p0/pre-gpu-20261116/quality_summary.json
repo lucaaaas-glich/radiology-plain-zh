@@ -1,0 +1,664 @@
+{
+  "schema_version": "p0-risk-screen-v1",
+  "generated_at_utc": "2026-11-16T00:53:47.636067+00:00",
+  "purpose": "CPU lexical training-target risk screening; no clinical correctness determination",
+  "input": {
+    "path": "data/pilot_v1/train.zh.jsonl",
+    "sha256": "a3a0c9ab66d3bda769806c8688548e515e14dac2e80c3d9bffcc68491ea7d999",
+    "all_rows_preserved": true
+  },
+  "source_sha256_definition": "SHA256 of exact report UTF-8; historical id uses normalized text separately",
+  "source_length_definition": "Unicode code points",
+  "rules": {
+    "version": "p0-risk-screen-v1",
+    "frozen_at_utc": "2026-11-16T00:53:45.750791+00:00",
+    "rule_sha256": {
+      "radplain/quality_p0.py": "89fd18a185fc65245aa7e6a02e979ba2b411b3b63ed1dba739a05f79be8ccad1",
+      "scripts/screen_p0_training.py": "2f6c2843e926df1fb5d8d37ab4faeca48ef1da81ad3f40873c8d14176e69e4a2",
+      "radplain/quantity_v2.py": "d38f6178494ac5839e5f1eea64275abbd0765a97822fd6971ba7474a47b23c0d",
+      "radplain/guard_v2.py": "784d7c24d8293dee1a08e5ce11b0f844355b50d08ec8dfdb8bc00e73815d6334",
+      "radplain/fidelity.py": "d92179b82a40fdebe6a0881156d988cdfcc113e404074c9a7039a4f7e981dec0",
+      "radplain/common.py": "3698bb29475ceb06fd4630cca14023c465f2e8e3a1a149fc890e7e56323927bd",
+      "configs/p0_quality.json": "1ab70e8a1eac592856fda206099c90c0fd43278d7267fc21c29e8827b38b28b0"
+    },
+    "calibration_sha256": "ee4dea4d2e9159b02a8c6e66cf7434a0857eb74aa07908e850498e0d58eda5e2",
+    "development_diagnostic_sha256": "5c8085e066f15e92aa028f9b1799db1e62ff4d11e8bdbf239cdd343cd3c2c107",
+    "validation_outputs_read_at_freeze": false,
+    "policy": "No rule tuning after this freeze; report validation errors unchanged."
+  },
+  "calibration": {
+    "sha256": "ee4dea4d2e9159b02a8c6e66cf7434a0857eb74aa07908e850498e0d58eda5e2",
+    "pair_count": 60,
+    "candidate_count": 120,
+    "split_unit": "family",
+    "label_provenance": "AI_authored_known_synthetic_edit_not_medical_annotation",
+    "human_review_count": 0,
+    "development": {
+      "split": "development",
+      "pair_count": 40,
+      "candidate_count": 80,
+      "families": [
+        "cross_organ_measurement_binding",
+        "exam_iso_date",
+        "explicit_chest_negation",
+        "followup_duration_equivalence",
+        "infection_modal_marker",
+        "nodule_size_decimal_conversion",
+        "numbered_list_not_measurement",
+        "pleural_side_flip",
+        "prior_current_reordering",
+        "unsupported_cause"
+      ],
+      "counts": {
+        "known_perturbations": 40,
+        "flagged_known_perturbations": 36,
+        "missed_known_perturbations": 4,
+        "control_candidates": 40,
+        "flagged_controls": 0,
+        "unflagged_controls": 40,
+        "synthetic_perturbation_detection_rate": 0.9,
+        "synthetic_control_false_flag_rate": 0.0
+      },
+      "by_category": {
+        "date": {
+          "known_perturbations": 4,
+          "flagged_known_perturbations": 4,
+          "missed_known_perturbations": 0,
+          "control_candidates": 4,
+          "flagged_controls": 0,
+          "unflagged_controls": 4,
+          "synthetic_perturbation_detection_rate": 1.0,
+          "synthetic_control_false_flag_rate": 0.0
+        },
+        "known_blindspot": {
+          "known_perturbations": 4,
+          "flagged_known_perturbations": 0,
+          "missed_known_perturbations": 4,
+          "control_candidates": 4,
+          "flagged_controls": 0,
+          "unflagged_controls": 4,
+          "synthetic_perturbation_detection_rate": 0.0,
+          "synthetic_control_false_flag_rate": 0.0
+        },
+        "laterality": {
+          "known_perturbations": 4,
+          "flagged_known_perturbations": 4,
+          "missed_known_perturbations": 0,
+          "control_candidates": 4,
+          "flagged_controls": 0,
+          "unflagged_controls": 4,
+          "synthetic_perturbation_detection_rate": 1.0,
+          "synthetic_control_false_flag_rate": 0.0
+        },
+        "negation": {
+          "known_perturbations": 5,
+          "flagged_known_perturbations": 5,
+          "missed_known_perturbations": 0,
+          "control_candidates": 5,
+          "flagged_controls": 0,
+          "unflagged_controls": 5,
+          "synthetic_perturbation_detection_rate": 1.0,
+          "synthetic_control_false_flag_rate": 0.0
+        },
+        "quantity": {
+          "known_perturbations": 14,
+          "flagged_known_perturbations": 14,
+          "missed_known_perturbations": 0,
+          "control_candidates": 14,
+          "flagged_controls": 0,
+          "unflagged_controls": 14,
+          "synthetic_perturbation_detection_rate": 1.0,
+          "synthetic_control_false_flag_rate": 0.0
+        },
+        "temporal": {
+          "known_perturbations": 4,
+          "flagged_known_perturbations": 4,
+          "missed_known_perturbations": 0,
+          "control_candidates": 4,
+          "flagged_controls": 0,
+          "unflagged_controls": 4,
+          "synthetic_perturbation_detection_rate": 1.0,
+          "synthetic_control_false_flag_rate": 0.0
+        },
+        "uncertainty": {
+          "known_perturbations": 5,
+          "flagged_known_perturbations": 5,
+          "missed_known_perturbations": 0,
+          "control_candidates": 5,
+          "flagged_controls": 0,
+          "unflagged_controls": 5,
+          "synthetic_perturbation_detection_rate": 1.0,
+          "synthetic_control_false_flag_rate": 0.0
+        }
+      },
+      "flag_counts": {
+        "date_mismatch": 4,
+        "exclusive_laterality_mismatch": 4,
+        "explicit_negation_marker_missing": 5,
+        "prior_measurement_mismatch": 4,
+        "quantity_mismatch": 14,
+        "uncertainty_possible_missing": 5
+      },
+      "missed_pair_ids": [
+        "p0-quality-037",
+        "p0-quality-038",
+        "p0-quality-039",
+        "p0-quality-040"
+      ],
+      "false_flag_pair_ids": []
+    },
+    "validation": {
+      "split": "validation",
+      "pair_count": 20,
+      "candidate_count": 40,
+      "families": [
+        "comparison_date_reordering",
+        "device_tip_distance",
+        "mass_uncertainty_synonym",
+        "renal_laterality",
+        "skeletal_negative_synonym",
+        "symptom_duration_history",
+        "unsupported_diagnostic_subtype"
+      ],
+      "counts": {
+        "known_perturbations": 20,
+        "flagged_known_perturbations": 18,
+        "missed_known_perturbations": 2,
+        "control_candidates": 20,
+        "flagged_controls": 0,
+        "unflagged_controls": 20,
+        "synthetic_perturbation_detection_rate": 0.9,
+        "synthetic_control_false_flag_rate": 0.0
+      },
+      "by_category": {
+        "date": {
+          "known_perturbations": 3,
+          "flagged_known_perturbations": 3,
+          "missed_known_perturbations": 0,
+          "control_candidates": 3,
+          "flagged_controls": 0,
+          "unflagged_controls": 3,
+          "synthetic_perturbation_detection_rate": 1.0,
+          "synthetic_control_false_flag_rate": 0.0
+        },
+        "known_blindspot": {
+          "known_perturbations": 2,
+          "flagged_known_perturbations": 0,
+          "missed_known_perturbations": 2,
+          "control_candidates": 2,
+          "flagged_controls": 0,
+          "unflagged_controls": 2,
+          "synthetic_perturbation_detection_rate": 0.0,
+          "synthetic_control_false_flag_rate": 0.0
+        },
+        "laterality": {
+          "known_perturbations": 2,
+          "flagged_known_perturbations": 2,
+          "missed_known_perturbations": 0,
+          "control_candidates": 2,
+          "flagged_controls": 0,
+          "unflagged_controls": 2,
+          "synthetic_perturbation_detection_rate": 1.0,
+          "synthetic_control_false_flag_rate": 0.0
+        },
+        "negation": {
+          "known_perturbations": 3,
+          "flagged_known_perturbations": 3,
+          "missed_known_perturbations": 0,
+          "control_candidates": 3,
+          "flagged_controls": 0,
+          "unflagged_controls": 3,
+          "synthetic_perturbation_detection_rate": 1.0,
+          "synthetic_control_false_flag_rate": 0.0
+        },
+        "quantity": {
+          "known_perturbations": 7,
+          "flagged_known_perturbations": 7,
+          "missed_known_perturbations": 0,
+          "control_candidates": 7,
+          "flagged_controls": 0,
+          "unflagged_controls": 7,
+          "synthetic_perturbation_detection_rate": 1.0,
+          "synthetic_control_false_flag_rate": 0.0
+        },
+        "uncertainty": {
+          "known_perturbations": 3,
+          "flagged_known_perturbations": 3,
+          "missed_known_perturbations": 0,
+          "control_candidates": 3,
+          "flagged_controls": 0,
+          "unflagged_controls": 3,
+          "synthetic_perturbation_detection_rate": 1.0,
+          "synthetic_control_false_flag_rate": 0.0
+        }
+      },
+      "flag_counts": {
+        "date_mismatch": 3,
+        "exclusive_laterality_mismatch": 2,
+        "explicit_negation_marker_missing": 3,
+        "quantity_mismatch": 7,
+        "uncertainty_cannot_exclude_missing": 1,
+        "uncertainty_indeterminate_missing": 1,
+        "uncertainty_possible_missing": 1
+      },
+      "missed_pair_ids": [
+        "p0-quality-059",
+        "p0-quality-060"
+      ],
+      "false_flag_pair_ids": []
+    }
+  },
+  "counts": {
+    "all_training_rows": 4096,
+    "teacher_format_accepted": 4066,
+    "teacher_format_rejected": 30,
+    "accepted_with_risk_flag": 686,
+    "accepted_no_known_rule_flag": 3380,
+    "new_human_reviews": 0
+  },
+  "screen_status_counts": {
+    "no_known_rule_flag": 3380,
+    "risk_flagged": 686,
+    "teacher_format_rejected": 30
+  },
+  "flag_counts_all_rows": {
+    "ambiguous_date_reinterpreted": 219,
+    "calendar_year_mismatch": 118,
+    "date_mismatch": 317,
+    "exclusive_laterality_mismatch": 27,
+    "explicit_negation_marker_missing": 61,
+    "explicit_size_bound_mismatch": 16,
+    "prior_measurement_mismatch": 3,
+    "quantity_mismatch": 224,
+    "uncertainty_cannot_exclude_missing": 3,
+    "uncertainty_possible_missing": 81
+  },
+  "flag_counts_teacher_accepted": {
+    "ambiguous_date_reinterpreted": 219,
+    "calendar_year_mismatch": 117,
+    "date_mismatch": 317,
+    "exclusive_laterality_mismatch": 27,
+    "explicit_negation_marker_missing": 60,
+    "explicit_size_bound_mismatch": 15,
+    "prior_measurement_mismatch": 2,
+    "quantity_mismatch": 222,
+    "uncertainty_cannot_exclude_missing": 3,
+    "uncertainty_possible_missing": 81
+  },
+  "all_rows_distribution": {
+    "source": {
+      "BIMCV-COVID19": {
+        "count": 1148,
+        "proportion": 0.28027344
+      },
+      "OpenI": {
+        "count": 81,
+        "proportion": 0.01977539
+      },
+      "PadChest": {
+        "count": 2867,
+        "proportion": 0.69995117
+      }
+    },
+    "length_bin": {
+      "long": {
+        "count": 165,
+        "proportion": 0.0402832
+      },
+      "medium": {
+        "count": 1504,
+        "proportion": 0.3671875
+      },
+      "short": {
+        "count": 2427,
+        "proportion": 0.5925293
+      }
+    },
+    "quantity_presence": {
+      "false": {
+        "count": 3807,
+        "proportion": 0.92944336
+      },
+      "true": {
+        "count": 289,
+        "proportion": 0.07055664
+      }
+    },
+    "negation_presence": {
+      "false": {
+        "count": 1812,
+        "proportion": 0.44238281
+      },
+      "true": {
+        "count": 2284,
+        "proportion": 0.55761719
+      }
+    },
+    "uncertainty_presence": {
+      "false": {
+        "count": 3071,
+        "proportion": 0.74975586
+      },
+      "true": {
+        "count": 1025,
+        "proportion": 0.25024414
+      }
+    },
+    "temporal_presence": {
+      "false": {
+        "count": 2753,
+        "proportion": 0.67211914
+      },
+      "true": {
+        "count": 1343,
+        "proportion": 0.32788086
+      }
+    }
+  },
+  "teacher_accepted_before_filter_distribution": {
+    "source": {
+      "BIMCV-COVID19": {
+        "count": 1135,
+        "proportion": 0.27914412
+      },
+      "OpenI": {
+        "count": 81,
+        "proportion": 0.0199213
+      },
+      "PadChest": {
+        "count": 2850,
+        "proportion": 0.70093458
+      }
+    },
+    "length_bin": {
+      "long": {
+        "count": 162,
+        "proportion": 0.0398426
+      },
+      "medium": {
+        "count": 1502,
+        "proportion": 0.36940482
+      },
+      "short": {
+        "count": 2402,
+        "proportion": 0.59075258
+      }
+    },
+    "quantity_presence": {
+      "false": {
+        "count": 3779,
+        "proportion": 0.92941466
+      },
+      "true": {
+        "count": 287,
+        "proportion": 0.07058534
+      }
+    },
+    "negation_presence": {
+      "false": {
+        "count": 1796,
+        "proportion": 0.44171176
+      },
+      "true": {
+        "count": 2270,
+        "proportion": 0.55828824
+      }
+    },
+    "uncertainty_presence": {
+      "false": {
+        "count": 3045,
+        "proportion": 0.74889326
+      },
+      "true": {
+        "count": 1021,
+        "proportion": 0.25110674
+      }
+    },
+    "temporal_presence": {
+      "false": {
+        "count": 2727,
+        "proportion": 0.67068372
+      },
+      "true": {
+        "count": 1339,
+        "proportion": 0.32931628
+      }
+    }
+  },
+  "teacher_accepted_no_known_rule_flag_distribution": {
+    "source": {
+      "BIMCV-COVID19": {
+        "count": 945,
+        "proportion": 0.2795858
+      },
+      "OpenI": {
+        "count": 77,
+        "proportion": 0.02278107
+      },
+      "PadChest": {
+        "count": 2358,
+        "proportion": 0.69763314
+      }
+    },
+    "length_bin": {
+      "long": {
+        "count": 112,
+        "proportion": 0.03313609
+      },
+      "medium": {
+        "count": 1159,
+        "proportion": 0.34289941
+      },
+      "short": {
+        "count": 2109,
+        "proportion": 0.6239645
+      }
+    },
+    "quantity_presence": {
+      "false": {
+        "count": 3176,
+        "proportion": 0.93964497
+      },
+      "true": {
+        "count": 204,
+        "proportion": 0.06035503
+      }
+    },
+    "negation_presence": {
+      "false": {
+        "count": 1553,
+        "proportion": 0.45946746
+      },
+      "true": {
+        "count": 1827,
+        "proportion": 0.54053254
+      }
+    },
+    "uncertainty_presence": {
+      "false": {
+        "count": 2584,
+        "proportion": 0.76449704
+      },
+      "true": {
+        "count": 796,
+        "proportion": 0.23550296
+      }
+    },
+    "temporal_presence": {
+      "false": {
+        "count": 2566,
+        "proportion": 0.7591716
+      },
+      "true": {
+        "count": 814,
+        "proportion": 0.2408284
+      }
+    }
+  },
+  "before_after_distribution_shift": {
+    "source": {
+      "BIMCV-COVID19": {
+        "before_count": 1135,
+        "after_count": 945,
+        "before_proportion": 0.27914412,
+        "after_proportion": 0.2795858,
+        "percentage_point_change": 0.044168
+      },
+      "OpenI": {
+        "before_count": 81,
+        "after_count": 77,
+        "before_proportion": 0.0199213,
+        "after_proportion": 0.02278107,
+        "percentage_point_change": 0.285977
+      },
+      "PadChest": {
+        "before_count": 2850,
+        "after_count": 2358,
+        "before_proportion": 0.70093458,
+        "after_proportion": 0.69763314,
+        "percentage_point_change": -0.330144
+      }
+    },
+    "length_bin": {
+      "long": {
+        "before_count": 162,
+        "after_count": 112,
+        "before_proportion": 0.0398426,
+        "after_proportion": 0.03313609,
+        "percentage_point_change": -0.670651
+      },
+      "medium": {
+        "before_count": 1502,
+        "after_count": 1159,
+        "before_proportion": 0.36940482,
+        "after_proportion": 0.34289941,
+        "percentage_point_change": -2.650541
+      },
+      "short": {
+        "before_count": 2402,
+        "after_count": 2109,
+        "before_proportion": 0.59075258,
+        "after_proportion": 0.6239645,
+        "percentage_point_change": 3.321192
+      }
+    },
+    "quantity_presence": {
+      "false": {
+        "before_count": 3779,
+        "after_count": 3176,
+        "before_proportion": 0.92941466,
+        "after_proportion": 0.93964497,
+        "percentage_point_change": 1.023031
+      },
+      "true": {
+        "before_count": 287,
+        "after_count": 204,
+        "before_proportion": 0.07058534,
+        "after_proportion": 0.06035503,
+        "percentage_point_change": -1.023031
+      }
+    },
+    "negation_presence": {
+      "false": {
+        "before_count": 1796,
+        "after_count": 1553,
+        "before_proportion": 0.44171176,
+        "after_proportion": 0.45946746,
+        "percentage_point_change": 1.77557
+      },
+      "true": {
+        "before_count": 2270,
+        "after_count": 1827,
+        "before_proportion": 0.55828824,
+        "after_proportion": 0.54053254,
+        "percentage_point_change": -1.77557
+      }
+    },
+    "uncertainty_presence": {
+      "false": {
+        "before_count": 3045,
+        "after_count": 2584,
+        "before_proportion": 0.74889326,
+        "after_proportion": 0.76449704,
+        "percentage_point_change": 1.560378
+      },
+      "true": {
+        "before_count": 1021,
+        "after_count": 796,
+        "before_proportion": 0.25110674,
+        "after_proportion": 0.23550296,
+        "percentage_point_change": -1.560378
+      }
+    },
+    "temporal_presence": {
+      "false": {
+        "before_count": 2727,
+        "after_count": 2566,
+        "before_proportion": 0.67068372,
+        "after_proportion": 0.7591716,
+        "percentage_point_change": 8.848788
+      },
+      "true": {
+        "before_count": 1339,
+        "after_count": 814,
+        "before_proportion": 0.32931628,
+        "after_proportion": 0.2408284,
+        "percentage_point_change": -8.848788
+      }
+    }
+  },
+  "limitations": [
+    "Flags are lexical risk indicators; no_known_rule_flag is not factual or clinical approval.",
+    "New human reviews = 0. Calibration labels are AI-authored known synthetic edits, not medical gold.",
+    "English/Chinese lexical coverage is incomplete; source errors and translation errors are not distinguished.",
+    "Quantities cover explicit mm/cm and day/week/month/year units; equivalent units and reordered mentions are allowed.",
+    "Bare numbers, list/series/image IDs, percentages, volumes, most bounds/ranges and implicit units may be missed.",
+    "Quantity counters do not bind values to organs; repeated explanation of a value may cause a false flag.",
+    "Date handling reuses narrow V2 formats; ambiguous dates must remain verbatim, and named-month dates may be missed.",
+    "Negation and uncertainty checks mostly detect marker loss, not finding-level scope or diagnostic correctness.",
+    "Laterality checks only compare exclusive left/right markers; mixed bilateral assignments are not verified.",
+    "Unsupported causes, diagnostic subtypes, anatomy translations, omissions and advice can remain unflagged.",
+    "The 60 small synthetic pairs are a diagnostic stress set, not prevalence or generalization estimates.",
+    "Filtering may shift source/length/feature distributions; aggregate shifts are reported, not corrected here."
+  ],
+  "local_artifacts": {
+    "per_sample.jsonl": {
+      "path": "data/p0/pre-gpu-20261116/quality/per_sample.jsonl",
+      "sha256": "1a5f6caccabc68205acf5b6ae074842e34ae148ea596efae103cd3f97e976598"
+    },
+    "risk_details.local.jsonl": {
+      "path": "data/p0/pre-gpu-20261116/quality/risk_details.local.jsonl",
+      "sha256": "127f7e7fc68f5c1c7e28957f824069d86125d396d9ca6603d940eb5ad154bd31"
+    },
+    "calibration_validation.json": {
+      "path": "data/p0/pre-gpu-20261116/quality/calibration_validation.json",
+      "sha256": "1756621cb122fe8cd395c4767146d0a57f280d16071adc111a2965edddb2231f"
+    },
+    "per_sample.frozen_screen.jsonl": {
+      "path": "data/p0/pre-gpu-20261116/quality/per_sample.frozen_screen.jsonl",
+      "sha256": "884c2be9ab6ff33d4d5a35cf2f0d582becc44f31bdba1a55d91bcf37589b934f"
+    },
+    "identity_metadata_enrichment.json": {
+      "path": "data/p0/pre-gpu-20261116/quality/identity_metadata_enrichment.json",
+      "sha256": "47147464105642a25372403ed88a72b9827fc1657465dcc813675183aab19a6e"
+    }
+  },
+  "normalized_source_sha256_definition": "radplain.common.fingerprint(report): casefold, collapse whitespace, strip, UTF-8 SHA256; explicit join key, separate from exact source_sha256",
+  "identity_metadata_enrichment": {
+    "stage": "post_validation_identity_metadata_only",
+    "time_utc": "2026-11-16T00:54:54.985673+00:00",
+    "transformation": "Add normalized_source_sha256 = radplain.common.fingerprint(original_report); preserve every existing field byte-equivalent as parsed JSON.",
+    "normalization": "str.casefold, collapse whitespace with re.sub(r\"\\s+\", \" \", text), strip, UTF-8 SHA256",
+    "source_sha256_semantics_unchanged": "SHA256 of exact report UTF-8",
+    "raw_input_sha256": "a3a0c9ab66d3bda769806c8688548e515e14dac2e80c3d9bffcc68491ea7d999",
+    "original_per_sample_sha256": "884c2be9ab6ff33d4d5a35cf2f0d582becc44f31bdba1a55d91bcf37589b934f",
+    "enriched_per_sample_sha256": "1a5f6caccabc68205acf5b6ae074842e34ae148ea596efae103cd3f97e976598",
+    "original_public_summary_sha256": "9fc509d26320cdd87af185a555ec774372891c5ff12b9bece21b07a4b02384e1",
+    "rows": 4096,
+    "flags_status_features_unchanged": true,
+    "frozen_rule_source_changed": false,
+    "all_normalized_hashes_match_historical_id": true,
+    "human_review_count": 0,
+    "replay": "Join the SHA-verified original train.zh.jsonl by id to per_sample.frozen_screen.jsonl, add fingerprint(report), serialize with radplain.common.write_jsonl."
+  }
+}

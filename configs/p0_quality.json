@@ -1,0 +1,48 @@
+{
+  "schema_version": "p0-quality-screen-v1",
+  "calibration_path": "examples/p0/quality_calibration.jsonl",
+  "calibration_sha256": "ee4dea4d2e9159b02a8c6e66cf7434a0857eb74aa07908e850498e0d58eda5e2",
+  "calibration_freeze_stage": "written_and_hashed_before_quality_rule_implementation",
+  "split_unit": "family",
+  "development_pairs": 40,
+  "validation_pairs": 20,
+  "candidate_rows_per_pair": 2,
+  "validation_policy": "Do not tune rules after validation outputs are read; report failures unchanged.",
+  "features": {
+    "length_bins": {
+      "short": "0-199 characters",
+      "medium": "200-599 characters",
+      "long": "600+ characters"
+    },
+    "text_length_unit": "Unicode code points"
+  },
+  "human_reviews_completed": 0,
+  "default_input": "data/pilot_v1/train.zh.jsonl",
+  "default_output_dir": "data/p0/pre-gpu-20261116/quality",
+  "default_public_summary": "results/p0/pre-gpu-20261116/quality_summary.json",
+  "labels": "Known synthetic edit labels authored by AI, not medical ground truth",
+  "historical_diagnostic_review": {
+    "dev2": {
+      "flagged_known_problem": 16,
+      "known_problem_count": 20,
+      "flagged_valid_control": 3,
+      "valid_control_count": 10
+    },
+    "dev3": {
+      "flagged_known_problem": 17,
+      "known_problem_count": 20,
+      "flagged_valid_control": 2,
+      "valid_control_count": 10
+    },
+    "observed_false_positive_types": [
+      "valid unit conversions",
+      "valid numeric reordering",
+      "atelectasis plain-language grammatical negation (dev2)"
+    ],
+    "observed_blindspot_types": [
+      "cross-organ value assignment",
+      "bilateral change assignment",
+      "invented causes"
+    ]
+  }
+}

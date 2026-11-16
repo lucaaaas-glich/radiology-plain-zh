@@ -1,0 +1,230 @@
+{
+  "version": "p0-source-grouping-v1",
+  "created_at_utc": "2026-11-16T00:52:46.777293+00:00",
+  "config_sha256": "3c91dd0515fd6e20eff36a11485702240e0c5a660f2118b935f41ef6d2e8dd51",
+  "source_files": {
+    "data/p0/exposure-20261116/manifest.json": {
+      "sha256": "1782653dc0dcba20d06f5e6b08c516116d701526aecf2bd869265c81376db4b1",
+      "bytes": 8699472
+    },
+    "data/pilot_v1/test.jsonl": {
+      "sha256": "72ac13ab565cfbac790ce6105b342c8cd49133e97f9979852af716ce16fe3017",
+      "bytes": 165118
+    },
+    "data/pilot_v1/train.jsonl": {
+      "sha256": "84a105d7e654e29b0b1cc5a3c74ce3db12580e42d800a9a9de6e054d1cede67b",
+      "bytes": 2719274
+    },
+    "data/pilot_v1/validation.jsonl": {
+      "sha256": "29f5d4b6d3831052bf2ed8742352288968d0a104f6ec124f02511d874f0b0852",
+      "bytes": 154094
+    },
+    "data/v2/real/dev.jsonl": {
+      "sha256": "b3d32295a683a3789607b46486136bde9518e6875dad47898a49c25ca587ed3b",
+      "bytes": 14620
+    },
+    "data/v2/real/holdout.jsonl": {
+      "sha256": "5b5754822d85947f9581bffcbc8444fb5bffbacd7e16275b5a220b6ca75b4768",
+      "bytes": 20566
+    },
+    "data/v2/source/data/validation-00000-of-00001.parquet": {
+      "sha256": "680bd10de398efbbe7cc115aa861bc12f722fcbcd307cd9c3deedacca8941fce",
+      "bytes": 1986111
+    },
+    "data/v2/thinking_dev_pairs.jsonl": {
+      "sha256": "bf1939f784d3366b9af9aacb89e0a5a3093f7f0b0a6808bd37067709c97e7ae5",
+      "bytes": 7610
+    },
+    "data/v3/development/dev5-old4.jsonl": {
+      "sha256": "99ee7cf3c5973fb1a05ec4fde223c901cadaf373566d266c9cc1df4a30248acb",
+      "bytes": 4010
+    },
+    "data/v3/real/holdout.jsonl": {
+      "sha256": "5a296d8497a7a0a8c4c9c29f64cb6ff4c1b0e8f70a4f8a417c21ada078ced98c",
+      "bytes": 67176
+    },
+    "data/v3/real/main20.jsonl": {
+      "sha256": "f77a8eef5f354176f0084b3dee5e11fcc446e67427b020d9fb0ce7cbf4e1d143",
+      "bytes": 36797
+    },
+    "examples/challenge.jsonl": {
+      "sha256": "d53fa9e1d57cd1da6d89c8505824a3079c1cb6000432dfcaa50cf5856992e848",
+      "bytes": 7151
+    },
+    "examples/v2/holdout.jsonl": {
+      "sha256": "a528158b924dbd7ff6da9c675e5bd8d8df756a1dc801600ef3cb4ef6f3aafdf7",
+      "bytes": 15740
+    },
+    "examples/中文报告.txt": {
+      "sha256": "7ad7d9b37a9efc842712c80e7a070687fcbd17a3e98265c8eb34577ce34da000",
+      "bytes": 64
+    },
+    "examples/英文报告.txt": {
+      "sha256": "c0400890cc5b3dcfea5df7fe975f6788eb96874645c6b5ace1d9e7af07c694b1",
+      "bytes": 78
+    },
+    "results/v2/dev_nllb600_probe/positive_controls.json": {
+      "sha256": "9de5e391e2e38217ec9f165f816e0a7c7e7bf253e0be1ad21b645740287f3910",
+      "bytes": 810
+    },
+    "scripts/audit_v2_guard.py": {
+      "sha256": "0d6746966f4180c86f1b322716b82e8f48e1382d1387c5ebbfad02ce03a7d566",
+      "bytes": 4228
+    },
+    "scripts/smoke_gpu.py": {
+      "sha256": "9430a1956d6d19e7e8ca6b9173215544c3474c56450022c9b9d1daddc8bb2d57",
+      "bytes": 1407
+    }
+  },
+  "historical": {
+    "unique_hashes": 4790,
+    "usage_status_counts": {
+      "actual_used": 4769,
+      "reserved_only": 20,
+      "unknown": 1
+    },
+    "all_including_reserved_excluded": true
+  },
+  "grouping": {
+    "unique_hashes": 11795,
+    "components": 11701,
+    "components_with_multiple_hashes": 74,
+    "largest_component_hashes": 7,
+    "edge_counts": {
+      "exact": 2995,
+      "near": 63,
+      "template": 34
+    },
+    "template_family_count": 22,
+    "template_edges_are_component_spanning_stars_not_all_pairs": true,
+    "empty_5gram_sets": 262,
+    "unique_word_5grams": 204957,
+    "exact_join": {
+      "candidate_pairs_checked": 359,
+      "matching_pairs": 63
+    }
+  },
+  "v1_cross_split_text_family_conflicts": {
+    "train__validation": {
+      "shared_exact_hashes": 0,
+      "shared_components": 1,
+      "first_split_reports_in_shared_components": 5,
+      "second_split_reports_in_shared_components": 1,
+      "cross_split_report_pairs_in_shared_components": 5,
+      "direct_edges_by_type": {
+        "template": 1
+      }
+    },
+    "train__test": {
+      "shared_exact_hashes": 0,
+      "shared_components": 0,
+      "first_split_reports_in_shared_components": 0,
+      "second_split_reports_in_shared_components": 0,
+      "cross_split_report_pairs_in_shared_components": 0,
+      "direct_edges_by_type": {}
+    },
+    "validation__test": {
+      "shared_exact_hashes": 0,
+      "shared_components": 0,
+      "first_split_reports_in_shared_components": 0,
+      "second_split_reports_in_shared_components": 0,
+      "cross_split_report_pairs_in_shared_components": 0,
+      "direct_edges_by_type": {}
+    }
+  },
+  "diagnostic_fragments": {
+    "unique_fragments": 29,
+    "with_possible_containing_parent": 13,
+    "with_multiple_possible_parents": 6,
+    "possible_parent_links": 239,
+    "unique_possible_parent_hashes": 232,
+    "confirmed_parent_provenance_links": 0,
+    "containment_links_join_components": false,
+    "additional_candidate_hashes_excluded_via_parent_components": 123
+  },
+  "validation_availability": {
+    "source_rows": 10000,
+    "unique_source_hashes": 7599,
+    "duplicate_source_rows": 2401,
+    "exact_historical_hashes": 594,
+    "exact_historical_rows": 703,
+    "additional_hashes_excluded_by_historical_text_family": 41,
+    "excluded_hashes_total": 758,
+    "remaining_rows": 9069,
+    "remaining_unique_hashes": 6841,
+    "remaining_components": 6805,
+    "by_dataset_source": {
+      "BIMCV-COVID19": {
+        "rows": 2042,
+        "unique_hashes": 1905,
+        "remaining_rows": 1798,
+        "remaining_unique_hashes": 1673,
+        "remaining_components": 1664
+      },
+      "OpenI": {
+        "rows": 134,
+        "unique_hashes": 130,
+        "remaining_rows": 93,
+        "remaining_unique_hashes": 91,
+        "remaining_components": 89
+      },
+      "PadChest": {
+        "rows": 7824,
+        "unique_hashes": 5580,
+        "remaining_rows": 7178,
+        "remaining_unique_hashes": 5092,
+        "remaining_components": 5067
+      }
+    },
+    "by_normalized_character_length": {
+      "under_1000": {
+        "remaining_unique_hashes": 6787,
+        "remaining_components": 6751
+      },
+      "1000_to_1499": {
+        "remaining_unique_hashes": 37,
+        "remaining_components": 37
+      },
+      "1500_to_1999": {
+        "remaining_unique_hashes": 14,
+        "remaining_components": 14
+      },
+      "2000_to_4000": {
+        "remaining_unique_hashes": 3,
+        "remaining_components": 3
+      },
+      "over_4000": {
+        "remaining_unique_hashes": 0,
+        "remaining_components": 0
+      }
+    },
+    "final_test_selected": false
+  },
+  "pending_and_limits": {
+    "human_review_completed": false,
+    "new_final_set_selected": false,
+    "model_inference_performed": false,
+    "patient_independence": "unknown",
+    "fragment_parent_provenance": "Textual candidates only; no verified original parent IDs",
+    "pretraining_exposure": "unknown",
+    "limits": [
+      "Near-duplicate and template groups do not establish medical equivalence or patient identity.",
+      "Template families, transitive closure and fragment containment may over-exclude reports.",
+      "Different wording, translations and unregistered historical sources may evade these textual rules.",
+      "Patient independence and foundation-model pretraining exposure remain unknown.",
+      "Availability counts are an input-only audit, not a new unseen final set or human review."
+    ],
+    "historical_usage_unknown_count": 1,
+    "grouping_scope": "Registered historical input hashes plus all local official validation source rows",
+    "remaining_component_counts_are_not_additive_across_strata_or_sources": true
+  },
+  "elapsed_seconds": 2.11,
+  "implementation_sha256": "3de4bc934838c45e57d54395b45a89ecdea1405e824a03f15a224af800c5629a",
+  "local_artifacts_sha256": {
+    "edges.json": "58f96b0230050c448df477097b476800492422fddcb7a341b0185d101e81e1f0",
+    "fragment_parent_candidates.json": "03b1dc1dc825643194433ae1daf42d4f3147969582d206f84f535f4849f43374",
+    "groups.json": "5a1abd41e908b187ea7a92baaf19e030ad7e63aadfd3df202ccac07c42f8cb10",
+    "template_families.json": "1af0c3d7d7aa1058e21b82972bdcf1d2e622e30c8d81575cc7e1db60e28382b7",
+    "validation_source_inventory.json": "5ec741dad75af56c4acde8797e9fccf96bd9ede6d5fc94701857ccd86439fbbd"
+  }
+}

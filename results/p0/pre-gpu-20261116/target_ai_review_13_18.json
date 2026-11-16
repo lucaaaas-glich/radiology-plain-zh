@@ -1,0 +1,92 @@
+{
+  "reviewer_type": "project_AI_not_independent_clinical",
+  "human_reviews": 0,
+  "cases": [
+    {
+      "id": "28935e566acc08db6ac7c91a36f1a57798f15f62cb5baf98819fb54f917b3429",
+      "normalized_source_sha256": "28935e566acc08db6ac7c91a36f1a57798f15f62cb5baf98819fb54f917b3429",
+      "target_sha256": "4b3e446d2dcec6a9eac6da139dd352061b8abc1ae72a6365a59121cfd741d53e",
+      "bucket": "random_remaining",
+      "observed_factual_error": true,
+      "required_information_missing": false,
+      "unjudgeable": true,
+      "flag_assessment": "false_alarm",
+      "issue_types": [
+        "negation_scope",
+        "unsupported_abbreviation_expansion"
+      ],
+      "notes_zh": "数值告警来自月份表达转换，不能据此判日期改错；另观察到将影像征象的否定扩大为疾病否定，并具体展开未定义缩写。缩写本义仍无法确认。"
+    },
+    {
+      "id": "64ed31dff74d28e9affb4de9a8bf2e4c59cfb57d799ca31b03417ba95ffb2ece",
+      "normalized_source_sha256": "64ed31dff74d28e9affb4de9a8bf2e4c59cfb57d799ca31b03417ba95ffb2ece",
+      "target_sha256": "db74c2d1d864efcbe2ecf8dec59bb246d90ba7a973fce6749c96959f365d9173",
+      "bucket": "random_remaining",
+      "observed_factual_error": true,
+      "required_information_missing": true,
+      "unjudgeable": false,
+      "flag_assessment": "no_flag_observed_issue",
+      "issue_types": [
+        "qualifier_scope",
+        "omission",
+        "process_commentary"
+      ],
+      "notes_zh": "将仅修饰一侧的程度限定扩展至另一侧，遗漏一组导管及尖端位置；另夹带教师处理参考文本的过程说明。规则无标记未识别这些问题。"
+    },
+    {
+      "id": "cab3be3cf860e68ef74bb86362ca95132b97f677b713012b5e39fac7984d3979",
+      "normalized_source_sha256": "cab3be3cf860e68ef74bb86362ca95132b97f677b713012b5e39fac7984d3979",
+      "target_sha256": "cc377f82b2dee20f3c7dbadb8667e56f2ca9bcfe246605893491c3d36ebdfa72",
+      "bucket": "random_remaining",
+      "observed_factual_error": false,
+      "required_information_missing": false,
+      "unjudgeable": false,
+      "flag_assessment": "no_flag_no_observed_issue",
+      "issue_types": [],
+      "notes_zh": "影像受遮挡和背部弯曲两项内容均有对应表达，未观察到明确源文事实变化；此判断不代表专业医学审核。"
+    },
+    {
+      "id": "eb90a8d70c5a4712894e1684ce1084b2bf94021306c8219006930bafefd4bcc2",
+      "normalized_source_sha256": "eb90a8d70c5a4712894e1684ce1084b2bf94021306c8219006930bafefd4bcc2",
+      "target_sha256": "5161145fbc851aa32b7ee068f0b1db2f893b75568cb93cc3a25be5eaaa9dead5",
+      "bucket": "random_remaining",
+      "observed_factual_error": false,
+      "required_information_missing": true,
+      "unjudgeable": true,
+      "flag_assessment": "no_flag_observed_issue",
+      "issue_types": [
+        "finding_pattern_omission",
+        "certainty_precision",
+        "readability"
+      ],
+      "notes_zh": "病变模式被笼统改成阴影，确定性表达有所变弱，另有重复词。是否属于实质确定性变化和泛化部位表达保留待审；模式信息未被明确保留。"
+    },
+    {
+      "id": "9d3e6c50587d82aa274de9942cb993c056ed7a8f649b90380ac0e1fdaa14728f",
+      "normalized_source_sha256": "9d3e6c50587d82aa274de9942cb993c056ed7a8f649b90380ac0e1fdaa14728f",
+      "target_sha256": "2cf16d9c07a31eeec43e89c00ba676f78c48d7fe25c3c1177de88ec7a178d50e",
+      "bucket": "random_remaining",
+      "observed_factual_error": false,
+      "required_information_missing": false,
+      "unjudgeable": false,
+      "flag_assessment": "false_alarm",
+      "issue_types": [],
+      "notes_zh": "年月在两种语言中正确对应，年份和数量告警均为表达识别问题。其余发现有对应表述，但保留了较多未解释术语。"
+    },
+    {
+      "id": "e4699c6b7e2715f23dd14cc46436ebe15e7e7a65acc26a27f18869af5ae67318",
+      "normalized_source_sha256": "e4699c6b7e2715f23dd14cc46436ebe15e7e7a65acc26a27f18869af5ae67318",
+      "target_sha256": "1576927902ad27645ba271853101e0cb49ebaf5929eea1cbc6797bde7ef31213",
+      "bucket": "random_remaining",
+      "observed_factual_error": false,
+      "required_information_missing": true,
+      "unjudgeable": true,
+      "flag_assessment": "no_flag_observed_issue",
+      "issue_types": [
+        "location_qualifier_omission",
+        "terminology_review_needed"
+      ],
+      "notes_zh": "血管的具体分段限定未保留；另一个解剖术语的中文命名和解释需要专业复核，未直接定性为医学错误。"
+    }
+  ]
+}

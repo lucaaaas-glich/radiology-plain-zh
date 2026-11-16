@@ -1,0 +1,210 @@
+{
+  "pilot": {
+    "splits": {
+      "train": {
+        "source_sha256": "a596099e9af4031b0c519403e247024a082ebb191deb21257e3294b4be1cbd9e",
+        "raw_rows": 96,
+        "eligible_rows": 96,
+        "used_rows": 96,
+        "pilot_not_selected_rows": 0,
+        "exclusions": [],
+        "input_tokens": 24430,
+        "supervised_answer_eos_tokens": 4979,
+        "min_sequence_tokens": 168,
+        "max_sequence_tokens": 854,
+        "mean_sequence_tokens": 254.47916666666666,
+        "template_trailing_tokens_ignored": 96
+      },
+      "validation": {
+        "source_sha256": "f2c1c5d68d9e1e92837554d8520a3e6211ecd9d44633b106da29ad828ebc44b5",
+        "raw_rows": 32,
+        "eligible_rows": 32,
+        "used_rows": 32,
+        "pilot_not_selected_rows": 0,
+        "exclusions": [],
+        "input_tokens": 7078,
+        "supervised_answer_eos_tokens": 1244,
+        "min_sequence_tokens": 168,
+        "max_sequence_tokens": 293,
+        "mean_sequence_tokens": 221.1875,
+        "template_trailing_tokens_ignored": 32
+      }
+    },
+    "plan": {
+      "train_microbatches_per_epoch": 24,
+      "optimizer_steps_per_epoch": 6,
+      "optimizer_steps": 6,
+      "epochs": 1,
+      "train_batch_size": 4,
+      "gradient_accumulation_steps": 4,
+      "effective_batch_size": 16,
+      "last_update_microbatches": 4,
+      "last_update_examples": 16,
+      "supervised_tokens_all_epochs": 4979,
+      "loss_normalization": "answer/EOS-token mean over each accumulation group"
+    },
+    "config_sha256": "47620b96d49231268dae7fb477b08bb4db408ee6797a86f346182a32ea34519a",
+    "gpu_training_verified": false
+  },
+  "S0": {
+    "splits": {
+      "train": {
+        "source_sha256": "76e124ee6e30e075697588811287849c323ec58667c7119ecb3e3ba6fb739bd0",
+        "raw_rows": 1024,
+        "eligible_rows": 1024,
+        "used_rows": 1024,
+        "pilot_not_selected_rows": 0,
+        "exclusions": [],
+        "input_tokens": 244814,
+        "supervised_answer_eos_tokens": 46437,
+        "min_sequence_tokens": 159,
+        "max_sequence_tokens": 999,
+        "mean_sequence_tokens": 239.076171875,
+        "template_trailing_tokens_ignored": 1024
+      },
+      "validation": {
+        "source_sha256": "777d68fad3cb2907a2b3b45b0e022eccd5a462a02fd6fd0878ab4bc1c258f8c6",
+        "raw_rows": 40,
+        "eligible_rows": 40,
+        "used_rows": 40,
+        "pilot_not_selected_rows": 0,
+        "exclusions": [],
+        "input_tokens": 8944,
+        "supervised_answer_eos_tokens": 1590,
+        "min_sequence_tokens": 166,
+        "max_sequence_tokens": 346,
+        "mean_sequence_tokens": 223.6,
+        "template_trailing_tokens_ignored": 40
+      }
+    },
+    "plan": {
+      "train_microbatches_per_epoch": 256,
+      "optimizer_steps_per_epoch": 64,
+      "optimizer_steps": 128,
+      "epochs": 2,
+      "train_batch_size": 4,
+      "gradient_accumulation_steps": 4,
+      "effective_batch_size": 16,
+      "last_update_microbatches": 4,
+      "last_update_examples": 16,
+      "supervised_tokens_all_epochs": 92874,
+      "loss_normalization": "answer/EOS-token mean over each accumulation group"
+    },
+    "config_sha256": "8da84ee675b5c798a019125b39dbcbf9db85ac656da9b8332297d99a523be2ef",
+    "gpu_training_verified": false
+  },
+  "S1": {
+    "splits": {
+      "train": {
+        "source_sha256": "fce4229f4e4a5fd4443a4b89cfa65122cf97e050ff5c12f1567b2d0ab478b8a1",
+        "raw_rows": 1024,
+        "eligible_rows": 1024,
+        "used_rows": 1024,
+        "pilot_not_selected_rows": 0,
+        "exclusions": [],
+        "input_tokens": 243891,
+        "supervised_answer_eos_tokens": 45968,
+        "min_sequence_tokens": 159,
+        "max_sequence_tokens": 999,
+        "mean_sequence_tokens": 238.1748046875,
+        "template_trailing_tokens_ignored": 1024
+      },
+      "validation": {
+        "source_sha256": "777d68fad3cb2907a2b3b45b0e022eccd5a462a02fd6fd0878ab4bc1c258f8c6",
+        "raw_rows": 40,
+        "eligible_rows": 40,
+        "used_rows": 40,
+        "pilot_not_selected_rows": 0,
+        "exclusions": [],
+        "input_tokens": 8944,
+        "supervised_answer_eos_tokens": 1590,
+        "min_sequence_tokens": 166,
+        "max_sequence_tokens": 346,
+        "mean_sequence_tokens": 223.6,
+        "template_trailing_tokens_ignored": 40
+      }
+    },
+    "plan": {
+      "train_microbatches_per_epoch": 256,
+      "optimizer_steps_per_epoch": 64,
+      "optimizer_steps": 128,
+      "epochs": 2,
+      "train_batch_size": 4,
+      "gradient_accumulation_steps": 4,
+      "effective_batch_size": 16,
+      "last_update_microbatches": 4,
+      "last_update_examples": 16,
+      "supervised_tokens_all_epochs": 91936,
+      "loss_normalization": "answer/EOS-token mean over each accumulation group"
+    },
+    "config_sha256": "8da84ee675b5c798a019125b39dbcbf9db85ac656da9b8332297d99a523be2ef",
+    "gpu_training_verified": false
+  },
+  "comparison": {
+    "same_train_rows": true,
+    "same_dev_file": true,
+    "supervised_tokens_relative_change_S1_vs_S0": -0.010099704976635038,
+    "input_tokens_relative_change_S1_vs_S0": -0.003770209220060994,
+    "exact_token_budget_matched": false,
+    "training_steps_matched": true,
+    "note": "Fixed examples and steps, matched joint character/source feature bins; token budgets are measured, not identical. No quality inference."
+  },
+  "model_asset_receipt": {
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "kind": "original_base",
+    "files_sha256": {
+      "config.json": "98d2ff8cc47488d08a2b0b3acf4eb99ef210779b42bd48605f6b8e36acdbf670",
+      "generation_config.json": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6",
+      "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+      "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+      "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+      "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "LICENSE": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+      "README.md": "2e1bcd8bd964728a820be709fa0f7b9dd54817a94fd2254c535df70c5e67fada",
+      "model.safetensors": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee"
+    },
+    "upstream_verified": true,
+    "upstream_lock_sha256": "783de88f7f3661b9f2b7167190f19fd5584649934ab427fc02704dcedef39354",
+    "model_loaded": false,
+    "elapsed_seconds": 283.52891679108143
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "packages": [
+      "certifi==2026.10.23",
+      "charset-normalizer==3.5.2",
+      "filelock==4.2.10",
+      "fsspec==2026.9.0",
+      "hf-xet==1.8.0",
+      "huggingface-hub==0.36.0",
+      "idna==3.20",
+      "iniconfig==2.3.1",
+      "Jinja2==3.1.6",
+      "MarkupSafe==3.0.4",
+      "numpy==2.5.5",
+      "packaging==26.3",
+      "pluggy==1.7.0",
+      "Pygments==2.21.0",
+      "pytest==8.4.2",
+      "PyYAML==6.0.3",
+      "regex==2026.11.15",
+      "requests==2.34.2",
+      "safetensors==0.6.2",
+      "sentencepiece==0.2.1",
+      "tokenizers==0.22.1",
+      "tqdm==4.70.1",
+      "transformers==4.57.1",
+      "typing_extensions==4.16.0",
+      "urllib3==2.8.0"
+    ],
+    "torch_installed": false,
+    "weights_loaded": false,
+    "gpu_used": false,
+    "ssh_connected": false
+  },
+  "local_preflight_issues_resolved": [
+    "Existing Mac environment used a different transformers API; isolated pinned CPU environment created without changing existing environments.",
+    "jinja2 was initially absent; explicitly pinned and installed before successful real preflights."
+  ]
+}

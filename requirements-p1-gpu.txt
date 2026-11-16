@@ -1,0 +1,6 @@
+# Future isolated school environment only; not installed during CPU preparation.
+# First verify the school's CUDA torch in a NEW project-specific venv.
+# Reuse its compatible torch without upgrading the shared/legacy environments.
+-r requirements-p1-cpu.txt
+peft==0.17.1
+accelerate==1.10.1

@@ -1,0 +1,35 @@
+{
+  "date_local": "2026-11-16",
+  "baseline_commit": "f374d11",
+  "branch": "feat/data-quality-p0",
+  "cpu_tests": {
+    "command": "cache/p1-cpu-venv/bin/python -m pytest -q tests/test_p0_groups.py tests/test_p0_quality.py tests/test_p1_preflight.py tests/test_p1_selection.py tests/test_p1_preparation_guards.py",
+    "passed": 61
+  },
+  "real_tokenizer_preflights": [
+    "pilot 96/32",
+    "S0 1024/40",
+    "S1 1024/40"
+  ],
+  "all_preflight_exclusions": 0,
+  "hardened_selection_replay_data_files_identical": 6,
+  "rule_and_config_freeze_hashes_verified": 7,
+  "grouping_input_hashes_verified": 18,
+  "grouping_artifact_hashes_verified": 5,
+  "raw_training_report_text_scanned_in_new_public_files": true,
+  "full_text_scan_min_characters": 60,
+  "complete_matches": 0,
+  "legacy_tracked_files_changed": 0,
+  "gpu_training_verified": false,
+  "model_loaded": false,
+  "ssh_connected": false,
+  "human_reviews_completed": 0,
+  "formal_quality_gate_passed": false,
+  "delivery_md_sha256": "ca06d6e1411e3bdcd9b50039761c1d52994f3d193a6b23627115d37ccfeaa273",
+  "remaining": [
+    "CUDA training/loading/gradient/adapter reload and generation verification",
+    "Independent human or clinical reference-quality assessment",
+    "Freeze genuinely new final test cohort and comparison protocol after development",
+    "Formal model effectiveness comparison"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "version": "p0-source-grouping-v1",
+  "purpose": "CPU-only conservative source audit; no final evaluation selection or clinical equivalence claim",
+  "exposure_manifest": "data/p0/exposure-20261116/manifest.json",
+  "exposure_manifest_sha256": "1782653dc0dcba20d06f5e6b08c516116d701526aecf2bd869265c81376db4b1",
+  "expected_historical_unique_hashes": 4790,
+  "normalization": "casefold, collapse Unicode whitespace, strip; SHA-256 of UTF-8",
+  "near_duplicate": {
+    "token_pattern": "\\w+",
+    "word_ngram_size": 5,
+    "jaccard_numerator": 4,
+    "jaccard_denominator": 5,
+    "minimum_report_length": 0,
+    "empty_shingle_sets_match": false,
+    "method": "Exact set Jaccard using global-frequency prefix candidate join and integer threshold checks; no approximate LSH"
+  },
+  "short_numeric_template": {
+    "max_word_tokens": 80,
+    "max_normalized_chars": 700,
+    "number_pattern": "\\d+(?:[.,]\\d+)*",
+    "replacement": "<number>",
+    "preserve_all_non_numeric_characters": true,
+    "require_at_least_one_number": true,
+    "meaning": "Conservative textual family only; numeric values may be clinically different; negation and all non-numeric text are preserved"
+  },
+  "components": {
+    "edge_types": ["exact", "near", "template"],
+    "group_id": "minimum normalized-report SHA-256 in connected component",
+    "split_policy": "A connected component must remain in one prospective split; old V1/V2/V3 splits and conclusions are immutable"
+  },
+  "diagnostic_fragments": {
+    "parent_relation": "Normalized full-fragment substring with Unicode word boundaries; all possible full-report parents recorded",
+    "containment_edges_join_components": false,
+    "exclude_all_possible_parent_components_from_new_evaluation": true,
+    "meaning": "Textual containment is a candidate source relation, not verified provenance or patient identity"
+  },
+  "evaluation_source": {
+    "parquet": "data/v2/source/data/validation-00000-of-00001.parquet",
+    "expected_sha256": "680bd10de398efbbe7cc115aa861bc12f722fcbcd307cd9c3deedacca8941fce",
+    "expected_rows": 10000,
+    "read_columns": ["source", "radiology_report"],
+    "dataset_revision": "6783ab38f9de28c4372799346f51d3927ae7eb9a",
+    "exclude_every_historical_hash_including_reserved_and_unknown": true,
+    "select_final_test": false
+  },
+  "limits": [
+    "Near-duplicate and template groups do not establish medical equivalence or patient identity.",
+    "Template families, transitive closure and fragment containment may over-exclude reports.",
+    "Different wording, translations and unregistered historical sources may evade these textual rules.",
+    "Patient independence and foundation-model pretraining exposure remain unknown.",
+    "Availability counts are an input-only audit, not a new unseen final set or human review."
+  ]
+}
